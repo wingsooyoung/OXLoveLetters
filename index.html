@@ -11,7 +11,8 @@
   <body>
 
     <div id="letter-form-div">
-      <form accept-charset="UTF-8" id="letter-form" method="post" action="/form_submissions.php">
+      <form name="letter-form" id="letter-form" method="POST" data-netlify="true" accept-charset="UTF-8" action="/pages/success">
+        
         <p>Would you like to sign your letter with a name or nickname?</p>
         <input type="radio" id="yessign" name="signature" value="Yes" required>
         <label for="yessign">Yes</label><br>
@@ -27,8 +28,34 @@
         <textarea name="lettercontent" maxlength="500" required wrap="hard" cols="100" style="height:150px;width:350px;resize: none;"></textarea><br>
 
         <input type="submit" name="submit" value="Submit">
+        
+        <button type="submit">Submit</button>
+        
       </form>
     </div>
+<!--     
+    <form name="letter-form" id="letter-form" method="POST" data-netlify="true" accept-charset="UTF-8">
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Your Role: <select name="role[]" multiple>
+          <option value="leader">Leader</option>
+          <option value="follower">Follower</option>
+        </select></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form> 
+-->
+
 
   </body>
 </html>
