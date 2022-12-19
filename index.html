@@ -14,18 +14,20 @@
       <form name="letter-form" id="letter-form" method="POST" data-netlify="true" accept-charset="UTF-8" action="/pages/success">
         
         <p>Would you like to sign your letter with a name or nickname?</p>
-        <input type="radio" id="yessign" name="signature" value="Yes" required>
-        <label for="yessign">Yes</label><br>
-        <input type="radio" id="nosign" name="signature" value="No" required checked>
-        <label for="nosign">No</label> <small><em>*If this option is selected, your letter will be signed with "FOR X" by default.</em></small><br>
-        <br>
+        
+          <input type="radio" id="yessign" name="signature" value="Yes" required>
+            <label for="yessign">Yes</label><br>
+        
+          <input type="radio" id="nosign" name="signature" value="No" required checked>
+            <label for="nosign">No</label> <small><em>*If this option is selected, your letter will be signed with "FOR X" by default.</em></small><br>
+          <br>
 
         <label for="nickname">Name / Nickname:</label>
-        <input type="text" id="nickname" name="nickname" placeholder="FOR X" maxlength="30" disabled><br>
-        <br>
+          <input type="text" id="nickname" name="nickname" placeholder="FOR X" maxlength="30" disabled><br>
+          <br>
 
         <p>What would you like your letter to say?</p>
-        <textarea name="lettercontent" maxlength="500" required wrap="hard" cols="100" style="height:150px;width:350px;resize: none;"></textarea><br>
+          <textarea name="lettercontent" maxlength="500" required wrap="hard" cols="100" style="height:150px;width:350px;resize: none;"></textarea><br>
 
         <input type="submit" name="submit" value="Submit">
         
@@ -56,6 +58,9 @@
     </form> 
 -->
 
+    <script>
+//       if yessign = checked
+//       remove "disabled" from nickname
 
   </body>
 </html>
