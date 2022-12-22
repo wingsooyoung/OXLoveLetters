@@ -3,12 +3,10 @@
 }
 
 header {
-/*here*/
   border: 5px solid greenyellow;
   text-align: center;
 }
 nav {
-/*here*/
   border: 5px dotted orangered;
   width: max-content;
   margin: auto;
@@ -16,7 +14,6 @@ nav {
   overflow: hidden;
 }
 nav a {
-/*here*/
   border: 5px dashed rebeccapurple;
   text-decoration: none;
   float: left;
@@ -92,7 +89,6 @@ img {
 
 
 #choices {
-/*here*/
   position: relative;
   border: 3px solid #2196F3;
 }
@@ -103,6 +99,20 @@ img {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.choicesbtn {
+  /*here*/
+  background-color: #008CBA; /* blue */
+  border: none;
+  padding: 32px 16px;  
+  text-align: center;
+  border-radius: 8px;
+/*   text-decoration: none; */
+  transition-duration: 0.4s;
+}
+.choicesbtn:hover {
+  background-color: white;
+  border: 2px solid #008CBA;
 }
 #readbtn {
 /*here*/
