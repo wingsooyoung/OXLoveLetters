@@ -34,6 +34,10 @@ body {
     --grey1: #46494c;
     --grey2: #DCDCDD;
 }
+a {
+    /*text-decoration: none;*/
+    color: black;
+}
 i {
     font-size: smaller;
 }
@@ -183,4 +187,20 @@ footer {
     margin-top: 300px;
     text-align: center;
     color: var(--eggshell);
+}
+footer a {
+    font-style: normal;
+    color: var(--eggshell);
+}
+footer a:hover {
+    font-style: oblique;
+    color: var(--pink3);
+}
+footer i {
+    vertical-align: text-bottom;
+}
+footer u {
+    text-decoration: none;
+    font-size: smaller;
+    font-style: italic;
 }
