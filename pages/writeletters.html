@@ -5,6 +5,11 @@
   <title>Write A Letter</title>
 
   <link rel="stylesheet" href="/styles.css">
+
+  <script src="/main.js"></script>
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
   <style>
     img {
       /*height: 408px;*/
@@ -50,79 +55,70 @@
   </style>
 </head>
 <body>
-  <header>
-  <nav>
-    <div class="dropdown">
-      <a href="/">HOME</a>
-      <a href="/pages/readletters.html">READ LETTERS</a>
-      <a href="/pages/writeletters.html">WRITE A LETTER</a>
+<p>idk if i'm making this a separate page yet but uh if so then move the form here!</p>
 
-      <a href="/" class="about">ABOUT <i class="ph-caret-down"></i></a>
+<div class="overimg">
+  <img src="/postcard with doodles v2.svg" alt="">
 
-      <div class="dropdown-content">
-        <a href="/pages/aboutomegax.html">ABOUT OMEGA X</a>
-        <a href="/pages/aboutthisproject.html">ABOUT THE SITE</a>
-      </div>
-    </div>
-  </nav>
-  </header>
-  
-  <p>idk if i'm making this a separate page yet but uh if so then move the form here!</p>
+  <div id="div1" class="overimgbox">{Letter Content} lorym ipsum sample text i just need a few l.inesšetc pmgm
+    g ateez omega axhe y hhf more text etc more more wordssss twutetr facedbiok kpopmo3 jusf a bit t more!!etc
+    etc etc flll.</div>
 
-  <div class="overimg">
-    <img src="/postcard with doodles v2.svg" alt="">
+  <div id="div2" class="overimgbox">{Name}12345678</div>
+</div>
 
-    <div id="div1" class="overimgbox">{Letter Content} lorym ipsum sample text i just need a few l.inesšetc pmgm
-      g ateez omega axhe y hhf more text etc more more wordssss twutetr facedbiok kpopmo3 jusf a bit t more!!etc
-      etc etc flll.</div>
+<div class="overimg zoom">
+  <img src="/postcard with doodles v2.svg" alt="" class="zoom">
 
-    <div id="div2" class="overimgbox">{Name}12345678</div>
-  </div>
+  <div id="div1-zoom" class="overimgbox zoom">{Letter Content} lorym ipsum sample text i just need a few l.inesšetc
+    pmgm
+    g ateez omega axhe y hhf more text etc more more wordssss twutetr facedbiok kpopmo3 jusf a bit t more!!etc
+    etc etc flll.</div>
 
-  <div class="overimg zoom">
-    <img src="/postcard with doodles v2.svg" alt="" class="zoom">
+  <div id="div2-zoom" class="overimgbox zoom">{Name}12345678</div>
+</div>
 
-    <div id="div1-zoom" class="overimgbox zoom">{Letter Content} lorym ipsum sample text i just need a few l.inesšetc
-      pmgm
-      g ateez omega axhe y hhf more text etc more more wordssss twutetr facedbiok kpopmo3 jusf a bit t more!!etc
-      etc etc flll.</div>
+<div id="letter-form-div">
+  <form name="letter-form" id="letter-form" method="POST" data-netlify="true" accept-charset="UTF-8" action="/pages/success">
 
-    <div id="div2-zoom" class="overimgbox zoom">{Name}12345678</div>
-  </div>
-    
-       <div id="letter-form-div">
-      <form name="letter-form" id="letter-form" method="POST" data-netlify="true" accept-charset="UTF-8" action="/pages/success">
-        
-        <p>Would you like to sign your letter with a name or nickname?</p>
-        
-          <input type="radio" id="yessign" name="signature" value="True" required>
-            <label for="yessign">Yes</label><br>
-        
-          <input type="radio" id="nosign" name="signature" value="False" required checked>
-            <label for="nosign">No</label> <small><em>*If this option is selected, your letter will be signed with "FOR X" by default.</em></small><br>
-          <br>
+    <p>Would you like to sign your letter with a name or nickname?</p>
 
-        <label for="nickname">Name / Nickname:</label>
-          <input type="text" id="nickname" name="nickname" placeholder="FOR X" value="FOR X" maxlength="30" disabled><br>
-          <br>
+    <input type="radio" id="yessign" name="signature" value="True" required>
+    <label for="yessign">Yes</label><br>
 
-        <p>What would you like your letter to say?</p>
-          <textarea name="lettercontent" maxlength="500" required wrap="hard" cols="100" style="height:150px;width:350px;resize: none;"></textarea><br>
+    <input type="radio" id="nosign" name="signature" value="False" required checked>
+    <label for="nosign">No</label> <small><em>*If this option is selected, your letter will be signed with "FOR X" by default.</em></small><br>
+    <br>
 
-        <input type="submit" name="submit" value="Submit">
-        
-        <button type="submit">Submit</button>
-        
-      </form>
-    </div>
+    <label for="nickname">Name / Nickname:</label>
+    <input type="text" id="nickname" name="nickname" placeholder="FOR X" value="FOR X" maxlength="30" disabled><br>
+    <br>
+
+    <p>What would you like your letter to say?</p>
+    <textarea name="lettercontent" maxlength="500" required wrap="hard" cols="100" style="height:150px;width:350px;resize: none;"></textarea><br>
+
+    <input type="submit" name="submit" value="Submit">
+
+    <button type="submit">Submit</button>
+
+  </form>
+</div>
+
+<footer>
+  <p><small><u>2022 </u><i class="ph-copyright"></i> <a href="https://twitter.com/oxmasterlist">OXMasterlist</a>
+    / <a
+            href="https://omegaxmasterlist.tumblr.com">
+      omegaxmasterlist</a>
+  </small></p>
+</footer>
 
 
-    <script type="text/javascript">
-      const signature = document.getElementById("yessign");
-      if (signature.checked) {
-        document.getElementById("nickname").disabled = false; 
-      }
-    </script>
+<script type="text/javascript">
+  const signature = document.getElementById("yessign");
+  if (signature.checked) {
+    document.getElementById("nickname").disabled = false;
+  }
+</script>
 
 </body>
 </html>
