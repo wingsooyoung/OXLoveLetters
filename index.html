@@ -13,6 +13,8 @@
 <!--  icons  -->
   <script src="https://unpkg.com/phosphor-icons"></script>
 
+  <script src="/main.js"></script>
+
 </head>
 <body>
 
@@ -44,17 +46,20 @@
 
 <div id="choices">
   <div class="centerbtns">
-    <button id="readbtn" class="choicesbtn"><a
-            href="/pages/readletters.html">READ</a> <i class="ph-envelope-open"
+    <button id="readbtn" class="choicesbtn" onclick="openMailbox()">READ <i class="ph-envelope-open"
                                                        style="display: block; padding-top: 5px;"></i></button>
 
-    <button id="writebtn" class="choicesbtn"><a href="/pages/writeletters.html">WRITE</a> <i
+    <button id="writebtn" class="choicesbtn"><a href="/pages/writeletters.html" onclick="writebtnFunc()">WRITE</a> <i
             class="ph-envelope" style="display: block; padding-top: 5px;"></i></button>
   </div>
 </div>
 
 <footer>
-  <p><em><small><i class="ph-copyright"></i> @OXMasterlist / omegaxmasterlist </small></em></p>
+  <p><small><u>2022 </u><i class="ph-copyright"></i> <a href="https://twitter.com/oxmasterlist">OXMasterlist</a>
+    / <a
+          href="https://omegaxmasterlist.tumblr.com">
+    omegaxmasterlist</a>
+  </small></p>
 </footer>
 
 
