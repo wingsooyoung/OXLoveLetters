@@ -1,31 +1,69 @@
 * {
     box-sizing: border-box;
 }
+body {
+    background-color: var(--pink4);
+}
+:root {
+    --pink1: #ff60b0;
+    --pink2: #ff2990;
+    --pink3: #ff69b9;
+    --pink4: #de376a;
+    --red1: #bd0e23;
+    --red2: #cd0b24;
+    --red3: #e80724;
+    --blue1: #02394a;
+    --blue2: #043565;
+    --blue3: #5158bb;
+    --brown1: #453823;
+    --blue4: #39a2ae;
+    --blue5: #55dbcb;
+    --violet1: #2e294e;
+    --violet2: #541388;
+    --eggshell: #f1e9da;
+    --purple1: #3f1651;
+    --purple2: #653780;
+    --purple3: #9c3587;
+    --purple4: #1a1423;
+    --purple5: #372549;
+    --green1: #14342b;
+    --green2: #60935d;
+    --yellow1: #e2f1af;
+    --yellow2: #e3d888;
+    --brown2: #84714f;
+    --grey1: #46494c;
+    --grey2: #DCDCDD;
+}
+i {
+    font-size: smaller;
+}
 
 header {
-/*here*/
-    border: 5px solid greenyellow;
+    /*here*/
+    border: 2px solid greenyellow;
     text-align: center;
 }
 nav {
-/*here*/
-    border: 5px dotted orangered;
+    /*here*/
+    border: 2px dotted orangered;
     width: max-content;
     margin: auto;
     padding: 5px;
     overflow: hidden;
 }
 nav a {
-/*here*/
-    border: 5px dashed rebeccapurple;
+    /*here*/
+    border: 5px dashed var(--grey1);
     text-decoration: none;
     float: left;
     padding: 12px 12px;
     /*max-width: 130px;*/
-    background-color: aquamarine;
+    background-color: var(--grey2);
+    color: var(--grey1);
 }
 nav a:hover {
-    background-color: blueviolet;
+    background-color: var(--grey1);
+    color: white;
 }
 .dropdown {
     /*display: inline;*/
@@ -34,7 +72,7 @@ nav a:hover {
     overflow: hidden;
 }
 .about {
-    background-color: mediumaquamarine;
+    /*background-color: mediumaquamarine;*/
     /*display: block;*/
     /*float: right;*/
 }
@@ -44,7 +82,6 @@ nav a:hover {
     /*position: absolute;*/
     float: right;
     clear: both !important;
-    background-color: #f9f9f9;
 
     max-width: 250px !important;
 
@@ -61,7 +98,7 @@ nav a:hover {
     text-align: center;
 }
 .about:hover {
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
 }
 .dropdown:hover .dropdown-content {
     display: block;
@@ -70,63 +107,80 @@ nav a:hover {
 
 
 #mailbox {
-/*here*/
+    /*here*/
 }
 img {
     object-fit: contain;
     height: 300px;
     width: 300px;
-    border: 2px inset palevioletred;
+    border: 1px solid palevioletred;
 
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
 }
 #static-mailbox {
-/*.png ver*/
+    /*.png ver*/
 }
 #opening-mailbox {
-/*.gif ver*/
+    /*.gif ver*/
+    display: none;
 }
 
 
 
 #choices {
-  position: relative;
-  border: 3px solid #2196F3;
+    position: relative;
+    margin-top: 100px;
+    /*border: 3px solid #2196F3;*/
+}
+#choices a {
+    text-decoration: inherit;
+    color: inherit;
 }
 .centerbtns {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+    /*border: 1px solid yellow;*/
+    width: max-content;
 }
 .choicesbtn {
-  /*here*/
-  background-color: #008CBA; /* blue */
-  border: none;
-  padding: 32px 16px;  
-  text-align: center;
-  border-radius: 8px;
-/*   text-decoration: none; */
-  transition-duration: 0.4s;
+    /*here*/
+    background-color: var(--red2);
+    padding: 9px 5px 5px;
+    text-align: center;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    width: 130px;
+    font-size: large;
+    font-weight: bold;
+    color: var(--eggshell);
+    border: 2px outset var(--red3);
 }
 .choicesbtn:hover {
-  background-color: white;
-  border: 2px solid #008CBA;
+    background-color: white;
+    color: var(--grey1);
+    border: 2px inset var(--red3);
 }
 #readbtn {
-/*here*/
+    /*here*/
+    margin-right: 100px;
 }
 #writebtn {
-/*here*/
+    /*here*/
+    /*margin-left: 18px;*/
 }
 
 
 
 
 footer {
-/*here*/
+    margin-top: 300px;
+    text-align: center;
+    color: var(--eggshell);
 }
