@@ -8,7 +8,10 @@
     <!---->
   </style>
 
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+<!--  icons  -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
 
 </head>
 <body>
@@ -20,7 +23,7 @@
       <a href="/pages/readletters.html">READ LETTERS</a>
       <a href="/pages/writeletters.html">WRITE A LETTER</a>
 
-      <a href="/" class="about">ABOUT <i class="fa fa-caret-down">+</i></a>
+      <a href="/" class="about">ABOUT <i class="ph-caret-down"></i></a>
 
       <div class="dropdown-content">
         <a href="/aboutomegax.html">ABOUT OMEGA X</a>
@@ -35,14 +38,18 @@
 
 
 <div id="mailbox">
-  <img src="/assets/mailbox static ver1.png" alt="mailbox" id="static-mailbox">
-  <img src="/assets/mailbox animated opening atmp3.gif" alt="mailbox opening" id="opening-mailbox">
+  <img src="mailbox static ver1.png" alt="mailbox" id="static-mailbox">
+  <img src="mailbox animated opening atmp3.gif" alt="mailbox opening" id="opening-mailbox">
 </div>
 
 <div id="choices">
   <div class="centerbtns">
-    <button id="readbtn"><h2>READ LETTERS</h2></button>
-    <button id="writebtn"><h2>WRITE LETTERS</h2></button>
+    <button id="readbtn" class="choicesbtn"><a
+            href="/pages/readletters.html">READ</a> <i class="ph-envelope-open"
+                                                       style="display: block; padding-top: 5px;"></i></button>
+
+    <button id="writebtn" class="choicesbtn"><a href="/pages/writeletters.html">WRITE</a> <i
+            class="ph-envelope" style="display: block; padding-top: 5px;"></i></button>
   </div>
 </div>
 
