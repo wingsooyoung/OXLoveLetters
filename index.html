@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
 
-    <style type="text/css">
+  <style type="text/css">
+    <!---->
+  </style>
 
-    </style>
-    
-    <link rel="stylesheet" href="styles.css">
-    
-  </head>
-  <body>
+  <link rel="stylesheet" href="/css/styles.css">
 
-  <header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/pages/readletters.html">Read Letters</a>
-      <a href="/pages/writeletters.html">Write A Letter</a>
-      <a href="/aboutomegax.html">About OMEGA X</a>
-      <a href="/aboutthis.html">About This Site</a>
-    </nav>
-  </header>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="dropdown">
+      <a href="/">HOME</a>
+      <a href="/pages/readletters.html">READ LETTERS</a>
+      <a href="/pages/writeletters.html">WRITE A LETTER</a>
+
+      <a href="/" class="about">ABOUT <i class="fa fa-caret-down">+</i></a>
+
+      <div class="dropdown-content">
+        <a href="/aboutomegax.html">ABOUT OMEGA X</a>
+        <a href="/aboutthis.html">ABOUT THE SITE</a>
+      </div>
+    </div>
 
 
-  <div id="mailbox">
-    <h3>mail box placeholder</h3>
-    <img src="/assets/mailbox static ver1.png" alt="mailbox" id="static-mailbox">
-    <img src="/assets/mailbox animated opening atmp3.gif" alt="mailbox opening" id="opening-mailbox">
+
+  </nav>
+</header>
+
+
+<div id="mailbox">
+  <img src="mailbox static ver1.png" alt="mailbox" id="static-mailbox">
+  <img src="mailbox animated opening atmp3.gif" alt="mailbox opening" id="opening-mailbox">
+</div>
+
+<div id="choices">
+  <div class="centerbtns">
+    <button id="readbtn"><h2>READ LETTERS</h2></button>
+    <button id="writebtn"><h2>WRITE LETTERS</h2></button>
   </div>
+</div>
 
-  <div id="choices">
-    <button id="readbtn" class="choicesbtn"><h2>READ LETTERS</h2></button>
-    <button id="writebtn" class="choicesbtn"><h2>WRITE LETTERS</h2></button>
-  </div>
-
-  <footer>
-    <p><em><small>(Credit goes here) @OXMasterlist / omegaxmasterlist </small></em></p>
-  </footer>
+<footer>
+  <p><em><small>(Credit goes here) @OXMasterlist / omegaxmasterlist </small></em></p>
+</footer>
 
 
 
 
-  
+
 
 </body>
 </html>
