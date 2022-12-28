@@ -7,6 +7,6 @@ module.exports = function(config) {
             // includes: "_includes"
         },
         templateFormats : ["hbs"],
-        htmlTemplateEngine : "hbs",
+        htmlTemplateEngine : "hbs"
     };
 };
