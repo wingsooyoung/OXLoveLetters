@@ -35,7 +35,7 @@
     <li class="comment">
         <img class="avatar" src="{{ comment.avatar }}">
         <h3>{{ comment.name }}</h3>
-        <div class="date">  made the following comment, <time>{{ comment.date | dateDisplay }}</time></div>
-        <div class="comment-text">{{ comment.comment | markdown | safe}}</div>
+        <div class="date">  made the following comment, <time>{{ comment.date }}</time></div>
+        <div class="comment-text">{{ comment.comment }}</div>
     </li>
 </div>
