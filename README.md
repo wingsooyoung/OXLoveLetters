@@ -6,7 +6,7 @@ All the code for my *new* silly little project! (Hosted on Netlify)
  - [READ](/pages/readletters.html) 
  - [WRITE](/pages/writeletters.html) 
  - [ABOUT THEM](/pages/aboutomegax.html) 
- - [ABOUT THIS](/pages/aboutthis.html)
+ - [ABOUT THIS](/pages/aboutthisproject.html)
 
 Includes:
 
