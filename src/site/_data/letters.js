@@ -1,6 +1,7 @@
 // massage the approved letters data into the shape we'd like
 
 const submissions = require('./approved-letters_submissions.json');
+const submissions2 = require('./letter-form_submissions.json');
 
 
 
