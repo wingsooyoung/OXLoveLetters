@@ -1,0 +1,14 @@
+{
+  "name": "oxletters",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "dotenv": "^16.0.3",
+    "netlify-plugin-form-submissions": "^0.1.4"
+  }
+}
+

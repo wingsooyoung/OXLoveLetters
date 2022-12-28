@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="main.js"></script>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="dropdown">
+      <a href="/">HOME</a>
+      <a href="/pages/readletters.html">READ LETTERS</a>
+      <a href="/pages/writeletters.html">WRITE A LETTER</a>
+
+      <a href="/" class="about">ABOUT <i class="ph-caret-down"></i></a>
+
+      <div class="dropdown-content">
+        <a href="/pages/aboutomegax.html">ABOUT OMEGA X</a>
+        <a href="/pages/aboutthisproject.html">ABOUT THE SITE</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <img src="/assets/postcard handdrawn 1.svg" alt="" id="postcard">
+
+    <div id="contentbox" class="template">{{letter.message}}</div>
+
+    <div id="namebox" class="template">
+        {{#if letter.signature}}
+           {{letter.nickname}}
+        {{else}}
+            FOR X
+        {{/if}}
+    </div>
+
+</div>
+
+<!--<div class="overimg zoom">-->
+<!--  <img src="/assets/postcard handdrawn 1.svg" alt="" class="zoom" id="postcardzoom">-->
+
+<!--  <div id="div1-zoom" class="overimgbox zoom">{Letter Content} lorym ipsum sample text i just need a few l.inesšetc-->
+<!--    pmgm-->
+<!--    g ateez omega axhe y hhf more text etc more more wordssss twutetr facedbiok kpopmo3 jusf a bit t more!!etc-->
+<!--    etc etc flll.</div>-->
+
+<!--  <div id="div2-zoom" class="overimgbox zoom">{Name}12345678</div>-->
+<!--</div>-->
+
+</body>
+</html>
