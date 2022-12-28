@@ -2,15 +2,13 @@
     Functions = "functions"
     command = "npm run build"
     publish = "dist"
-    environment = { NODE_VERSION = "12.18.0" } #check this ver num is correct and up to date
+    environment = { NODE_VERSION = "18.12.1" } 
 
 # Config for the Netlify Build Plugin: netlify-plugin-form-submissions
 [[plugins]]
     package = "netlify-plugin-form-submissions"
 
 [plugins.inputs]
-    formNames = "letter-form"
-
-    # the folder to recieve json files for each form
-    # don't know if i need to keep this but i don't think so???
-    # dataDirectory = "src/site/_data"
+    formNames = "approved-letters"
+    dataDirectory = "src/site/_data"
+    
