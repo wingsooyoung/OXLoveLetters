@@ -8,6 +8,6 @@ dist
 
 src/site/_inludes/css/*
 
-src/site/_data/*.json
+src/site/_data/*
 
 .netlify
