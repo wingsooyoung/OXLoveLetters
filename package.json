@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
+    "watch:eleventy": "eleventy --serve",
     "build": "npm run eleventy"
   },
   "dependencies": {
