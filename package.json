@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "npx @11ty/eleventy"
+    "build": "npm run eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
