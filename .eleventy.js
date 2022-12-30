@@ -1,7 +1,7 @@
 module.exports = function(config) {
     // eleventy config settings
     config.addPassthroughCopy("pages");
-
+    config.addPassthroughCopy("assets");
     return {
         dir: {
             input: "src/site",
