@@ -37,7 +37,7 @@ module.exports = function(config) {
             output: "dist",
             includes: "_includes"
         },
-        templateFormats : ["hbs", "md"],
+        templateFormats : ["hbs", "md", "html"],
         htmlTemplateEngine : ["hbs"],
         markdownTemplateEngine : ["hbs"]
     };
