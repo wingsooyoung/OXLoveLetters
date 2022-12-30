@@ -2,7 +2,7 @@
 
 All the code for my *new* silly little project! (Hosted on Netlify)
 
- - [HOME](/index.html) 
+ - [HOME](/src/site/index.html) 
  - [READ](/pages/readletters.html) 
  - [WRITE](/pages/writeletters.html) 
  - [ABOUT THEM](/pages/aboutomegax.html) 

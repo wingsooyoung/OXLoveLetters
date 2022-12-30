@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+
+  <link rel="stylesheet" href="/src/site/_includes/css/styles.css">
+
+  <script src="/main.js"></script>
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="dropdown">
+      <a href="/">HOME</a>
+      <a href="/pages/readletters.html">READ LETTERS</a>
+      <a href="/pages/writeletters.html">WRITE A LETTER</a>
+
+      <a href="/" class="about">ABOUT <i class="ph-caret-down"></i></a>
+
+      <div class="dropdown-content">
+        <a href="/pages/aboutomegax.html">ABOUT OMEGA X</a>
+        <a href="/pages/aboutthisproject.html">ABOUT THE SITE</a>
+      </div>
+    </div>
+
+
+
+  </nav>
+</header>
+
+
+<div id="mailbox">
+  <img src="/assets/mailbox%20static%20ver1.png" alt="mailbox" id="static-mailbox">
+  <img src="/assets/mailbox%20animated%20opening%20atmp3.gif" alt="mailbox opening" id="opening-mailbox">
+</div>
+
+<div id="choices">
+  <div class="centerbtns">
+    <button id="readbtn" class="choicesbtn" onclick="openMailbox()">READ <i class="ph-envelope-open"
+                                                       style="display: block; padding-top: 5px;"></i></button>
+
+    <button id="writebtn" class="choicesbtn"><a href="/pages/writeletters.html" onclick="writebtnFunc()">WRITE</a> <i
+            class="ph-envelope" style="display: block; padding-top: 5px;"></i></button>
+  </div>
+</div>
+
+<footer>
+  <p><small><u>2022 </u><i class="ph-copyright"></i> <a href="https://twitter.com/oxmasterlist">OXMasterlist</a>
+    / <a
+          href="https://omegaxmasterlist.tumblr.com">
+    omegaxmasterlist</a>
+  </small></p>
+</footer>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,28 +1,45 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
-    <style>
-    </style>
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="src/site/_includes/css/styles.css">
+    <script src="/main.js"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
 </head>
-<body class="pageClass">
-<div class="container">
-    <header>
-        <ul class="nav">
-            <li>
-                <a href="/">home<small>where the links are</small></a>
-            </li>
-            <li>
-                <a href="/about">about<small>where the info is</small></a>
-            </li>
-        </ul>
-    </header>
+
+<body>
+<header>
+    <nav>
+        <div class="dropdown">
+            <a href="/">HOME</a>
+            <a href="/pages/readletters.html">READ LETTERS</a>
+            <a href="/pages/writeletters.html">WRITE A LETTER</a>
+
+            <a href="/" class="about">ABOUT <i class="ph-caret-down"></i></a>
+
+            <div class="dropdown-content">
+                <a href="/pages/aboutomegax.html">ABOUT OMEGA X</a>
+                <a href="/pages/aboutthisproject.html">ABOUT THE SITE</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+{{{content}}}
+
+<div class="empty">
+    <!--nothing-->
 </div>
 
+{{{footer}}}
+
 <script>
+     {{{jsmin include "src/main.js"}}}
 </script>
 </body>
 </html>
