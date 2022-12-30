@@ -7,7 +7,7 @@ const {
 } = process.env;
 
 // hardcoding this for a moment... TO DO: replace request with something that follows redirects
-const URL = "https://forxloveletters.netlify.app/";
+const URL = "https://forxloveletters.com/";
 
 /*
   delete this submission via the api
@@ -31,7 +31,7 @@ export function handler(event, context, callback) {
 
     // parse the payload
     var body = event.body.split("payload=")[1];
-    var payload = JSON.parse(unescape(body));
+    var payload = JSON.parse(decodeURIComponent(body));
     var method = payload.actions[0].name;
     var id = payload.actions[0].value;
 
