@@ -64,7 +64,7 @@ export function handler(event, context, callback) {
                     //comments-queue = letter-form
                     //approved-comments = approved-letters
 
-                    //'path': data.path,
+                    'path': data.path,
                     //'received': new Date().toString(),
                     //'email': data.email,
                     //'name': data.name,

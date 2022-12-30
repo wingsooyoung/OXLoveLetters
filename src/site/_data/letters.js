@@ -29,7 +29,8 @@ module.exports = () => {
     for (let entry in submissions) {
         let letter = {
             // avatar: gravatar.url(entry.data.email, {s: '100', r: 'x', d: 'retro'}, true),
-            //signature nickname message
+            // signature nickname message
+            path: entry.data.path,
             signature: entry.data.signature,
             nickname: entry.data.nickname,
             message: entry.data.message.trim()
