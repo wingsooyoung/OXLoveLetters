@@ -9,7 +9,24 @@ module.exports = () => {
 
     let letters = {};
 
-    submissions.forEach(entry => {
+    // submissions.forEach(function (entry) {
+    //     let letter = {
+    //         // avatar: gravatar.url(entry.data.email, {s: '100', r: 'x', d: 'retro'}, true),
+    //         //signature nickname message
+    //         signature: entry.data.signature,
+    //         nickname: entry.data.nickname,
+    //         message: entry.data.message.trim()
+    //     };
+    //
+    //     // Add it to an existing array or create a new one in the comments object
+    //     if (letters[entry.data.path]) {
+    //         letters[entry.data.path].push(letter);
+    //     } else {
+    //         letters[entry.data.path] = [letter];
+    //     }
+    // });
+
+    for (let entry in submissions) {
         let letter = {
             // avatar: gravatar.url(entry.data.email, {s: '100', r: 'x', d: 'retro'}, true),
             //signature nickname message
@@ -19,12 +36,12 @@ module.exports = () => {
         };
 
         // Add it to an existing array or create a new one in the comments object
-        if(letters[entry.data.path]){
+        if (letters[entry.data.path]) {
             letters[entry.data.path].push(letter);
         } else {
             letters[entry.data.path] = [letter];
         }
-    });
+    }
 
     return letters;
 

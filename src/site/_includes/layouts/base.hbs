@@ -1,17 +1,14 @@
 <!doctype html>
-<!--this is the layout for home page i think?????-->
-<!--this seems unnecessary to use template lang for most of this for what i'm doing so like
-perhaps cut this down or remove almost entirely?-->
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>title</title>
     <style>
-        {% include "css/styles.css" ignore missing %}
     </style>
 </head>
-<body class="{{ pageClass }}">
+<body class="pageClass">
 <div class="container">
     <header>
         <ul class="nav">
@@ -23,14 +20,9 @@ perhaps cut this down or remove almost entirely?-->
             </li>
         </ul>
     </header>
-    {{ content }}
-<!--    {% include "footer.njk" %}-->
 </div>
-{% set js %}
-<!--{% include "js/validate.js" %}-->
-{% endset %}
+
 <script>
-        {{ js }}
 </script>
 </body>
 </html>

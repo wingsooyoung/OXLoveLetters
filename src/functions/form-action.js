@@ -60,7 +60,7 @@ export function handler(event, context, callback) {
 
                 // now we have the data, let's massage it and POST IT TO THE APPROVED FORM
                 var payload = {
-                    'form-name' : "approved-comments", //CREATE AN APPROVED LETTERS FORM????
+                    'form-name' : "approved-letters", //CREATE AN APPROVED LETTERS FORM????
                     //comments-queue = letter-form
                     //approved-comments = approved-letters
 

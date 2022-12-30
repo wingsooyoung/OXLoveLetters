@@ -1,2 +1,3 @@
-./.netlify/plugins/node_modules/
-**/node_modules/**
+.netlify/plugins/node_modules/
+
+*/node_modules/*
