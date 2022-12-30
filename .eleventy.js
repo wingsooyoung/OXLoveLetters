@@ -1,4 +1,6 @@
 module.exports = function(config) {
+    var helpers = require('handlebars-helpers')();
+
     const Terser = require("terser");
     config.addFilter("jsmin", function(code) {
         let minified = Terser.minify(code);

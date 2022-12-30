@@ -10,6 +10,7 @@
     "@11ty/eleventy": "^1.0.2",
     "dotenv": "^16.0.3",
     "netlify-plugin-form-submissions": "^0.1.4",
+    "handlebars-helpers": "0.10.0",
     
     "axios": "^1.2.1",
     "gravatar": "^1.8.2",

@@ -1,0 +1,20 @@
+---
+layout:
+pageClass:
+templateEngineOverride: hbs
+---
+
+{{#forEach letters}}
+    <div class="containerbox">
+        <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
+        <div id="contentbox" class="template">{{message}}</div>
+        <div id="namebox" class="template">
+            {{#if signature}}
+                {{nickname}}
+            {{else}}
+                FOR X
+            {{/if}}
+        </div>
+    </div>
+{{/forEach}}
+

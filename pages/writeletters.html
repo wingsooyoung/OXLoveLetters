@@ -6,53 +6,10 @@
 
   <link rel="stylesheet" href="/src/site/_includes/css/styles.css">
 
-  <script src="/main.js"></script>
+  <script src="/src/site/_includes/js/main.js"></script>
 
   <script src="https://unpkg.com/phosphor-icons"></script>
 
-  <style>
-    img {
-      /*height: 408px;*/
-      /*width: 270px;*/
-      padding:0;
-      margin:0;
-
-    }
-    img .zoom {
-      height: 200%;
-      width: 200%;
-    }
-
-    /*container for both template divs*/
-    .overimg {
-      position: relative;
-      font-size: x-small;
-      width: max-content;
-    }
-
-    /*class applied to both template divs*/
-    .overimgbox {
-      border: 1px solid lime;
-      /*width: max-content;*/
-      position: absolute;
-    }
-
-    /*letter content template*/
-    #div1 {
-      top: 45px;
-      left: 50px;
-      width: 168px;
-      height: 71px;
-      line-height: 15px;
-
-    }
-    /*nickname template*/
-    #div2 {
-      bottom: 32px;
-      right: 33px;
-    }
-
-  </style>
 </head>
 <body>
 <header>
@@ -71,29 +28,6 @@
     </div>
   </nav>
 </header>
-
-<p>idk if i'm making this a separate page yet but uh if so then move the form here!</p>
-
-<div class="overimg">
-  <img src="/postcard with doodles v2.svg" alt="">
-
-  <div id="div1" class="overimgbox">{Letter Content} lorym ipsum sample text i just need a few l.inesšetc pmgm
-    g ateez omega axhe y hhf more text etc more more wordssss twutetr facedbiok kpopmo3 jusf a bit t more!!etc
-    etc etc flll.</div>
-
-  <div id="div2" class="overimgbox">{Name}12345678</div>
-</div>
-
-<div class="overimg zoom">
-  <img src="/postcard with doodles v2.svg" alt="" class="zoom">
-
-  <div id="div1-zoom" class="overimgbox zoom">{Letter Content} lorym ipsum sample text i just need a few l.inesšetc
-    pmgm
-    g ateez omega axhe y hhf more text etc more more wordssss twutetr facedbiok kpopmo3 jusf a bit t more!!etc
-    etc etc flll.</div>
-
-  <div id="div2-zoom" class="overimgbox zoom">{Name}12345678</div>
-</div>
 
 <div id="letter-form-div">
   <form name="letter-form" id="letter-form" method="POST" data-netlify="true" accept-charset="UTF-8" action="/pages/success">

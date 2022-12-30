@@ -1,3 +1,13 @@
+/* SECTIONS! */
+/*
+NAVIGATION MENU
+HOME PAGE GRAPHIC
+HOME PAGE BUTTONS
+POSTCARD TEMPLATE
+READ LETTERS
+FOOTER / CREDIT
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -42,6 +52,7 @@ i {
     font-size: smaller;
 }
 
+/*NAVIGATION MENU*/
 header {
     /*here*/
     border: 2px solid greenyellow;
@@ -80,7 +91,6 @@ nav a:hover {
     /*display: block;*/
     /*float: right;*/
 }
-
 .dropdown-content {
     display: none;
     /*position: absolute;*/
@@ -109,7 +119,7 @@ nav a:hover {
 }
 
 
-
+/*HOME PAGE GRAPHIC*/
 #mailbox {
     /*here*/
 }
@@ -133,7 +143,7 @@ img {
 }
 
 
-
+/*HOME PAGE BUTTONS*/
 #choices {
     position: relative;
     margin-top: 100px;
@@ -180,9 +190,85 @@ img {
     /*margin-left: 18px;*/
 }
 
+/*POSTCARD TEMPLATE*/
+.containerbox {
+    position: relative;
+}
+#postcard {
+    height: auto;
+}
+.template {
+    position: absolute;
+    /*border: 1px solid lime;*/
+    padding:0;
+}
+#contentbox {
+    top: 45%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    height: 40%;
+    width: 44%;
+    font-size: x-small;
+    line-height: 16px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-color: var(--purple2) var(--pink4);
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+#contentbox::-webkit-scrollbar-track {
+    background: var(--pink4);
+    box-shadow: inset 0 0 5px var(--pink3);
+    border-radius: 10px;
+}
+#contentbox::-webkit-scrollbar-thumb {
+    background: var(--purple2);
+    border-radius: 10px;
+}
+#contentbox::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+#namebox {
+    bottom: 17%;
+    right: 25%;
+    width: 20%;
+    height: 8%;
+    overflow: clip;
+    line-height: 15px;
+    font-size: x-small;
+}
+
+/*READ LETTERS*/
+.grid-container {
+    display: inline-grid;
+    column-gap: 50px;
+    row-gap: 30px;
+    /*justify-content: space-evenly;*/
+    grid-template-columns: auto auto auto;
+
+    background-color: #2196F3;
+    padding: 10px;
+}
+.grid-item {
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    /*border: 5px solid rgba(0, 0, 0, 0.8);*/
+    /*padding: 20px;*/
+    /*font-size: 30px;*/
+    /*text-align: center;*/
+
+    /*height:545px;*/
+    /*width: 360px;*/
+}
+iframe {
+    height: 180px;
+    width: 272px;
+}
 
 
 
+/*FOOTER / CREDIT*/
 footer {
     margin-top: 300px;
     text-align: center;
