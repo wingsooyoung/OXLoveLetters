@@ -1,5 +1,6 @@
 module.exports = function(config) {
     // eleventy config settings
+    config.addPassthroughCopy("pages");
 
     return {
         dir: {
