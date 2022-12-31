@@ -1,7 +1,5 @@
 module.exports = function(config) {
     var helpers = require('handlebars-helpers')();
-    var path = require("path");
-    var hbs = require('hbs');
 
     var fs = require('fs');
     config.addHandlebarsHelper("include", (filename = "") => {
@@ -18,8 +16,8 @@ module.exports = function(config) {
     config.addPassthroughCopy("pages");
     config.addPassthroughCopy("assets");
     config.addPassthroughCopy("index.html");
-    config.addPassthroughCopy("src/site/_includes/css/styles.css");
-    config.addPassthroughCopy("src/site/_includes/js/main.js");
+    config.addPassthroughCopy("src/site/_includes/css/*");
+    config.addPassthroughCopy("src/site/_includes/js/*");
 
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
     config.addShortcode("footer", function() {
