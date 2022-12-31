@@ -15,7 +15,7 @@ function writebtnFunc() {
     setTimeout(myWriteURL, 5000);
 }
 
-const signature = document.getElementById("yessign");
-if (signature.checked) {
+const sign = document.getElementById("yessign");
+if (sign.checked) {
     document.getElementById("nickname").disabled = false;
 }
