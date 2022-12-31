@@ -18,31 +18,34 @@
 <header>
     <nav>
         <div class="dropdown">
-            {%- for page in collections.pages -%}
-                <a href="{{ page.url }}">{{ page.data.title }}</a>
-            {%- endfor -%}
-
             <a href="/">HOME</a>
-            <a href="/">READ LETTERS</a>
-            <a href="/">WRITE A LETTER</a>
+
+            {%- for page in collections.pages -%}
+                {% if page.data.title == 'Write Letters' %}
+                    <a href="{{ page.url }}">WRITE LETTERS</a>
+                {% elseif page.data.title == 'Read Letters' %}
+                    <a href="{{ page.url }}">READ LETTERS</a>
+                {% endif %}
+            {%- endfor -%}
 
             <a href="/" class="about">ABOUT <i class="ph-caret-down"></i></a>
 
             <div class="dropdown-content">
-                <a href="/">ABOUT OMEGA X</a>
-                <a href="/">ABOUT THE SITE</a>
+                {%- for page in collections.pages -%}
+                    {% if page.data.title == 'About OMEGA X' %}
+                    <a href="{{ page.url }}">ABOUT OMEGA X</a>
+                    {% elseif page.data.title == 'About This Project' %}
+                    <a href="{{ page.url }}">ABOUT THIS SITE</a>
+                    {% endif %}
+                {%- endfor -%}
             </div>
         </div>
     </nav>
 </header>
 
 
-  {{ content | safe }}
+    {{ content | safe }}
 
-
-<div class="empty">
-    <!--nothing-->
-</div>
 
     {% footer %}
 
@@ -52,6 +55,7 @@
     <script>
       {{ js | safe }}
     </script>
+
 </body>
 </html>
 
