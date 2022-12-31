@@ -13,11 +13,11 @@ module.exports = function(config) {
 
 
     // eleventy config settings
-    config.addPassthroughCopy("pages");
     config.addPassthroughCopy("assets");
-    config.addPassthroughCopy("index.html");
     config.addPassthroughCopy("src/site/_includes/css/*");
     config.addPassthroughCopy("src/site/_includes/js/*");
+    config.addPassthroughCopy("index.html");
+
 
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
     config.addShortcode("footer", function() {

@@ -1,16 +1,18 @@
+---
+templateEngineOverride: njk
+---
 
-
-{{#forEach letters}}
+{%- for letter in (letters) -%}
     <div class="containerbox grid-item">
         <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
-        <div id="contentbox" class="template">{{message}}</div>
+        <div id="contentbox" class="template">{{ letter.message }}</div>
         <div id="namebox" class="template">
-            {{#if signature}}
-                {{nickname}}
-            {{else}}
+            {% if letter.signature %}
+                {{ letter.nickname }}
+            {% else %}
                 FOR X
-            {{/if}}
+            {% endif %}
         </div>
     </div>
-{{/forEach}}
+{%- endfor -%}
 

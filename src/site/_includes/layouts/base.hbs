@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
 
-    <link rel="stylesheet" href={{include '/css/styles.css'}}>
+    <link rel="stylesheet" href="_includes/css/styles.css">
 
-    <script src={{include '/js/main.js'}}></script>
+    <script src="_includes/js/main.js"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>
 
 </head>
@@ -17,19 +17,24 @@
 <header>
     <nav>
         <div class="dropdown">
+            {%- for page in collections.pages -%}
+            <a href="{{ page.url }}">{{ page.data.title }}</a>
+            {%- endfor -%}
+
             <a href="/">HOME</a>
-            <a href="/readletters2.html">READ LETTERS</a>
-            <a href="/writeletters2.html">WRITE A LETTER</a>
+            <a href="/">READ LETTERS</a>
+            <a href="/">WRITE A LETTER</a>
 
             <a href="/" class="about">ABOUT <i class="ph-caret-down"></i></a>
 
             <div class="dropdown-content">
-                <a href="/pages/aboutomegax.html">ABOUT OMEGA X</a>
-                <a href="/pages/aboutthisproject.html">ABOUT THE SITE</a>
+                <a href="/">ABOUT OMEGA X</a>
+                <a href="/">ABOUT THE SITE</a>
             </div>
         </div>
     </nav>
 </header>
+
 
 {{{content}}}
 

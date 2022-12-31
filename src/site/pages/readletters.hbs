@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.hbs
-templateEngineOverride: hbs
+templateEngineOverride: njk
 title: Read Letters
 ---
 <div class="grid-container">
-  {{> postcardtemplate}}
+    {% include "postcardtemplate.hbs" %}
 </div>
 
 <div class="grid-container">
