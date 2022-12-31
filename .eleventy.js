@@ -1,16 +1,6 @@
 module.exports = function(config) {
     var helpers = require('handlebars-helpers')();
 
-    const Terser = require("terser");
-    config.addFilter("jsmin", function(code) {
-        let minified = Terser.minify(code);
-        if( minified.error ) {
-            console.log("Terser error: ", minified.error);
-            return code;
-        }
-        return minified.code;
-    });
-
     var fs = require('fs');
     config.addHandlebarsHelper("include", (filename = "") => {
         var content = fs.readFileSync(filename); // Using the 'fs' module of nodejs
