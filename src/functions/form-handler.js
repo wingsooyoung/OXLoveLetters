@@ -23,12 +23,6 @@ export function handler(event, context, callback) {
             {
                 "fallback": "New letter submitted on the site",
                 "color": "#444",
-
-                // "author_name": body.data.email,
-                // "title": body.data.path,
-                // "title_link": URL + body.data.path,
-                // "text": body.data.comment,
-
                 "signature":body.data.signature,
                 "nickname":body.data.nickname,
                 "message":body.data.message

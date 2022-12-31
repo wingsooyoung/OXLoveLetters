@@ -35,7 +35,7 @@ export function handler(event, context, callback) {
     var method = payload.actions[0].name;
     var id = payload.actions[0].value;
 
-    if(method == "hide") {
+    if(method === "hide") {
         purgeComment(id);
         callback(null, {
             statusCode: 200,
@@ -44,12 +44,11 @@ export function handler(event, context, callback) {
     }
 
 
-    //i just want to create the letter then hold before posting it to the READ page
-    else if (method == "approve"){ //KEEP THIS LINE AND BELOW, DELETE ABOVE!!! ^^^^^^
+    else if (method === "approve"){
 
         // get the comment data from the queue
         var url = `https://api.netlify.com/api/v1/submissions/${id}?access_token=${NETLIFY_AUTH_TOKEN}`;
-        // replace with:
+        // replace with: ???????????
         // var url = 'https:// api.netlify.com/api/v1/forms/{form_id}/submissions'
 
 
@@ -60,15 +59,8 @@ export function handler(event, context, callback) {
 
                 // now we have the data, let's massage it and POST IT TO THE APPROVED FORM
                 var payload = {
-                    'form-name' : "approved-letters", //CREATE AN APPROVED LETTERS FORM????
-                    //comments-queue = letter-form
-                    //approved-comments = approved-letters
-
+                    'form-name' : "approved-letters",
                     'path': data.path,
-                    //'received': new Date().toString(),
-                    //'email': data.email,
-                    //'name': data.name,
-                    //'comment': data.comment,
                     'signature': data.signature,
                     'nickname': data.nickname,
                     'message': data.message

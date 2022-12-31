@@ -1,23 +1,9 @@
 module.exports = function(config) {
     var helpers = require('handlebars-helpers')();
 
-    var fs = require('fs');
-    config.addHandlebarsHelper("include", (filename = "") => {
-        var content = fs.readFileSync(filename); // Using the 'fs' module of nodejs
-        var compiled = config.compile(content.toString());
-        return compiled();
-    });
-
-
-    // config.registerPartial("postcardtemplate", );
-
-
     // eleventy config settings
     config.addPassthroughCopy("assets");
-    // config.addPassthroughCopy("src/site/_includes/css/*");
-    // config.addPassthroughCopy("src/site/_includes/js/*");
     config.addPassthroughCopy("index.html");
-    // config.addPassthroughCopy("src/site/_includes/postcardtemplate.njk");
 
 
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)

@@ -6,11 +6,16 @@ function openMailbox() {
     setTimeout(myReadURL, 5000);
 }
 function myReadURL() {
-    document.location.href = '../../../../html pages/readletters/';
+    document.location.href = '/pages/readletters/';
 }
 function myWriteURL() {
-    document.location.href = '../../../../html pages/writeletters/';
+    document.location.href = '/pages/writeletters/';
 }
 function writebtnFunc() {
     setTimeout(myWriteURL, 5000);
+}
+
+const signature = document.getElementById("yessign");
+if (signature.checked) {
+    document.getElementById("nickname").disabled = false;
 }
