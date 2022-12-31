@@ -14,8 +14,8 @@ module.exports = function(config) {
 
     // eleventy config settings
     config.addPassthroughCopy("assets");
-    config.addPassthroughCopy("src/site/_includes/css/*");
-    config.addPassthroughCopy("src/site/_includes/js/*");
+    // config.addPassthroughCopy("src/site/_includes/css/*");
+    // config.addPassthroughCopy("src/site/_includes/js/*");
     config.addPassthroughCopy("index.html");
 
 
@@ -33,8 +33,6 @@ module.exports = function(config) {
             output: "dist",
             includes: "_includes"
         },
-        templateFormats : ["hbs", "md", "html", "css", "js"],
-        htmlTemplateEngine : ["hbs"],
-        markdownTemplateEngine : ["hbs"]
+        templateFormats : ["hbs", "md", "html", "css", "js", "njk"]
     };
 };

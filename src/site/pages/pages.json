@@ -1,5 +1,4 @@
 {
-  "layout" : "layouts/base.hbs",
-  "tags" : "pages",
-  "templateEngineOverride": "hbs"
+  "layout" : "layouts/base.njk",
+  "tags" : "pages"
 }

@@ -18,7 +18,7 @@
     <nav>
         <div class="dropdown">
             {%- for page in collections.pages -%}
-            <a href="{{ page.url }}">{{ page.data.title }}</a>
+                <a href="{{ page.url }}">{{ page.data.title }}</a>
             {%- endfor -%}
 
             <a href="/">HOME</a>
@@ -36,13 +36,14 @@
 </header>
 
 
-{{{content}}}
+    {{ content }}
+
 
 <div class="empty">
     <!--nothing-->
 </div>
 
-{{{footer}}}
+    {% footer %}
 
 </body>
 </html>

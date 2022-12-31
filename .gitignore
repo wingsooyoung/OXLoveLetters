@@ -6,8 +6,8 @@ node_modules
 
 dist
 
-src/site/_includes/css/*
+#src/site/_includes/css/*
 
-./src/site/_data/*.json
+src/site/_data/*.json
 
 .netlify
