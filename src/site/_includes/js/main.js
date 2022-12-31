@@ -16,6 +16,4 @@ function writebtnFunc() {
 }
 
 const sign = document.getElementById("yessign");
-if (sign.checked) {
-    document.getElementById("nickname").disabled = false;
-}
+document.getElementById("nickname").disabled = !sign.checked;
