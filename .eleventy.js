@@ -17,6 +17,7 @@ module.exports = function(config) {
     // config.addPassthroughCopy("src/site/_includes/css/*");
     // config.addPassthroughCopy("src/site/_includes/js/*");
     config.addPassthroughCopy("index.html");
+    // config.addPassthroughCopy("src/site/_includes/postcardtemplate.njk");
 
 
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
@@ -33,6 +34,7 @@ module.exports = function(config) {
             output: "dist",
             includes: "_includes"
         },
-        templateFormats : ["hbs", "md", "html", "css", "js", "njk"]
+        templateFormats : ["hbs", "md", "html", "css", "js", "njk"],
+        htmlTemplateEngine : "html"
     };
 };

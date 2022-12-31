@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
 
-    {% set css %}
-      {% include "css/styles.css" %}
-    {% endset %}
     <style>
-      {{ css | safe }}
-    </script>
+      {% include "css/styles.css" ignore missing %}
+    </style>
 
     <script src="https://unpkg.com/phosphor-icons"></script>
 
