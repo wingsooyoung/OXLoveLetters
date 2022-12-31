@@ -3,10 +3,10 @@
 All the code for my *new* silly little project! (Hosted on Netlify)
 
  - [HOME](/src/site/index.html) 
- - [READ](/html%20pages/readletters.html) 
- - [WRITE](/html%20pages/writeletters.html) 
- - [ABOUT THEM](/html%20pages/aboutomegax.html) 
- - [ABOUT THIS](/html%20pages/aboutthisproject.html)
+ - [READ](/src/site/pages/readletters.njk) 
+ - [WRITE](/src/site/pages/writeletters.hbs) 
+ - [ABOUT THEM](/src/site/pages/aboutomegax.hbs) 
+ - [ABOUT THIS](/src/site/pages/aboutthisproject.hbs)
 
 Includes:
 
