@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title>{{ title }}</title>
 
-    <link rel="stylesheet" href="_includes/css/styles.css">
+    {% set css %}
+      {% include "css/styles.css" %}
+    {% endset %}
+    <style>
+      {{ css | safe }}
+    </script>
 
-    <script src="_includes/js/main.js"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>
 
 </head>
@@ -36,15 +40,21 @@
 </header>
 
 
-    {{ content }}
+  {{ content | safe }}
 
 
 <div class="empty">
     <!--nothing-->
 </div>
 
-    {% footer %}
+    {% footer | safe %}
 
+    {% set js %}
+      {% include "js/main.js" %}
+    {% endset %}
+    <script>
+      {{ js | safe }}
+    </script>
 </body>
 </html>
 
