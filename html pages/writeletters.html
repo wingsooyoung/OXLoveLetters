@@ -14,16 +14,19 @@
 <body>
 <header>
   <nav>
-    <div class="dropdown">
-      <a href="/">HOME</a>
+    <div class="dropdown" id="navig">
+      <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;">HOME</a>
       <a href="/html%20pages/readletters.html">READ LETTERS</a>
       <a href="/html%20pages/writeletters.html">WRITE A LETTER</a>
 
-      <a href="/" class="about">ABOUT <i class="ph-caret-down"></i></a>
+      <span class="about"><a href="/"  onmouseover="mOver()" onmouseout="mOut()"
+                      style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;">ABOUT <i
+              class="ph-caret-down"></i></a></span>
 
       <div class="dropdown-content">
-        <a href="/html%20pages/aboutomegax.html">ABOUT OMEGA X</a>
-        <a href="/html%20pages/aboutthisproject.html">ABOUT THE SITE</a>
+        <a href="/html%20pages/aboutomegax.html" class="drop about">ABOUT OMEGA X</a>
+        <a href="/html%20pages/aboutthisproject.html" class="drop about" style="border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;">ABOUT THE SITE</a>
       </div>
     </div>
   </nav>
@@ -46,9 +49,7 @@
     <br>
 
     <p>What would you like your letter to say?</p>
-    <textarea name="lettercontent" maxlength="500" required wrap="hard" cols="100" style="height:150px;width:350px;resize: none;"></textarea><br>
-
-    <input type="submit" name="submit" value="Submit">
+    <textarea name="lettercontent" id="message" maxlength="500" required wrap="hard" cols="100"></textarea><br>
 
     <button type="submit">Submit</button>
 
@@ -69,6 +70,33 @@
   if (signature.checked) {
     document.getElementById("nickname").disabled = false;
   }
+
+  const drop = document.getElementsByClassName("drop");
+  const x = document.getElementById("navig");
+
+  if (drop.item(0) === x.querySelector(":hover")|| drop.item(1) ===
+          x.querySelector(":hover")) {
+    drop.item(0).style.display = "block!important";
+    drop.item(1).style.display = "block!important";
+  }
+  else {
+    drop.item(0).style.display = "none!important";
+    drop.item(1).style.display = "none!important";
+  }
+
+  const abouut = document.getElementsByClassName("about");
+
+  function mOver() {
+
+      drop.item(0).style.display = "block!important";
+      drop.item(1).style.display = "block!important";
+
+  }
+  function mOut() {
+    drop.item(0).style.display = "none!important";
+    drop.item(1).style.display = "none!important";
+  }
+
 </script>
 
 </body>

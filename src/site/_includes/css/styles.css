@@ -8,11 +8,27 @@ READ LETTERS
 FOOTER / CREDIT
 */
 
+/*fonts
+
+fallback = font: 14px "Trebuchet MS", Helvetica, sans-serif;
+    font-family: 'Cabin', sans-serif;
+
+    font-family: 'Comfortaa', cursive;
+
+    font-family: 'Hanken Grotesk', sans-serif;
+
+    font-family: 'Rubik', sans-serif;
+
+*/
+
 * {
     box-sizing: border-box;
+    font: 14px "Trebuchet MS", Helvetica, sans-serif;
 }
 body {
     background-color: var(--pink4);
+    background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 :root {
     --pink1: #ff60b0;
@@ -60,21 +76,24 @@ header {
 }
 nav {
     /*here*/
-    border: 2px dotted orangered;
+    /*border: 2px dotted orangered;*/
     width: max-content;
     margin: auto;
     padding: 5px;
     overflow: hidden;
+
+
 }
 nav a {
     /*here*/
-    border: 5px dashed var(--grey1);
+    /*border: 5px dashed var(--grey1);*/
     text-decoration: none;
     float: left;
     padding: 12px 12px;
     /*max-width: 130px;*/
     background-color: var(--grey2);
     color: var(--grey1);
+    font-size: 20px;
 }
 nav a:hover {
     background-color: var(--grey1);
@@ -85,11 +104,6 @@ nav a:hover {
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
-.about {
-    /*background-color: mediumaquamarine;*/
-    /*display: block;*/
-    /*float: right;*/
 }
 .dropdown-content {
     display: none;
@@ -111,12 +125,7 @@ nav a:hover {
     display: block;
     text-align: center;
 }
-.about:hover {
-    /*background-color: blueviolet;*/
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+
 
 
 /*HOME PAGE GRAPHIC*/
@@ -266,7 +275,87 @@ iframe {
     width: 272px;
 }
 
+/*WRITE LETTERS - FORM*/
+/* Rounded corner gradient border - credit: stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient */
+#letter-form-div {
+    margin-top: 20px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--pink3);
+    position: relative;
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    padding: 10px;
+    box-shadow: 0 3px 9px darkslategray, inset 0 0 9px var(--eggshell);
+}
+#letter-form-div::after {
+    position: absolute;
+    top: -4px; bottom: -4px;
+    left: -4px; right: -4px;
+    background: linear-gradient(100deg, #D279EE, #F8C390);
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
+}
+form {
+    padding: 5px 20px 20px;
 
+}
+label {}
+#letter-form-div > p {}
+
+#yessign {}
+#nosign {}
+#nickname {}
+#message {
+    height:150px;
+    width: 100%;
+    resize: none;
+    /*maxlength="500"
+    required wrap="hard"
+    cols="100"*/
+}
+/*
+  --gradient-start: #D279EE; purple
+  --gradient-end: #F8C390; orange
+    .loader {
+        position: relative;
+        width: 350px;
+        height: 350px;
+    }
+    .loader span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
+    }
+    .loader span:nth-child(1) {
+        filter: blur(5px);
+    }
+    .loader span:nth-child(2) {
+        filter: blur(10px);
+    }
+    .loader span:nth-child(3) {
+        filter: blur(25px);
+    }
+    .loader span:nth-child(4) {
+        filter: blur(50px);
+    }
+    .loader:after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: #f1f1f1;
+        border: solid white 10px;
+        border-radius: 50%;
+    }
+    */
 
 /*FOOTER / CREDIT*/
 footer {

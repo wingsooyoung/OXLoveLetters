@@ -12,13 +12,15 @@
 
     <script src="https://unpkg.com/phosphor-icons"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 <header>
     <nav>
         <div class="dropdown">
-            <a href="/">HOME</a>
+            <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;">HOME</a>
 
             {%- for page in collections.pages -%}
                 {% if page.data.title == 'Write Letters' %}
@@ -28,14 +30,14 @@
                 {% endif %}
             {%- endfor -%}
 
-            <a href="/" class="about">ABOUT <i class="ph-caret-down"></i></a>
+            <a href="/" class="about" style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;">ABOUT <i class="ph-caret-down"></i></a>
 
             <div class="dropdown-content">
                 {%- for page in collections.pages -%}
                     {% if page.data.title == 'About OMEGA X' %}
                     <a href="{{ page.url }}">ABOUT OMEGA X</a>
                     {% elseif page.data.title == 'About This Project' %}
-                    <a href="{{ page.url }}">ABOUT THIS SITE</a>
+                    <a href="{{ page.url }}" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">ABOUT THIS SITE</a>
                     {% endif %}
                 {%- endfor -%}
             </div>
