@@ -32,7 +32,7 @@
 
           <a onclick="showDrop();" id="aboutbtn" class=""><i class="ph-info-bold"></i> ABOUT <i class="ph-caret-down"></i></a>
 
-          <div id="dropdown-content" class="">
+          <div id="dropdowncontent" class="">
               {%- for page in collections.pages -%}
                   {% if page.data.title == 'About OMEGA X' %}
                       <a href="{{ page.url }}">ABOUT OMEGA X</a>
