@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Write A Letter</title>
 
   <link rel="stylesheet" href="/src/site/_includes/css/styles.css">
@@ -15,17 +16,18 @@
 <header>
   <nav>
     <div class="dropdown" id="navig">
-      <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;">HOME</a>
-      <a href="/html%20pages/readletters.html">READ LETTERS</a>
-      <a href="/html%20pages/writeletters.html">WRITE A LETTER</a>
+      <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-house-bold"></i>
+        HOME</a>
+      <a href="/html%20pages/readletters.html"><i class="ph-envelope-open-bold"></i> READ LETTERS</a>
+      <a href="/html%20pages/writeletters.html"><i class="ph-pencil-line-bold"></i> WRITE A LETTER</a>
 
-      <span class="about"><a href="/"  onmouseover="mOver()" onmouseout="mOut()"
-                      style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;">ABOUT <i
-              class="ph-caret-down"></i></a></span>
+      <a onclick="showDrop();"
+         id="aboutbtn" class=""><i class="ph-info-bold"></i> ABOUT <i
+              class="ph-caret-down"></i></a>
 
-      <div class="dropdown-content">
-        <a href="/html%20pages/aboutomegax.html" class="drop about">ABOUT OMEGA X</a>
-        <a href="/html%20pages/aboutthisproject.html" class="drop about" style="border-bottom-right-radius: 5px;
+      <div id="dropdowncontent" class="">
+        <a href="/html%20pages/aboutomegax.html">ABOUT OMEGA X</a>
+        <a href="/html%20pages/aboutthisproject.html" style="border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;">ABOUT THE SITE</a>
       </div>
     </div>
@@ -40,7 +42,7 @@
     <input type="radio" id="yessign" name="signature" value="True" required>
     <label for="yessign">Yes</label><br>
 
-    <input type="radio" id="nosign" name="signature" value="False" required checked>
+    <input type="radio" id="nosign" name="signature" value="False" onclick="noCheck()" required>
     <label for="nosign">No</label> <small><em>*If this option is selected, your letter will be signed with "FOR X" by default.</em></small><br>
     <br>
 
@@ -49,9 +51,9 @@
     <br>
 
     <p>What would you like your letter to say?</p>
-    <textarea name="lettercontent" id="message" maxlength="500" required wrap="hard" cols="100"></textarea><br>
+    <textarea name="lettercontent" id="message" required wrap="hard" cols="100"></textarea><br>
 
-    <button type="submit">Submit</button>
+    <button type="submit" id="sendbtn">SUBMIT</button>
 
   </form>
 </div>
@@ -66,36 +68,6 @@
 
 
 <script type="text/javascript">
-  const signature = document.getElementById("yessign");
-  if (signature.checked) {
-    document.getElementById("nickname").disabled = false;
-  }
-
-  const drop = document.getElementsByClassName("drop");
-  const x = document.getElementById("navig");
-
-  if (drop.item(0) === x.querySelector(":hover")|| drop.item(1) ===
-          x.querySelector(":hover")) {
-    drop.item(0).style.display = "block!important";
-    drop.item(1).style.display = "block!important";
-  }
-  else {
-    drop.item(0).style.display = "none!important";
-    drop.item(1).style.display = "none!important";
-  }
-
-  const abouut = document.getElementsByClassName("about");
-
-  function mOver() {
-
-      drop.item(0).style.display = "block!important";
-      drop.item(1).style.display = "block!important";
-
-  }
-  function mOut() {
-    drop.item(0).style.display = "none!important";
-    drop.item(1).style.display = "none!important";
-  }
 
 </script>
 

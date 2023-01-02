@@ -15,5 +15,14 @@ function writebtnFunc() {
     setTimeout(myWriteURL, 5000);
 }
 
-const sign = document.getElementById("yessign");
-document.getElementById("nickname").disabled = !sign.checked;
+const nname = document.getElementById("nickname");
+function yesCheck() {
+    nname.disabled = false;
+}
+function noCheck() {
+    nname.disabled = true;
+}
+function showDrop() {
+    document.getElementById("dropdowncontent").classList.toggle("drop");
+    document.getElementById("aboutbtn").classList.toggle("corners");
+}

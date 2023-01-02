@@ -20,15 +20,43 @@ fallback = font: 14px "Trebuchet MS", Helvetica, sans-serif;
     font-family: 'Rubik', sans-serif;
 
 */
+ @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html {
+    margin: 0;
+    width: 100%;
+    font-size: 100%;
+    font-weight: 500;
+    font-family: 'Hanken Grotesk', "Trebuchet MS", sans-serif;
+}
 * {
     box-sizing: border-box;
-    font: 14px "Trebuchet MS", Helvetica, sans-serif;
+}
+small {
+    font-size: x-small;
 }
 body {
+    /*border: 1px solid yellow;*/
+    margin: 0;
+    padding: 0;
     background-color: var(--pink4);
     background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
-    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.9em;
+}
+html::-webkit-scrollbar {
+    width: 8px;
+}
+html::-webkit-scrollbar-track {
+    background: #00000080;
+    /*box-shadow: inset 0 0 5px var(--pink3);*/
+    /*border-radius: 10px;*/
+}
+html::-webkit-scrollbar-thumb {
+    background: #99AA00;
+    /*border-radius: 10px;*/
+}
+html::-webkit-scrollbar-thumb:hover {
+    background: #7C8500;
 }
 :root {
     --pink1: #ff60b0;
@@ -66,64 +94,122 @@ a {
 }
 i {
     font-size: smaller;
+    vertical-align: -0.1em;
 }
 
 /*NAVIGATION MENU*/
 header {
-    /*here*/
-    border: 2px solid greenyellow;
+    /*border: 2px solid greenyellow;
+    #df3a6b
+    #de376a
+    #db245b
+    #c52052*/
     text-align: center;
+    width: 100%;
+    margin: 0 0 5vh;
+    background-color: #df3a6b;
+    border-bottom-color: green;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-image: linear-gradient(to top, #de376a, #db245b, #c52052) 100 / 0 0 5px;
 }
 nav {
-    /*here*/
-    /*border: 2px dotted orangered;*/
     width: max-content;
     margin: auto;
-    padding: 5px;
+    padding: 15px 0 15px;
     overflow: hidden;
-
-
 }
 nav a {
-    /*here*/
-    /*border: 5px dashed var(--grey1);*/
     text-decoration: none;
     float: left;
-    padding: 12px 12px;
-    /*max-width: 130px;*/
-    background-color: var(--grey2);
-    color: var(--grey1);
-    font-size: 20px;
+    padding: 8px 12px;
+    background-color: #F3E5F5;
+    color: #373737;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 nav a:hover {
-    background-color: var(--grey1);
+    background-color: #373737;
     color: white;
 }
 .dropdown {
-    /*display: inline;*/
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-.dropdown-content {
+#dropdowncontent {
     display: none;
-    /*position: absolute;*/
     float: right;
     clear: both !important;
-
     max-width: 250px !important;
-
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     right: 0;
 }
-.dropdown-content a {
+#dropdowncontent a {
     float: none;
-    /*color: black;*/
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: center;
+}
+.drop {
+    display:block!important;
+}
+#aboutbtn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.corners {
+    border-bottom-right-radius: 0!important;
+}
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    nav {
+        max-width: 95%;
+        font-size: 0.65em;
+    }
+    nav a {
+        padding: 8px 4px;
+    }
+    #letter-form-div {
+        width:90%;
+        font-size: 0.8em;
+    }
+    #nickname {
+        font-size: 0.8em;
+    }
+    form {
+        margin: 0;
+        padding: 0 8px 5px!important;
+    }
+    #sendbtn {
+        padding: 3px 5px!important;
+        font-size: 1.1em!important;
+    }
+}
+@media screen and (min-width: 431px) and (max-width: 600px) {
+    nav {
+        max-width: 95%;
+        font-size: 0.65em;
+    }
+    nav a {
+        padding: 8px 4px;
+    }
+    #letter-form-div {
+        width:90%;
+        font-size: 0.8em;
+    }
+    #nickname {
+        font-size: 0.8em;
+    }
+    form {
+        margin: 0;
+        padding: 0 8px 5px!important;
+    }
+    #sendbtn {
+        padding: 3px 5px!important;
+        font-size: 1.1em!important;
+    }
 }
 
 
@@ -224,19 +310,19 @@ img {
     scrollbar-color: var(--purple2) var(--pink4);
     scrollbar-width: thin;
 }
-::-webkit-scrollbar {
+#contentbox::-webkit-scrollbar, textarea::-webkit-scrollbar {
     width: 8px;
 }
-#contentbox::-webkit-scrollbar-track {
+#contentbox::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
     background: var(--pink4);
     box-shadow: inset 0 0 5px var(--pink3);
     border-radius: 10px;
 }
-#contentbox::-webkit-scrollbar-thumb {
+#contentbox::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
     background: var(--purple2);
     border-radius: 10px;
 }
-#contentbox::-webkit-scrollbar-thumb:hover {
+#contentbox::-webkit-scrollbar-thumb:hover, textarea::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 #namebox {
@@ -278,11 +364,11 @@ iframe {
 /*WRITE LETTERS - FORM*/
 /* Rounded corner gradient border - credit: stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient */
 #letter-form-div {
-    margin-top: 20px;
-    max-width: 80%;
+    /*margin-top: 30svh;*/
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--pink3);
+    background-color: #FFC1E3;
     position: relative;
     border: 4px solid transparent;
     border-radius: 16px;
@@ -300,66 +386,54 @@ iframe {
     border-radius: 16px;
 }
 form {
-    padding: 5px 20px 20px;
-
+    padding: 5px 20px 10px;
 }
 label {}
 #letter-form-div > p {}
-
+#sendbtn {
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border: 4px solid deeppink;
+    border-radius: 7px;
+    padding: 7px 9px;
+    background-color: #ff99cf;
+    font-weight: 700;
+    font-size: larger;
+    box-shadow: inset 0 0 5px 2px deeppink, 1px 1px 8px 0 #B78AA2;
+}
+#sendbtn:hover {
+    background-color: darkseagreen;
+    border-color: seagreen;
+    box-shadow: inset 0 0 5px 2px seagreen, 1px 1px 8px 0 #B78AA2;
+    /*color: darkslategrey;*/
+}
 #yessign {}
 #nosign {}
-#nickname {}
+#nickname {
+    border-radius: 5px;
+    padding: 3px 7px;
+}
 #message {
-    height:150px;
+    height: 150px;
     width: 100%;
     resize: none;
-    /*maxlength="500"
-    required wrap="hard"
-    cols="100"*/
+    border-radius: 5px;
 }
-/*
-  --gradient-start: #D279EE; purple
-  --gradient-end: #F8C390; orange
-    .loader {
-        position: relative;
-        width: 350px;
-        height: 350px;
-    }
-    .loader span {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
-    }
-    .loader span:nth-child(1) {
-        filter: blur(5px);
-    }
-    .loader span:nth-child(2) {
-        filter: blur(10px);
-    }
-    .loader span:nth-child(3) {
-        filter: blur(25px);
-    }
-    .loader span:nth-child(4) {
-        filter: blur(50px);
-    }
-    .loader:after {
-        content: '';
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        background: #f1f1f1;
-        border: solid white 10px;
-        border-radius: 50%;
-    }
-    */
+textarea:focus, #nickname:focus {
+    outline: medium ridge darkslateblue;
+
+    /*background: rgba(0, 0, 0, 0.1);*/
+
+}
+
+
 
 /*FOOTER / CREDIT*/
 footer {
-    margin-top: 300px;
+    padding-top: 10%;
     text-align: center;
     color: var(--eggshell);
 }
