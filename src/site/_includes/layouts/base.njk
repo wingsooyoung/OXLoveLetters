@@ -20,21 +20,28 @@
 <header>
   <nav>
     <div class="dropdown">
-      <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-house-bold"></i>
-        HOME</a>
-      <a href="/html%20pages/readletters.html"><i class="ph-envelope-open-bold"></i> READ LETTERS</a>
-      <a href="/html%20pages/writeletters.html"><i class="ph-pencil-line-bold"></i> WRITE A LETTER</a>
+          <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-house-bold"></i> HOME</a>
 
-      <a onclick="showDrop();"
-         id="aboutbtn" class=""><i class="ph-info-bold"></i> ABOUT <i
-              class="ph-caret-down"></i></a>
+          {%- for page in collections.pages -%}
+              {% if page.data.title == 'Read Letters' %}
+                  <a href="{{ page.url }}"><i class="ph-envelope-open-bold"></i> READ LETTERS</a>
+              {% elseif page.data.title == 'Write Letters' %}
+                  <a href="{{ page.url }}"><i class="ph-pencil-line-bold"></i> WRITE A LETTER</a>
+              {% endif %}
+          {%- endfor -%}
 
-      <div id="dropdowncontent" class="">
-        <a href="/html%20pages/aboutomegax.html">ABOUT OMEGA X</a>
-        <a href="/html%20pages/aboutthisproject.html" style="border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;">ABOUT THE SITE</a>
+          <a onclick="showDrop();" id="aboutbtn" class=""><i class="ph-info-bold"></i> ABOUT <i class="ph-caret-down"></i></a>
+
+          <div id="dropdown-content" class="">
+              {%- for page in collections.pages -%}
+                  {% if page.data.title == 'About OMEGA X' %}
+                      <a href="{{ page.url }}">ABOUT OMEGA X</a>
+                  {% elseif page.data.title == 'About This Project' %}
+                      <a href="{{ page.url }}" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">ABOUT THIS SITE</a>
+                  {% endif %}
+              {%- endfor -%}
+          </div>
       </div>
-    </div>
   </nav>
 </header>
 
