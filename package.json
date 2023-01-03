@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "axios": "^1.2.1",
+    "axios": "1.1.2",
     "dotenv": "^16.0.3",
     "got": "^12.5.3",
     "gravatar": "^1.8.2",
