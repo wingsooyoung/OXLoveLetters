@@ -16,7 +16,7 @@ exports.handler = function (event, context, callback) {
     var body = JSON.parse(event.body);
 
     // prepare call to the Slack API
-    var slackURL = process.env.SLACK_WEBHOOK_URL
+    var slackURL = process.env.SLACK_WEBHOOK_URL;
     var slackPayload = {
         "text": "New comment on " + URL,
         "attachments": [
@@ -29,7 +29,7 @@ exports.handler = function (event, context, callback) {
             },
             {
                 "fallback": "Manage comments on " + URL,
-                "callback_id": "form-action",
+                // "callback_id": "form-action",
                 "actions": [
                     {
                         "type": "button",
