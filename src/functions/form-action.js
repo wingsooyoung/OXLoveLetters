@@ -27,7 +27,7 @@ function purgeComment(id) {
 /*
   Handle the lambda invocation
 */
-export function handler(event, context, callback) {
+exports.handler = function (event, context, callback) {
 
     // parse the payload
     var body = event.body.split("payload=")[1];
