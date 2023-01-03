@@ -27,7 +27,7 @@ exports.handler = function (event, context, callback) {
             },
             {
                 "fallback": "Manage comments on " + URL,
-                // "callback_id": "form-action",
+                "callback_id": "form-action",
                 "actions": [
                     {
                         "type": "button",
