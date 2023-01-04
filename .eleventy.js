@@ -10,6 +10,12 @@ module.exports = function(config) {
     config.addPlugin(EleventyServerlessBundlerPlugin, {
         name: "serverless",
         functionsDir: "src/functions",
+        copy: ["form-action.js", "form-handler.js"],
+        copyEnabled: true
+    });
+    config.addPlugin(EleventyServerlessBundlerPlugin, {
+        name: "dynamic",
+        functionsDir: "src/functions",
     });
 
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)

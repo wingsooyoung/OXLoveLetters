@@ -16,15 +16,15 @@ package = "netlify-plugin-form-submissions"
   dataDirectory = "src/site/_data"
 
 [[redirects]]
-from = "/pages/writeletters/:slug/"
-to = "/src/functions/serverless"
-status = 200
-force = true
-_generated_by_eleventy_serverless = "serverless"
-
-[[redirects]]
 from = "/pages/writeletters/:slug/dynamic/"
-to = "/src/functions/dynamic"
+to = "/.netlify/functions/dynamic"
 status = 200
 force = true
 _generated_by_eleventy_serverless = "dynamic"
+
+[[redirects]]
+from = "/pages/writeletters/:slug/"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
