@@ -6,6 +6,9 @@ node_modules
 
 dist
 
+src/functions/serverless/**
+!src/functions/serverless/index.js
+
 #src/site/_includes/css/*
 
 src/site/_data/*.json

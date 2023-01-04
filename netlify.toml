@@ -13,4 +13,18 @@
 [plugins.inputs]
     formNames = "approved-letters"
     dataDirectory = "src/site/_data"
+
+[[redirects]]
+from = "/:slug/dynamic/"
+to = "/src/functions/dynamic"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "dynamic"
+
+[[redirects]]
+from = "/:slug/"
+to = "/src/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
     

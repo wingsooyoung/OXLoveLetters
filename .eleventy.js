@@ -1,3 +1,5 @@
+const { EleventyServerlessBundlerPlugin } = require("@11ty/eleventy");
+
 module.exports = function(config) {
     var helpers = require('handlebars-helpers')();
 
@@ -5,6 +7,10 @@ module.exports = function(config) {
     config.addPassthroughCopy("assets");
     config.addPassthroughCopy("index.html");
 
+    config.addPlugin(EleventyServerlessBundlerPlugin, {
+        name: "serverless",
+        functionsDir: "src/functions",
+    });
 
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
     config.addShortcode("footer", function() {
