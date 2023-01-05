@@ -1,15 +1,18 @@
-var request = require("request");
+// var request = require("request");
+import request from 'request';
 
 // populate environment variables locally.
-require('dotenv').config()
+// require('dotenv').config()
+import 'dotenv/config';
 
 const URL = "https://forxloveletters.com/";
 
 /*
   Our serverless function handler
 */
-exports.handler = function (event, context, callback) {
-
+export const handler = async (event, context) => {
+// exports.handler = function (event, context, callback) {
+    console.log(event);
     // get the arguments from the notification
     var body = JSON.parse(event.body);
 

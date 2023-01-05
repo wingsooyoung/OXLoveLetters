@@ -1,7 +1,10 @@
-var request = require("request");
+// var request = require("request");
+import request from 'request';
 
 // populate environment variables locally.
-require('dotenv').config();
+// require('dotenv').config();
+import 'dotenv/config';
+
 const {
     NETLIFY_AUTH_TOKEN
 } = process.env;
@@ -27,13 +30,24 @@ function purgeComment(id) {
 /*
   Handle the lambda invocation
 */
-exports.handler = function (event, context, callback) {
+export const handler = async (event, context) => {
+// exports.handler = function (event, context, callback) {
 
     // parse the payload
+    console.log('Event: ', event.body)
     var body = event.body.split("payload=")[1];
+    console.log('body: ', body);
     var payload = JSON.parse(decodeURIComponent(body));
+    console.log('payload: ', payload);
+
     var method = payload.actions[0].name;
     var id = payload.actions[0].value;
+
+    // parse the payload
+    // var body = event.body.split("payload=")[1];
+    // var payload = JSON.parse(unescape(body));
+    // var method = payload.actions[0].name;
+    // var id = payload.actions[0].value;
 
     if(method === "hide") {
         purgeComment(id);
@@ -84,7 +98,7 @@ exports.handler = function (event, context, callback) {
                     var msg = "Letter registered. Site deploying to include it.";
                     callback(null, {
                         statusCode: 200,
-                        body: msg
+                        body: JSON.stringify(msg)
                     })
                     return console.log(msg);
                 });

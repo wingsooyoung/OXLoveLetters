@@ -7,6 +7,8 @@ publish = "dist"
 
 [functions]
 directory = "src/functions"
+node_bundler = "esbuild"
+
 
 [[plugins]]
 package = "netlify-plugin-form-submissions"
@@ -16,14 +18,14 @@ package = "netlify-plugin-form-submissions"
   dataDirectory = "src/site/_data"
 
 [[redirects]]
-from = "/:slug/dynamic/"
+from = "/pages/writeletters/:slug/dynamic/"
 to = "/.netlify/functions/dynamic"
 status = 200
 force = true
 _generated_by_eleventy_serverless = "dynamic"
 
 [[redirects]]
-from = "/:slug/"
+from = "/pages/writeletters/:slug/"
 to = "/.netlify/functions/serverless"
 status = 200
 force = true
