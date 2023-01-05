@@ -8,7 +8,8 @@ publish = "dist"
 [functions]
 directory = "src/functions"
 node_bundler = "esbuild"
-
+external_node_modules = ["@11ty/eleventy", "@11ty/dependency-tree"]
+included_files = ["src/functions/serverless/**/*", "src/functions/dynamic/**/*"]
 
 [[plugins]]
 package = "netlify-plugin-form-submissions"
