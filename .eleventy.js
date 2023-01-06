@@ -7,16 +7,34 @@ module.exports = function(config) {
     config.addPassthroughCopy("assets");
     config.addPassthroughCopy("index.html");
 
-    config.addPlugin(EleventyServerlessBundlerPlugin, {
-        name: "serverless",
-        functionsDir: "src/functions",
-        copy: ["form-action.js", "form-handler.js"],
-        copyEnabled: true
-    });
-    config.addPlugin(EleventyServerlessBundlerPlugin, {
-        name: "dynamic",
-        functionsDir: "src/functions",
-    });
+    // config.addPlugin(EleventyServerlessBundlerPlugin, {
+    //     name: "serverless",
+    //     functionsDir: "src/functions",
+    //     copy: ["form-action.js", "form-handler.js"],
+    //     copyEnabled: true
+    // });
+    // config.addPlugin(EleventyServerlessBundlerPlugin, {
+    //     name: "dynamic",
+    //     functionsDir: "src/functions",
+    // });
+    // permalink:
+    //     build: "/pages/writeletters/"
+    // serverless: "/pages/writeletters/:slug/"
+    // dynamic: "/pages/writeletters/:slug/dynamic/"
+    //
+    // [[redirects]]
+    // from = "/:slug/dynamic/"
+    // to = "/.netlify/functions/dynamic"
+    // status = 200
+    // force = true
+    // _generated_by_eleventy_serverless = "dynamic"
+    //
+    // [[redirects]]
+    // from = "/:slug/"
+    // to = "/.netlify/functions/serverless"
+    // status = 200
+    // force = true
+    // _generated_by_eleventy_serverless = "serverless"
 
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
     config.addShortcode("footer", function() {

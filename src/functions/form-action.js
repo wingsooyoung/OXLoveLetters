@@ -43,7 +43,6 @@ exports.handler = function (event, context, callback) {
         });
     }
 
-
     else if (method === "approve"){
 
         // get the comment data from the queue

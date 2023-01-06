@@ -7,9 +7,9 @@ node_modules
 dist
 
 src/functions/serverless/**
-!src/functions/serverless/index.js
+#!src/functions/serverless/index.js
 src/functions/dynamic/**
-!src/functions/dynamic/index.js
+#!src/functions/dynamic/index.js
 
 #src/site/_includes/css/*
 

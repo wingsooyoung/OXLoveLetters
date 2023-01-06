@@ -15,16 +15,4 @@ package = "netlify-plugin-form-submissions"
   formNames = "approved-letters"
   dataDirectory = "src/site/_data"
 
-[[redirects]]
-from = "/:slug/dynamic/"
-to = "/.netlify/functions/dynamic"
-status = 200
-force = true
-_generated_by_eleventy_serverless = "dynamic"
 
-[[redirects]]
-from = "/:slug/"
-to = "/.netlify/functions/serverless"
-status = 200
-force = true
-_generated_by_eleventy_serverless = "serverless"
