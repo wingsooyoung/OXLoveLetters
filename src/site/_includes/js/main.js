@@ -27,8 +27,13 @@ function showDrop() {
     document.getElementById("aboutbtn").classList.toggle("corners");
 }
 
-document.querySelector('#letter-form').submit(function() {
-    document.querySelector(this).querySelector('#nickname').each(function() {
-        if($.trim(document.querySelector(this).value) == '') document.querySelector(this).val(document.querySelector(this).attr('placeholder'));
-    });
-});
+// document.querySelector('#letter-form').submit();
+function checkName() {
+    const myform = document.querySelector('#letter-form');
+    const mynameinput = myform.querySelector('#nickname');
+
+    if(mynameinput.value.trim() === '') {
+        mynameinput.value = mynameinput.getAttribute('placeholder');
+    }
+
+}

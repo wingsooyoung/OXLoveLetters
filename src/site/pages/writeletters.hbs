@@ -8,7 +8,7 @@ permalink:
 ---
 
 <div id="letter-form-div">
-  <form name="letter-form" id="letter-form" method="POST" data-netlify="true" accept-charset="UTF-8">
+  <form name="letter-form" id="letter-form" method="POST" data-netlify="true" accept-charset="UTF-8" onsubmit="checkName()">
     <input name="path" type="hidden" value="{{ page.url }}">
 
     <p>Would you like to sign your letter with a name or nickname?</p>
@@ -21,7 +21,7 @@ permalink:
     <br>
 
     <label for="nickname">Name / Nickname:</label>
-    <input type="text" id="nickname" name="nickname" placeholder="FOR X" value="FOR X" maxlength="30" disabled><br>
+    <input type="text" id="nickname" name="nickname" placeholder="FOR X" maxlength="30" disabled><br>
     <br>
 
     <p>What would you like your letter to say?</p>
