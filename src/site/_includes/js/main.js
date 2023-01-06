@@ -26,14 +26,3 @@ function showDrop() {
     document.getElementById("dropdowncontent").classList.toggle("drop");
     document.getElementById("aboutbtn").classList.toggle("corners");
 }
-
-// document.querySelector('#letter-form').submit();
-function checkName() {
-    const myform = document.querySelector('#letter-form');
-    const mynameinput = myform.querySelector('#nickname');
-
-    if(mynameinput.value.trim() === '') {
-        mynameinput.value = mynameinput.getAttribute('placeholder');
-    }
-
-}

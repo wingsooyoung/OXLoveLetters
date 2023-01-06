@@ -12,6 +12,12 @@ exports.handler = function (event, context, callback) {
 
     // get the arguments from the notification
     var body = JSON.parse(event.body);
+    var signedName;
+    if (body.data.nickname.trim() === "") {
+        signedName = "FOR X";
+    } else {
+        signedName = body.data.nickname;
+    }
 
     // prepare call to the Slack API
     var slackURL = process.env.SLACK_WEBHOOK_URL;
@@ -22,7 +28,7 @@ exports.handler = function (event, context, callback) {
                 "fallback": "New letter submitted on the site",
                 "color": "#444",
                 "signature":body.data.signature,
-                "nickname":body.data.nickname,
+                "nickname": signedName,
                 "message":body.data.message
             },
             {

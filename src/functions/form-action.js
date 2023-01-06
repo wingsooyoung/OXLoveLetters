@@ -56,13 +56,19 @@ exports.handler = function (event, context, callback) {
         request(url, function(err, response, body){
             if(!err && response.statusCode === 200){
                 var data = JSON.parse(body).data;
+                var signedName;
+                if (data.nickname.trim() === "") {
+                    signedName = "FOR X";
+                } else {
+                    signedName = data.nickname;
+                }
 
                 // now we have the data, let's massage it and POST IT TO THE APPROVED FORM
                 var payload = {
                     'form-name' : "approved-letters",
                     'path': data.path,
                     'signature': data.signature,
-                    'nickname': data.nickname,
+                    'nickname': signedName,
                     'message': data.message
                 };
                 var approvedURL = URL;
