@@ -5,14 +5,12 @@ module.exports = () => {
 
     const {
         NETLIFY_AUTH_TOKEN,
-        SLACK_WEBHOOK_URL,
         SITE_NAME
     } = process.env;
 
     return {
-        ready : NETLIFY_AUTH_TOKEN && SLACK_WEBHOOK_URL ? true : false,
-        NETLIFY_AUTH_TOKEN_ready : NETLIFY_AUTH_TOKEN ? true : false,
-        SLACK_WEBHOOK_URL_ready : SLACK_WEBHOOK_URL ? true : false,
+        ready : !!(NETLIFY_AUTH_TOKEN),
+        NETLIFY_AUTH_TOKEN_ready : !!NETLIFY_AUTH_TOKEN,
         SITE_NAME
     }
 

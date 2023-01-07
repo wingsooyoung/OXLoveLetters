@@ -1,11 +1,11 @@
 
-{%- for letter in letters -%}
+{%- for postcard in letters -%}
     <div class="containerbox grid-item">
         <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
-        <div id="contentbox" class="template">{{ letter.message }}</div>
+        <div id="contentbox" class="template">{{ postcard.message }}</div>
         <div id="namebox" class="template">
-            {% if letter.signature %}
-                {{ letter.nickname }}
+            {% if postcard.signature %}
+                {{ postcard.nickname }}
             {% else %}
                 FOR X
             {% endif %}

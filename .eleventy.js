@@ -1,8 +1,6 @@
 const { EleventyServerlessBundlerPlugin } = require("@11ty/eleventy");
 
 module.exports = function(config) {
-    var helpers = require('handlebars-helpers')();
-
     // eleventy config settings
     config.addPassthroughCopy("assets");
     config.addPassthroughCopy("index.html");
@@ -38,7 +36,8 @@ module.exports = function(config) {
         dir: {
             input: "src/site",
             output: "dist",
-            includes: "_includes"
+            includes: "_includes",
+            data: "_data"
         },
         templateFormats : ["hbs", "md", "html", "css", "js", "njk"],
         htmlTemplateEngine : "html"

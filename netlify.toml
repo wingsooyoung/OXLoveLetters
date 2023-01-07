@@ -12,7 +12,7 @@ directory = "src/functions"
 package = "netlify-plugin-form-submissions"
 
   [plugins.inputs]
-  formNames = "approved-letters"
+  formNames = "ALL"
   dataDirectory = "src/site/_data"
 
  [[redirects]]
