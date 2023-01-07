@@ -9,7 +9,7 @@ module.exports = () => {
         let letter = {
             signature: entry.data.signature,
             nickname: entry.data.nickname,
-            message: entry.data.message.trim()
+            message: entry.data.message
         };
         // Add it to an existing array or create a new one in the comments object
         if(letters[entry.data.path]){
