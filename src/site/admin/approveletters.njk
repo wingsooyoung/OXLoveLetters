@@ -1,0 +1,23 @@
+---
+title: Moderate Letter Submissions
+---
+
+<p>i get to approve or deny letter submissions as well as preview how they look on the template</p>
+
+<ul class="submissions">
+    {% for item in letter-form_submissions | reverse %}
+
+    <li>
+        <p>{{ item.data.signature }}</p>
+        <p>{{ item.data.nickname }}</p>
+        <p>{{ item.data.lettercontent }}</p>
+    </li>
+
+    {% endfor %}
+</ul>
+
+<div>
+    {% include "postcardtemplate.njk" %}
+</div>
+
+
