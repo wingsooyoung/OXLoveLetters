@@ -456,18 +456,18 @@ footer u {
 
 
 /* IDENTITY WIDGET */
-div[data-netlify-identity-menu] {
+div[data-netlify-identity-button] {
     /*outer container*/
-    border: 2px solid mediumaquamarine;
-    background: #55dbcb;
-    width: max-content;
+    /*border: 2px solid mediumaquamarine;*/
+    /*background: #55dbcb;*/
+    /*width: max-content;*/
     font-size: xx-small;
 }
 .identity-overlay {
     width: max-content;
-    outline: 3px solid grey;
-    border-radius: 5px;
-    padding: 8px;
-    float: left;
+    /*outline: 3px solid grey;*/
+    /*border-radius: 5px;*/
+    padding: 2px 12px;
+    float: right;
     position: absolute;
 }

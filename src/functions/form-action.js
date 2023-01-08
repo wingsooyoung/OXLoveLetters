@@ -6,8 +6,6 @@ const {
     NETLIFY_AUTH_TOKEN
 } = process.env;
 
-// hardcoding this for a moment... TO DO: replace request with something that follows redirects
-const URL = "https://forxloveletters.com/stub/index.html";
 
 /*
   delete this submission via the api

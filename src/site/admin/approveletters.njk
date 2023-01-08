@@ -5,7 +5,7 @@ title: Moderate Letter Submissions
 <p>i get to approve or deny letter submissions as well as preview how they look on the template</p>
 
 <ul class="submissions">
-    {% for item in letter-form_submissions | reverse %}
+    {% for item in submissions | reverse %}
 
     <li>
         <p>{{ item.data.signature }}</p>
@@ -19,5 +19,9 @@ title: Moderate Letter Submissions
 <div>
     {% include "postcardtemplate.njk" %}
 </div>
+
+<script>
+    const submissions = await require('./letter-form_submissions.json');
+</script>
 
 
