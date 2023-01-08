@@ -4,6 +4,8 @@ title: Moderate Letter Submissions
 
 <p>i get to approve or deny letter submissions as well as preview how they look on the template</p>
 
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vROQiEHxulW6vltEqIDf1t-Bt0ydJUfvmQFrRVm25jJBtQma4YB7rLxI1cNBRffosZojCeJ1klKicbo/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
 <ul class="submissions">
     {% for item in submissions | reverse %}
 
@@ -21,7 +23,7 @@ title: Moderate Letter Submissions
 </div>
 
 <script>
-    const submissions = await require('./letter-form_submissions.json');
+    const submissions = await require('../_data/letter-form_submissions.json');
 </script>
 
 
