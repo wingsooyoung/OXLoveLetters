@@ -467,37 +467,9 @@ div[data-netlify-identity-menu] {
     top: 50px;
     font-size: xx-small;
 }
-div[data-netlify-identity-menu] > {
-    list-style-type: none;
+.identity-overlay {
+    width: max-content;
+    outline: 3px solid grey;
+    border-radius: 5px;
+    padding: 8px;
 }
-
-/*ul .netlify-identity-menu {*/
-/*    !*list container*!*/
-/*    list-style-type: none;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
-/*li .netlify-identity-item {*/
-
-/*}*/
-/*li .netlify-identity-user-details {*/
-/*    !*first list item*!*/
-/*}*/
-/*span .netlify-identity-user {*/
-/*    !*login email*!*/
-/*    font-style: italic;*/
-/*    text-transform: uppercase;*/
-/*}*/
-/*a .netlify-identity-logout {*/
-/*    !*logout link*!*/
-/*    text-transform: uppercase;*/
-/*}*/
-
-/*a .netlify-identity-signup {*/
-/*    !*signup button*!*/
-/*    display: none;*/
-/*}*/
-/*a .netlify-identity-login {*/
-/*    !*login button*!*/
-/*    font-style: italic;*/
-/*}*/
