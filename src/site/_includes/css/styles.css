@@ -453,3 +453,47 @@ footer u {
     font-size: smaller;
     font-style: italic;
 }
+
+
+/* IDENTITY WIDGET */
+div[data-netlify-identity-menu] {
+    /*outer container*/
+    border: 2px solid mediumaquamarine;
+    background: #55dbcb;
+    width: max-content;
+    float: left;
+    position: absolute;
+    left:10px;
+    top: 50px;
+    font-size: xx-small;
+}
+ul .netlify-identity-menu {
+    /*list container*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li .netlify-identity-item {
+
+}
+li .netlify-identity-user-details {
+    /*first list item*/
+}
+span .netlify-identity-user {
+    /*login email*/
+    font-style: italic;
+    text-transform: uppercase;
+}
+a .netlify-identity-logout {
+    /*logout link*/
+    text-transform: uppercase;
+}
+
+a .netlify-identity-signup {
+    /*signup button*/
+    display: none;
+}
+a .netlify-identity-login {
+    /*login button*/
+    font-style: italic;
+}
