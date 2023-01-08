@@ -4,6 +4,7 @@ module.exports = function(config) {
     // eleventy config settings
     config.addPassthroughCopy("assets");
     config.addPassthroughCopy("index.html");
+    config.addPassthroughCopy("sheets");
 
     config.addPlugin(EleventyServerlessBundlerPlugin, {
         name: "serverless",
