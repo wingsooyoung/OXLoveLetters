@@ -2,7 +2,6 @@ var request = require("request");
 
 // populate environment variables locally.
 require('dotenv').config();
-const submissions = require('./letter-form_submissions.json');
 /*
   Our serverless function handler
 */
@@ -12,6 +11,8 @@ const submissions = require('./letter-form_submissions.json');
 
 exports.handler = function (event, context, callback) {
     // massage the approved letters data into the shape we'd like
+    const submissions = require('./letter-form_submissions.json');
+
     let postcards = {};
     for(var i = 0; i < submissions.length; i++) {
         let entry = submissions[i]
