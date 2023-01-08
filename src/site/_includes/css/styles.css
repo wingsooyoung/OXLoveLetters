@@ -461,10 +461,6 @@ div[data-netlify-identity-menu] {
     border: 2px solid mediumaquamarine;
     background: #55dbcb;
     width: max-content;
-    float: left;
-    position: absolute;
-    left:10px;
-    top: 50px;
     font-size: xx-small;
 }
 .identity-overlay {
@@ -472,4 +468,6 @@ div[data-netlify-identity-menu] {
     outline: 3px solid grey;
     border-radius: 5px;
     padding: 8px;
+    float: left;
+    position: absolute;
 }
