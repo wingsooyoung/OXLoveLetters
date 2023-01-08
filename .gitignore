@@ -17,4 +17,4 @@ src/site/_data/*.json
 
 .netlify
 
-credentials.json
+src/site/_data/credentials.json
