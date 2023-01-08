@@ -416,7 +416,7 @@ label {}
     border-radius: 5px;
     padding: 3px 7px;
 }
-#message {
+#lettercontent {
     height: 150px;
     width: 100%;
     resize: none;

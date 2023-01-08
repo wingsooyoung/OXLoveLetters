@@ -6,7 +6,7 @@
 exports.handler = function(event, context, callback) {
     console.log('submission-created')
     console.log('event', event)
-    console.log('context', context)
+    // console.log('context', context)
     return callback(null, {
         statusCode: 200,
         body: "Hello, World"
