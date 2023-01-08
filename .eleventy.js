@@ -28,7 +28,7 @@ module.exports = function(config) {
     config.addShortcode("footer", function() {
         return `<footer>
         <p><small><u>2022 </u><i class="ph-copyright"></i> <a href="https://twitter.com/oxmasterlist">OXMasterlist</a>
-        / <a href="https://omegaxmasterlist.tumblr.com">omegaxmasterlist</a> <i class="ph-key"><a href="/admin/approveletters"></a></i>
+        / <a href="https://omegaxmasterlist.tumblr.com">omegaxmasterlist</a> <a href="/admin/approveletters"><i class="ph-key" style="text-decoration: none;"></i></a>
         </small> <div class="identity-overlay"><div data-netlify-identity-menu></div></div></p>
         </footer>`;
     });
