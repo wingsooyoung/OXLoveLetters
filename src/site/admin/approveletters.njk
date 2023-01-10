@@ -7,10 +7,10 @@ title: Moderate Letter Submissions
 <iframe id="letter-sheet" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vROQiEHxulW6vltEqIDf1t-Bt0ydJUfvmQFrRVm25jJBtQma4YB7rLxI1cNBRffosZojCeJ1klKicbo/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 <ul class="listing">
-    {{ sheetstest | dump }}
+    {{ sheetstest | dump(2) }}
 
     {%- for item in sheetstest -%}
-        <li>{{ item.values[0] }}</li>
+        <li> ex {{ item.values[0] }}</li>
     {%- endfor -%}
 </ul>
 
