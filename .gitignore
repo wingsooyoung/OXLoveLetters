@@ -4,11 +4,11 @@
 
 **/node_modules/**
 
-dist
+#dist
 
-../untitled/serverless/**
+#../untitled/serverless/**
 #!src/functions/serverless/index.js
-../untitled/dynamic/**
+#../untitled/dynamic/**
 #!src/functions/dynamic/index.js
 
 #src/site/_includes/css/*
