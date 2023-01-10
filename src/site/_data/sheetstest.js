@@ -23,7 +23,7 @@ const {
 const sheetID = "1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM";
 // let sheetID = `1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM`;
 // const googleSheetUrl = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
-const googleSheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM/values/1/?alt=json&key=` + YOUR_API_KEY;
+const googleSheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM/values/1/?alt=json&key=${YOUR_API_KEY}`;
 
 module.exports = () => {
     return new Promise((resolve, reject) => {
