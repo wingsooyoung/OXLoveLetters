@@ -36,13 +36,15 @@ from = "/admin/*"
 to = "/admin/:splat"
 force = true
 status = 200
-conditions = {Role = ["admin", "creator"]}
+conditions = {App_metadata = {Role = ["admin", "creator"]}}
 
-[[redirects]]
-from = "/admin/*"
-to = "/pages/notallowed"
-status = 302
-force = true
+#"app_metadata": {"roles": ["investigator", "photographer"]}
+
+#[[redirects]]
+#from = "/admin/*"
+#to = "/pages/notallowed"
+#status = 302
+#force = true
 
 # Error Page Redirects
 [[redirects]]

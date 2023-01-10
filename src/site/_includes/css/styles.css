@@ -471,3 +471,9 @@ div[data-netlify-identity-button] {
     float: right;
     position: absolute;
 }
+
+/*approve or deny*/
+#letter-sheet {
+    height:auto;
+    width: 100%;
+}
