@@ -18,3 +18,4 @@ src/site/_data/*.json
 .netlify
 
 src/site/_data/credentials.json
+#!/src/site/_data/letter-form_submissions.json
