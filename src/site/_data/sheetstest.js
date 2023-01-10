@@ -1,25 +1,30 @@
 
 
 // sheetId: '1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM';
-// https://docs.google.com/spreadsheets/d/1DpRZ4IA6Xd_rd4sNnkpuTkp_-6KOEJJWS-VqZxw4oU0/edit#gid=0&range=A2
+// https:/ /docs.google.com/spreadsheets/d/1DpRZ4IA6Xd_rd4sNnkpuTkp_-6KOEJJWS-VqZxw4oU0/edit#gid=0&range=A2
 
 const axios  = require('axios');
 const seed   = require('../../../utils/save-seed.js');
+require("dotenv").config();
+const {
+    YOUR_API_KEY
+} = process.env;
 
 
 // Once a googel sheet is "published to the web" we can access its JSON
 // via a URL of this form. We just need to pass in the ID of the sheet
 // which we can find in the URL of the document.
-// https://spreadsheets.google.com/feeds/cells/${sheetID}/1/public/full?alt=json
+// https:/ /spreadsheets.google.com/feeds/cells/${sheetID}/1/public/full?alt=json
 
-// 'https://sheets.googleapis.com/v4/spreadsheets/1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM/values/1/?alt=json&key='
+// 'https:/ /sheets.googleapis.com/v4/spreadsheets/1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM/values/1/?alt=json&key='
 //  + YOUR_API_KEY;
-// https://sheets.googleapis.com/v4/spreadsheets/1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM/values/1/?alt=json&key=AIzaSyBOQeuna4PK-WCldGMOwOuAm9dHBpUoLlI
+// https:/ /sheets.googleapis.com/v4/spreadsheets/1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM/values/1/?alt=json&key=AIzaSyBOQeuna4PK-WCldGMOwOuAm9dHBpUoLlI
 
 const sheetID = "1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM";
 // let sheetID = `1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM`;
 // const googleSheetUrl = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
-const googleSheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM/values/1/?alt=json&key=AIzaSyBOQeuna4PK-WCldGMOwOuAm9dHBpUoLlI`;
+const googleSheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/1e4JKidqlL1JLYf_xQM8OSTSxrtNkHy7AR4AJKCkpEtM/values/1/?alt=json&key=` + YOUR_API_KEY;
+
 module.exports = () => {
     return new Promise((resolve, reject) => {
 
