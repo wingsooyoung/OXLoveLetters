@@ -6,18 +6,18 @@ module.exports = function(config) {
     config.addPassthroughCopy("index.html");
     config.addPassthroughCopy("sheets");
 
-    config.addPlugin(EleventyServerlessBundlerPlugin, {
-        name: "serverless",
-        functionsDir: "src/functions",
-        copy: ["form-action.js", "form-handler.js"],
-        copyEnabled: true
-    });
-    config.addPlugin(EleventyServerlessBundlerPlugin, {
-        name: "dynamic",
-        functionsDir: "src/functions",
-        copy: ["form-action.js", "form-handler.js"],
-        copyEnabled: true
-    });
+    // config.addPlugin(EleventyServerlessBundlerPlugin, {
+    //     name: "serverless",
+    //     functionsDir: "src/functions",
+    //     copy: ["form-action.js", "form-handler.js"],
+    //     copyEnabled: true
+    // });
+    // config.addPlugin(EleventyServerlessBundlerPlugin, {
+    //     name: "dynamic",
+    //     functionsDir: "src/functions",
+    //     copy: ["form-action.js", "form-handler.js"],
+    //     copyEnabled: true
+    // });
     // permalink:
     //     build: "/pages/writeletters/"
     // serverless: "/pages/writeletters/:slug/"
