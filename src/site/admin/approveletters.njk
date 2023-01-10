@@ -9,6 +9,10 @@ title: Moderate Letter Submissions
 <ul class="listing">
     {{ sheetstest | dump(2) }}
 
+    {%- for item in sheetstest.values -%}
+        <li> ex* {{ item }}</li>
+    {%- endfor -%}
+
     {%- for item in sheetstest -%}
         <li> ex {{ item.values[0] }}</li>
     {%- endfor -%}
