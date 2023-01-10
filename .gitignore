@@ -6,9 +6,9 @@
 
 dist
 
-src/functions/serverless/**
+../untitled/serverless/**
 #!src/functions/serverless/index.js
-src/functions/dynamic/**
+../untitled/dynamic/**
 #!src/functions/dynamic/index.js
 
 #src/site/_includes/css/*
