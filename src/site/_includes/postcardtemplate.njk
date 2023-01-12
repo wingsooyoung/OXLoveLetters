@@ -1,11 +1,11 @@
 
-{%- for postcard in letter-form_submissions -%}
+{%- for x, y, z, q in sheetstest.values -%}
     <div class="containerbox grid-item">
         <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
-        <div id="contentbox" class="template">{{ postcard.message }}</div>
+        <div id="contentbox" class="template">{{ q }}</div>
         <div id="namebox" class="template">
-            {% if postcard.signature %}
-                {{ postcard.nickname }}
+            {% if y %}
+                {{ z }}
             {% else %}
                 FOR X
             {% endif %}

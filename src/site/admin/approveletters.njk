@@ -13,6 +13,7 @@ title: Moderate Letter Submissions
     {%- for item in sheetstest.values -%}
         {{ loop.index }}. {{ item }}
     {%- endfor -%}
+{#    per row   #}
     <p>^test 2</p>
 
     {%- for item in sheetstest.values -%}
@@ -22,15 +23,16 @@ title: Moderate Letter Submissions
             {%- endfor -%}
         </ul>
     {%- endfor -%}
+{#    per item  #}
     <p>^test 3</p>
 
     {%- for x, y, z, q in sheetstest.values -%}
-        {{ loop.index }})
+        ROW {{ loop.index }})
         <ul>
-            path: {{ x }}
-            signature: {{ y }}
-            nickname: {{ z }}
-            lettercontent: {{ q }}
+            <li>path: {{ x }}</li>
+            <li>signature: {{ y }}</li>
+            <li>nickname: {{ z }}</li>
+            <li>lettercontent: {{ q }}</li>
         </ul>
     {%- endfor -%}
     <p>^test 4</p>
