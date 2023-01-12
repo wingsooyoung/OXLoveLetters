@@ -300,13 +300,13 @@ img {
 #contentbox {
     top: 45%;
     left: 50%;
-    transform: translate(-49%, -49%);
+    transform: translate(-51%, -49%);
     height: 40%;
-    width: 44%;
+    width: 50%;
     font-size: x-small;
     line-height: 16px;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-color: var(--purple2) var(--pink4);
     scrollbar-width: thin;
 }
@@ -325,15 +325,36 @@ img {
 #contentbox::-webkit-scrollbar-thumb:hover, textarea::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    height: 14px;
+    width: 16px;
+    background-position: center 4px;
+    background-image: url("/assets/scrollbarUP.svg");
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+    background-image: url("/assets/scrollbarUP.svg");
+}
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    height: 14px;
+    width: 16px;
+    background-position: center 5px;
+    background-image: url("/assets/scrollbarDOWN.svg");
+}
+::-webkit-scrollbar-button:single-button:vertical:increment:active {
+    background-image: url("/assets/scrollbarDOWN.svg");
+}
 #namebox {
     bottom: 17%;
     right: 25%;
-    width: 20%;
+    width: 18%;
     height: 8%;
     overflow: clip;
     line-height: 15px;
     font-size: x-small;
 }
+
 
 /*READ LETTERS*/
 .grid-container {
