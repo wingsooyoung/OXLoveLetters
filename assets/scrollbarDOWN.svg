@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="252.686" cy="340.915" r="215.554" id="gradient-0" gradientTransform="matrix(0.905627, -0.001586, 0.00221, 1.261776, 23.358399, -102.991418)" spreadMethod="pad">
+      <stop offset="0" style="stop-color: rgb(54, 29, 68);"/>
+      <stop offset="1" style="stop-color: rgb(117, 58, 152);"/>
+    </radialGradient>
+    <pattern x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100" id="pattern-0">
+      <rect x="0" y="0" width="50" height="100" style="fill: black;"/>
+    </pattern>
+    <pattern id="pattern-0-0" patternTransform="matrix(1, 0, 0, 1, 237.827011, 235.531998)" xlink:href="#pattern-0"/>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="250.327" y1="30.838" x2="250.327" y2="465.226" id="gradient-1">
+      <stop offset="0" style="stop-color: #bada55"/>
+      <stop offset="1" style="stop-color: #758d29"/>
+    </linearGradient>
+  </defs>
+  <path d="M 191.771 -408.781 Q 250.327 -521.673 308.883 -408.781 L 446.362 -143.731 Q 504.918 -30.839 387.806 -30.839 L 112.848 -30.839 Q -4.264 -30.839 54.292 -143.731 Z" style="fill-rule: nonzero; fill: rgb(101, 55, 128);" transform="matrix(1, 0, 0, -1, 0, 0)" bx:shape="triangle -4.264 -521.673 509.182 490.834 0.5 0.23 1@336bdfe7"/>
+</svg>
