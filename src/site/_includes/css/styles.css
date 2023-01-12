@@ -477,3 +477,10 @@ div[data-netlify-identity-button] {
     height:auto;
     width: 100%;
 }
+
+/* submitted form success page */
+#success-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
