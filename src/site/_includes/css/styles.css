@@ -288,9 +288,11 @@ img {
 /*POSTCARD TEMPLATE*/
 .containerbox {
     position: relative;
+    width: 300px;
 }
 #postcard {
-    height: auto;
+    height: 100%;
+    width: 300px;
 }
 .template {
     position: absolute;
@@ -302,11 +304,12 @@ img {
     left: 50%;
     transform: translate(-51%, -49%);
     height: 40%;
-    width: 50%;
+    width: 60%;
     font-size: x-small;
     line-height: 16px;
     overflow-x: hidden;
     overflow-y: auto;
+    overflow-wrap: break-word;
     scrollbar-color: var(--purple2) var(--pink4);
     scrollbar-width: thin;
 }
@@ -345,10 +348,17 @@ img {
 ::-webkit-scrollbar-button:single-button:vertical:increment:active {
     background-image: url("/assets/scrollbarDOWN.svg");
 }
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement,
+::-webkit-scrollbar-button:horizontal:start:increment,
+::-webkit-scrollbar-button:horizontal:end:decrement {
+    display: none;
+}
+
 #namebox {
     bottom: 17%;
-    right: 25%;
-    width: 18%;
+    right: 15%;
+    width: 27%;
     height: 8%;
     overflow: clip;
     line-height: 15px;
@@ -380,6 +390,11 @@ img {
 iframe {
     height: 180px;
     width: 272px;
+}
+div#griddy {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*WRITE LETTERS - FORM*/
