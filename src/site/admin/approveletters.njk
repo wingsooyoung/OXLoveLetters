@@ -45,9 +45,10 @@ title: Moderate Letter Submissions
         <p>{{ item.data.signature }}</p>
         <p>{{ item.data.nickname }}</p>
         <p>{{ item.data.lettercontent }}</p>
+        <button id="approveL" onclick="showEvents()">Approve</button>
     </li>
 
-    <button id="approveL" onclick="showEvents();">Approve</button>
+    <button id="approveL" onclick="showEvents()">Approve</button>
 
     {% endfor %}
 </ul>
@@ -56,8 +57,7 @@ title: Moderate Letter Submissions
     {% include "postcardtemplate.njk" %}
 </div>
 
-<script src="https://accounts.google.com/gsi/client" onload="console.log('TODO: add onload function')">
-</script>
+<script src="https://accounts.google.com/gsi/client" onload="console.log('TODO: add onload function')"></script>
 {#<script>#}
 
 
@@ -102,14 +102,17 @@ title: Moderate Letter Submissions
 
 <button id="revokeBtn" onclick="revokeToken();">Revoke access token</button>
 <script>
+    import { NetlifyAPI } from 'netlify'
+    const client = new NetlifyAPI('1234myAccessToken')
+
     let tokenClient;
     let gapiInited;
     let gisInited;
     const value = process.env.YOUR_API_KEY;
     const ovalue = process.env.YOUR_CLIENT_ID;
 
-    document.getElementById("approveL").style.visibility="hidden";
-    document.getElementById("revokeBtn").style.visibility="hidden";
+    // document.getElementById("approveL").style.visibility="hidden";
+    // document.getElementById("revokeBtn").style.visibility="hidden";
 
     function checkBeforeStart() {
         if (gapiInited && gisInited){
