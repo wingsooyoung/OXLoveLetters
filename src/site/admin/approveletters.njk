@@ -47,6 +47,8 @@ title: Moderate Letter Submissions
         <p>{{ item.data.lettercontent }}</p>
     </li>
 
+    <button id="approveL" onclick="showEvents();">Approve</button>
+
     {% endfor %}
 </ul>
 
@@ -54,8 +56,151 @@ title: Moderate Letter Submissions
     {% include "postcardtemplate.njk" %}
 </div>
 
+<script src="https://accounts.google.com/gsi/client" onload="console.log('TODO: add onload function')">
+</script>
+{#<script>#}
+
+
+{#    // Make sure the client is loaded and sign-in is complete before calling this method.#}
+{#    function execute() {#}
+{#        return gapi.client.sheets.spreadsheets.values.append({#}
+{#            "spreadsheetId": "1JL75fI-sIp5LATOkwV1rB9hYzCF1y0WeaBusj6rsHpw",#}
+{#            "range": "Sheet1",#}
+{#            "valueInputOption": "USER_ENTERED",#}
+{#            "resource": {#}
+{#                "values": [#}
+{#                    [#}
+{#                        "",#}
+{#                        "{{ item.data.signature }}",#}
+{#                        "{{ item.data.nickname }}",#}
+{#                        "{{ item.data.lettercontent }}"#}
+{#                    ]#}
+{#                ]#}
+{#            }#}
+{#        })#}
+{#            .then(function(response) {#}
+{#                    // Handle the results here (response.result has the parsed body).#}
+{#                    console.log("Response", response);#}
+{#                },#}
+{#                function(err) { console.error("Execute error", err); });#}
+{#    }#}
+{#    gapi.load("client:auth2", function() {#}
+{#        google.accounts.oauth2.initTokenClient(#}
+{#            {#}
+{#                client_id: ovalue, #}
+{#                scope: "https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/spreadsheets", #}
+{#                callback: (tokenResponse) => {#}
+{#                if (tokenResponse && tokenResponse.access_token) {#}
+{#                    gapi.client.setApiKey(value);#}
+{#                    gapi.client.load('sheets', 'v4', execute);#}
+{#                }#}
+{#            },#}
+{#        });#}
+{#    });#}
+{#</script>#}
+{#<button onclick="authenticate().then(loadClient)">authorize and load</button>#}
+
+<button id="revokeBtn" onclick="revokeToken();">Revoke access token</button>
+<script>
+    let tokenClient;
+    let gapiInited;
+    let gisInited;
+    const value = process.env.YOUR_API_KEY;
+    const ovalue = process.env.YOUR_CLIENT_ID;
+
+    document.getElementById("approveL").style.visibility="hidden";
+    document.getElementById("revokeBtn").style.visibility="hidden";
+
+    function checkBeforeStart() {
+        if (gapiInited && gisInited){
+            document.getElementById("approveL").style.visibility="visible";
+            document.getElementById("revokeBtn").style.visibility="visible";
+        }
+    }
+
+    function gapiInit() {
+        gapi.client.init({
+        })
+            .then(function() {  // Load the Calendar API discovery document.
+                gapi.client.load('https://sheets.googleapis.com/$discovery/rest?version=v4');
+                gapiInited = true;
+                checkBeforeStart();
+            });
+    }
+
+    function gapiLoad() {
+        gapi.load('client', gapiInit)
+    }
+
+    function gisInit() {
+        tokenClient = google.accounts.oauth2.initTokenClient({
+            client_id: ovalue,
+            scope: 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/spreadsheets',
+            callback: '',
+        });
+        gisInited = true;
+        checkBeforeStart();
+    }
+
+    function showEvents() {
+
+        tokenClient.callback = (resp) => {
+            if (resp.error !== undefined) {
+                throw(resp);
+            }
+            console.log('gapi.client access token: ' + JSON.stringify(gapi.client.getToken()));
+
+            // gapi.client.calendar.events.list({ 'calendarId': 'primary' })
+            //     .then(calendarAPIResponse => console.log(JSON.stringify(calendarAPIResponse)))
+            //     .catch(err => console.log(err));
+            gapi.client.sheets.spreadsheets.values.append({
+                "spreadsheetId": "1JL75fI-sIp5LATOkwV1rB9hYzCF1y0WeaBusj6rsHpw",
+                "range": "Sheet1",
+                "valueInputOption": "USER_ENTERED",
+                "resource": {
+                    "values": [
+                        [
+                            "",
+                            "{{ item.data.signature }}",
+                            "{{ item.data.nickname }}",
+                            "{{ item.data.lettercontent }}"
+                        ]
+                    ]
+                }
+            }).then(function(response) {
+                        console.log("Response", response);
+                    },
+                    function(err) { console.error("Execute error", err); }
+                );
+
+            document.getElementById("approveL").innerText = "ta da";
+        }
+
+        if (gapi.client.getToken() === null) {
+            tokenClient.requestAccessToken({prompt: 'consent'});
+        } else {
+            tokenClient.requestAccessToken({prompt: ''});
+        }
+    }
+
+    function revokeToken() {
+        let cred = gapi.client.getToken();
+        if (cred !== null) {
+            google.accounts.oauth2.revoke(cred.access_token, () => {console.log('Revoked: ' + cred.access_token)});
+            gapi.client.setToken('');
+            document.getElementById("approveL").innerText = "Approve";
+        }
+    }
+</script>
+
+
+
+
+
 <script>
     const submissions = await require('../_data/letter-form_submissions.json');
 </script>
+
+
 
 
