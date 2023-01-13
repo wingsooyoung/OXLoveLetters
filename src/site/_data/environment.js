@@ -5,13 +5,17 @@ module.exports = () => {
 
     const {
         NETLIFY_AUTH_TOKEN,
-        SITE_NAME
+        SITE_NAME,
+        YOUR_API_KEY,
+        YOUR_CLIENT_ID
     } = process.env;
 
     return {
         ready : !!(NETLIFY_AUTH_TOKEN),
         NETLIFY_AUTH_TOKEN_ready : !!NETLIFY_AUTH_TOKEN,
-        SITE_NAME
+        SITE_NAME,
+        YOUR_API_KEY,
+        YOUR_CLIENT_ID
     }
 
 };
