@@ -42,30 +42,26 @@ use number to access allLoveLetters.values[+indexNumber]
         event.preventDefault();
         let ele = event.submitter;
         const indexNumber = ele.className;
-        {{ dex }}
-        {% set dex = indexNumber|int %}
+        let dex = CSS.escape(indexNumber);
+
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        {#div#{{ loop.index0 }} > #contentbox .innerHTML#}
+        let message = document.querySelector("#griddy > div.containerbox.grid-item.${dex} > #contentbox").innerHTML;
+        let name = document.querySelector("#griddy > div.containerbox.grid-item.${dex} > #namebox").innerHTML;
 
-        {#div > #namebox .innerHTML#}
-
-        let mess = CSS.escape(indexNumber);
-        console.log(mess);
-
-        formData.set('path', 'test');
-
-        {% if true %}
+        //manually enter form data
+        formData.set('path', 'default');
+        {% if name != "" %}
             formData.set('signature','TRUE');
-            formData.set('nickname', 'testagain');
+            formData.set('nickname', name);
         {% else %}
             formData.set('signature','FALSE');
             formData.set('nickname', 'FOR X');
         {% endif %}
+        formData.set('lettercontent', message);
 
-        formData.set('lettercontent', 'testttt');
-
+        //send data above to the READ page
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
