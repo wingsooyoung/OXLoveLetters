@@ -11,17 +11,19 @@
 
             let wannaSign = document.getElementById("yessign");
             let defaultSign = document.getElementById("nosign");
+            const inputs = document.getElementById("letter-form").elements;
+            const inputByName = inputs["nickname"];
+
             if (wannaSign.checked) {
                 console.log("signing my own name");
             } else if (defaultSign.checked) {
-                form.set('nickname', 'FOR X');
+                inputByName.value = 'FOR X';
             } else {
                 console.log ('something didnt go write with the name part...')
             }
 
             // let nickname = form.get('nickname');
-            const inputs = document.getElementById("letter-form").elements;
-            const inputByName = inputs["nickname"];
+
 
             if(inputByName.length === 0) {
                 return false;
