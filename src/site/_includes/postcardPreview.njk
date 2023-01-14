@@ -52,7 +52,7 @@ use number to access allLoveLetters.values[+indexNumber]
 
         //manually enter form data
         formData.set('path', 'default');
-        {% if name != "" %}
+        {% if name !== "" %}
             formData.set('signature','TRUE');
             formData.set('nickname', name);
         {% else %}
