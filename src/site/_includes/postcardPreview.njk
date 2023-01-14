@@ -12,26 +12,61 @@
         </div>
     </div>
 
-    <button form="approver" id="approveL" type="submit">Approve</button>
+    <button class="{{ loop.index0 }}" form="approver" id="approveL" type="submit">Approve</button>
 {% else %}
 
-    <li>No new letter submissions!</li>
+    <li>No new letter submissions.</li>
 
 {%- endfor -%}
+
+{# turn btn class string into indexNumber,
+use number to access allLoveLetters.values[+indexNumber]
+    allLoveLetters.values[+indexNumber][0]
+    allLoveLetters.values[+indexNumber][1]
+    allLoveLetters.values[+indexNumber][2]
+    allLoveLetters.values[+indexNumber][3]
+
+
+#}
 
 <form id="approver" name="approved-letters" netlify netlify-honeypot="full-name">
     <input type="text" name="path">
     <input type="text" name="signature" id="signature">
     <input type="text" name="nickname" id="nickname">
-    <textarea name="message" id="lettercontent"></textarea>
+    <textarea name="lettercontent" id="lettercontent"></textarea>
 </form>
+
 
 <script>
     const handleSubmit = (event) => {
         event.preventDefault();
-
+        let ele = event.submitter;
+        const indexNumber = ele.className;
+        {{ dex }}
+        {% set dex = indexNumber|int %}
         const myForm = event.target;
         const formData = new FormData(myForm);
+
+        {{ lpath }}
+        {% set lpath = allLoveLetters.values[dex][0] %}
+        {{ lsign }}
+        {% set lsign = allLoveLetters.values[dex][1] %}
+        {{ lnick }}
+        {% set lnick = allLoveLetters.values[dex][2] %}
+        {{ lmess }}
+        {% set lmess = allLoveLetters.values[dex][3] %}
+
+        formData.set('path', {{ lpath }});
+
+        {% if lsign %}
+            formData.set('signature','TRUE');
+            formData.set('nickname', {{ lnick }});
+        {% else %}
+            formData.set('signature','FALSE');
+            formData.set('nickname', 'FOR X');
+        {% endif %}
+
+        formData.set('lettercontent', {{ lmess }});
 
         fetch("/", {
             method: "POST",
@@ -45,4 +80,9 @@
     document
         .querySelector("form")
         .addEventListener("submit", handleSubmit);
+
 </script>
+
+
+
+

@@ -6,25 +6,6 @@ module.exports = function(config) {
     config.addPassthroughCopy("index.html");
     config.addPassthroughCopy("sheets");
 
-    // config.addPlugin(EleventyServerlessBundlerPlugin, {
-    //     name: "serverless",
-    //     functionsDir: "src/functions",
-    //     copy: ["form-action.js", "form-handler.js"],
-    //     copyEnabled: true
-    // });
-    // config.addPlugin(EleventyServerlessBundlerPlugin, {
-    //     name: "dynamic",
-    //     functionsDir: "src/functions",
-    //     copy: ["form-action.js", "form-handler.js"],
-    //     copyEnabled: true
-    // });
-    // permalink:
-    //     build: "/pages/writeletters/"
-    // serverless: "/pages/writeletters/:slug/"
-    // dynamic: "/pages/writeletters/:slug/dynamic/"
-    //
-
-
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
     config.addShortcode("footer", function() {
         return `<footer>
@@ -34,6 +15,8 @@ module.exports = function(config) {
         </small></p>
         </footer>`;
     });
+
+
 
     return {
         dir: {
