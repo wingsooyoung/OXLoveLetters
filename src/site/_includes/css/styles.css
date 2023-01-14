@@ -513,6 +513,9 @@ div[data-netlify-identity-button] {
     height:auto;
     width: 100%;
 }
+form#approver {
+    visibility: hidden;
+}
 
 /* submitted form success page */
 #success-block {

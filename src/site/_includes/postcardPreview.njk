@@ -1,0 +1,27 @@
+
+{%- for x, y, z, q in allLoveLetters.values -%}
+    <div class="containerbox grid-item">
+        <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
+        <div id="contentbox" class="template">{{ q }}</div>
+        <div id="namebox" class="template">
+            {% if y %}
+                {{ z }}
+            {% else %}
+                FOR X
+            {% endif %}
+        </div>
+    </div>
+
+    <button form="approver" id="approveL" type="submit">Approve</button>
+{% else %}
+
+    <li>No new letter submissions!</li>
+
+{%- endfor -%}
+
+<form id="approver" name="approved-letters" netlify netlify-honeypot="full-name">
+    <input type="text" name="path">
+    <input type="text" name="signature" id="signature">
+    <input type="text" name="nickname" id="nickname">
+    <textarea name="message" id="lettercontent"></textarea>
+</form>

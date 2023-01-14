@@ -1,0 +1,19 @@
+
+{%- for x, y, z, q in approvedLoveLetters.values -%}
+    <div class="containerbox grid-item">
+        <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
+        <div id="contentbox" class="template">{{ q }}</div>
+        <div id="namebox" class="template">
+            {% if y %}
+                {{ z }}
+            {% else %}
+                FOR X
+            {% endif %}
+        </div>
+    </div>
+{% else %}
+
+    <li>No letters to read at the moment.</li>
+
+{%- endfor -%}
+
