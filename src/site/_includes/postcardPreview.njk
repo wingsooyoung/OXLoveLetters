@@ -47,8 +47,8 @@ use number to access allLoveLetters.values[+indexNumber]
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        let message = document.querySelector("#griddy > div.containerbox.grid-item.${dex} > #contentbox").innerHTML;
-        let name = document.querySelector("#griddy > div.containerbox.grid-item.${dex} > #namebox").innerHTML;
+        let message = document.querySelector("#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox").innerHTML;
+        let name = document.querySelector("#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox").innerHTML;
 
         //manually enter form data
         formData.set('path', 'default');
