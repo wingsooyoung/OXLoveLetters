@@ -19,8 +19,11 @@
                 console.log ('something didnt go write with the name part...')
             }
 
-            let nickname = form.get('nickname');
-            if(nickname.value.length === 0) {
+            // let nickname = form.get('nickname');
+            const inputs = document.getElementById("letter-form").elements;
+            const inputByName = inputs["nickname"];
+
+            if(inputByName.length === 0) {
                 return false;
             } else {
                 form.submit();
