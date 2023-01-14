@@ -17,10 +17,10 @@ function writebtnFunc() {
 
 const nname = document.getElementById("nickname");
 function yesCheck() {
-    nname.disabled = false;
+    nname.readonly = false;
 }
 function noCheck() {
-    nname.disabled = true;
+    nname.readonly = true;
 }
 function showDrop() {
     document.getElementById("dropdowncontent").classList.toggle("drop");
