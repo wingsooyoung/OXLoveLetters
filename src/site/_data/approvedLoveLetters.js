@@ -10,7 +10,7 @@ module.exports = async function() {
 
         /* This returns a promise */
         return EleventyFetch(allApproved, {
-            duration: "1d", // save for 1 day
+            duration: "0s", // save for 1 day
             type: "json"    // we’ll parse JSON for you
         });
     } catch(e) {
