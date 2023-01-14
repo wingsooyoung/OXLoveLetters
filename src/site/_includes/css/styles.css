@@ -291,22 +291,21 @@ img {
 .grid-container {
     display: grid;
     max-width: 90%;
-    column-gap: 50px;
-    row-gap: 30px;
-    justify-content: stretch;
+    column-gap: 25px;
+    row-gap: 15px;
+    justify-content: center;
     justify-items: stretch;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
     align-items: stretch;
     align-content: stretch;
-
     border: 2px solid brown;
     padding: 10px;
     margin-right: auto;
     margin-left: auto;
 }
-.grid-item {
-
+.grid-container > * {
+    min-width: 0;
 }
 .grid-item img {
     max-width: 300px;
@@ -316,13 +315,14 @@ img {
 }
 /*POSTCARD TEMPLATE*/
 .containerbox {
-
     position: relative;
-    width: 300px;
+    min-width: 0;
 }
 #postcard {
-    height: 100%;
-    width: 300px;
+    object-fit: contain;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
 }
 .template {
     position: absolute;
@@ -330,16 +330,18 @@ img {
     padding:0;
 }
 #contentbox {
-    top: 45%;
-    left: 50%;
-    transform: translate(-51%, -49%);
+    top: 46%;
+    left: 51%;
+    transform: translate(-50%, -49%);
     height: 40%;
     width: 60%;
-    font-size: x-small;
-    line-height: 16px;
+    font-size: x-small; /*xx-small resp small screen*/
+    line-height: 16px; /*1.1 resp small screen*/
     overflow-x: hidden;
     overflow-y: auto;
     overflow-wrap: break-word;
+    padding-right: 20px;
+    box-sizing: initial;
     scrollbar-color: var(--purple2) var(--pink4);
     scrollbar-width: thin;
 }
@@ -358,6 +360,10 @@ img {
 #contentbox::-webkit-scrollbar-thumb:hover, textarea::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+::-webkit-scrollbar-button:single-button {
+    background-repeat: no-repeat;
+}
 /* Up */
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
     height: 14px;
@@ -365,9 +371,9 @@ img {
     background-position: center 4px;
     background-image: url("/assets/scrollbarUP.svg");
 }
-::-webkit-scrollbar-button:single-button:vertical:decrement:active {
-    background-image: url("/assets/scrollbarUP.svg");
-}
+/*::-webkit-scrollbar-button:single-button:vertical:decrement:active {*/
+/*    background-image: url("/assets/scrollbarUP.svg");*/
+/*}*/
 /* Down */
 ::-webkit-scrollbar-button:single-button:vertical:increment {
     height: 14px;
@@ -375,9 +381,9 @@ img {
     background-position: center 5px;
     background-image: url("/assets/scrollbarDOWN.svg");
 }
-::-webkit-scrollbar-button:single-button:vertical:increment:active {
-    background-image: url("/assets/scrollbarDOWN.svg");
-}
+/*::-webkit-scrollbar-button:single-button:vertical:increment:active {*/
+/*    background-image: url("/assets/scrollbarDOWN.svg");*/
+/*}*/
 ::-webkit-scrollbar-button:vertical:start:increment,
 ::-webkit-scrollbar-button:vertical:end:decrement,
 ::-webkit-scrollbar-button:horizontal:start:increment,
