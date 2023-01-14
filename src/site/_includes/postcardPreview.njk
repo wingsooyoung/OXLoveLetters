@@ -56,7 +56,7 @@ use number to access allLoveLetters.values[+indexNumber]
         {{ lmess }}
         {% set lmess = allLoveLetters.values[dex][3] %}
 
-        formData.set('path', {{ lpath }});
+        formData.set('path', {{ lpath|default('lpath is not defined') }});
 
         {% if lsign %}
             formData.set('signature','TRUE');
