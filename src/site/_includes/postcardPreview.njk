@@ -1,6 +1,6 @@
 
 {%- for x, y, z, q in allLoveLetters.values -%}
-    <div class="containerbox grid-item">
+    <div class="containerbox grid-item {{ loop.index0 }}">
         <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
         <div id="contentbox" class="template">{{ q }}</div>
         <div id="namebox" class="template">
@@ -47,26 +47,21 @@ use number to access allLoveLetters.values[+indexNumber]
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        {{ lpath }}
-        {% set lpath = allLoveLetters.values[dex][0] %}
-        {{ lsign }}
-        {% set lsign = allLoveLetters.values[dex][1] %}
-        {{ lnick }}
-        {% set lnick = allLoveLetters.values[dex][2] %}
-        {{ lmess }}
-        {% set lmess = allLoveLetters.values[dex][3] %}
+        {#div#{{ loop.index0 }} > #contentbox .innerHTML#}
 
-        formData.set('path', {{ lpath|default("lpath is not defined")|string }});
+        {#div > #namebox .innerHTML#}
 
-        {% if lsign %}
+        formData.set('path', 'test');
+
+        {% if true %}
             formData.set('signature','TRUE');
-            formData.set('nickname', {{ lnick }});
+            formData.set('nickname', 'testagain');
         {% else %}
             formData.set('signature','FALSE');
             formData.set('nickname', 'FOR X');
         {% endif %}
 
-        formData.set('lettercontent', {{ lmess }});
+        formData.set('lettercontent', 'testttt');
 
         fetch("/", {
             method: "POST",
@@ -75,7 +70,7 @@ use number to access allLoveLetters.values[+indexNumber]
         })
             .then(() => alert("Thank you for your submission"))
             .catch((error) => alert(error));
-    };
+    }};
 
     document
         .querySelector("form")
