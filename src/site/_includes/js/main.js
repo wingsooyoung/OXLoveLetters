@@ -3,7 +3,7 @@ function openMailbox() {
 
     ogbox.src = "/assets/mailbox animated opening atmp3.gif";
 
-    setTimeout(myReadURL, 5000);
+    setTimeout(myReadURL, 2500);
 }
 function myReadURL() {
     document.location.href = '/pages/readletters/';
@@ -12,7 +12,7 @@ function myWriteURL() {
     document.location.href = '/pages/writeletters/';
 }
 function writebtnFunc() {
-    setTimeout(myWriteURL, 5000);
+    setTimeout(myWriteURL, 2500);
 }
 
 const nname = document.getElementById("nickname");

@@ -222,7 +222,7 @@ img {
     object-fit: contain;
     height: 300px;
     width: 300px;
-    border: 1px solid palevioletred;
+    /*border: 1px solid palevioletred;*/
 
     display: block;
     margin-left: auto;

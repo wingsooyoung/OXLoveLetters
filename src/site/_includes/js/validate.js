@@ -9,8 +9,8 @@
             event.preventDefault();
             let form = event.target;
 
-            let wannaSign = form.getElementById("yessign");
-            let defaultSign = form.getElementById("nosign");
+            let wannaSign = document.getElementById("yessign");
+            let defaultSign = document.getElementById("nosign");
             if (wannaSign.checked) {
                 console.log("signing my own name");
             } else if (defaultSign.checked) {
