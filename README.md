@@ -4,7 +4,7 @@ All the code for my *new* silly little project! (Hosted on Netlify)
 
  - [HOME](/src/site/index.html) 
  - [READ](/src/site/pages/readletters.njk) 
- - [WRITE](/src/site/pages/writeletters.hbs) 
+ - [WRITE](/src/site/pages/writeletters.njk) 
  - [ABOUT THEM](/src/site/pages/aboutomegax.hbs) 
  - [ABOUT THIS](/src/site/pages/aboutthisproject.hbs)
 

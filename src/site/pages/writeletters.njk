@@ -1,5 +1,5 @@
 ---
-templateEngineOverride: hbs
+templateEngineOverride: njk
 title: Write Letters
 ---
 
@@ -27,5 +27,12 @@ title: Write Letters
 
   </form>
 </div>
+
+{% set jscript %}
+{% include "js/validate.js" %}
+{% endset %}
+<script>
+        {{ jscript | safe }}
+</script>
 
 
