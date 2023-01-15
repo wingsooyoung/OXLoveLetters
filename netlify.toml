@@ -40,11 +40,11 @@ conditions = {App_metadata = {Role = ["admin", "creator"]}}
 
 #"app_metadata": {"roles": ["investigator", "photographer"]}
 
-#[[redirects]]
-#from = "/admin/*"
-#to = "/pages/notallowed"
-#status = 302
-#force = true
+[[redirects]]
+from = "/admin/*"
+to = "/pages/notallowed"
+status = 302
+force = true
 
 # Error Page Redirects
 [[redirects]]
