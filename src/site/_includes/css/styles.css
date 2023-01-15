@@ -256,9 +256,11 @@ nav a:hover {
 }
 #static-mailbox {
     /*.png ver*/
+    width: 500px;
 }
 #opening-mailbox {
     /*.gif ver*/
+    width: 500px;
     display: none;
 }
 
