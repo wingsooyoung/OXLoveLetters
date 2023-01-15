@@ -258,7 +258,6 @@ nav a:hover {
 /*HOME PAGE GRAPHIC*/
 #mailbox {
     position: relative;
-    left: 33%;
     /* position: absolute; */
     width: min-content;
     display: block;
@@ -569,9 +568,10 @@ div[data-netlify-identity-button] {
     /*border-radius: 5px;*/
     padding: 2px 12px;
     /*float: right;*/
-    position: absolute;
-    left: 672px;
-    bottom: -280px;
+    /*position: absolute;*/
+    /*left: 672px;*/
+    /*bottom: -280px;*/
+    display: contents;
 }
 
 /*approve or deny*/

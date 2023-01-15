@@ -15,17 +15,14 @@ package = "netlify-plugin-form-submissions"
   formNames = "ALL"
   dataDirectory = "src/site/_data"
 
-# In this example, visitors whose JWT tokens include the `admin` or
-# `editor` role can access the `/admin` path.
 [[redirects]]
 from = "/admin/approveletters"
-to = "/admin/:splat"
+to = "/admin/approveletters/index.html"
 force = true
 status = 200
   [redirects.conditions]
   Role = [ "admin", "creator" ]
 
-#"app_metadata": {"roles": ["investigator", "photographer"]}
 [[redirects]]
 from = "/admin/approveletters"
 to = "/pages/notallowed"
