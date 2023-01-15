@@ -43,6 +43,31 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
     font-size: 0.9em;
 }
+.parallaxLEFT {
+    /* The image used */
+    background-image: url("/assets/parallaxLEFT.png")
+    /* Set a specific height */
+    min-height: 800px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.parallaxRIGHT {
+    /* The image used */
+    background-image: url("/assets/parallaxRIGHT.png");
+  /*background-image: url("/assets/parallaxLEFT.png") */
+    /* Set a specific height */
+    min-height: 800px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 html::-webkit-scrollbar {
     width: 8px;
 }
