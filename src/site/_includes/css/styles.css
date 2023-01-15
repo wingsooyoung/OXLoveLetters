@@ -40,7 +40,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--pink4);
-    background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+    /*background-image: url("https: //www.transparenttextures.com/patterns/otis-redding.png");*/
+    background-image: url("/assets/background proj2.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     font-size: 0.9em;
 }
 .colside {

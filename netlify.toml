@@ -15,20 +15,6 @@ package = "netlify-plugin-form-submissions"
   formNames = "ALL"
   dataDirectory = "src/site/_data"
 
-# [[redirects]]
-# from = "/:slug/dynamic/"
-# to = "/.netlify/functions/dynamic"
-# status = 200
-# force = true
-# _generated_by_eleventy_serverless = "dynamic"
-#
-# [[redirects]]
-# from = "/:slug/"
-# to = "/.netlify/functions/serverless"
-# status = 200
-# force = true
-# _generated_by_eleventy_serverless = "serverless"
-
 # In this example, visitors whose JWT tokens include the `admin` or
 # `editor` role can access the `/admin` path.
 [[redirects]]
@@ -39,7 +25,6 @@ status = 200
 conditions = {App_metadata = {Role = ["admin", "creator"]}}
 
 #"app_metadata": {"roles": ["investigator", "photographer"]}
-
 [[redirects]]
 from = "/admin/*"
 to = "/pages/notallowed"
