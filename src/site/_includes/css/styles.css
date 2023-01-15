@@ -45,7 +45,7 @@ body {
 }
 .parallaxLEFT {
     /* The image used */
-    background-image: url("/assets/parallaxLEFT.png")
+    background-image: url("/assets/img/parallaxLEFT.png");
     /* Set a specific height */
     min-height: 800px; 
   
@@ -57,8 +57,7 @@ body {
   }
 .parallaxRIGHT {
     /* The image used */
-    background-image: url("/assets/parallaxRIGHT.png");
-  /*background-image: url("/assets/parallaxLEFT.png") */
+    background-image: url("/assets/img/parallaxRIGHT.png");
     /* Set a specific height */
     min-height: 800px; 
   
