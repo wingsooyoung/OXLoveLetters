@@ -331,7 +331,7 @@ img {
 }
 #contentbox {
     top: 46%;
-    left: 51%;
+    left: 52%;
     transform: translate(-50%, -49%);
     height: 40%;
     width: 60%;
@@ -340,7 +340,7 @@ img {
     overflow-x: hidden;
     overflow-y: auto;
     overflow-wrap: break-word;
-    padding-right: 20px;
+    padding-right: 15px;
     box-sizing: initial;
     scrollbar-color: var(--purple2) var(--pink4);
     scrollbar-width: thin;
@@ -398,6 +398,7 @@ img {
     overflow: clip;
     line-height: 15px;
     font-size: x-small;
+    text-align: center;
 }
 iframe {
     height: 180px;
