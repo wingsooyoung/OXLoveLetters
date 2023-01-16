@@ -20,13 +20,13 @@ from = "/admin/approveletters"
 force = true
 status = 200
   [redirects.conditions]
-  Role = [ "admin", "creator" ]
+  Role = [ "admin" ]
 
 [[redirects]]
 from = "/admin/approveletters"
 to = "/pages/notallowed"
 force = true
-status = 302
+status = 401
 
 # Error Page Redirects
 [[redirects]]
