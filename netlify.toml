@@ -17,6 +17,7 @@ package = "netlify-plugin-form-submissions"
 
 [[redirects]]
 from = "/admin/approveletters"
+to = "/admin/approveletters"
 force = true
 status = 200
   [redirects.conditions]
