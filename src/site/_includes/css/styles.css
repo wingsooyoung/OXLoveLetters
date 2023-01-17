@@ -472,7 +472,6 @@ div#griddy {
 }
 
 /*WRITE LETTERS - FORM*/
-/* Rounded corner gradient border - credit: stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient */
 #letter-form-div, #success-block {
     /*margin-top: 30svh;*/
     max-width: 550px;
