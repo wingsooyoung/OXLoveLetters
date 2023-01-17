@@ -4,9 +4,12 @@ templateEngineOverride: hbs
 title: Success
 ---
 <div id="success-block">
-    <p>Thank you for submitting a letter! Once the admin approves it, you'll be able to view it on the READ LETTERS page.</p>
-    <a href="/pages/writeletters">Write Another Letter</a>
-    <a href="/pages/readletters">Read Letters</a>
-    <a href="/">HOME</a>
+    <p>Thank you for submitting a letter! Once the admin approves it, you'll be able to view it on the "Read Letters" page.</p>
+    <div id="success-links">
+        <a href="/" id="suchome" class="button--primary">HOME</a>
+        <a href="/pages/readletters" id="sucread" class="button--primary">Read Letters</a>
+        <a href="/pages/writeletters" id="sucwrite" class="button--primary">Write Another Letter</a>
+    </div>
 </div>
+
 

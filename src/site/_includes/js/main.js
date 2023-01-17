@@ -26,3 +26,19 @@ function showDrop() {
     document.getElementById("dropdowncontent").classList.toggle("drop");
     document.getElementById("aboutbtn").classList.toggle("corners");
 }
+
+// const user = auth.currentUser();
+// // "app_metadata": {"roles": ["admin", "creator"]}
+// if (user) {
+//     const timeCheck =
+//         netlifyIdentity.currentUser().token.expires_at <= new Date().getTime();
+//     if (timeCheck) {
+//         netlifyIdentity.refresh(); //.then((jwt)=>console.log(jwt))
+//         console.log('Welcome', user.user_metadata.full_name);
+//     }
+// }
+// if (user) {
+// ...
+// } else {
+//     netlifyIdentity.open();
+// }
