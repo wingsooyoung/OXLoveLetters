@@ -787,18 +787,57 @@ form#approver {
 
 .tippy-box[data-theme~='custom1'] {
     font-weight: bold;
-    color: palegoldenrod;
-    background: mediumpurple;
+    color: #13070c;
+    background: #eff9f0;
+    border: solid #DDC8C4;
 }
 .tippy-box[data-theme~='custom1'][data-placement^='top'] > .tippy-arrow::before {
-    border-top-color: mediumpurple;
+    border-top-color: #DDC8C4;
 }
 .tippy-box[data-theme~='custom1'][data-placement^='bottom'] > .tippy-arrow::before {
-    border-bottom-color: mediumpurple;
+    border-bottom-color: #DDC8C4;
 }
 .tippy-box[data-theme~='custom1'][data-placement^='left'] > .tippy-arrow::before {
-    border-left-color: mediumpurple;
+    border-left-color: #DDC8C4;
 }
 .tippy-box[data-theme~='custom1'][data-placement^='right'] > .tippy-arrow::before {
-    border-right-color: mediumpurple;
+    border-right-color: #DDC8C4;
+}
+.tippy-box[data-theme~='custom2'] {
+    font-weight: bold;
+    background: #BFDBF7;
+    color: #0E131F;
+    border: 3px solid #38405F;
+    text-shadow: 1px 1px 5px #8b939c;
+}
+.tippy-box[data-theme~='custom2'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #38405F;
+}
+.tippy-box[data-theme~='custom2'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #38405F;
+}
+.tippy-box[data-theme~='custom2'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #38405F;
+}
+.tippy-box[data-theme~='custom2'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #38405F;
+}
+.tippy-box[data-theme~='custom3'] {
+    font-weight: bold;
+    background: #B3C2F2;
+    color: #320a28;
+    border: 2px solid #320A28;
+    font-variant: small-caps;
+}
+.tippy-box[data-theme~='custom3'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #320A28;
+}
+.tippy-box[data-theme~='custom3'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #320A28;
+}
+.tippy-box[data-theme~='custom3'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #320A28;
+}
+.tippy-box[data-theme~='custom3'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #320A28;
 }
