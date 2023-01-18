@@ -785,20 +785,20 @@ form#approver {
     box-shadow: 0 0 24px 0 #dd4b39;
 }
 
-.select[data-theme~='custom1'] {
+.tippy-box[data-theme~='custom1'] {
     font-weight: bold;
     color: palegoldenrod;
     background: mediumpurple;
 }
-.select[data-theme~='custom1'][data-placement^='top'] > .tippy-arrow::before {
+.tippy-box[data-theme~='custom1'][data-placement^='top'] > .tippy-arrow::before {
     border-top-color: mediumpurple;
 }
-.select[data-theme~='custom1'][data-placement^='bottom'] > .tippy-arrow::before {
+.tippy-box[data-theme~='custom1'][data-placement^='bottom'] > .tippy-arrow::before {
     border-bottom-color: mediumpurple;
 }
-.select[data-theme~='custom1'][data-placement^='left'] > .tippy-arrow::before {
+.tippy-box[data-theme~='custom1'][data-placement^='left'] > .tippy-arrow::before {
     border-left-color: mediumpurple;
 }
-.select[data-theme~='custom1'][data-placement^='right'] > .tippy-arrow::before {
+.tippy-box[data-theme~='custom1'][data-placement^='right'] > .tippy-arrow::before {
     border-right-color: mediumpurple;
 }
