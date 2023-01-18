@@ -24,7 +24,7 @@
 <body>
 <header>
   <div id="banner">
-      <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo">
+      <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select">
   </div>
   <nav>
     <div class="dropdown">
@@ -59,7 +59,35 @@
 
     {% footer %}
 
-{#    add tooltips here !!!   #}
+{#    START tooltips here !!!   #}
+    <!-- Development TIPPY -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <!-- Production TIPPY -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script>
+        tippy('.select', {
+            content: 'tippy text',
+            placement: 'top',
+            // theme: 'material',
+            arrow: false,
+            hideOnClick: "toggle",
+            trigger: "click"
+            //arrow: '<svg>...</svg>',
+            //arrow: svgElement,
+            //followCursor: IMPORT,
+            //hideOnClick: toggle / true / false
+            //trigger: 'mouseenter focus', DEFAULT
+            //trigger: click / mouseenter click / focusin
+            //triggerTarget: someElement, SEPARATE TIPPY TARGET FROM THE TRIGGER ELEMENT
+            //zIndex: 9999, DEFAULT
+            //maxWidth: 350, DEFAULT
+            //appendTo: 'smth'
+        })
+    </script>
+{#    END tooltips here !!!   #}
 
     {% set js %}
       {% include "js/main.js" %}
