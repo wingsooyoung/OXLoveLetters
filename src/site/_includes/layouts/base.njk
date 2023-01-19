@@ -23,9 +23,19 @@
 
 <body>
 <header>
-  <div id="banner">
+  <div id="banner" onclick="openAbout()">
       <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select">
   </div>
+  <!-- The Modal -->
+  <div id="abModal" class="modal">
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+      <!-- Modal Content -->
+      <div class="modal-content" id="modContainer">
+          (insert What Is This Place? content here)
+      </div>
+  </div>
+
   <nav>
     <div class="dropdown">
           <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-house-bold"></i> HOME</a>
