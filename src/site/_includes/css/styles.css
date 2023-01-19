@@ -384,7 +384,7 @@ nav a:hover {
     transition: 0.3s;
 }
 .containerboxM {
-
+    width: fit-content;
 }
 .containerbox:hover {opacity: 0.7;}
 /* The Modal (background) */
@@ -447,7 +447,7 @@ nav a:hover {
     width: fill-available;
 }
 #postcardM {
-
+    max-width: fit-content;
 }
 .template {
     position: absolute;
@@ -474,21 +474,22 @@ nav a:hover {
     scrollbar-width: thin;
 }
 #contentboxM{
-
+    font-size: initial;
+    line-height: normal;
 }
-#contentbox::-webkit-scrollbar, textarea::-webkit-scrollbar {
+#contentbox::-webkit-scrollbar, textarea::-webkit-scrollbar, #contentboxM::-webkit-scrollbar {
     width: 8px;
 }
-#contentbox::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
+#contentbox::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track, #contentboxM::-webkit-scrollbar-track {
     background: var(--pink4);
     box-shadow: inset 0 0 5px var(--pink3);
     border-radius: 10px;
 }
-#contentbox::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
+#contentbox::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb, #contentboxM::-webkit-scrollbar-thumb {
     background: var(--purple2);
     border-radius: 10px;
 }
-#contentbox::-webkit-scrollbar-thumb:hover, textarea::-webkit-scrollbar-thumb:hover {
+#contentbox::-webkit-scrollbar-thumb:hover, textarea::-webkit-scrollbar-thumb:hover, #contentboxM::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
@@ -532,7 +533,8 @@ nav a:hover {
     text-align: center;
 }
 #nameboxM {
-
+    font-size: initial;
+    line-height: initial;
 }
 iframe {
     height: 180px;
