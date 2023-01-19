@@ -383,6 +383,9 @@ nav a:hover {
     cursor: pointer;
     transition: 0.3s;
 }
+.containerboxM {
+
+}
 .containerbox:hover {opacity: 0.7;}
 /* The Modal (background) */
 .modal {
@@ -443,6 +446,9 @@ nav a:hover {
     width: -moz-available;
     width: fill-available;
 }
+#postcardM {
+
+}
 .template {
     position: absolute;
     /*border: 1px solid lime;*/
@@ -466,6 +472,9 @@ nav a:hover {
     background: rgb(1 0 1 / 10%);
     scrollbar-color: var(--purple2) var(--pink4);
     scrollbar-width: thin;
+}
+#contentboxM{
+
 }
 #contentbox::-webkit-scrollbar, textarea::-webkit-scrollbar {
     width: 8px;
@@ -521,6 +530,9 @@ nav a:hover {
     line-height: 15px;
     font-size: x-small;
     text-align: center;
+}
+#nameboxM {
+
 }
 iframe {
     height: 180px;
