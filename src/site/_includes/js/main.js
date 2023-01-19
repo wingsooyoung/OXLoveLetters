@@ -27,18 +27,14 @@ function showDrop() {
     document.getElementById("aboutbtn").classList.toggle("corners");
 }
 
-// Get the modal
 var modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
 var modalLetter = document.getElementById("modal1");
 function modalZoom(x) {
     modal.style.display = "block";
-    modalLetter.getElementById("namebox").innerHTML = x.getElementById("namebox").innerHTML;
-    modalLetter.getElementById("contentbox").innerHTML = x.getElementById("contentbox").innerHTML;
+    modalLetter.childNodes[3]["outerText"] = x.getElementById("namebox").innerHTML;
+    modalLetter.childNodes[5]["outerText"] = x.getElementById("contentbox").innerHTML;
 }
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
