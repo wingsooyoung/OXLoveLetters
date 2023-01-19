@@ -377,7 +377,7 @@ nav a:hover {
     display: initial;
 }
 /*POSTCARD TEMPLATE*/
-.containerbox {
+.containerbox, .containerboxM {
     position: relative;
     min-width: 0;
     cursor: pointer;
@@ -437,7 +437,7 @@ nav a:hover {
     }
 }
 
-#postcard {
+#postcard, #postcardM {
     object-fit: contain;
     width: -webkit-fill-available;
     width: -moz-available;
@@ -448,7 +448,7 @@ nav a:hover {
     /*border: 1px solid lime;*/
     padding:0;
 }
-#contentbox {
+#contentbox, #contentboxM {
     top: 46%;
     left: 51%;
     transform: translate(-50%, -49%);
@@ -512,7 +512,7 @@ nav a:hover {
 ::-webkit-scrollbar-button:horizontal:end:decrement {
     display: none;
 }
-#namebox {
+#namebox, #nameboxM {
     bottom: 17%;
     right: 15%;
     width: 27%;

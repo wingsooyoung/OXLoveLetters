@@ -31,8 +31,10 @@ var modal = document.getElementById("myModal");
 var modalLetter = document.getElementById("modal1");
 function modalZoom(x) {
     modal.style.display = "block";
-    modalLetter.childNodes[3]["outerText"] = x.getElementById("namebox").innerHTML;
-    modalLetter.childNodes[5]["outerText"] = x.getElementById("contentbox").innerHTML;
+    let m = document.getElementById("modal1").children;
+    let y = x.children;
+    m["contentbox"].textContent = y[1].children["contentbox"].innerText;
+    m["namebox"].textContent = y[2].children["namebox"].innerText;
 }
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
