@@ -27,18 +27,18 @@ function showDrop() {
     document.getElementById("aboutbtn").classList.toggle("corners");
 }
 
-// const user = auth.currentUser();
-// // "app_metadata": {"roles": ["admin", "creator"]}
-// if (user) {
-//     const timeCheck =
-//         netlifyIdentity.currentUser().token.expires_at <= new Date().getTime();
-//     if (timeCheck) {
-//         netlifyIdentity.refresh(); //.then((jwt)=>console.log(jwt))
-//         console.log('Welcome', user.user_metadata.full_name);
-//     }
-// }
-// if (user) {
-// ...
-// } else {
-//     netlifyIdentity.open();
-// }
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var modalLetter = document.getElementById("modal1");
+function modalZoom(x) {
+    modal.style.display = "block";
+    modalLetter.getElementById("namebox").innerHTML = x.getElementById("namebox").innerHTML;
+    modalLetter.getElementById("contentbox").innerHTML = x.getElementById("contentbox").innerHTML;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
