@@ -33,8 +33,8 @@ function modalZoom(x) {
     modal.style.display = "block";
     let m = document.getElementById("modal1").children;
     let y = x.children;
-    m["contentbox"].textContent = y[1].children["contentbox"].innerText;
-    m["namebox"].textContent = y[2].children["namebox"].innerText;
+    m["contentboxM"].textContent = y[1].children["contentbox"].innerHTML;
+    m["nameboxM"].textContent = y[2].children["namebox"].innerHTML;
 }
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
