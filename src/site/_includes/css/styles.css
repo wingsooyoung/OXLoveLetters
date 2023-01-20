@@ -347,29 +347,45 @@ nav a:hover {
 }
 
 /*ABOUT MODAL*/
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+h2 {
+    padding: 10px 0;
+    width: auto;
+    margin: 18px auto;
+    font-style: oblique;
+    text-decoration: underline;
+    text-decoration-thickness: 0.3em;
+    text-decoration-color: gold;
+    text-underline-position: under;
 }
 #abModal {
     /*outer*/
+    background-color: rgba(0,0,0,0.2) !important;
+    padding-bottom: 100px;
 }
 #modContainer {
     /*inner*/
+    max-width: 600px;
+    background: azure;
+    border-radius: 15px;
+    padding: 10px 75px 40px;
+    border-color: #55dbcb;
+    border-width: 8px;
+    border-style: solid;
+    box-shadow: 0 0 4px 2px inset powderblue, 5px 5px cadetblue;
+    font-weight: 600;
 }
-#modContainer ol {}
-#modContainer ul {}
-#modContainer li {}
+#modContainer ol {padding-left: 20px;}
+#modContainer ul {list-style-type: disclosure-closed;}
+#modContainer li {text-align: initial;}
 #modContainer p {}
 #modContainer em {}
+#modContainer hr {
+    border-width: 5px;
+    border-color: gold;
+    border-style: groove;
+    margin-left: -2em;
+    margin-right: -2em;
+}
 
 /* Modal Content */
 .modal-content {
