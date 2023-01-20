@@ -36,6 +36,7 @@
           <p>OMEGA X is an 11 member group that was created by Spire Entertainment and debuted on (date). As of January 11th, 2023, their contracts with Spire have been suspended. More on that situation can be found (here).</p>
           <p>FOR X is the name of their fandom, meaning "FOREVER WITH OMEGA X".</p>
           <p>This site was created as a way for all FOR X around the world to let the boys know how incredibly loved they are. I wanted to create a space for the guys that is full of messages of love, support, and hope.</p>
+          <small><em>DISCLAIMER:</em> THIS WEBSITE AND ITS ADMIN ARE NOT OFFICIALLY AFFILIATED WITH OMEGA X OR ITS MEMBERS IN ANY WAY WHATSOEVER. THERE IS NO GUARANTEE THE MEMBERS OF OMEGA X WILL READ ANY OF THE LETTERS SUBMITTED AND APPROVED TO THIS SITE. THIS IS AN UNOFFICIAL PROJECT CREATED BY ONE (1) INTERNATIONAL FOR X AND IS FOR ENTERTAINMENT PURPOSES ONLY.</small>
           <hr>
           <em>How does this work?</em>
           <p>On the HOME page, you can select one of two buttons:</p>
@@ -128,6 +129,15 @@
             //zIndex: 9999, DEFAULT
             //maxWidth: 350, DEFAULT
             //appendTo: 'smth'
+        })
+        tippy('.instagram', {
+            content(reference) {
+                const title = reference.getAttribute('title');
+                reference.removeAttribute('title');
+                return title.toUpperCase();
+            },
+            theme: 'custom3',
+            arrow: true,
         })
     </script>
 {#    END tooltips here !!!   #}

@@ -16,6 +16,7 @@ module.exports = function(config) {
         <p><u>2022 </u><i class="ph-copyright"></i> <a href="https://twitter.com/oxmasterlist">OXMasterlist</a>
         / <a href="https://omegaxmasterlist.tumblr.com">omegaxmasterlist</a> <a href="/admin/approveletters" style="text-decoration: none;"><i class="ph-key-bold"></i></a>
         </p>
+        <p><small><em>DISCLAIMER:</em> THIS WEBSITE AND ITS ADMIN ARE NOT OFFICIALLY AFFILIATED WITH OMEGA X OR ITS MEMBERS IN ANY WAY WHATSOEVER. THERE IS NO GUARANTEE THE MEMBERS OF OMEGA X WILL READ ANY OF THE LETTERS SUBMITTED AND APPROVED TO THIS SITE. THIS IS AN UNOFFICIAL PROJECT CREATED BY ONE (1) INTERNATIONAL FOR X AND IS FOR ENTERTAINMENT PURPOSES ONLY.</small></p>
         </footer>`;
     });
 
