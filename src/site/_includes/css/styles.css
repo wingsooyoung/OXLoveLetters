@@ -807,6 +807,15 @@ form#approver {
 }
 
 /*ABOUT PAGE DESIGNS*/
+#aboutme {
+    padding: 20px;
+    border: 5px double #cd0b24;
+    border-radius: 15px 5px;
+    color: rgba(0,0,0,1);
+    text-align: center;
+    text-overflow: fade;
+    background: rgba(255,163,212,1);
+}
 .abouth1 {
     margin:auto;
     width: max-content;
