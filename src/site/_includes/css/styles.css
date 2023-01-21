@@ -917,11 +917,17 @@ form#approver {
     transition: 250ms;
     background: white;
 }
-.share:last-child {
+.share.twitter {
     margin-right: 0;
 }
 .share:focus {
     outline-color: inherit;
+}
+div.connect2 {
+    display: none;
+}
+a#memberstoggle:hover + div.connect2 {
+    display: block;
 }
 .twitter:hover, .twitter:focus {
     color: #00aced;
@@ -930,6 +936,12 @@ form#approver {
 .instagram:hover, .instagram:focus {
     color: #d300c5;
     box-shadow: 0 0 24px 0 #d300c5;
+}
+.memberAccounts {
+    display: none;
+}
+.memberAccounts:hover {
+    display: inline;
 }
 .github:hover, .github:focus {
     color: #4183c4;

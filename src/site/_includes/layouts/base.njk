@@ -130,12 +130,17 @@
             //maxWidth: 350, DEFAULT
             //appendTo: 'smth'
         })
-        tippy('.instagram', {
+        tippy('.share', {
             content(reference) {
                 const title = reference.getAttribute('title');
                 reference.removeAttribute('title');
                 return title.toUpperCase();
             },
+            theme: 'custom3',
+            arrow: true,
+        })
+        tippy('.ph-key-bold', {
+            content: 'ADMIN ONLY',
             theme: 'custom3',
             arrow: true,
         })
