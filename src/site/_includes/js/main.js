@@ -49,7 +49,7 @@ function openAbout() {
     aboutModal.style.display = "block";
 
 }
-var closer = document.getElementsByClassName("close")[0];
+var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = function() {
     aboutModal.style.display = "none";
 }

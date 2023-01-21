@@ -404,7 +404,7 @@ h2 {
     to {transform:scale(1)}
 }
 /* The Close Button */
-.close {
+.close,.closer {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -414,7 +414,7 @@ h2 {
     transition: 0.3s;
 }
 .close:hover,
-.close:focus {
+.close:focus,.closer:hover,.closer:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
