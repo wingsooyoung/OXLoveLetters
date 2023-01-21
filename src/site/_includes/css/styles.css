@@ -917,16 +917,16 @@ form#approver {
     transition: 250ms;
     background: white;
 }
-.share.twitter {
+#memberstoggle.share.instagram {
     margin-right: 0;
 }
 .share:focus {
     outline-color: inherit;
 }
-div.connect2 {
+.connect2 {
     display: none;
 }
-a#memberstoggle:hover, div.connect2 {
+a#memberstoggle:hover + .connect2  {
     display: block;
 }
 .twitter:hover, .twitter:focus {
