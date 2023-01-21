@@ -808,17 +808,22 @@ form#approver {
 
 /*ABOUT PAGE DESIGNS*/
 #aboutme {
+    width: 650px;
+    margin: auto;
     padding: 20px;
     border: 5px double #cd0b24;
+    outline: 5px outset #cd0b24;
     border-radius: 15px 5px;
     color: rgba(0,0,0,1);
     text-align: center;
     text-overflow: fade;
     background: rgba(255,163,212,1);
+    font-size: 1.05em;
 }
 .abouth1 {
     margin:auto;
     width: max-content;
+    padding-bottom: 20px;
 }
 .box{
     border-width: 3px 4px 3px 5px;
