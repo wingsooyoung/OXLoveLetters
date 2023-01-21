@@ -926,7 +926,7 @@ form#approver {
 div.connect2 {
     display: none;
 }
-a#memberstoggle:hover + div.connect2 {
+a#memberstoggle:hover, div.connect2 {
     display: block;
 }
 .twitter:hover, .twitter:focus {
