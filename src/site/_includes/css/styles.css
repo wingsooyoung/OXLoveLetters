@@ -925,8 +925,9 @@ form#approver {
 }
 .connect2 {
     display: none;
+    margin-top: -10px;
 }
-a#memberstoggle:hover + .connect2  {
+a#memberstoggle:hover + .connect2, .connect2:hover  {
     display: block;
 }
 .twitter:hover, .twitter:focus {
