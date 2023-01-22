@@ -27,6 +27,17 @@ function showDrop() {
     document.getElementById("aboutbtn").classList.toggle("corners");
 }
 
+// ABOUT logo modal
+var aboutModal = document.getElementById("abModal");
+function openAbout() {
+    aboutModal.style.display = "block";
+
+}
+var closer = document.getElementsByClassName("closer")[0];
+closer.onclick = function() {
+    aboutModal.style.display = "none";
+}
+
 // READ LETTERS postcard modal
 var modal = document.getElementById("myModal");
 var modalLetter = document.getElementById("modal1");
@@ -42,13 +53,3 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
-// ABOUT logo modal
-var aboutModal = document.getElementById("abModal");
-function openAbout() {
-    aboutModal.style.display = "block";
-
-}
-var closer = document.getElementsByClassName("closer")[0];
-closer.onclick = function() {
-    aboutModal.style.display = "none";
-}
