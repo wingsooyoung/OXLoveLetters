@@ -32,7 +32,7 @@ var modal = document.getElementById("myModal");
 var modalLetter = document.getElementById("modal1");
 function modalZoom(x) {
     modal.style.display = "block";
-    let m = document.getElementById("modal1").children;
+    let m = modalLetter.children;
     let y = x.children;
     m["contentboxM"].textContent = y[1].innerHTML;
     m["nameboxM"].textContent = y[2].innerHTML;
@@ -44,7 +44,6 @@ span.onclick = function() {
 
 // ABOUT logo modal
 var aboutModal = document.getElementById("abModal");
-var modalContainer = document.getElementById("modContainer");
 function openAbout() {
     aboutModal.style.display = "block";
 
