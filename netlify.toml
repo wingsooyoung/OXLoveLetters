@@ -16,6 +16,12 @@ package = "netlify-plugin-form-submissions"
   dataDirectory = "src/site/_data"
 
 [[redirects]]
+from = "/*"
+to = "/pages/comingsoon"
+force = true
+status = 200
+
+[[redirects]]
 from = "/admin/approveletters"
 to = "/admin/approveletters"
 force = true
