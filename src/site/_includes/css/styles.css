@@ -291,6 +291,24 @@ nav a:hover {
         padding: 3px 5px!important;
         font-size: 1.1em!important;
     }
+    #banner {
+        max-width: 25px;
+        max-height: 25px;
+        margin-top: 16px;
+    }
+    footer {
+        font-size: smaller;
+        padding-top: 60%;
+    }
+    div[data-netlify-identity-button] {
+        bottom: -100px;
+    }
+    #csModal img {
+        height: 200px;
+    }
+    #csModal {
+        padding-top: 55px;
+    }
 }
 
 
