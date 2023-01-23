@@ -23,8 +23,10 @@ fallback = font: 14px "Trebuchet MS", Helvetica, sans-serif;
 
     font-family: 'Single Day', cursive;
 
+    font-family: 'Stylish', sans-serif;
+
 */
- @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kalam:wght@300;400;700&family=Mali:wght@400;500;600;700&family=Single+Day&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kalam:wght@300;400;700&family=Mali:wght@400;500;600;700&family=Single+Day&family=Stylish&display=swap');
 
 html {
     margin: 0;
@@ -792,6 +794,7 @@ div[data-netlify-identity-button] {
     /*width: max-content;*/
     font-size: xx-small;
     position: relative;
+    bottom: -108px;
     z-index: 1000000000000000;
 }
 .identity-overlay {
@@ -1042,15 +1045,20 @@ a#memberstoggle:hover + .connect2, .connect2:hover  {
     background: rgba(0,0,0,0.8);
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 40px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
+    font-family: 'Stylish', sans-serif;
 }
 #csModal h2 {
     font-family: 'Single Day', cursive;
+    font-size: larger;
+    display: block;
+    margin: auto;
+    width: fit-content;
 }
 #csModal a {
     font-style: normal;
