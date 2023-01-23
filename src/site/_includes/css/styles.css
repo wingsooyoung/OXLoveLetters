@@ -259,7 +259,7 @@ nav a:hover {
         font-size: 1.1em!important;
     }
     div[data-netlify-identity-button] {
-        bottom: -100px;
+        bottom: -220px;
     }
     #csModal img {
         height: 200px;
@@ -1088,6 +1088,11 @@ a#memberstoggle:hover + .connect2, .connect2:hover  {
     height: 100%;
     overflow: auto;
     font-family: 'Stylish', sans-serif;
+}
+#csModal img {
+    height:250px;
+    display:block;
+    margin:auto;
 }
 #csModal h2 {
     font-family: 'Single Day', cursive;
