@@ -259,10 +259,10 @@ nav a:hover {
         font-size: 1.1em!important;
     }
     div[data-netlify-identity-button] {
-        bottom: -220px;
+        bottom: -185px!important;
     }
     #csModal img {
-        height: 200px;
+        height: 200px!important;
     }
     #csModal {
         padding-top: 55px;
@@ -301,10 +301,10 @@ nav a:hover {
         padding-top: 60%;
     }
     div[data-netlify-identity-button] {
-        bottom: -100px;
+        bottom: -100px!important;
     }
     #csModal img {
-        height: 200px;
+        height: 200px!important;
     }
     #csModal {
         padding-top: 55px;
