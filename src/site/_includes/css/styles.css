@@ -1033,3 +1033,15 @@ a#memberstoggle:hover + .connect2, .connect2:hover  {
 .tippy-box[data-theme~='custom3'][data-placement^='right'] > .tippy-arrow::before {
     border-right-color: #320A28;
 }
+
+#csModal {
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
