@@ -228,11 +228,20 @@ nav a:hover {
 }
 @media screen and (min-width: 300px) and (max-width: 430px) {
     nav {
-        max-width: 95%;
+        max-width: 100%;
         font-size: 0.65em;
     }
     nav a {
         padding: 8px 4px;
+    }
+    #banner {
+        max-width: 25px;
+        max-height: 25px;
+        margin-top: 16px;
+    }
+    footer {
+        font-size: smaller;
+        padding-top: 60%;
     }
     #letter-form-div {
         width:90%;
@@ -1059,6 +1068,7 @@ a#memberstoggle:hover + .connect2, .connect2:hover  {
     display: block;
     margin: auto;
     width: fit-content;
+    text-align: center;
 }
 #csModal h3 {
     text-align: center;
@@ -1072,4 +1082,17 @@ a#memberstoggle:hover + .connect2, .connect2:hover  {
 #csModal a:hover {
     font-style: oblique;
     color: var(--pink3);
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    div[data-netlify-identity-button] {
+        bottom: -100px;
+    }
+    #csModal img {
+        height: 200px;
+    }
+    #csModal {
+        padding-top: 55px;
+    }
 }
