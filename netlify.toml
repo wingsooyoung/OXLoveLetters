@@ -14,14 +14,6 @@ package = "netlify-plugin-form-submissions"
   [plugins.inputs]
   formNames = "ALL"
   dataDirectory = "src/site/_data"
-
-[[redirects]]
-from = "/*"
-to = "/*"
-force = true
-status = 200
-  [redirects.conditions]
-  Role = [ "admin" ]
   
 [[redirects]]
 from = "/*"
