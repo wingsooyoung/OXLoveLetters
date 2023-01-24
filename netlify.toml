@@ -17,6 +17,28 @@ package = "netlify-plugin-form-submissions"
   
 [[redirects]]
 from = "/*"
+to = "/:splat"
+force = true
+status = 200
+  [redirects.conditions]
+  Role = [ "admin" ]
+  
+[[redirects]]
+from = "/*"
+to = "/pages/comingsoon"
+force = true
+status = 401
+
+[[redirects]]
+from = "/pages/*"
+to = "/pages/:splat"
+force = true
+status = 200
+  [redirects.conditions]
+  Role = [ "admin" ]
+  
+[[redirects]]
+from = "/pages/*"
 to = "/pages/comingsoon"
 force = true
 status = 401
