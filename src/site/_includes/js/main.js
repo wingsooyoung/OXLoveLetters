@@ -1,7 +1,7 @@
 function openMailbox() {
     const ogbox = document.getElementById("static-mailbox");
 
-    ogbox.src = "/assets/mailbox animated opening atmp3.gif";
+    ogbox.src = "/assets/mailbox animated opening atmp3 -noshadows.gif";
 
     setTimeout(myReadURL, 2500);
 }
@@ -27,18 +27,29 @@ function showDrop() {
     document.getElementById("aboutbtn").classList.toggle("corners");
 }
 
-// const user = auth.currentUser();
-// // "app_metadata": {"roles": ["admin", "creator"]}
-// if (user) {
-//     const timeCheck =
-//         netlifyIdentity.currentUser().token.expires_at <= new Date().getTime();
-//     if (timeCheck) {
-//         netlifyIdentity.refresh(); //.then((jwt)=>console.log(jwt))
-//         console.log('Welcome', user.user_metadata.full_name);
-//     }
-// }
-// if (user) {
-// ...
-// } else {
-//     netlifyIdentity.open();
-// }
+// ABOUT logo modal
+var aboutModal = document.getElementById("abModal");
+function openAbout() {
+    aboutModal.style.display = "block";
+
+}
+var closer = document.getElementsByClassName("closer")[0];
+closer.onclick = function() {
+    aboutModal.style.display = "none";
+}
+
+// READ LETTERS postcard modal
+var modal = document.getElementById("myModal");
+var modalLetter = document.getElementById("modal1");
+function modalZoom(x) {
+    modal.style.display = "block";
+    let m = modalLetter.children;
+    let y = x.children;
+    m["contentboxM"].textContent = y[1].innerHTML;
+    m["nameboxM"].textContent = y[2].innerHTML;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+    modal.style.display = "none";
+}
+

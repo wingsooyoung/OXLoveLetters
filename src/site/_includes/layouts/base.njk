@@ -23,9 +23,52 @@
 
 <body>
 <header>
-  <div id="banner">
-      <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo">
+  <div id="banner" onclick="openAbout()">
+      <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select">
   </div>
+  <!-- The Modal -->
+  <div id="abModal" class="modalabout">
+      <!-- The Close Button -->
+      <span class="closer">&times;</span>
+      <!-- Modal Content -->
+      <div class="modal-content" id="modContainer">
+          <h2>What Is This Place?</h2>
+          <p>OMEGA X is an 11 member group that was created by Spire Entertainment and debuted on June 30th, 2021. As of January 11th, 2023, their contracts with Spire have been suspended. More on that situation can be found <a href="/pages/aboutomegax">here</a>.</p>
+          <p>FOR X is the name of their fandom, meaning "FOREVER WITH OMEGA X".</p>
+          <p>This site was created as a way for all FOR X around the world to let the boys know how incredibly loved they are. I wanted to create a space for the guys that is full of messages of love, support, and hope.</p>
+          <small><em>DISCLAIMER:</em> THIS WEBSITE AND ITS ADMIN ARE NOT OFFICIALLY AFFILIATED WITH OMEGA X OR ITS MEMBERS IN ANY WAY WHATSOEVER. THERE IS NO GUARANTEE THE MEMBERS OF OMEGA X WILL READ ANY OF THE LETTERS SUBMITTED AND APPROVED TO THIS SITE. THIS IS AN UNOFFICIAL PROJECT CREATED BY ONE (1) INTERNATIONAL FOR X AND IS FOR ENTERTAINMENT PURPOSES ONLY.</small>
+          <hr>
+          <em>How does this work?</em>
+          <p>On the HOME page, you can select one of two buttons:</p>
+          <ol>
+              <li>WRITE
+                  <ul>
+                      <li>This button will take you to a form that will ask for your name and your message for OMEGA X. If you don't wish to sign your name, it will be signed with 'FOR X' by default. Once you hit submit, the site admin will check your letter (to prevent spam and inappropriate content). After a letter gets approved it will be visible on the READ Letters page.</li>
+                  </ul><br>
+              </li>
+              <li>READ
+                  <ul>
+                      <li>This button brings you to the page where you can view all the approved letter submissions written by FOR X.</li>
+                  </ul>
+              </li>
+          </ol>
+          <hr style="border-width: 3px;">
+          <p>In the MENU bar at the top of every page, you can access the WRITE and READ Letters pages, as well as two ABOUT pages.</p>
+          <ol>
+              <li>ABOUT OMEGA X
+                  <ul>
+                      <li>This page gives a brief history of OMEGA X, some fun facts and stats, and links to all of their currently active social media accounts. You can also find links to other resources where you can find more details about the boys and their careers.</li>
+                  </ul><br>
+              </li>
+              <li>ABOUT THIS PROJECT
+                  <ul>
+                      <li>This page offers a look into the inspiration and development of this website, along with a bit of information about the site's admin/creator. This includes the site's Github repo link and some discussions of the coding that made this possible.</li>
+                  </ul>
+              </li>
+          </ol>
+      </div>
+  </div>
+
   <nav>
     <div class="dropdown">
           <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-house-bold"></i> HOME</a>
@@ -59,7 +102,50 @@
 
     {% footer %}
 
-{#    add tooltips here !!!   #}
+{#    START tooltips here !!!   #}
+    <!-- Development TIPPY -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <!-- Production TIPPY -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script>
+        tippy('.select', {
+            content: 'What Is This Place?',
+            // placement: 'top',
+            theme: 'custom3',
+            arrow: true,
+            // hideOnClick: "toggle",
+            // trigger: "click" //keep for testing only!
+
+            //arrow: '<svg>...</svg>',
+            //arrow: svgElement,
+            //followCursor: IMPORT,
+            //hideOnClick: toggle / true / false
+            //trigger: 'mouseenter focus', DEFAULT
+            //trigger: click / mouseenter click / focusin
+            //triggerTarget: someElement, SEPARATE TIPPY TARGET FROM THE TRIGGER ELEMENT
+            //zIndex: 9999, DEFAULT
+            //maxWidth: 350, DEFAULT
+            //appendTo: 'smth'
+        })
+        tippy('.share', {
+            content(reference) {
+                const title = reference.getAttribute('title');
+                reference.removeAttribute('title');
+                return title.toUpperCase();
+            },
+            theme: 'custom3',
+            arrow: true,
+        })
+        tippy('.ph-key-bold', {
+            content: 'ADMIN ONLY',
+            theme: 'custom3',
+            arrow: true,
+        })
+    </script>
+{#    END tooltips here !!!   #}
 
     {% set js %}
       {% include "js/main.js" %}

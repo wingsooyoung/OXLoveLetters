@@ -11,18 +11,24 @@ FOOTER / CREDIT
 /*fonts
 
 fallback = font: 14px "Trebuchet MS", Helvetica, sans-serif;
-    font-family: 'Cabin', sans-serif;
 
-    font-family: 'Comfortaa', cursive;
-
-    font-family: 'Hanken Grotesk', sans-serif;
+    //default
+    font-family: 'Hanken Grotesk', sans-serif; /
 
     font-family: 'Rubik', sans-serif;
-
     font-family: 'Kalam', cursive;
+    font-family: 'Single Day', cursive;
+    font-family: 'Stylish', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Comfortaa', cursive;
+
+    //title h1 options
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick Hand SC', cursive;
 
 */
- @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kalam:wght@300;400;700&family=Mali:wght@400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kalam:wght@300;400;700&family=Mali:wght@400;500;600;700&family=Single+Day&family=Stylish&family=Fuzzy+Bubbles:wght@400;700&family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
 
 html {
     margin: 0;
@@ -224,11 +230,20 @@ nav a:hover {
 }
 @media screen and (min-width: 300px) and (max-width: 430px) {
     nav {
-        max-width: 95%;
+        max-width: 100%;
         font-size: 0.65em;
     }
     nav a {
         padding: 8px 4px;
+    }
+    #banner {
+        max-width: 25px;
+        max-height: 25px;
+        margin-top: 16px;
+    }
+    footer {
+        font-size: smaller;
+        padding-top: 60%;
     }
     #letter-form-div {
         width:90%;
@@ -244,6 +259,15 @@ nav a:hover {
     #sendbtn {
         padding: 3px 5px!important;
         font-size: 1.1em!important;
+    }
+    div[data-netlify-identity-button] {
+        bottom: -185px!important;
+    }
+    #csModal img {
+        height: 200px!important;
+    }
+    #csModal {
+        padding-top: 55px;
     }
 }
 @media screen and (min-width: 431px) and (max-width: 600px) {
@@ -268,6 +292,24 @@ nav a:hover {
     #sendbtn {
         padding: 3px 5px!important;
         font-size: 1.1em!important;
+    }
+    #banner {
+        max-width: 25px;
+        max-height: 25px;
+        margin-top: 16px;
+    }
+    footer {
+        font-size: smaller;
+        padding-top: 60%;
+    }
+    div[data-netlify-identity-button] {
+        bottom: -100px!important;
+    }
+    #csModal img {
+        height: 200px!important;
+    }
+    #csModal {
+        padding-top: 55px;
     }
 }
 
@@ -346,14 +388,104 @@ nav a:hover {
     /*margin-left: 18px;*/
 }
 
+/*ABOUT MODAL*/
+h2 {
+    padding: 10px 0;
+    width: auto;
+    margin: 18px auto;
+    font-style: oblique;
+    text-decoration: underline;
+    text-decoration-thickness: 0.3em;
+    text-decoration-color: gold;
+    text-underline-position: under;
+}
+#abModal {
 
+}
+.modalabout {
+    /*outer*/
+    background-color: rgba(0,0,0,0.2) !important;
+    padding-bottom: 100px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+#modContainer {
+    /*inner*/
+    max-width: 600px;
+    background: azure;
+    border-radius: 15px;
+    padding: 10px 75px 40px;
+    border-color: #55dbcb;
+    border-width: 8px;
+    border-style: solid;
+    box-shadow: 0 0 4px 2px inset powderblue, 5px 5px cadetblue;
+    font-weight: 600;
+}
+#modContainer ol {padding-left: 20px;}
+#modContainer ul {list-style-type: disclosure-closed;}
+#modContainer li {text-align: initial;}
+#modContainer p {}
+#modContainer em {}
+#modContainer hr {
+    border-width: 5px;
+    border-color: gold;
+    border-style: groove;
+    margin-left: -2em;
+    margin-right: -2em;
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close,.closer {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus,.closer:hover,.closer:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
 
 /*READ LETTERS*/
 .grid-container {
     display: grid;
     max-width: 90%;
-    column-gap: 25px;
-    row-gap: 15px;
+    column-gap: 111px;
+    row-gap: 42px;
     justify-content: center;
     justify-items: stretch;
     grid-template-columns: auto auto auto;
@@ -361,6 +493,8 @@ nav a:hover {
     align-items: stretch;
     align-content: stretch;
     border: 2px solid brown;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
     padding: 10px;
     margin-right: auto;
     margin-left: auto;
@@ -375,50 +509,119 @@ nav a:hover {
     display: initial;
 }
 /*POSTCARD TEMPLATE*/
-.containerbox {
+.containerbox, .containerboxM {
     position: relative;
     min-width: 0;
+    cursor: pointer;
+    transition: 0.3s;
 }
-#postcard {
+.containerboxM {
+    width: fit-content!important;
+}
+.containerbox:hover {opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+#postcard, #postcardM {
     object-fit: contain;
     width: -webkit-fill-available;
     width: -moz-available;
     width: fill-available;
+}
+#postcardM {
+    max-width: fit-content;
 }
 .template {
     position: absolute;
     /*border: 1px solid lime;*/
     padding:0;
 }
-#contentbox {
+#contentbox, #contentboxM {
     top: 46%;
-    left: 52%;
+    left: 51%;
     transform: translate(-50%, -49%);
     height: 40%;
     width: 60%;
     font-size: x-small; /*xx-small resp small screen*/
     line-height: 16px; /*1.1 resp small screen*/
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-wrap: break-word;
     padding-right: 15px;
+    padding-left: 5px;
     box-sizing: initial;
+    border-radius: 8px;
+    background: rgb(1 0 1 / 10%);
     scrollbar-color: var(--purple2) var(--pink4);
     scrollbar-width: thin;
 }
-#contentbox::-webkit-scrollbar, textarea::-webkit-scrollbar {
+#contentboxM{
+    font-size: medium;
+    line-height: 28px;
+}
+#contentbox::-webkit-scrollbar, textarea::-webkit-scrollbar, #contentboxM::-webkit-scrollbar {
     width: 8px;
 }
-#contentbox::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
+#contentbox::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track, #contentboxM::-webkit-scrollbar-track {
     background: var(--pink4);
     box-shadow: inset 0 0 5px var(--pink3);
     border-radius: 10px;
 }
-#contentbox::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
+#contentbox::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb, #contentboxM::-webkit-scrollbar-thumb {
     background: var(--purple2);
     border-radius: 10px;
 }
-#contentbox::-webkit-scrollbar-thumb:hover, textarea::-webkit-scrollbar-thumb:hover {
+#contentbox::-webkit-scrollbar-thumb:hover, textarea::-webkit-scrollbar-thumb:hover, #contentboxM::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
@@ -451,7 +654,7 @@ nav a:hover {
 ::-webkit-scrollbar-button:horizontal:end:decrement {
     display: none;
 }
-#namebox {
+#namebox, #nameboxM {
     bottom: 17%;
     right: 15%;
     width: 27%;
@@ -460,6 +663,10 @@ nav a:hover {
     line-height: 15px;
     font-size: x-small;
     text-align: center;
+}
+#nameboxM {
+    font-size: initial;
+    line-height: initial;
 }
 iframe {
     height: 180px;
@@ -472,7 +679,6 @@ div#griddy {
 }
 
 /*WRITE LETTERS - FORM*/
-/* Rounded corner gradient border - credit: stackoverflow.com/questions/5706963/possible-to-use-border-radius-together-with-a-border-image-which-has-a-gradient */
 #letter-form-div, #success-block {
     /*margin-top: 30svh;*/
     max-width: 550px;
@@ -625,6 +831,9 @@ div[data-netlify-identity-button] {
     /*background: #55dbcb;*/
     /*width: max-content;*/
     font-size: xx-small;
+    position: relative;
+    bottom: -108px;
+    z-index: 1000000000000000;
 }
 .identity-overlay {
     width: max-content;
@@ -655,9 +864,23 @@ form#approver {
 }
 
 /*ABOUT PAGE DESIGNS*/
+#aboutme {
+    width: 650px;
+    margin: auto;
+    padding: 20px;
+    border: 5px double #cd0b24;
+    outline: 5px outset #cd0b24;
+    border-radius: 15px 5px;
+    color: rgba(0,0,0,1);
+    text-align: center;
+    text-overflow: fade;
+    background: rgba(255,163,212,1);
+    font-size: 1.05em;
+}
 .abouth1 {
     margin:auto;
     width: max-content;
+    padding-bottom: 20px;
 }
 .box{
     border-width: 3px 4px 3px 5px;
@@ -731,13 +954,14 @@ form#approver {
     fill: currentColor;
 }
 .wrapper {
-    width: 100%;
-    height: 8vh;
+    width: 700px;
+    margin: auto auto 33px auto;
+    height: 18vh;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin-bottom: 33px;
+    align-content: flex-start;
 }
 .share {
     width: 3rem;
@@ -751,11 +975,18 @@ form#approver {
     transition: 250ms;
     background: white;
 }
-.share:last-child {
+#memberstoggle.share.instagram {
     margin-right: 0;
 }
 .share:focus {
     outline-color: inherit;
+}
+.connect2 {
+    display: none;
+    margin-top: -10px;
+}
+a#memberstoggle:hover + .connect2, .connect2:hover  {
+    display: block;
 }
 .twitter:hover, .twitter:focus {
     color: #00aced;
@@ -764,6 +995,12 @@ form#approver {
 .instagram:hover, .instagram:focus {
     color: #d300c5;
     box-shadow: 0 0 24px 0 #d300c5;
+}
+.memberAccounts {
+    display: none;
+}
+.memberAccounts:hover {
+    display: inline;
 }
 .github:hover, .github:focus {
     color: #4183c4;
@@ -785,3 +1022,100 @@ form#approver {
     color: #dd4b39;
     box-shadow: 0 0 24px 0 #dd4b39;
 }
+
+.tippy-box[data-theme~='custom1'] {
+    font-weight: bold;
+    color: #13070c;
+    background: #eff9f0;
+    border: solid #DDC8C4;
+}
+.tippy-box[data-theme~='custom1'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #DDC8C4;
+}
+.tippy-box[data-theme~='custom1'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #DDC8C4;
+}
+.tippy-box[data-theme~='custom1'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #DDC8C4;
+}
+.tippy-box[data-theme~='custom1'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #DDC8C4;
+}
+.tippy-box[data-theme~='custom2'] {
+    font-weight: bold;
+    background: #BFDBF7;
+    color: #0E131F;
+    border: 3px solid #38405F;
+    text-shadow: 1px 1px 5px #8b939c;
+}
+.tippy-box[data-theme~='custom2'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #38405F;
+}
+.tippy-box[data-theme~='custom2'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #38405F;
+}
+.tippy-box[data-theme~='custom2'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #38405F;
+}
+.tippy-box[data-theme~='custom2'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #38405F;
+}
+.tippy-box[data-theme~='custom3'] {
+    font-weight: bold;
+    background: #B3C2F2;
+    color: #320a28;
+    border: 2px solid #320A28;
+    font-variant: small-caps;
+}
+.tippy-box[data-theme~='custom3'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #320A28;
+}
+.tippy-box[data-theme~='custom3'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #320A28;
+}
+.tippy-box[data-theme~='custom3'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #320A28;
+}
+.tippy-box[data-theme~='custom3'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #320A28;
+}
+
+#csModal {
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    z-index: 1;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Stylish', sans-serif;
+}
+#csModal img {
+    height:250px;
+    display:block;
+    margin:auto;
+}
+#csModal h2 {
+    font-family: 'Single Day', cursive;
+    font-size: 35px;
+    display: block;
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+#csModal h3 {
+    text-align: center;
+}
+#csModal a {
+    font-style: normal;
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+#csModal a:hover {
+    font-style: oblique;
+    color: var(--pink3);
+}
+
