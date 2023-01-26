@@ -887,6 +887,10 @@ form#approver {
     background-image: url("/assets/title bg.png");
     background-position: inherit;
     background-size: contain;
+    background-repeat: no-repeat;
+}
+.abouth1.project {
+    background-size: initial!important;
 }
 .box{
     border-width: 3px 4px 3px 5px;
@@ -958,8 +962,6 @@ form#approver {
     display: block;
     margin: 0 auto;
     fill: currentColor;
-}
-#memberstoggle.svg--icon {
     stroke: currentColor;
 }
 .wrapper {
