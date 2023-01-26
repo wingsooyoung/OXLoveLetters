@@ -878,9 +878,13 @@ form#approver {
     font-size: 1.05em;
 }
 .abouth1 {
-    margin:auto;
-    width: max-content;
-    padding-bottom: 20px;
+    margin: 0;
+    color: var(--grey2);
+    text-shadow: 2px 2px 2px darkslategrey;
+    text-align: center;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 4em;
+    background-image: url("/assets/title bg.png");
 }
 .box{
     border-width: 3px 4px 3px 5px;
