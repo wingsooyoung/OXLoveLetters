@@ -959,6 +959,9 @@ form#approver {
     margin: 0 auto;
     fill: currentColor;
 }
+#memberstoggle.svg--icon {
+    stroke: currentColor;
+}
 .wrapper {
     width: 700px;
     margin: auto auto 33px auto;
@@ -1000,6 +1003,10 @@ a#memberstoggle:hover + .connect2, .connect2:hover  {
 }
 .instagram:hover, .instagram:focus {
     color: #d300c5;
+    box-shadow: 0 0 24px 0 #d300c5;
+}
+#memberstoggle:hover, #memberstoggle:focus {
+    fill: #d300c5;
     box-shadow: 0 0 24px 0 #d300c5;
 }
 .memberAccounts {
