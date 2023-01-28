@@ -1134,3 +1134,19 @@ a#memberstoggle:hover + .connect2, .connect2:hover  {
     color: var(--pink3);
 }
 
+ul#sitemap-ul {
+    list-style: square inside;
+    width: fit-content;
+    /*margin: auto;*/
+    margin-left: 30%;
+    margin-right: 50%;
+    font-size: large;
+    color: var(--eggshell);
+}
+div#sitemap-links a {
+    font-style: oblique;
+    color: var(--pink3);
+}
+li.sitemap-li {
+    margin: 20px;
+}
