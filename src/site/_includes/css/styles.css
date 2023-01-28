@@ -822,6 +822,11 @@ footer u {
     font-size: smaller;
     font-style: italic;
 }
+#disclaimer {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 /* IDENTITY WIDGET */
@@ -1147,6 +1152,7 @@ ul#sitemap-ul {
 div#sitemap-links a {
     font-style: oblique;
     color: var(--pink3);
+    vertical-align: 17%;
 }
 li.sitemap-li {
     margin: 20px;
