@@ -1141,9 +1141,8 @@ a#memberstoggle:hover + .connect2, .connect2:hover  {
 
 ul#sitemap-ul {
     list-style-position: inside;
-    list-style-image: url("/assets/gqlzckg4akcldg9z4rj.svg");
+    list-style-image: url("/assets/stamp-empty-svgrepo-com.svg");
     width: fit-content;
-    /*margin: auto;*/
     margin-left: 30%;
     margin-right: 50%;
     font-size: large;
