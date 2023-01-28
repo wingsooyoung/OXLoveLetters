@@ -1149,10 +1149,13 @@ ul#sitemap-ul {
     color: var(--eggshell);
 }
 div#sitemap-links a {
-    font-style: oblique;
-    color: var(--pink3);
     vertical-align: 17%;
 }
+div#sitemap-links a:hover {
+    font-style: oblique;
+    color: var(--pink3);
+}
+
 li.sitemap-li {
     margin: 20px;
 }
