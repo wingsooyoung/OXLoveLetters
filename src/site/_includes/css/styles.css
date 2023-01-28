@@ -954,6 +954,15 @@ hr {
     font-variant: small-caps;
     font-size: large;
 }
+#contact svg {
+    vertical-align: middle;
+    margin-left: 4px;
+}
+#contact i {
+    font-size: initial;
+    vertical-align: middle;
+    margin-left: 4px;
+}
 
 /*social media buttons*/
 .clip {
