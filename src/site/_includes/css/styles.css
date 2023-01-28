@@ -1146,10 +1146,11 @@ ul#sitemap-ul {
     margin-left: 30%;
     margin-right: 50%;
     font-size: large;
-    color: var(--eggshell);
 }
 div#sitemap-links a {
     vertical-align: 17%;
+    color: var(--eggshell) !important;
+    text-decoration: none;
 }
 div#sitemap-links a:hover {
     font-style: oblique;
