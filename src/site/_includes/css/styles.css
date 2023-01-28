@@ -943,6 +943,13 @@ form#approver {
     display: block;
     box-shadow: 8px 18px 12px 0 rgba(0, 0, 0, 0.1), -8px 26px 14px 0 rgba(0,0,0,0.1);
 }
+hr {
+    border-width: 5px;
+    /*border-color: gold;*/
+    /*border-style: groove;*/
+    margin-left: -2em;
+    margin-right: -2em;
+}
 
 
 /*social media buttons*/
