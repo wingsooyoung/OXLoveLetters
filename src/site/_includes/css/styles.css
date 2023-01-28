@@ -944,13 +944,16 @@ form#approver {
     box-shadow: 8px 18px 12px 0 rgba(0, 0, 0, 0.1), -8px 26px 14px 0 rgba(0,0,0,0.1);
 }
 hr {
-    border-width: 5px;
-    /*border-color: gold;*/
-    /*border-style: groove;*/
-    margin-left: -2em;
-    margin-right: -2em;
+    border-width: 3px;
+    border-color: #cd0b24;
+    border-style: outset;
+    margin-left: 0;
+    margin-right: 0;
 }
-
+#contact a {
+    font-variant: small-caps;
+    font-size: large;
+}
 
 /*social media buttons*/
 .clip {
@@ -1156,7 +1159,7 @@ ul#sitemap-ul {
 }
 div#sitemap-links a {
     vertical-align: 17%;
-    color: var(--eggshell) !important;
+    color: var(--eggshell);
     text-decoration: none;
 }
 div#sitemap-links a:hover {
