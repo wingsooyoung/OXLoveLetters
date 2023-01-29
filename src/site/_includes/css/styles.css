@@ -230,11 +230,24 @@ nav a:hover {
 }
 @media screen and (min-width: 300px) and (max-width: 430px) {
     nav {
-        max-width: 100%;
+        max-width: 88%;
         font-size: 0.65em;
+        margin-left: auto;
+        margin-right: 4px;
     }
     nav a {
         padding: 8px 4px;
+        font-size: 1.15em;
+    }
+    #static-mailbox {
+        width: 215px!important;
+    }
+    #readbtn {
+        margin-right: 40px!important;
+    }
+    .choicesbtn {
+        font-size: 0.9em!important;
+        width: 95px!important;
     }
     #banner {
         max-width: 25px;
@@ -244,6 +257,14 @@ nav a:hover {
     footer {
         font-size: smaller;
         padding-top: 60%;
+    }
+    footer p#line1 {
+        font-size: 0.8em!important;
+    }
+    footer p#disclaimer { /*change so this hides by default and expands on hover!*/
+        font-size: 0.2em!important;
+        margin: 5px;
+        width: 97%;
     }
     #letter-form-div {
         width:90%;
@@ -261,7 +282,7 @@ nav a:hover {
         font-size: 1.1em!important;
     }
     div[data-netlify-identity-button] {
-        bottom: -185px!important;
+        bottom: -150px!important;
     }
     #csModal img {
         height: 200px!important;
