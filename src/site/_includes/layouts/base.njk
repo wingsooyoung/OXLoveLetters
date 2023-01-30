@@ -32,63 +32,69 @@
       <span class="closer">&times;</span>
       <!-- Modal Content -->
       <div class="modal-content" id="modContainer">
-          <h2>What Is This Place?</h2>
-          <p>OMEGA X is an 11 member group that was created by Spire Entertainment and debuted on June 30th, 2021. As of January 11th, 2023, their contracts with Spire have been suspended. More on that situation can be found <a href="/pages/aboutomegax">here</a>.</p>
-          <p>FOR X is the name of their fandom, meaning "FOREVER WITH OMEGA X".</p>
-          <p>This site was created as a way for all FOR X around the world to let the boys know how incredibly loved they are. I wanted to create a space for the guys that is full of messages of love, support, and hope.</p>
-          <small><em>DISCLAIMER:</em> THIS WEBSITE AND ITS ADMIN ARE NOT OFFICIALLY AFFILIATED WITH OMEGA X OR ITS MEMBERS IN ANY WAY WHATSOEVER. THERE IS NO GUARANTEE THE MEMBERS OF OMEGA X WILL READ ANY OF THE LETTERS SUBMITTED AND APPROVED TO THIS SITE. THIS IS AN UNOFFICIAL PROJECT CREATED BY ONE (1) INTERNATIONAL FOR X AND IS FOR ENTERTAINMENT PURPOSES ONLY.</small>
+          <div id="section1">
+              <h2>What Is This Place?</h2>
+              <p>OMEGA X is an 11 member group that was created by Spire Entertainment and debuted on June 30th, 2021. As of January 11th, 2023, their contracts with Spire have been suspended. More on that situation can be found <a href="/pages/aboutomegax">here</a>.</p>
+              <p>FOR X is the name of their fandom, meaning "FOREVER WITH OMEGA X".</p>
+              <p>This site was created as a way for all FOR X around the world to let the boys know how incredibly loved they are. I wanted to create a space for the guys that is full of messages of love, support, and hope.</p>
+              <small><em>DISCLAIMER:</em> THIS WEBSITE AND ITS ADMIN ARE NOT OFFICIALLY AFFILIATED WITH OMEGA X OR ITS MEMBERS IN ANY WAY WHATSOEVER. THERE IS NO GUARANTEE THE MEMBERS OF OMEGA X WILL READ ANY OF THE LETTERS SUBMITTED AND APPROVED TO THIS SITE. THIS IS AN UNOFFICIAL PROJECT CREATED BY ONE (1) INTERNATIONAL FOR X AND IS FOR ENTERTAINMENT PURPOSES ONLY.</small>
+          </div>
           <hr>
-          <em>How does this work?</em>
-          <p>On the HOME page, you can select one of two buttons:</p>
-          <ol>
-              <li>WRITE
-                  <ul>
-                      <li>This button will take you to a form that will ask for your name and your message for OMEGA X. If you don't wish to sign your name, it will be signed with 'FOR X' by default. Once you hit submit, the site admin will check your letter (to prevent spam and inappropriate content). After a letter gets approved it will be visible on the READ Letters page.</li>
-                  </ul><br>
-              </li>
-              <li>READ
-                  <ul>
-                      <li>This button brings you to the page where you can view all the approved letter submissions written by FOR X.</li>
-                  </ul>
-              </li>
-          </ol>
+          <div id="section2">
+              <em>How does this work?</em>
+              <p>On the HOME page, you can select one of two buttons:</p>
+              <ol>
+                  <li>WRITE
+                      <ul>
+                          <li>This button will take you to a form that will ask for your name and your message for OMEGA X. If you don't wish to sign your name, it will be signed with 'FOR X' by default. Once you hit submit, the site admin will check your letter (to prevent spam and inappropriate content). After a letter gets approved it will be visible on the READ Letters page.</li>
+                      </ul><br>
+                  </li>
+                  <li>READ
+                      <ul>
+                          <li>This button brings you to the page where you can view all the approved letter submissions written by FOR X.</li>
+                      </ul>
+                  </li>
+              </ol>
+          </div>
           <hr style="border-width: 3px;">
-          <p>In the MENU bar at the top of every page, you can access the WRITE and READ Letters pages, as well as two ABOUT pages.</p>
-          <ol>
-              <li>ABOUT OMEGA X
-                  <ul>
-                      <li>This page gives a brief history of OMEGA X, some fun facts and stats, and links to all of their currently active social media accounts. You can also find links to other resources where you can find more details about the boys and their careers.</li>
-                  </ul><br>
-              </li>
-              <li>ABOUT THIS PROJECT
-                  <ul>
-                      <li>This page offers a look into the inspiration and development of this website, along with a bit of information about the site's admin/creator. This includes the site's Github repo link and some discussions of the coding that made this possible.</li>
-                  </ul>
-              </li>
-          </ol>
+          <div id="section3">
+              <p>In the MENU bar at the top of every page, you can access the WRITE and READ Letters pages, as well as two ABOUT pages.</p>
+              <ol>
+                  <li>ABOUT OMEGA X
+                      <ul>
+                          <li>This page gives a brief history of OMEGA X, some fun facts and stats, and links to all of their currently active social media accounts. You can also find links to other resources where you can find more details about the boys and their careers.</li>
+                      </ul><br>
+                  </li>
+                  <li>ABOUT THIS PROJECT
+                      <ul>
+                          <li>This page offers a look into the inspiration and development of this website, along with a bit of information about the site's admin/creator. This includes the site's Github repo link and some discussions of the coding that made this possible.</li>
+                      </ul>
+                  </li>
+              </ol>
+          </div>
       </div>
   </div>
 
   <nav>
     <div class="dropdown">
-          <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-house-bold"></i> HOME</a>
+        <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-house-bold"></i><span class="nav-text"> HOME</span></a>
 
           {%- for page in collections.pages -%}
               {% if page.data.title == 'Read Letters' %}
-                  <a href="{{ page.url }}"><i class="ph-envelope-open-bold"></i> READ LETTERS</a>
+                  <a href="{{ page.url }}"><i class="ph-envelope-open-bold"></i><span class="nav-text"> READ LETTERS</span></a>
               {% elseif page.data.title == 'Write Letters' %}
-                  <a href="{{ page.url }}"><i class="ph-pencil-line-bold"></i> WRITE A LETTER</a>
+                  <a href="{{ page.url }}"><i class="ph-pencil-line-bold"></i><span class="nav-text"> WRITE A LETTER</span></a>
               {% endif %}
           {%- endfor -%}
 
-          <a onclick="showDrop();" id="aboutbtn" class=""><i class="ph-info-bold"></i> ABOUT <i class="ph-caret-down"></i></a>
+          <a onclick="showDrop();" id="aboutbtn" class=""><i class="ph-info-bold"></i><span class="nav-text"> ABOUT</span> <i class="ph-caret-down"></i></a>
 
           <div id="dropdowncontent" class="">
               {%- for page in collections.pages -%}
                   {% if page.data.title == 'About OMEGA X' %}
                       <a href="{{ page.url }}">ABOUT OMEGA X</a>
                   {% elseif page.data.title == 'About This Project' %}
-                      <a href="{{ page.url }}" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">ABOUT THIS SITE</a>
+                      <a href="{{ page.url }}" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">ABOUT THIS PROJECT</a>
                   {% endif %}
               {%- endfor -%}
           </div>

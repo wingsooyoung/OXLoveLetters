@@ -235,9 +235,15 @@ nav a:hover {
         margin-left: auto;
         margin-right: 4px;
     }
-    nav a {
+    nav a { /*OMG WAIT REMOVE THE TEXT IN THE MENU BUTTONS AND JUST MAKE THEM THE ICONS!!!!!!*/
         padding: 8px 4px;
         font-size: 1.15em;
+    }
+    nav i {
+        font-size: 1em;
+    }
+    .nav-text {
+        display: none;
     }
     #static-mailbox {
         width: 215px!important;
@@ -248,6 +254,9 @@ nav a:hover {
     .choicesbtn {
         font-size: 0.9em!important;
         width: 95px!important;
+    }
+    .centerbtns i {
+        font-size: larger;
     }
     #banner {
         max-width: 25px;
@@ -359,6 +368,22 @@ nav a:hover {
         margin: 0 20px!important;
         font-size: 0.9em!important;
         padding: 5px 15px!important;
+    }
+    .modalabout {
+        padding-top: 70px!important;
+    }
+    #section1 {
+        padding: 10px 30px !important;
+    }
+    #section2 {
+        padding: 10px 17px !important;
+    }
+    #section3 {
+        padding: 10px 17px !important;
+    }
+    #modContainer hr {
+        margin-left: -0.5em!important;
+        margin-right: -0.5em!important;
     }
 }
 @media screen and (min-width: 431px) and (max-width: 600px) {
