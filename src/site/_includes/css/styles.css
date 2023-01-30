@@ -233,10 +233,10 @@ nav a:hover {
         max-width: 88%;
         font-size: 0.65em;
         margin-left: auto;
-        margin-right: 4px;
+        margin-right: 53px;
     }
     nav a { /*OMG WAIT REMOVE THE TEXT IN THE MENU BUTTONS AND JUST MAKE THEM THE ICONS!!!!!!*/
-        padding: 8px 4px;
+        padding: 8px 15px;
         font-size: 1.15em;
     }
     nav i {
@@ -244,6 +244,10 @@ nav a:hover {
     }
     .nav-text {
         display: none;
+    }
+    #dropdowncontent a {
+        font-size: 1.4em;
+        padding: 8px 10px;
     }
     #static-mailbox {
         width: 215px!important;
@@ -262,6 +266,7 @@ nav a:hover {
         max-width: 25px;
         max-height: 25px;
         margin-top: 16px;
+        margin-left: 38px!important;
     }
     footer {
         font-size: smaller;
@@ -307,6 +312,9 @@ nav a:hover {
     .modal-content {
         max-width: 90%!important;
     }
+    #modContainer {
+        padding: 10px 0 40px!important;
+    }
     #contentbox {
         line-height: 14px!important;
     }
@@ -323,11 +331,13 @@ nav a:hover {
         margin-bottom: 0!important;
     }
     .share {
-        height: 2rem;
-        width: 2rem;
+        height: 2.5rem!important;
+        width: 2.5rem!important;
     }
     .connect2 > .share {
         margin: 0.5rem 0.3rem 0.5rem 0!important;
+        height: 2rem!important;
+        width: 2rem!important;
     }
     #aboutox {
         max-width: 100%;
