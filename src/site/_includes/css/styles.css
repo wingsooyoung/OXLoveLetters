@@ -290,6 +290,24 @@ nav a:hover {
     #csModal {
         padding-top: 55px;
     }
+    .grid-container {
+        grid-template-columns: auto!important;
+        row-gap: 15px!important;
+        padding: 15px 30px!important;
+    }
+    .modal-content {
+        max-width: 90%!important;
+    }
+    #contentbox {
+        line-height: 14px!important;
+    }
+    #contentboxM, #nameboxM {
+        line-height: 17px!important;
+        font-size: 0.9em!important;
+    }
+    .modal {
+        padding-top: 200px!important;
+    }
 }
 @media screen and (min-width: 431px) and (max-width: 600px) {
     nav {
