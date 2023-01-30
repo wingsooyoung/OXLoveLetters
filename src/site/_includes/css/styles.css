@@ -346,6 +346,20 @@ nav a:hover {
         font-size: 0.9em!important;
         padding: 5px 15px!important;
     }
+    #sitemap-ul {
+        width: max-content!important;
+        margin-left: 10%!important;
+        font-size: 1.1em!important;
+    }
+    div#sitemap-links a {
+        vertical-align: 19%!important;
+    }
+    #faq {
+        max-width: fit-content;
+        margin: 0 20px!important;
+        font-size: 0.9em!important;
+        padding: 5px 15px!important;
+    }
 }
 @media screen and (min-width: 431px) and (max-width: 600px) {
     nav {
@@ -1255,4 +1269,25 @@ div#sitemap-links a:hover {
 
 li.sitemap-li {
     margin: 20px;
+}
+
+div#faq {
+    width: 650px;
+    margin: auto;
+    padding: 20px;
+    border: 5px double #cd0b24;
+    outline: 5px outset #cd0b24;
+    border-radius: 15px 5px;
+    color: rgba(0,0,0,1);
+    background: rgba(255,163,212,1);
+    font-size: 1.05em;
+}
+dt {
+    font-weight: 800;
+    font-size: 1.2em;
+}
+dd {
+    margin-left: 28px;
+    margin-bottom: 10px;
+    font-size: 1.15em;
 }
