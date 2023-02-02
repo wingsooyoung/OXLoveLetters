@@ -1023,6 +1023,10 @@ dd {
 
 /*RESPONSIVENESS*/
 @media screen and (min-width: 300px) and (max-width: 430px) {
+    body {
+        background-image: url("/assets/mobile bg rough.png");
+        background-size: contain;
+    }
     nav {
         max-width: 88%;
         font-size: 0.65em;
@@ -1191,7 +1195,11 @@ dd {
     }
 } /*my phone = 360w x 649h*/
 
-/*@media screen and (min-width: 431px) and (max-width: 600px) {*/
+@media screen and (min-width: 431px) and (max-width: 600px) {
+    body {
+        background-image: url("/assets/mobile bg rough.png");
+        background-size: contain;
+    }
 /*    nav {*/
 /*        max-width: 95%;*/
 /*        font-size: 0.65em;*/
@@ -1232,4 +1240,4 @@ dd {
 /*    #csModal {*/
 /*        padding-top: 55px;*/
 /*    }*/
-/*}*/
+}
