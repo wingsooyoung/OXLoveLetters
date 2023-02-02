@@ -301,8 +301,10 @@ footer u {
 }
 #disclaimer {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+}
+#line1 {
+    margin: 0 auto;
 }
 small.disclaimer {
     /*font-size: 0.2em!important;*/
@@ -318,7 +320,7 @@ small.disclaimer {
 div[data-netlify-identity-button] {
     font-size: xx-small;
     position: relative;
-    bottom: -108px;
+    bottom: -50px;
     z-index: 1000000000000000;
 }
 .identity-overlay {
@@ -708,6 +710,10 @@ form#approver {
     font-variant: small-caps;
     font-size: large;
 }
+#contact a:hover {
+    font-style: oblique;
+    color: var(--pink3);
+}
 #contact svg {
     vertical-align: middle;
     margin-left: 4px;
@@ -1079,12 +1085,12 @@ dd {
     }
     footer {
         font-size: smaller;
-        padding-top: 60%;
+        padding-top: 25%;
     }
     footer p#line1 {
         font-size: 0.8em!important;
     }
-    footer p#disclaimer { /*change so this hides by default and expands on hover!*/
+    footer p#disclaimer {
         font-size: 0.2em!important;
         margin: 5px;
         width: 97%;
