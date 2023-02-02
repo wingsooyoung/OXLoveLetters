@@ -63,7 +63,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     font-size: 0.9em;
 }
 h2 {
@@ -273,11 +273,13 @@ nav a:hover {
     }
 }
 footer {
-    bottom:0;
-    padding-top: 10%;
+    bottom: 1%;
+    left: 10%;
+    right: 10%;
     text-align: center;
     font-size: inherit;
     color: var(--eggshell);
+    position: absolute;
 }
 footer a {
     font-style: normal;
@@ -320,7 +322,6 @@ small.disclaimer {
 div[data-netlify-identity-button] {
     font-size: xx-small;
     position: relative;
-    bottom: -50px;
     z-index: 1000000000000000;
 }
 .identity-overlay {
@@ -1039,18 +1040,43 @@ dd {
 
 
 /*RESPONSIVENESS*/
-@media screen and (min-width: 300px) and (max-width: 430px) {
+@media screen and (min-width: 550px) and (max-width: 800px) {
     body {
-        background-image: url("/assets/mobile bg rough.png");
-        background-size: contain;
+        background-size: 50% 100%;
+        background-repeat: repeat;
     }
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    nav a {
+        padding: initial;
+    }
+    .nav-text {
+        display: initial;
+    }
+    nav {
+        margin-right: 3vw;
+    }
+    #banner {
+        margin-left: 24px;
+    }
+    nav i {
+        vertical-align: -3px;
+    }
+    #static-mailbox {
+        width: 300px!important;
+    }
+    #mailbox {
+        margin-top: 11%;
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 500px) {
     nav {
         max-width: 88%;
         font-size: 0.65em;
         margin-left: auto;
         margin-right: 53px;
     }
-    nav a { /*OMG WAIT REMOVE THE TEXT IN THE MENU BUTTONS AND JUST MAKE THEM THE ICONS!!!!!!*/
+    nav a {
         padding: 8px 15px;
         font-size: 1.15em;
     }
@@ -1063,6 +1089,11 @@ dd {
     #dropdowncontent a {
         font-size: 1.4em;
         padding: 8px 10px;
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 800px) {
+    body {
+        background-image: url("/assets/mobile bg rough.png");
     }
     #static-mailbox {
         width: 215px!important;
@@ -1089,6 +1120,7 @@ dd {
     }
     footer p#line1 {
         font-size: 0.8em!important;
+        margin: 5px;
     }
     footer p#disclaimer {
         font-size: 0.2em!important;
@@ -1111,7 +1143,7 @@ dd {
         font-size: 1.1em!important;
     }
     div[data-netlify-identity-button] {
-        bottom: -150px!important;
+        margin: 5px;
     }
     #csModal img {
         height: 200px!important;
@@ -1211,50 +1243,3 @@ dd {
         margin-right: -0.5em!important;
     }
 } /*my phone = 360w x 649h*/
-
-@media screen and (min-width: 431px) and (max-width: 600px) {
-    body {
-        background-image: url("/assets/mobile bg rough.png");
-        background-size: contain;
-    }
-/*    nav {*/
-/*        max-width: 95%;*/
-/*        font-size: 0.65em;*/
-/*    }*/
-/*    nav a {*/
-/*        padding: 8px 4px;*/
-/*    }*/
-/*    #letter-form-div {*/
-/*        width:90%;*/
-/*        font-size: 0.8em;*/
-/*    }*/
-/*    #nickname {*/
-/*        font-size: 0.8em;*/
-/*    }*/
-/*    form {*/
-/*        margin: 0;*/
-/*        padding: 0 8px 5px!important;*/
-/*    }*/
-/*    #sendbtn {*/
-/*        padding: 3px 5px!important;*/
-/*        font-size: 1.1em!important;*/
-/*    }*/
-/*    #banner {*/
-/*        max-width: 25px;*/
-/*        max-height: 25px;*/
-/*        margin-top: 16px;*/
-/*    }*/
-/*    footer {*/
-/*        font-size: smaller;*/
-/*        padding-top: 60%;*/
-/*    }*/
-/*    div[data-netlify-identity-button] {*/
-/*        bottom: -100px!important;*/
-/*    }*/
-/*    #csModal img {*/
-/*        height: 200px!important;*/
-/*    }*/
-/*    #csModal {*/
-/*        padding-top: 55px;*/
-/*    }*/
-}
