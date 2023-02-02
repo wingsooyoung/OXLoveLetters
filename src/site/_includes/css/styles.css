@@ -304,6 +304,14 @@ footer u {
     margin-left: auto;
     margin-right: auto;
 }
+.hide {
+    display: none;
+    overflow: hidden;
+}
+.show {}
+.show:hover + .hide {
+    display: inline;
+}
 div[data-netlify-identity-button] {
     font-size: xx-small;
     position: relative;
