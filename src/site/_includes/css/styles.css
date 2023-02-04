@@ -273,14 +273,14 @@ nav a:hover {
     }
 }
 footer {
-    bottom: 1%;
-    top: 100%;
-    left: 10%;
-    right: 10%;
+    /*bottom: 1%;*/
+    /*top: 100%;*/
+    /*left: 10%;*/
+    /*right: 10%;*/
     text-align: center;
     font-size: inherit;
     color: var(--eggshell);
-    position: absolute;
+    /*position: absolute;*/
 }
 footer a {
     font-style: normal;
