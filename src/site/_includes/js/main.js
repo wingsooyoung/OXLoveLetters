@@ -50,8 +50,12 @@ function modalZoom(x) {
     m["lettercountM"].textContent = y[3].innerHTML;
 }
 var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-    modal.style.display = "none";
+try {
+    span.onclick = function() {
+        modal.style.display = "none";
+    }}
+catch(err) {
+    console.log("doesnt apply to this page dwbi")
 }
 
 //FAQ open/close

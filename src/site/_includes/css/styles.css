@@ -80,6 +80,10 @@ a {
     /*text-decoration: none;*/
     color: black;
 }
+a:hover {
+    font-style: oblique;
+    color: var(--pink3);
+}
 i {
     font-size: smaller;
     vertical-align: -0.1em;
@@ -280,6 +284,7 @@ footer {
     text-align: center;
     font-size: inherit;
     color: var(--eggshell);
+    padding-top: 30px;
     /*position: absolute;*/
 }
 footer a {
