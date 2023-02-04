@@ -54,3 +54,18 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
+//FAQ open/close
+var ques = document.getElementsByClassName("questions");
+var i;
+
+for (i = 0; i < ques.length; i++) {
+    ques[i].addEventListener("click", function() {
+        var answ = this.nextElementSibling;
+        if (answ.style.display === "block") {
+            answ.style.display = "none";
+        } else {
+            answ.style.display = "block";
+        }
+    });
+}
+
