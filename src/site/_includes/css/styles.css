@@ -274,6 +274,7 @@ nav a:hover {
 }
 footer {
     bottom: 1%;
+    top: 100%;
     left: 10%;
     right: 10%;
     text-align: center;
@@ -305,6 +306,9 @@ footer u {
     width: 80%;
     margin: 0 auto;
 }
+#disclaimer:hover {
+    color: var(--pink3);
+}
 #line1 {
     margin: 0 auto;
 }
@@ -323,6 +327,7 @@ div[data-netlify-identity-button] {
     font-size: xx-small;
     position: relative;
     z-index: 1000000000000000;
+    padding-bottom: 5px;
 }
 .identity-overlay {
     width: max-content;
