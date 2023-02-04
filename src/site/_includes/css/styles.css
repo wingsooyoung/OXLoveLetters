@@ -306,7 +306,7 @@ footer u {
     width: 80%;
     margin: 0 auto;
 }
-#disclaimer:hover {
+.show:hover {
     color: var(--pink3);
 }
 #line1 {
