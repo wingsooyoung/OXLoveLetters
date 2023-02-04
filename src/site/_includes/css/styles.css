@@ -568,7 +568,11 @@ div[data-netlify-identity-button] {
     line-height: initial;
 }
 #lettercount {
-
+    bottom: 9px;
+    left: 9px;
+    background: #e592ab91;
+    padding: 0 5px;
+    border-radius: 7px;
 }
 iframe {
     height: 180px;

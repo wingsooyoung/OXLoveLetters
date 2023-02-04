@@ -47,6 +47,7 @@ function modalZoom(x) {
     let y = x.children;
     m["contentboxM"].textContent = y[1].innerHTML;
     m["nameboxM"].textContent = y[2].innerHTML;
+    m["lettercountM"].textContent = y[3].innerHTML;
 }
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
