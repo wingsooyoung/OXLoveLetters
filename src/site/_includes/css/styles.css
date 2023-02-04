@@ -326,8 +326,8 @@ small.disclaimer {
 div[data-netlify-identity-button] {
     font-size: xx-small;
     position: relative;
-    z-index: 1000000000000000;
     padding-bottom: 5px;
+    padding-top: 2px;
 }
 .identity-overlay {
     width: max-content;
@@ -567,12 +567,16 @@ div[data-netlify-identity-button] {
     font-size: initial;
     line-height: initial;
 }
-#lettercount {
+#lettercount, #lettercountM {
     bottom: 9px;
     left: 9px;
     background: #e592ab91;
     padding: 0 5px;
     border-radius: 7px;
+}
+#lettercountM {
+    bottom: 14px;
+    left: 14px;
 }
 iframe {
     height: 180px;
