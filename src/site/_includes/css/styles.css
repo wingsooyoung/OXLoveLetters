@@ -158,12 +158,12 @@ header {
 #bannerA {
     position: absolute;
     text-align: left;
-    margin-left: 20px;
+    margin-left: 70px;
     margin-top: 10px;
     left: 0;
     display: inline-flex;
-    max-height: 50px;
-    max-width: 50px;
+    max-height: 34px;
+    max-width: 34px;
     flex-direction: column;
 }
 nav {
