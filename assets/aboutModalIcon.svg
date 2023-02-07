@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 150 150" width="150px" height="150px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <g id="SVGRepo_bgCarrier" stroke-width="0" transform="matrix(1, 0, 0, 1, -346.63798, -332.236475)"/>
+  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1, 0, 0, 1, -346.63798, -332.236475)"/>
+  <g id="SVGRepo_iconCarrier" transform="matrix(0.246711, 0, 0, 0.234375, -53.315842, -53.000004)" bx:origin="0.5 0.474999">
+    <path d="M789.333333 853.333333H234.666667l-128 128V256c0-70.4 57.6-128 128-128h554.666666c70.4 0 128 57.6 128 128v469.333333c0 70.4-57.6 128-128 128z" fill="#46494c"/>
+    <path d="M469.333333 426.666667h85.333334v234.666666h-85.333334z" fill="#FFFFFF"/>
+    <path d="M512 320m-42.666667 0a42.666667 42.666667 0 1 0 85.333334 0 42.666667 42.666667 0 1 0-85.333334 0Z" fill="#FFFFFF"/>
+  </g>
+</svg>

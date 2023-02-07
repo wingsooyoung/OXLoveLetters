@@ -23,11 +23,14 @@
 
 <body>
 <header>
-  <div id="banner" onclick="openAbout()">
-      <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select">
-  </div>
-  <!-- The Modal -->
-  <div id="abModal" class="modalabout">
+    <div id="bannerH" onclick="openHome()">
+      <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select1">
+    </div>
+    <div id="bannerA" onclick="openAbout()">
+        <img src="assets/aboutModalIcon.svg" alt="about" id="infoIcon" class="select2">
+    </div>
+    <!-- The Modal -->
+    <div id="abModal" class="modalabout">
       <!-- The Close Button -->
       <span class="closer">&times;</span>
       <!-- Modal Content -->
@@ -123,24 +126,15 @@
             theme: 'custom3',
             arrow: true,
         })
-        tippy('.select', {
+        tippy('.select2', {
             content: 'What Is This Place?',
-            // placement: 'top',
             theme: 'custom3',
             arrow: true,
-            // hideOnClick: "toggle",
-            // trigger: "click" //keep for testing only!
-
-            //arrow: '<svg>...</svg>',
-            //arrow: svgElement,
-            //followCursor: IMPORT,
-            //hideOnClick: toggle / true / false
-            //trigger: 'mouseenter focus', DEFAULT
-            //trigger: click / mouseenter click / focusin
-            //triggerTarget: someElement, SEPARATE TIPPY TARGET FROM THE TRIGGER ELEMENT
-            //zIndex: 9999, DEFAULT
-            //maxWidth: 350, DEFAULT
-            //appendTo: 'smth'
+        })
+        tippy('.select1', {
+            content: 'HOME',
+            theme: 'custom3',
+            arrow: true,
         })
         tippy('.share', {
             content(reference) {

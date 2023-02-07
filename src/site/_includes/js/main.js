@@ -3,7 +3,7 @@ function openMailbox() {
 
     ogbox.src = "/assets/mailbox animated opening atmp3 -noshadows.gif";
 
-    setTimeout(myReadURL, 2500);
+    setTimeout(myReadURL, 2800);
 }
 function myReadURL() {
     document.location.href = '/pages/readletters/';
@@ -12,7 +12,7 @@ function myWriteURL() {
     document.location.href = '/pages/writeletters/';
 }
 function writebtnFunc() {
-    setTimeout(myWriteURL, 2500);
+    setTimeout(myWriteURL, 1000);
 }
 
 const nname = document.getElementById("nickname");
@@ -27,6 +27,9 @@ function showDrop() {
     document.getElementById("aboutbtn").classList.toggle("corners");
 }
 
+function openHome() {
+    document.location.href = '/';
+}
 // ABOUT logo modal
 var aboutModal = document.getElementById("abModal");
 function openAbout() {

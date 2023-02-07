@@ -144,10 +144,21 @@ header {
     border-bottom-width: 5px;
     border-image: linear-gradient(to top, #de376a, #db245b, #c52052) 100 / 0 0 5px;
 }
-#banner {
+#bannerH {
     position: absolute;
     text-align: left;
     margin-left: 10px;
+    margin-top: 10px;
+    left: 0;
+    display: inline-flex;
+    max-height: 50px;
+    max-width: 50px;
+    flex-direction: column;
+}
+#bannerA {
+    position: absolute;
+    text-align: left;
+    margin-left: 20px;
     margin-top: 10px;
     left: 0;
     display: inline-flex;
