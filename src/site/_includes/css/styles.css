@@ -503,6 +503,9 @@ div[data-netlify-identity-button] {
     width: -webkit-fill-available;
     width: -moz-available;
     width: fill-available;
+    border: 1.5px solid #000000;
+    box-shadow: 1px 1px 5px 1px #380614;
+    border-radius: 2px;
 }
 #postcardM {
     max-width: fit-content;
