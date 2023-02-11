@@ -21,7 +21,7 @@
 
 </head>
 
-<body onload="myLoadFunc()">
+<body>
 <header>
     <div id="bannerH" onclick="openHome()">
       <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select1">
@@ -156,7 +156,7 @@
     {% set js %}
       {% include "js/main.js" %}
     {% endset %}
-    <script>
+    <script onload="myLoadFunc()">
       {{ js | safe }}
     </script>
 
