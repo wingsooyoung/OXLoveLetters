@@ -42,11 +42,11 @@ function openAbout() {
 // /pages/* , /admin/*
 // window.onload ..? onload="myLoadFunc()"
 function myLoadFunc() {
-    if (window.location.pathname !== "/") {
-        aboutModal.style.display = "none";
+    if (window.location.pathname === "/") {
+        aboutModal.style.display = "block";
     }
     else {
-        aboutModal.style.display = "block";
+        aboutModal.style.display = "none";
     }
 }
 
