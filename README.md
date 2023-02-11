@@ -1,6 +1,7 @@
 # OXLoveLetters
 
-All the code for my *new* silly little project! (Hosted on Netlify)
+All the code for my *new* silly little project! 
+(Hosted on Netlify)
 
  - [HOME](/src/site/index.html) 
  - [READ](/src/site/pages/readletters.njk) 
