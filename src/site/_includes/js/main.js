@@ -22,6 +22,7 @@ function yesCheck() {
 function noCheck() {
     nname.setAttribute('readonly', 'readonly')
 }
+
 function showDrop() {
     document.getElementById("dropdowncontent").classList.toggle("drop");
     document.getElementById("aboutbtn").classList.toggle("corners");
@@ -30,12 +31,26 @@ function showDrop() {
 function openHome() {
     document.location.href = '/';
 }
+
 // ABOUT logo modal
 var aboutModal = document.getElementById("abModal");
 function openAbout() {
     aboutModal.style.display = "block";
-
 }
+
+// window.location.pathname != "/"
+// /pages/* , /admin/*
+// window.onload ..? onload="myLoadFunc()"
+function myLoadFunc() {
+    if (window.location.pathname !== "/") {
+        aboutModal.style.display = "none";
+    }
+    else {
+        aboutModal.style.display = "block";
+    }
+}
+
+
 var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = function() {
     aboutModal.style.display = "none";
@@ -64,7 +79,6 @@ catch(err) {
 //FAQ open/close
 var ques = document.getElementsByClassName("questions");
 var i;
-
 for (i = 0; i < ques.length; i++) {
     ques[i].addEventListener("click", function() {
         var answ = this.nextElementSibling;
@@ -75,4 +89,5 @@ for (i = 0; i < ques.length; i++) {
         }
     });
 }
+
 

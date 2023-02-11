@@ -220,7 +220,7 @@ nav a:hover {
 .modalabout {
     background-color: rgba(0,0,0,0.2) !important;
     padding-bottom: 100px;
-    display: none; /* Hidden by default */
+    /*display: none; !* Hidden by default *!*/
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
