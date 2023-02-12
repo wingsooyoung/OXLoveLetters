@@ -52,7 +52,7 @@ function openAbout() {
     }
     list.add("opening");
     // aboutModal.style.display = "block !important";
-    aboutModal.toggle("see");
+    aboutModal.classList.toggle("see");
     console.log("you CAN see the modal");
 
     aboutContent.removeEventListener("animationend", myEndFunction);
@@ -92,7 +92,7 @@ function closeAbout() {
 
     aboutContent.addEventListener("animationend", myEndFunction);
 
-    aboutModal.toggle("see");
+    aboutModal.classList.toggle("see");
     console.log("you CANNOT see the modal");
 
 }
