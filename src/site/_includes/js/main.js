@@ -51,7 +51,7 @@ function openAbout() {
         list.remove("closing");
     }
     list.add("opening");
-    aboutModal.style.display = "block!important";
+    aboutModal.style.display = "block !important";
 
     aboutContent.removeEventListener("animationend", myEndFunction);
 }
@@ -61,11 +61,11 @@ function myLoadFunc() {
         openAbout();
     }
     else {
-        aboutModal.style.display = "none!important";
+        aboutModal.style.display = "none !important";
     }
 }
 function myEndFunction() {
-    aboutModal.style.display = "none!important";
+    aboutModal.style.display = "none !important";
 }
 var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = closeAbout;
