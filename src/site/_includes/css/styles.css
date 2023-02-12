@@ -240,7 +240,7 @@ nav a:hover {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
 }
-.see {
+.hidden {
     display: none;
 }
 #modContainer.opening{ /* == #modContainer */

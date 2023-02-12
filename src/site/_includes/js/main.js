@@ -52,7 +52,9 @@ function openAbout() {
     }
     list.add("opening");
     // aboutModal.style.display = "block !important";
-    aboutModal.classList.toggle("see");
+    if (aboutModal.classList.contains("hidden")) {
+        aboutModal.classList.toggle("hidden");
+    }
     console.log("you CAN see the modal");
 
     aboutContent.removeEventListener("animationend", myEndFunction);
@@ -67,8 +69,8 @@ function myLoadFunc() {
     }
 }
 function myEndFunction() {
-    if (aboutModal.classList.contains("see")) {
-        aboutModal.classList.toggle("see");
+    if (!aboutModal.classList.contains("hidden")) {
+        aboutModal.classList.toggle("hidden");
     }
     console.log("you CANNOT see the modal");
 }
@@ -92,7 +94,6 @@ function closeAbout() {
 
     aboutContent.addEventListener("animationend", myEndFunction);
 
-    aboutModal.classList.toggle("see");
     console.log("you CANNOT see the modal");
 
 }
