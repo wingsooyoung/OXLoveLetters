@@ -36,10 +36,14 @@ function openHome() {
 var aboutModal = document.getElementById("abModal");
 var modContainer = document.getElementById("modContainer");
 function openAbout() {
-    aboutModal.style.display = "block";
+    modContainer.addEventListener("animationstart", myStartFunction);
+    function myStartFunction() {
+        aboutModal.style.display = "block";
+    }
     const list = modContainer.classList;
     list.remove("closing");
     list.add("opening");
+
 }
 
 function myLoadFunc() {
