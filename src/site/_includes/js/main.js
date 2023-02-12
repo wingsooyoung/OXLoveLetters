@@ -41,10 +41,11 @@ function openAbout() {
         list.remove("closing");
     }
     list.add("opening");
-    function myStartFunction() {
-        aboutModal.style.display = "block";
-    }
-    aboutModal.addEventListener("animationstart", myStartFunction);
+    aboutModal.style.display = "block";
+
+    // function myStartFunction() {
+    // }
+    // aboutModal.addEventListener("animationstart", myStartFunction);
 }
 
 function myLoadFunc() {
