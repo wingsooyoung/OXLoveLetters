@@ -43,6 +43,8 @@ function openAbout() {
     list.add("opening");
     aboutModal.style.display = "block";
 
+    aboutModal.removeEventListener("animationend", myEndFunction);
+
     // function myStartFunction() {
     // }
     // aboutModal.addEventListener("animationstart", myStartFunction);
@@ -56,7 +58,9 @@ function myLoadFunc() {
         aboutModal.style.display = "none";
     }
 }
-
+function myEndFunction() {
+    aboutModal.style.display = "none";
+}
 var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = closeAbout;
 function closeAbout() {
@@ -65,9 +69,7 @@ function closeAbout() {
         list.remove("opening");
     }
     list.add("closing");
-    function myEndFunction() {
-        aboutModal.style.display = "none";
-    }
+
     aboutModal.addEventListener("animationend", myEndFunction);
 
 }
