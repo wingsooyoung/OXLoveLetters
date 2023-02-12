@@ -3,16 +3,17 @@ function openMailbox() {
 
     ogbox.src = "/assets/mailbox animated opening atmp3 -noshadows.gif";
 
-    setTimeout(myReadURL, 2800);
+    setTimeout(myReadURL, 3000);
 }
 function myReadURL() {
     document.location.href = '/pages/readletters/';
 }
-function myWriteURL() {
-    document.location.href = '/pages/writeletters/';
-}
+
 function writebtnFunc() {
     setTimeout(myWriteURL, 1000);
+}
+function myWriteURL() {
+    document.location.href = '/pages/writeletters/';
 }
 
 const nname = document.getElementById("nickname");
@@ -37,7 +38,9 @@ var aboutModal = document.getElementById("abModal");
 var modContainer = document.getElementById("modContainer");
 function openAbout() {
     const list = modContainer.classList;
-    list.remove("closing");
+    if (list.contains("closing")) {
+        list.remove("closing");
+    }
     list.add("opening");
     modContainer.addEventListener("animationstart", myStartFunction);
     function myStartFunction() {
@@ -58,7 +61,9 @@ var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = closeAbout;
 function closeAbout() {
     const list = modContainer.classList;
-    list.remove("opening");
+    if (list.contains("opening")) {
+        list.remove("opening");
+    }
     list.add("closing");
     modContainer.addEventListener("animationend", myEndFunction);
     function myEndFunction() {
