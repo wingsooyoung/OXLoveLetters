@@ -38,8 +38,8 @@ function openAbout() {
     aboutModal.style.display = "block";
     var modContainer = document.getElementById("modContainer");
     const list = modContainer.classList;
-    list.remove("closer");
-    list.add("opener");
+    list.remove("closing");
+    list.add("opening");
 }
 
 function myLoadFunc() {
@@ -56,8 +56,8 @@ closer.onclick = function() {
     aboutModal.style.display = "none";
     var modContainer = document.getElementById("modContainer");
     const list = modContainer.classList;
-    list.remove("opener");
-    list.add("closer");
+    list.remove("opening");
+    list.add("closing");
 }
 
 // READ LETTERS postcard modal
