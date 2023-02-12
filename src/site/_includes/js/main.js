@@ -133,3 +133,20 @@ for (i = 0; i < ques.length; i++) {
 }
 
 
+//--------------------------------
+
+// var thisurl = new URL(navigation.currentEntry);
+// var lasturl = new URL(navigation.entries()[0].url);
+// lasturl.hostname
+//     'update-1--forxloveletters.netlify.app'
+//
+// if (lasturl.hostname === thisurl.hostname) {
+//
+// }
+
+// const prevURL = document.getElementById("prevURL");
+document.onbeforeunload = function() {
+    localStorage.setItem("prevURL", document.location);
+}
+
+console.log(localStorage.getItem("prevURL"));
