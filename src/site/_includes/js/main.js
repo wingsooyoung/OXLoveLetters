@@ -37,31 +37,25 @@ function openHome() {
 var aboutModal = document.getElementById("abModal");
 var aboutContent = document.getElementById("modContainer");
 function openAbout() {
-    // const list = aboutModal.classList;
-    // if (list.contains("closing")) {
-    //     list.remove("closing");
-    // }
-    // list.add("opening");
-    // aboutModal.style.display = "block";
-    //
-    // aboutModal.removeEventListener("animationend", myEndFunction);
-
     const list = aboutContent.classList;
     if (list.contains("closing")) {
         list.remove("closing");
     }
     list.add("opening");
-    // aboutModal.style.display = "block !important";
     if (aboutModal.classList.contains("hidden")) {
         aboutModal.classList.toggle("hidden");
     }
     console.log("you CAN see the modal");
-
     aboutContent.removeEventListener("animationend", myEndFunction);
 }
 
+if (document.referrer !== "") {
+    var prev = new URL(document.referrer);
+} else {
+    var prev = "empty";
+}
 function myLoadFunc() {
-    if (window.location.pathname === "/") {
+    if ((window.location.pathname === "/") && (prev.hostname !== window.location.hostname)) {
         openAbout();
     }
     else {
@@ -78,24 +72,12 @@ function myEndFunction() {
 var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = closeAbout;
 function closeAbout() {
-    // const list = aboutModal.classList;
-    // if (list.contains("opening")) {
-    //     list.remove("opening");
-    // }
-    // list.add("closing");
-    //
-    // aboutModal.addEventListener("animationend", myEndFunction);
-
     const list = aboutContent.classList;
     if (list.contains("opening")) {
         list.remove("opening");
     }
     list.add("closing");
-
     aboutContent.addEventListener("animationend", myEndFunction);
-
-    console.log("you CANNOT see the modal");
-
 }
 
 // READ LETTERS postcard modal
@@ -135,18 +117,4 @@ for (i = 0; i < ques.length; i++) {
 
 //--------------------------------
 
-// var thisurl = new URL(navigation.currentEntry);
-// var lasturl = new URL(navigation.entries()[0].url);
-// lasturl.hostname
-//     'update-1--forxloveletters.netlify.app'
-//
-// if (lasturl.hostname === thisurl.hostname) {
-//
-// }
 
-// const prevURL = document.getElementById("prevURL");
-document.onbeforeunload = function() {
-    localStorage.setItem("prevURL", document.location);
-}
-
-console.log(localStorage.getItem("prevURL"));
