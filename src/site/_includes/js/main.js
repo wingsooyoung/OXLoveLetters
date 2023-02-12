@@ -36,11 +36,11 @@ function openHome() {
 var aboutModal = document.getElementById("abModal");
 function openAbout() {
     aboutModal.style.display = "block";
+    const list = aboutModal.classList;
+    list.remove("closer");
+    list.add("opener");
 }
 
-// window.location.pathname != "/"
-// /pages/* , /admin/*
-// window.onload ..? onload="myLoadFunc()"
 function myLoadFunc() {
     if (window.location.pathname === "/") {
         aboutModal.style.display = "block";
@@ -50,10 +50,12 @@ function myLoadFunc() {
     }
 }
 
-
 var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = function() {
     aboutModal.style.display = "none";
+    const list = aboutModal.classList;
+    list.remove("opener");
+    list.add("closer");
 }
 
 // READ LETTERS postcard modal
