@@ -35,17 +35,16 @@ function openHome() {
 
 // ABOUT logo modal
 var aboutModal = document.getElementById("abModal");
-var modContainer = document.getElementById("modContainer");
 function openAbout() {
-    const list = modContainer.classList;
+    const list = aboutModal.classList;
     if (list.contains("closing")) {
         list.remove("closing");
     }
     list.add("opening");
-    modContainer.addEventListener("animationstart", myStartFunction);
     function myStartFunction() {
         aboutModal.style.display = "block";
     }
+    aboutModal.addEventListener("animationstart", myStartFunction);
 }
 
 function myLoadFunc() {
@@ -60,15 +59,16 @@ function myLoadFunc() {
 var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = closeAbout;
 function closeAbout() {
-    const list = modContainer.classList;
+    const list = aboutModal.classList;
     if (list.contains("opening")) {
         list.remove("opening");
     }
     list.add("closing");
-    modContainer.addEventListener("animationend", myEndFunction);
     function myEndFunction() {
         aboutModal.style.display = "none";
     }
+    aboutModal.addEventListener("animationend", myEndFunction);
+
 }
 
 // READ LETTERS postcard modal
