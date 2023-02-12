@@ -3,7 +3,7 @@ function openMailbox() {
 
     ogbox.src = "/assets/mailbox animated opening atmp3 -noshadows 150speed.gif";
 
-    setTimeout(myReadURL, 1500); //1350ms gif length
+    setTimeout(myReadURL, 1700); //1350ms gif length
 }
 function myReadURL() {
     document.location.href = '/pages/readletters/';
