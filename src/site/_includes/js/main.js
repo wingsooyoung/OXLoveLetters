@@ -36,7 +36,8 @@ function openHome() {
 var aboutModal = document.getElementById("abModal");
 function openAbout() {
     aboutModal.style.display = "block";
-    const list = aboutModal.classList;
+    var modContainer = document.getElementById("modContainer");
+    const list = modContainer.classList;
     list.remove("closer");
     list.add("opener");
 }
@@ -53,7 +54,8 @@ function myLoadFunc() {
 var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = function() {
     aboutModal.style.display = "none";
-    const list = aboutModal.classList;
+    var modContainer = document.getElementById("modContainer");
+    const list = modContainer.classList;
     list.remove("opener");
     list.add("closer");
 }
