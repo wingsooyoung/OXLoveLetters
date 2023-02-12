@@ -231,7 +231,6 @@ nav a:hover {
 .modalabout { /* == #abModal */
     background-color: rgba(0,0,0,0.2) !important;
     padding-bottom: 100px;
-    /*display: none;*/
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 25px; /* Location of the box */
@@ -240,6 +239,9 @@ nav a:hover {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
+}
+.see {
+    display: none;
 }
 #modContainer.opening{ /* == #modContainer */
     animation: scale-in-tl 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

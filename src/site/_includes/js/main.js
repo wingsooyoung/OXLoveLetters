@@ -51,7 +51,9 @@ function openAbout() {
         list.remove("closing");
     }
     list.add("opening");
-    aboutModal.style.display = "block !important";
+    // aboutModal.style.display = "block !important";
+    aboutModal.toggle("see");
+    console.log("you CAN see the modal");
 
     aboutContent.removeEventListener("animationend", myEndFunction);
 }
@@ -61,12 +63,16 @@ function myLoadFunc() {
         openAbout();
     }
     else {
-        aboutModal.style.display = "none !important";
+        myEndFunction();
     }
 }
 function myEndFunction() {
-    aboutModal.style.display = "none !important";
+    if (aboutModal.classList.contains("see")) {
+        aboutModal.classList.toggle("see");
+    }
+    console.log("you CANNOT see the modal");
 }
+
 var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = closeAbout;
 function closeAbout() {
@@ -85,6 +91,9 @@ function closeAbout() {
     list.add("closing");
 
     aboutContent.addEventListener("animationend", myEndFunction);
+
+    aboutModal.toggle("see");
+    console.log("you CANNOT see the modal");
 
 }
 
