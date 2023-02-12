@@ -325,10 +325,10 @@ nav a:hover {
     }
 }
 
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
+/*@keyframes zoom {*/
+/*    from {transform:scale(0)}*/
+/*    to {transform:scale(1)}*/
+/*}*/
 .close,.closer {
     position: absolute;
     top: 15px;
@@ -526,20 +526,20 @@ div[data-netlify-identity-button] {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.9);
 }
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-.modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
+/*.modal-content {*/
+/*    margin: auto;*/
+/*    display: block;*/
+/*    width: 80%;*/
+/*    max-width: 700px;*/
+/*}*/
+/*.modal-content, #caption {*/
+/*    animation-name: zoom;*/
+/*    animation-duration: 0.6s;*/
+/*}*/
+/*@keyframes zoom {*/
+/*    from {transform:scale(0)}*/
+/*    to {transform:scale(1)}*/
+/*}*/
 .close {
     position: absolute;
     top: 15px;
