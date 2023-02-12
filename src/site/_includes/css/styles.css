@@ -240,10 +240,10 @@ nav a:hover {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
 }
-.modalabout.opening{ /* == #modContainer */
+#modContainer.opening{ /* == #modContainer */
     animation: scale-in-tl 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.modalabout.closing{ /* == #modContainer */
+#modContainer.closing{ /* == #modContainer */
     animation: scale-out-tl 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 #modContainer { /* == .modal-content */

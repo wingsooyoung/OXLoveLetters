@@ -35,19 +35,25 @@ function openHome() {
 
 // ABOUT logo modal
 var aboutModal = document.getElementById("abModal");
+var aboutContent = document.getElementById("modContainer");
 function openAbout() {
-    const list = aboutModal.classList;
+    // const list = aboutModal.classList;
+    // if (list.contains("closing")) {
+    //     list.remove("closing");
+    // }
+    // list.add("opening");
+    // aboutModal.style.display = "block";
+    //
+    // aboutModal.removeEventListener("animationend", myEndFunction);
+
+    const list = aboutContent.classList;
     if (list.contains("closing")) {
         list.remove("closing");
     }
     list.add("opening");
     aboutModal.style.display = "block";
 
-    aboutModal.removeEventListener("animationend", myEndFunction);
-
-    // function myStartFunction() {
-    // }
-    // aboutModal.addEventListener("animationstart", myStartFunction);
+    aboutContent.removeEventListener("animationend", myEndFunction);
 }
 
 function myLoadFunc() {
@@ -64,13 +70,21 @@ function myEndFunction() {
 var closer = document.getElementsByClassName("closer")[0];
 closer.onclick = closeAbout;
 function closeAbout() {
-    const list = aboutModal.classList;
+    // const list = aboutModal.classList;
+    // if (list.contains("opening")) {
+    //     list.remove("opening");
+    // }
+    // list.add("closing");
+    //
+    // aboutModal.addEventListener("animationend", myEndFunction);
+
+    const list = aboutContent.classList;
     if (list.contains("opening")) {
         list.remove("opening");
     }
     list.add("closing");
 
-    aboutModal.addEventListener("animationend", myEndFunction);
+    aboutContent.addEventListener("animationend", myEndFunction);
 
 }
 
