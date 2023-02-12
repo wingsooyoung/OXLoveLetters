@@ -217,13 +217,24 @@ nav a:hover {
     border-bottom-right-radius: 0!important;
 }
 /*ABOUT MODAL*/
+#logoHeader {
+    max-width: 100%;
+}
+#welcome {
+    top: 20px;
+    position: relative;
+    font-variant: small-caps;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 900;
+    font-size: 1.3em;
+}
 .modalabout {
     background-color: rgba(0,0,0,0.2) !important;
     padding-bottom: 100px;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 25px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -231,7 +242,7 @@ nav a:hover {
     overflow: auto; /* Enable scroll if needed */
 }
 #modContainer {
-    max-width: 600px;
+    max-width: 715px;
     background: azure;
     border-radius: 15px;
     padding: 10px 75px 40px;
