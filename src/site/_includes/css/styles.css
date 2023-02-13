@@ -880,11 +880,10 @@ form#approver {
 }
 .evenboxinnerF {
     width: 75%;
-    margin: 15px 15px 15px 0;
+    margin: 0 0 15px -10px;
     transform: rotate(2deg);
     padding:0 5px;
     overflow-wrap: break-word;
-    overflow: auto;
 }
 .timelineArrow {
     text-align: center;
@@ -929,20 +928,19 @@ form#approver {
     border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
     transform: rotate(-2deg);
     margin:8px auto;
-    width: 250px;
+    width: 493px;
     height: fit-content;
     border: solid #320159;
     border-width: 3px 3px 5px 5px;
     background-color: #f4e7f6;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .placeholder {
-    border: 1px solid lime;
-    background-color: darkseagreen;
-    height: available;
-    width: 25%;
-    overflow: auto;
-    margin: 15px 0 15px 15px;
+    max-height: 75%;
+    max-width: 65%;
+    margin: 15px auto;
     transform: rotate(2deg);
 }
 #groupphoto {
