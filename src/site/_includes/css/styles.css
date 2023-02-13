@@ -147,16 +147,16 @@ header {
 #bannerH {
     position: absolute;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-top: 10px;
     left: 0;
     display: inline-flex;
     max-height: 50px;
-    max-width: 50px;
+    max-width: 43px;
     flex-direction: column;
 }
 #bannerA {
-    --leftorigin: 70px;
+    --leftorigin: 65px;
     --toporigin: 10px;
 }
 #bannerA {
@@ -167,7 +167,7 @@ header {
     left: 0;
     display: inline-flex;
     max-height: 34px;
-    max-width: 34px;
+    max-width: 28px;
     flex-direction: column;
 }
 nav {
@@ -293,15 +293,15 @@ nav a:hover {
     0% {
         -webkit-transform: scale(0);
         transform: scale(0);
-        -webkit-transform-origin: 0% 0%;
-        transform-origin: var(--leftorigin) var(--toporigin);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
         opacity: 1;
     }
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
-        -webkit-transform-origin: 0% 0%;
-        transform-origin: var(--leftorigin) var(--toporigin);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
         opacity: 1;
     }
 }
@@ -315,14 +315,14 @@ nav a:hover {
         -webkit-transform: scale(1);
         transform: scale(1);
         -webkit-transform-origin: 0 0;
-        transform-origin: var(--leftorigin) var(--toporigin);
+        transform-origin: 0 0;
         opacity: 1;
     }
     100% {
         -webkit-transform: scale(0);
         transform: scale(0);
         -webkit-transform-origin: 0 0;
-        transform-origin: var(--leftorigin) var(--toporigin);
+        transform-origin: 0 0;
         opacity: 1;
     }
 }
@@ -480,9 +480,9 @@ div[data-netlify-identity-button] {
 .grid-container {
     display: grid;
     max-width: 85%;
-    column-gap: 60px;
+    column-gap: 30px;
     row-gap: 42px;
-    justify-content: center;
+    justify-content: space-between;
     justify-items: stretch;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
@@ -491,7 +491,7 @@ div[data-netlify-identity-button] {
     border: 2px solid brown;
     border-radius: 10px;
     background: rgba(0,0,0,0.2);
-    padding: 25px 0;
+    padding: 25px 35px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -983,8 +983,8 @@ hr {
 }
 .wrapper {
     width: 700px;
-    margin: auto auto 33px auto;
-    height: 18vh;
+    margin: auto auto 0 auto;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -1228,7 +1228,7 @@ dd {
         background-repeat: repeat;
     }
 }
-@media screen and (min-width: 500px) and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
     nav a {
         padding: initial;
     }
@@ -1241,6 +1241,14 @@ dd {
     #banner {
         margin-left: 24px;
     }
+    #bannerA {
+        max-width: 25px;
+        --leftorigin: 60px;
+    }
+    #bannerH {
+        max-width: 35px;
+        margin-left: 18px;
+    }
     nav i {
         vertical-align: -3px;
     }
@@ -1251,7 +1259,7 @@ dd {
         margin-top: 11%;
     }
 }
-@media screen and (min-width: 280px) and (max-width: 500px) {
+@media screen and (min-width: 280px) and (max-width: 600px) {
     nav {
         max-width: 88%;
         font-size: 0.65em;
@@ -1337,6 +1345,7 @@ dd {
         grid-template-columns: auto!important;
         row-gap: 15px!important;
         padding: 15px 30px!important;
+        justify-content: center!important;
     }
     .modal-content {
         max-width: 90%!important;
@@ -1356,8 +1365,6 @@ dd {
     }
     .wrapper { /*figure out how to deal with tippy insta dropdown on mobile...*/
         width: 100%!important;
-        height: fit-content!important;
-        margin-bottom: 0!important;
     }
     .share {
         height: 2.5rem!important;
