@@ -119,7 +119,7 @@ for (i = 0; i < ques.length; i++) {
 const ele = document.getElementsByClassName("template");
 for (let i = 0; i < ele.length; i++) {
     if (ele[i].innerHTML === "4") {
-        ele[i].remove();
+        ele[i].parentElement.remove();
     }
 }
 
