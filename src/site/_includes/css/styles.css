@@ -847,6 +847,7 @@ form#approver {
 }
 .box1{
     margin:25px auto;
+    padding: 15px 7px;
     width:500px;
     height:250px;
     background:#fff;
@@ -854,6 +855,7 @@ form#approver {
 }
 .box3{
     margin:25px auto;
+    padding: 11px 1px;
     width:400px;
     height:110px;
     background:#fff;
@@ -928,6 +930,7 @@ form#approver {
     border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
     transform: rotate(-2deg);
     margin:8px auto;
+    padding: 15px 0;
     width: 493px;
     height: fit-content;
     border: solid #320159;
@@ -942,6 +945,15 @@ form#approver {
     max-width: 65%;
     margin: 15px auto;
     transform: rotate(2deg);
+}
+.box2F.album {
+    width: 400px;
+}
+.placeholder.album {
+    margin: 15px 0;
+}
+.placeholder.album + .evenboxinnerF {
+    width: 80%;
 }
 #groupphoto {
     height: 300px;
