@@ -674,6 +674,9 @@ div#griddy {
 
 /*WRITE*/
 /*form, success page/action*/
+.contentsonly {
+    display: contents;
+}
 #toggler {
     /* btn styling */
     text-decoration: none;

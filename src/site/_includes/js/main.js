@@ -29,12 +29,18 @@ function toggleAnnouncement(btn) {
     const imgEle = outerDiv.children.item(0);
     const pEle = outerDiv.children.item(1);
 
+    outerDiv.classList.toggle("contentsonly");
     imgEle.classList.toggle("hidden");
     pEle.classList.toggle("hidden");
     if (btn.innerHTML === "HIDE") {
         btn.innerHTML = "SHOW";
     } else {
         btn.innerHTML = "HIDE";
+    }
+    if (outerDiv.classList.contains("contentsonly")) {
+        document.getElementById("toggler").style.margin = "5px auto 35px;";
+    } else {
+        document.getElementById("toggler").style.margin = "5px auto 5px;";
     }
 }
 
