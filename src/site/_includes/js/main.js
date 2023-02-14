@@ -1,18 +1,19 @@
 function openMailbox() {
     const ogbox = document.getElementById("static-mailbox");
 
-    ogbox.src = "/assets/mailbox animated opening atmp3 -noshadows.gif";
+    ogbox.src = "/assets/mailbox animated opening atmp3 -noshadows 150speed.gif";
 
-    setTimeout(myReadURL, 2800);
+    setTimeout(myReadURL, 1700); //1350ms gif length
 }
 function myReadURL() {
     document.location.href = '/pages/readletters/';
 }
-function myWriteURL() {
-    document.location.href = '/pages/writeletters/';
-}
+
 function writebtnFunc() {
     setTimeout(myWriteURL, 1000);
+}
+function myWriteURL() {
+    document.location.href = '/pages/writeletters/';
 }
 
 const nname = document.getElementById("nickname");
@@ -22,6 +23,27 @@ function yesCheck() {
 function noCheck() {
     nname.setAttribute('readonly', 'readonly')
 }
+
+function toggleAnnouncement(btn) {
+    const outerDiv = document.getElementById("special-announcement");
+    const imgEle = outerDiv.children.item(0);
+    const pEle = outerDiv.children.item(1);
+
+    outerDiv.classList.toggle("contentsonly");
+    imgEle.classList.toggle("hidden");
+    pEle.classList.toggle("hidden");
+    if (btn.innerHTML === "HIDE") {
+        btn.innerHTML = "SHOW";
+    } else {
+        btn.innerHTML = "HIDE";
+    }
+    if (outerDiv.classList.contains("contentsonly")) {
+        document.getElementById("toggler").style.margin = "5px auto 35px;";
+    } else {
+        document.getElementById("toggler").style.margin = "5px auto 5px;";
+    }
+}
+
 function showDrop() {
     document.getElementById("dropdowncontent").classList.toggle("drop");
     document.getElementById("aboutbtn").classList.toggle("corners");
@@ -30,15 +52,52 @@ function showDrop() {
 function openHome() {
     document.location.href = '/';
 }
+
 // ABOUT logo modal
 var aboutModal = document.getElementById("abModal");
+var aboutContent = document.getElementById("modContainer");
 function openAbout() {
-    aboutModal.style.display = "block";
-
+    const list = aboutContent.classList;
+    if (list.contains("closing")) {
+        list.remove("closing");
+    }
+    list.add("opening");
+    if (aboutModal.classList.contains("hidden")) {
+        aboutModal.classList.toggle("hidden");
+    }
+    console.log("you CAN see the modal");
+    aboutContent.removeEventListener("animationend", myEndFunction);
 }
+
+if (document.referrer !== "") {
+    var prev = new URL(document.referrer);
+} else {
+    var prev = "empty";
+}
+function myLoadFunc() {
+    if ((window.location.pathname === "/") && (prev.hostname !== window.location.hostname)) {
+        openAbout();
+    }
+    else {
+        myEndFunction();
+    }
+}
+function myEndFunction() {
+    if (!aboutModal.classList.contains("hidden")) {
+        aboutModal.classList.toggle("hidden");
+    }
+    console.log("you CANNOT see the modal");
+}
+
 var closer = document.getElementsByClassName("closer")[0];
-closer.onclick = function() {
-    aboutModal.style.display = "none";
+closer.onclick = closeAbout;
+function closeAbout() {
+    const list = aboutContent.classList;
+    if (list.contains("opening")) {
+        list.remove("opening");
+    }
+    list.add("closing");
+    aboutContent.addEventListener("animationend", myEndFunction);
 }
 
 // READ LETTERS postcard modal
@@ -64,7 +123,6 @@ catch(err) {
 //FAQ open/close
 var ques = document.getElementsByClassName("questions");
 var i;
-
 for (i = 0; i < ques.length; i++) {
     ques[i].addEventListener("click", function() {
         var answ = this.nextElementSibling;
@@ -75,4 +133,14 @@ for (i = 0; i < ques.length; i++) {
         }
     });
 }
+
+
+//--------------------------------
+const ele = document.getElementsByClassName("template");
+for (let i = 0; i < ele.length; i++) {
+    if (ele[i].innerHTML === "4") {
+        ele[i].parentElement.remove();
+    }
+}
+
 
