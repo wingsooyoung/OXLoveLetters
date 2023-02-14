@@ -866,6 +866,9 @@ form#approver {
     transform: rotate(-1deg);
     overflow-wrap: break-word;
 }
+.oddboxinner.timeline {
+    margin: 20px 20px 15px 20px;
+}
 .evenboxinner{
     transform: rotate(2deg);
     margin:15px;
