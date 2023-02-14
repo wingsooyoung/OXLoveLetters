@@ -24,6 +24,20 @@ function noCheck() {
     nname.setAttribute('readonly', 'readonly')
 }
 
+function toggleAnnouncement(btn) {
+    const outerDiv = document.getElementById("special-announcement");
+    const imgEle = outerDiv.children.item(0);
+    const pEle = outerDiv.children.item(1);
+
+    imgEle.classList.toggle("hidden");
+    pEle.classList.toggle("hidden");
+    if (btn.innerHTML === "HIDE") {
+        btn.innerHTML = "SHOW";
+    } else {
+        btn.innerHTML = "HIDE";
+    }
+}
+
 function showDrop() {
     document.getElementById("dropdowncontent").classList.toggle("drop");
     document.getElementById("aboutbtn").classList.toggle("corners");
