@@ -38,7 +38,7 @@ function toggleAnnouncement(btn) {
         btn.innerHTML = "HIDE";
     }
     if (outerDiv.classList.contains("contentsonly")) {
-        document.getElementById("toggler").style.margin = "5px auto 35px;";
+        document.getElementById("toggler").style.margin = "5px auto 35px!important;";
     } else {
         document.getElementById("toggler").style.margin = "5px auto 5px;";
     }
