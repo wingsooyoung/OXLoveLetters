@@ -59,12 +59,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--pink4);
-    background-image: url("/assets/background proj2 coloradj.png");
+    background-image: url("/assets/background proj2.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
     font-size: 0.9em;
+    backdrop-filter: brightness(0.9) saturate(1.1);
 }
 h2 {
     padding: 10px 0;
@@ -138,11 +139,11 @@ header {
     text-align: center;
     width: 100%;
     margin: 0 0 5vh;
-    background-color: #df3a6b;
+    background-color: #d03061;
     border-bottom-color: green;
     border-bottom-style: solid;
     border-bottom-width: 5px;
-    border-image: linear-gradient(to top, #de376a, #db245b, #c52052) 100 / 0 0 5px;
+    border-image: linear-gradient(to top, #d03162, #c42b5b, #ae2750) 100 / 0 0 5px;
 }
 #bannerH {
     position: absolute;
@@ -429,6 +430,7 @@ div[data-netlify-identity-button] {
 }
 #static-mailbox {
     width: 350px;
+    filter: hue-rotate(3deg) brightness(1) contrast(1.1) drop-shadow(4px 3px 8px #212e03);
 }
 #opening-mailbox {
     width: 500px;
