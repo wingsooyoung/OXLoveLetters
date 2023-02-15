@@ -1,7 +1,7 @@
 function openMailbox() {
     const ogbox = document.getElementById("static-mailbox");
 
-    ogbox.src = "/assets/mailbox animated opening atmp3 -noshadows 150speed.gif";
+    ogbox.src = "/assets/mailbox animated opening atmp3 -noshadows 150speed coloradj.gif";
 
     setTimeout(myReadURL, 1700); //1350ms gif length
 }
