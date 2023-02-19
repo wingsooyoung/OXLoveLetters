@@ -59,13 +59,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--pink4);
-    background-image: url("/assets/background proj2.png");
+    background-image: url("/assets/background proj2 darker.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
     font-size: 0.9em;
-    backdrop-filter: brightness(0.9) saturate(1.1);
+    /*backdrop-filter: brightness(0.9) saturate(1.1);*/
 }
 h2 {
     padding: 10px 0;
@@ -719,7 +719,7 @@ div#griddy {
     margin: auto;
     text-align: center;
 }
-#letter-form-div, #success-block {
+#letter-form-div, #success-block, #special-announcement {
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
@@ -731,7 +731,7 @@ div#griddy {
     padding: 10px;
     box-shadow: 0 3px 9px darkslategray, inset 0 0 9px var(--eggshell);
 }
-#letter-form-div::after, #success-block::after {
+#letter-form-div::after, #success-block::after, #special-announcement::after {
     position: absolute;
     top: -4px; bottom: -4px;
     left: -4px; right: -4px;
@@ -1341,7 +1341,7 @@ dd {
 }
 @media screen and (min-width: 280px) and (max-width: 800px) {
     body {
-        background-image: url("/assets/mobile bg rough.png");
+        background-image: url("/assets/mobile bg rough darker.png");
     }
     #static-mailbox {
         width: 215px!important;
