@@ -29,7 +29,6 @@ function toggleAnnouncement(btn) {
     const imgEle = outerDiv.children.item(0);
     const pEle = outerDiv.children.item(1);
 
-    outerDiv.classList.toggle("contentsonly");
     imgEle.classList.toggle("hidden");
     pEle.classList.toggle("hidden");
     if (btn.innerHTML === "HIDE") {
