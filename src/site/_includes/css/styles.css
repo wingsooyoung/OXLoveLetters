@@ -139,11 +139,11 @@ header {
     text-align: center;
     width: 100%;
     margin: 0 0 5vh;
-    background-color: #d03061;
+    background-color: #bf2e54;
     border-bottom-color: green;
     border-bottom-style: solid;
     border-bottom-width: 5px;
-    border-image: linear-gradient(to top, #d03162, #c42b5b, #ae2750) 100 / 0 0 5px;
+    border-image: linear-gradient(to top, #be2f54, #ab3051, #9d2949) 100 / 0 0 5px;
 }
 #bannerH {
     position: absolute;
