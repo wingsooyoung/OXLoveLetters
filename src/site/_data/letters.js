@@ -26,7 +26,7 @@ module.exports = () => {
         }
         // letters[entry.data.path] = [letter];
     }
-    console.log(letters.values()); //Object [Array Iterator] {}
+    //console.log(letters.values()); //Object [Array Iterator] {} = if 'let letters = []'
     console.log(letters.values); //[Function: values]
     console.log(letters);
 
