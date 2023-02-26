@@ -8,7 +8,7 @@ title: Moderate Letter Submissions
 
 
 
-{%- for letter in letters.values -%}
+{%- for letter in letters["default"] -%}
 <li class="testing">
     <h3>{{ letter.nickname }}</h3>
     <div class="comment-text1">{{ letter.message | safe}}</div>
