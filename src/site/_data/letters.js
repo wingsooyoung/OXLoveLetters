@@ -12,7 +12,7 @@ module.exports = () => {
             type: 'submission',
             signature: entry.data.signature,
             nickname: entry.data.nickname,
-            message: entry.data.message
+            message: entry.data.lettercontent
         };
         // Add it to an existing array or create a new one in the comments object
         // if(letters[entry.data.path]){
