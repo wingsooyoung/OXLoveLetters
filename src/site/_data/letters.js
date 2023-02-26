@@ -7,7 +7,7 @@ const approved = require('./approved-letters_submissions.json');
 // console.log("appr " + JSON.stringify(approved));
 
 module.exports = () => {
-    let letters = [];
+    let letters = {};
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
@@ -23,11 +23,13 @@ module.exports = () => {
         // } else {
         //     letters[entry.data.path] = [letter];
         // }
-        letters = [letter];
+        letters.push(letter);
     }
-    console.log(letters.values());
-    console.log(letters.values);
+    console.log(letters.values()); //Object [Array Iterator] {}
+    console.log(letters.values); //[Function: values]
     console.log(letters);
+    console.log(typeof letters);
+
     return letters;
 };
 
