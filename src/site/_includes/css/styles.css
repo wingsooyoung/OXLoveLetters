@@ -580,6 +580,9 @@ div[data-netlify-identity-button] {
     position: absolute;
     padding:0;
 }
+#membersbox {
+
+}
 #contentbox, #contentboxM {
     top: 46%;
     left: 51%;
