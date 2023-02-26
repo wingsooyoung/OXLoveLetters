@@ -3,8 +3,8 @@
 const submissions = require('./letter-form_submissions.json');
 const approved = require('./approved-letters_submissions.json');
 
-console.log("sub " + submissions);
-console.log("appr " + approved);
+console.log("sub " + JSON.parse(submissions));
+console.log("appr " + JSON.parse(approved));
 
 module.exports = () => {
     let letters = [];
@@ -25,6 +25,7 @@ module.exports = () => {
         // }
         letters = [letter];
     }
+    console.log(typeof letters);
 
     return letters;
 };
