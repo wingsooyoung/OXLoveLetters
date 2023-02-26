@@ -3,8 +3,8 @@
 const submissions = require('./letter-form_submissions.json');
 const approved = require('./approved-letters_submissions.json');
 
-console.log("sub " + JSON.parse(submissions));
-console.log("appr " + JSON.parse(approved));
+console.log("sub " + JSON.stringify(submissions));
+console.log("appr " + JSON.stringify(approved));
 
 module.exports = () => {
     let letters = [];
