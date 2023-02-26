@@ -16,6 +16,10 @@ title: Moderate Letter Submissions
     <p>{{ letters }}</p>
 {%- endfor -%}
 
+{%- for letter in letters.values() -%}
+    <p class="testing2">{{ letter }}</p>
+{%- endfor -%}
+
 <div id="griddy">
     {% include "postcardPreview.njk" %}
 </div>
