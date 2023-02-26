@@ -1,14 +1,24 @@
-{%- for letter in letters["default"] -%}
+{%- for letter in exportSubmissions["default"] -%}
     <li class="testing">
         <h3>{{ letter.nickname }}</h3>
         <div class="comment-text1">{{ letter.message | safe }}</div>
         <div class="comment-text2">{{ letter.signature }}</div>
     </li>
 {% else %}
-    <p>{{ letters }}</p>
+    <p>{{ previews }}</p>
 {%- endfor -%}
 
-{%- for letter in letters["default"] -%}
+{%- for letter in previews["default"] -%}
+    <li class="testing">
+        <h3>{{ letter.nickname }}</h3>
+        <div class="comment-text1">{{ letter.message | safe }}</div>
+        <div class="comment-text2">{{ letter.signature }}</div>
+    </li>
+{% else %}
+    <p>{{ previews }}</p>
+{%- endfor -%}
+
+{%- for letter in previews["default"] -%}
     <div class="containerbox grid-item {{ loop.index0 }}">
         <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
         <div id="contentbox" class="template">{{ letter.message | safe }}</div>
