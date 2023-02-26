@@ -24,7 +24,7 @@ module.exports = () => {
     }
 
     // console.log(letters);
-    console.log("default = " + previews['default']);
+    console.log("/pages/writeletters/ = " + previews['/pages/writeletters/']);
 
 
     return previews;
