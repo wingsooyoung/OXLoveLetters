@@ -12,6 +12,8 @@ title: Moderate Letter Submissions
     <div class="comment-text1">{{ letters.message | markdown | safe}}</div>
     <div class="comment-text2">{{ letters.signature }}</div>
 </li>
+{% else %}
+    <p>{{ letters }}</p>
 {%- endfor -%}
 
 <div id="griddy">
