@@ -6,8 +6,8 @@ const approved = require('./approved-letters_submissions.json');
 module.exports = () => {
     let letters = {};
 
-    for(var i = 0; i < submissions.length; i++) {
-        let entry = submissions[i];
+    for(var i = 0; i < approved.length; i++) {
+        let entry = approved[i];
         let letter = {
             type: 'submission',
             signature: entry.data.signature,
@@ -20,6 +20,7 @@ module.exports = () => {
         // } else {
         //     letters[entry.data.path] = [letter];
         // }
+        letters = [letter];
     }
 
     return letters;
