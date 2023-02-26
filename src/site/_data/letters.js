@@ -25,7 +25,6 @@ module.exports = () => {
         // }
         letters = [letter];
     }
-    console.log(typeof letters);
 
     return letters;
 };
