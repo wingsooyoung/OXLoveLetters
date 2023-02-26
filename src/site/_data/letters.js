@@ -19,12 +19,12 @@ module.exports = () => {
             message: entry.data.lettercontent
         };
         // Add it to an existing array or create a new one in the comments object
-        // if(letters[entry.data.path]){
-        //     letters[entry.data.path].push(letter);
-        // } else {
-        //     letters[entry.data.path] = [letter];
-        // }
-        letters[entry.data.path].push(letter);
+        if(letters[entry.data.path]){
+            letters[entry.data.path].push(letter);
+        } else {
+            letters[entry.data.path] = [letter];
+        }
+        // letters[entry.data.path] = [letter];
     }
     console.log(letters.values()); //Object [Array Iterator] {}
     console.log(letters.values); //[Function: values]
