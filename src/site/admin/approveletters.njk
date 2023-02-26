@@ -5,7 +5,8 @@ title: Moderate Letter Submissions
 <p>i get to approve or deny letter submissions as well as preview how they look on the template</p>
 
 <p>just testing to see if the data is actually going to the form json files in _data like its supposed to be??</p>
-{%- for letter in (letters) -%}
+
+{%- for letter in letters.values -%}
 <li class="testing">
     <h3>{{ letters.nickname }}</h3>
     <div class="comment-text1">{{ letters.message | markdown | safe}}</div>
