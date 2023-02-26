@@ -1,10 +1,13 @@
 // massage the approved letters data into the shape we'd like
 
+let approvedLoveLetters;
+approvedLoveLetters.values;
+
 const submissions = require('./letter-form_submissions.json');
 const approved = require('./approved-letters_submissions.json');
 
 module.exports = () => {
-    let letters = {};
+    let letters = [];
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
