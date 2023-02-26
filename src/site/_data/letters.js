@@ -27,6 +27,7 @@ module.exports = () => {
     }
     console.log(letters.values());
     console.log(letters.values);
+    console.log(letters);
     return letters;
 };
 
