@@ -6,11 +6,11 @@ title: Moderate Letter Submissions
 
 <p>just testing to see if the data is actually going to the form json files in _data like its supposed to be??</p>
 
-{%- for letter in letters.values -%}
+{%- for letter in letters.values() -%}
 <li class="testing">
-    <h3>{{ letters.nickname }}</h3>
-    <div class="comment-text1">{{ letters.message | markdown | safe}}</div>
-    <div class="comment-text2">{{ letters.signature }}</div>
+    <h3>{{ letter.nickname }}</h3>
+    <div class="comment-text1">{{ letter.message | markdown | safe}}</div>
+    <div class="comment-text2">{{ letter.signature }}</div>
 </li>
 {% else %}
     <p>{{ letters }}</p>
