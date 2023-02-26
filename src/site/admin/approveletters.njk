@@ -18,7 +18,7 @@ title: Moderate Letter Submissions
 
 {# const myArray = Object.values(person); #}
 {# document.getElementById("demo").innerHTML = myArray; #}
-{{ set list = Object.values(letters) }}
+{% set list = Object.values(letters) %}
 {{ console.log(list) }}
 {%- for x in list -%}
     <p class="testing2"> {{ x.nickname }} / {{ x.message }} / {{ x.signature }} </p>
