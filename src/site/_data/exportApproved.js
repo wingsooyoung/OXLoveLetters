@@ -1,10 +1,6 @@
 // massage the approved letters data into the shape we'd like
 
-const submissions = require('./letter-form_submissions.json');
 const approved = require('./approved-letters_submissions.json');
-
-// console.log("sub " + JSON.stringify(submissions));
-// console.log("appr " + JSON.stringify(approved));
 
 module.exports = () => {
     let letters = {};
@@ -13,10 +9,11 @@ module.exports = () => {
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
         let letter = {
-            type: 'submission',
+            type: 'final',
             signature: entry.data.signature,
             nickname: entry.data.nickname,
-            message: entry.data.lettercontent
+            message: entry.data.lettercontent,
+            member: entry.data.members
         };
         // Add it to an existing array or create a new one in the comments object
         if(letters[entry.data.path]){
@@ -26,7 +23,6 @@ module.exports = () => {
         }
     }
 
-    // console.log(letters);
     console.log("default = " + letters['default']);
 
 

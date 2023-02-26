@@ -1,5 +1,5 @@
 
-{%- for x, y, z, q in approvedLoveLetters.values | reverse -%}
+{%- for x, y, z, q, t in approvedLoveLetters.values | reverse -%}
     <div class="containerbox grid-item" onclick="modalZoom(this)">
         <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
         <div id="contentbox" class="template">{{ q }}</div>
@@ -10,6 +10,7 @@
                 FOR X
             {% endif %}
         </div>
+        <div id="memberbox">{{ t }}</div>
         <div id="lettercount" class="template"> {{ loop.revindex - 1 }} </div>
     </div>
 {% else %}
