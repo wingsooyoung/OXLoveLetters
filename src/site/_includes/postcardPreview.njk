@@ -10,17 +10,16 @@
 
 {%- for letter in exportSubmissions["/pages/writeletters/"] -%}
     <div class="containerbox grid-item {{ loop.index0 }}">
-        <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
+        <img src="{{ letter.src }}" alt="" id="postcard">
         <div id="contentbox" class="template">{{ letter.message | safe }}</div>
-        <div id="namebox" class="template">
-            {% if letter.signature %}
-                {{ letter.nickname }}
-            {% else %}
-                FOR X
-            {% endif %}
-        </div>
+
+        {% if letter.signature %}
+            <div id="namebox" class="template">{{ letter.nickname }}</div>
+        {% else %}
+            <div id="namebox" class="template">FOR X</div>
+        {% endif %}
+
         <div id="memberbox">{{ letter.member }}</div>
-{#        change the member thing so it assigns the correct postcard based on whatever member is chosen!         #}
     </div>
 
     <button class="{{ loop.index0 }}" form="approver" id="approveL" type="submit">Approve</button>
