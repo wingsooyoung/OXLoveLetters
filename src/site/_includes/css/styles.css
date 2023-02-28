@@ -676,6 +676,9 @@ div#griddy {
     margin-left: auto;
     margin-right: auto;
 }
+.filter {
+    display: inline;
+}
 
 /*WRITE*/
 /*form, success page/action*/
