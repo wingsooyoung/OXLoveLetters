@@ -1,12 +1,3 @@
-{#{%- for letter in exportSubmissions["/pages/writeletters/"] -%}#}
-{#    <li class="testingES">#}
-{#        <h3>{{ letter.nickname }}</h3>#}
-{#        <div class="comment-text1">{{ letter.message | safe }}</div>#}
-{#        <div class="comment-text2">{{ letter.signature }}</div>#}
-{#    </li>#}
-{#{% else %}#}
-{#    <p class="testingES">{{ previews }}</p>#}
-{#{%- endfor -%}#}
 
 {%- for letter in exportSubmissions["/pages/writeletters/"] -%}
     <div class="containerbox grid-item {{ loop.index0 }}">
@@ -57,7 +48,7 @@
         //manually enter form data
         formData.set('path', 'default');
         formData.set('signature','bool');
-        formData.set('nickname', name); //figure out how to get it to NAME or FOR X
+        formData.set('nickname', name);
         formData.set('lettercontent', message);
         formData.set('members', member);
 

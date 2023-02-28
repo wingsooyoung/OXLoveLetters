@@ -1,5 +1,5 @@
 
-{%- for letter in exportApproved["default"] | reverse -%}
+{%- for letter in exportApproved["default"] -%}
     <div class="containerbox grid-item" onclick="modalZoom(this)">
         <img src="{{ letter.src }}" alt="" id="postcard">
         <div id="contentbox" class="template">{{ letter.message | safe }}</div>

@@ -46,12 +46,19 @@ module.exports = () => {
             postcardLink = '/assets/postcard%20handdrawn%201.svg';
         }
 
+        let letterTo = "";
+        if(entry.data.members === "") {
+            letterTo = "All";
+        } else {
+            letterTo = entry.data.members;
+        }
+
         let letter = {
             type: 'preview',
             signature: entry.data.signature,
             nickname: entry.data.nickname,
             message: entry.data.lettercontent,
-            member: entry.data.members,
+            member: letterTo,
             src: postcardLink
         };
         // Add it to an existing array or create a new one in the comments object
