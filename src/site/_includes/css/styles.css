@@ -679,6 +679,38 @@ div#griddy {
 .filter {
     display: inline;
 }
+
+button.filter {
+    --i: var(--light, 0);
+    --not-i: calc(1 - var(--i));
+    --j: var(--press, 0);
+    --not-j: calc(1 - var(--j));
+    z-index: var(--i);
+    border: none;
+    height: 2em;
+    border-radius: 15%;
+    transform: scale(calc(1 - var(--j)*.02));
+    box-shadow: calc(var(--not-j)*-0.25em) calc(var(--not-j)*-0.25em) 0.25em rgba(252, 252, 252, var(--not-j)), calc(var(--not-j)*0.25em) calc(var(--not-j)*0.25em) 0.25em rgba(210, 218, 230, var(--not-j)), inset calc(var(--j)*0.25em) calc(var(--j)*0.25em) 0.25em rgba(210, 218, 230, var(--j)), inset calc(var(--j)*-0.25em) calc(var(--j)*-0.25em) 0.25em rgba(252, 252, 252, var(--j));
+    background: #e8e8e8;
+    font-size: 2.5em;
+    transition: box-shadow 0.3s, transform 0.3s cubic-bezier(0.2, 4, 1, 3);
+    cursor: pointer;
+}
+button.filter::after {
+    filter: Contrast(0) Sepia(var(--i)) Hue-Rotate(calc(294deg)) Saturate(5) Opacity(calc(var(--i) + .21*var(--not-i))) Drop-Shadow(1px 1px hsla(0, 0%, 100%, var(--not-i)));
+    transition: filter 0.3s;
+    content: attr(data-ico);
+}
+button.filter:focus {
+    outline: none;
+}
+button.filter:hover, button.filter:focus {
+    --light: 1;
+}
+button.filter:active {
+    --press: 1;
+}
+
 .filter-container {
     grid-column-start: 1;
     grid-column-end: 4;
