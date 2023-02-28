@@ -145,15 +145,26 @@ for (let i = 0; i < ele.length; i++) {
 function myFilter(member) {
     var x, i;
     x = document.getElementsByClassName("memberbox");
-    if (member === "All") member = "";
+    // if (member === "All") member = "";
     for (i = 0; i < x.length; i++) {
         // w3RemoveClass(x[i], "show");
         if (x[i].parentElement.classList.contains("visible")) {
             x[i].parentElement.classList.remove("visible");
         }
-        if (x[i].innerHTML === member) {
-            // w3AddClass(x[i], "show");
-            x[i].parentElement.classList.add("visible");
+        // if (x[i].innerHTML === member) {
+        //     // w3AddClass(x[i], "show");
+        //     x[i].parentElement.classList.add("visible");
+        // }
+        switch (x[i].innerHTML) {
+            case 'All':
+                x[i].parentElement.classList.add("visible");
+                break
+            case '':
+                x[i].parentElement.classList.add("visible");
+                break
+            case member:
+                x[i].parentElement.classList.add("visible");
+                break
         }
     }
 }
