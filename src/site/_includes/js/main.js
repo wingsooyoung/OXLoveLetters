@@ -182,4 +182,15 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
+function filterToggle() {
+    var x = document.getElementById("buttons");
+    var y = document.getElementById("filterTitle");
+    if (x.style.display === "none") {
+        x.style.display = "inline";
+        y.innerHTML = "FILTER -";
+    } else {
+        x.style.display = "none";
+        y.innerHTML = "FILTER +";
+    }
+}
 

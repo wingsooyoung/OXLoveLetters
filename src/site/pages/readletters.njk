@@ -4,11 +4,22 @@ title: Read Letters
 
 
 <div class="grid-container">
-    <span>FILTER:</span>
-    <button class="filter" onclick="myFilter('Jaehan')">Jaehan</button>
-    <button class="filter" onclick="myFilter('Hwichan')">Hwichan</button>
-    <button class="filter" onclick="myFilter('Sebin')">Sebin</button>
-
+    <div class="filter-container">
+        <span id="filterTitle" onclick="filterToggle()">FILTER +</span>
+        <span id="buttons">
+            <button class="filter" onclick="myFilter('Jaehan')">Jaehan</button>
+            <button class="filter" onclick="myFilter('Hwichan')">Hwichan</button>
+            <button class="filter" onclick="myFilter('Sebin')">Sebin</button>
+            <button class="filter" onclick="myFilter('Hangyeom')">Hangyeom</button>
+            <button class="filter" onclick="myFilter('Taedong')">Taedong</button>
+            <button class="filter" onclick="myFilter('Xen')">Xen</button>
+            <button class="filter" onclick="myFilter('Jehyun')">Jehyun</button>
+            <button class="filter" onclick="myFilter('Kevin')">Kevin</button>
+            <button class="filter" onclick="myFilter('Junghoon')">Junghoon</button>
+            <button class="filter" onclick="myFilter('Hyuk')">Hyuk</button>
+            <button class="filter" onclick="myFilter('Yechan')">Yechan</button>
+        </span>
+    </div>
     {% include "postcardFinals.njk" %}
 </div>
 

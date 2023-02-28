@@ -679,6 +679,11 @@ div#griddy {
 .filter {
     display: inline;
 }
+.filter-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: inline;
+}
 
 /*WRITE*/
 /*form, success page/action*/
