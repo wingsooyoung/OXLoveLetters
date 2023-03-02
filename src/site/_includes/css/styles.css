@@ -584,7 +584,28 @@ div[data-netlify-identity-button] {
 #membersbox {
 
 }
-#contentbox, #contentboxM {
+#contentbox {
+    top: 44%;
+    left: 51%;
+    transform: translate(-50%, -49%);
+    height: 43%;
+    width: 68%;
+    font-size: 0.8em;
+    line-height: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    padding-right: 11px;
+    padding-left: 6px;
+    box-sizing: initial;
+    border-radius: 8px;
+    background: rgb(1 0 1 / 10%);
+    scrollbar-color: var(--purple2) var(--pink4);
+    scrollbar-width: thin;
+}
+#contentboxM{
+    /*font-size: medium;*/
+    /*line-height: 28px;*/
     top: 46%;
     left: 51%;
     transform: translate(-50%, -49%);
@@ -602,10 +623,6 @@ div[data-netlify-identity-button] {
     background: rgb(1 0 1 / 10%);
     scrollbar-color: var(--purple2) var(--pink4);
     scrollbar-width: thin;
-}
-#contentboxM{
-    font-size: medium;
-    line-height: 28px;
 }
 #contentbox::-webkit-scrollbar, textarea::-webkit-scrollbar, #contentboxM::-webkit-scrollbar {
     width: 8px;
@@ -643,9 +660,9 @@ div[data-netlify-identity-button] {
 ::-webkit-scrollbar-button:horizontal:end:decrement {
     display: none;
 }
-#namebox, #nameboxM {
-    bottom: 17%;
-    right: 15%;
+#namebox {
+    bottom: 15%;
+    right: 11%;
     width: 27%;
     height: 8%;
     overflow: clip;
@@ -654,8 +671,14 @@ div[data-netlify-identity-button] {
     text-align: center;
 }
 #nameboxM {
-    font-size: initial;
-    line-height: initial;
+    bottom: 18%;
+    right: 14%;
+    width: 27%;
+    height: 8%;
+    overflow: clip;
+    line-height: 15px;
+    font-size: x-small;
+    text-align: center;
 }
 #lettercount, #lettercountM {
     bottom: 9px;
@@ -1455,11 +1478,36 @@ dd {
         padding: 10px 0 40px!important;
     }
     #contentbox {
-        line-height: 14px!important;
+        top: 45%;
+        height: 44%;
+        width: 68%;
+        font-size: 12px;
+        line-height: 20px!important;
+        padding-right: 12px;
+        padding-left: 6px;
     }
-    #contentboxM, #nameboxM {
+    #namebox {
+        bottom: 15%;
+        right: 11%;
+        font-size: 12px;
         line-height: 17px!important;
-        font-size: 0.9em!important;
+    }
+    #contentboxM {
+        height: 38%;
+        width: 62%;
+        line-height: 26px!important;
+        font-size: 1.025em!important;
+    }
+    #nameboxM {
+        bottom: 18%;
+        right: 14%;
+        line-height: 26px!important;
+        font-size: 1.025em!important;
+    }
+    .filter-container {
+        grid-column-start: initial;
+        grid-column-end: initial;
+        display: initial;
     }
     .modal {
         padding-top: 200px!important;
