@@ -43,7 +43,7 @@ module.exports = () => {
             postcardLink = '/assets/yechanpostcard.svg';
         }
         else{
-            postcardLink = '/assets/postcard%20handdrawn%201.svg';
+            postcardLink = '/assets/small borders postcard.svg';
         }
 
         let letterTo = "";
