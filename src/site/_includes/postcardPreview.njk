@@ -41,7 +41,7 @@
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        let message = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
+        let message = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerText;
         let name = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
         let member = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
 
