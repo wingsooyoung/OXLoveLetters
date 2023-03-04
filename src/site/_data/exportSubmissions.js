@@ -1,7 +1,7 @@
 // massage the approved letters data into the shape we'd like
 
 const submissions = require('./letter-form_submissions.json');
-console.log("sub " + JSON.stringify(submissions));
+// console.log("sub " + JSON.stringify(submissions)); // delete
 
 module.exports = () => {
     let previews = {};
@@ -69,11 +69,15 @@ module.exports = () => {
             previews[entry.data.path] = [letter];
         }
     }
+
+
+//delete below...
     let text = "";
     for (var i = 0; i < previews['/pages/writeletters/']; i++) {
         text += previews['/pages/writeletters/'][i] + " & ";
     }
     console.log("/pages/writeletters/ = " + text)
+// delete till here ^
 
     return previews;
 };
