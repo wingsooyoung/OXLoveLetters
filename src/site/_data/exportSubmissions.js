@@ -57,7 +57,8 @@ module.exports = () => {
             type: 'preview',
             signature: entry.data.signature,
             nickname: entry.data.nickname,
-            message: entry.data.lettercontent,
+            // message: entry.data.lettercontent,
+            message: entry.body,
             member: letterTo,
             src: postcardLink
         };
