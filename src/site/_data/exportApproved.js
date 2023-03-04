@@ -73,10 +73,8 @@ module.exports = () => {
     //     text += letters['/default'][i] + " & ";
     // }
     // console.log("/default = " + text)
-    console.log(letters.values()); //Object [Array Iterator] {} = if 'let letters = []'
     console.log(letters.values); //[Function: values]
     console.log(letters);
-    console.log(letters['default'])
     console.log(letters['default'])
 
 
