@@ -4,7 +4,6 @@ const submissions = require('./letter-form_submissions.json');
 
 module.exports = () => {
     let previews = {};
-    console.log(typeof previews); //object
 
     for(var i = 0; i < submissions.length; i++) {
         let entry = submissions[i];
@@ -68,10 +67,11 @@ module.exports = () => {
             previews[entry.data.path] = [letter];
         }
     }
-
-    // console.log(letters);
-    console.log("/pages/writeletters/ = " + previews['/pages/writeletters/']);
-
+    let text = "";
+    for (var i = 0; i < previews['/pages/writeletters/'].length; i++) {
+        text += previews['/pages/writeletters/'][i] + " & ";
+    }
+    console.log("/pages/writeletters/ = " + text)
 
     return previews;
 };

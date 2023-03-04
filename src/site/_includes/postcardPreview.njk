@@ -10,8 +10,8 @@
             <div id="namebox" class="template">FOR X</div>
         {% endif %}
 
-        <div id="memberbox">{{ letter.member }}</div>
     </div>
+    <div id="membersbox">{{ letter.member }}</div>
 
     <button class="{{ loop.index0 }}" form="approver" id="approveL" type="submit">Approve</button>
     <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>
@@ -43,7 +43,7 @@
 
         let message = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
         let name = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
-        let member = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #memberbox`).innerHTML;
+        let member = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
 
 
         //manually enter form data

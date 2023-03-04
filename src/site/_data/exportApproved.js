@@ -4,7 +4,6 @@ const approved = require('./approved-letters_submissions.json');
 
 module.exports = () => {
     let letters = {};
-    console.log(typeof letters); //object
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
@@ -69,8 +68,11 @@ module.exports = () => {
         }
     }
 
-    console.log("default = " + letters['default']);
-
+    let text = "";
+    for (var i = 0; i < letters['/default'].length; i++) {
+        text += letters['/default'][i] + " & ";
+    }
+    console.log("/default = " + text)
 
     return letters;
 };

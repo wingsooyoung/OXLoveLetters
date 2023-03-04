@@ -581,7 +581,7 @@ div[data-netlify-identity-button] {
     position: absolute;
     padding:0;
 }
-#membersbox {
+#memberbox {
     display: none;
 }
 #contentbox {
