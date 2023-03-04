@@ -3,14 +3,12 @@
 const approved = require('./approved-letters_submissions.json');
 
 module.exports = () => {
-    let objList = {"human_fields":{"Lettercontent":"Hi Sebin!"}}
-    console.log(objList.human_fields.Lettercontent)
-
-    let objList2 = {"human_fields":{"Lettercontent":"I love you so \r\nmuch 💚"}}
-    let grr = objList2.human_fields.Lettercontent;
-    console.log(grr)
-    console.log(grr.escape())
-    console.log(grr)
+    // let objList = {"human_fields":{"Lettercontent":"Hi Sebin!"}}
+    // console.log(objList.human_fields.Lettercontent)
+    //
+    // let objList2 = {"human_fields":{"Lettercontent":"I love you so \r\nmuch 💚"}}
+    // let grr = objList2.human_fields.Lettercontent;
+    // console.log(grr)
 
     let letters = {};
 
