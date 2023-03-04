@@ -1,7 +1,6 @@
 // massage the approved letters data into the shape we'd like
 
 const approved = require('./approved-letters_submissions.json');
-console.log("approved json = " + JSON.stringify(approved));
 
 module.exports = () => {
     let letters = {};

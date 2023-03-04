@@ -1,6 +1,7 @@
 // massage the approved letters data into the shape we'd like
 
 const submissions = require('./letter-form_submissions.json');
+console.log("sub " + JSON.stringify(submissions));
 
 module.exports = () => {
     let previews = {};
