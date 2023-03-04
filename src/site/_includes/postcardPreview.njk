@@ -53,6 +53,10 @@
         formData.set('lettercontent', message);
         formData.set('members', member);
 
+        for (const pair of formData.entries()) {
+            console.log(`${pair[0]}, ${pair[1]}`);
+        }
+
         //send data above to the READ page
         fetch("/", {
             method: "POST",
