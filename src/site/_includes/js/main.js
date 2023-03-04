@@ -182,3 +182,47 @@ function filterToggle() {
     }
 }
 
+if (window.location.pathname === "/admin/approveletters") {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let ele = event.submitter;
+        const indexNumber = ele.className;
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+
+        let cbox = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`);
+        let message = cbox.innerHTML;
+
+        let name = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
+        let member = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
+
+
+        //manually enter form data
+        formData.set('path', 'default');
+        formData.set('signature', 'bool');
+        formData.set('nickname', name);
+        formData.set('lettercontent', message);
+        formData.set('members', member);
+
+        for (const pair of formData.entries()) {
+            console.log(`${pair[0]}, ${pair[1]}`);
+        }
+
+        //send data above to the READ page
+        fetch("/", {
+            method: "POST",
+            headers: {"Content-Type": "application/x-www-form-urlencoded"},
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => alert("Thank you for your submission"))
+            .catch((error) => alert(error));
+
+    };
+
+    document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
+}
+
+
