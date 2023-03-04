@@ -68,7 +68,7 @@ module.exports = () => {
         }
     }
     let text = "";
-    for (var i = 0; i < previews['/pages/writeletters/'].length; i++) {
+    for (var i = 0; i < previews['/pages/writeletters/']; i++) {
         text += previews['/pages/writeletters/'][i] + " & ";
     }
     console.log("/pages/writeletters/ = " + text)
