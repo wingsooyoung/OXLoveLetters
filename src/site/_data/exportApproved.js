@@ -1,6 +1,7 @@
 // massage the approved letters data into the shape we'd like
 
 const approved = require('./approved-letters_submissions.json');
+console.log("approved json = "+approved);
 
 module.exports = () => {
     let letters = {};
@@ -73,9 +74,7 @@ module.exports = () => {
     //     text += letters['/default'][i] + " & ";
     // }
     // console.log("/default = " + text)
-    console.log(letters.values); //[Function: values]
-    console.log(letters);
-    console.log(letters['default'])
+    console.log("letters['default'] = "+letters['default'])
 
 
     return letters;
