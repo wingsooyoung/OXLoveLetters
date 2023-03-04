@@ -10,37 +10,37 @@ module.exports = () => {
         let entry = submissions[i];
         let postcardLink = '';
         if(entry.data.members === 'Jaehan'){
-            postcardLink = '/assets/jaehanpostcard.svg';
+            postcardLink = '/assets/base/jaehanbase.svg';
         }
         else if(entry.data.members === 'Hwichan') {
-            postcardLink = '/assets/hwichanpostcard.svg';
+            postcardLink = '/assets/base/hwichanbase.svg';
         }
         else if(entry.data.members === 'Sebin') {
-            postcardLink = '/assets/sebinpostcard.svg';
+            postcardLink = '/assets/base/sebinbase.svg';
         }
         else if(entry.data.members === 'Hangyeom') {
-            postcardLink = '/assets/hangyeompostcard.svg';
+            postcardLink = '/assets/base/hangyeombase.svg';
         }
         else if(entry.data.members === 'Taedong') {
-            postcardLink = '/assets/taedongpostcard.svg';
+            postcardLink = '/assets/base/taedongbase.svg';
         }
         else if(entry.data.members === 'Xen') {
-            postcardLink = '/assets/xenpostcard.svg';
+            postcardLink = '/assets/base/xenbase.svg';
         }
         else if(entry.data.members === 'Jehyun') {
-            postcardLink = '/assets/jehyunpostcard.svg';
+            postcardLink = '/assets/base/jehyunbase.svg';
         }
         else if(entry.data.members === 'Kevin') {
-            postcardLink = '/assets/kevinpostcard.svg';
+            postcardLink = '/assets/base/kevinbase.svg';
         }
         else if(entry.data.members === 'Junghoon') {
-            postcardLink = '/assets/junghoonpostcard.svg';
+            postcardLink = '/assets/base/junghoonbase.svg';
         }
         else if(entry.data.members === 'Hyuk') {
-            postcardLink = '/assets/hyukpostcard.svg';
+            postcardLink = '/assets/base/hyukbase.svg';
         }
         else if(entry.data.members === 'Yechan') {
-            postcardLink = '/assets/yechanpostcard.svg';
+            postcardLink = '/assets/base/yechanbase.svg';
         }
         else{
             postcardLink = '/assets/small borders postcard.svg';
