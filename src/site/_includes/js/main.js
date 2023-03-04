@@ -183,7 +183,7 @@ function filterToggle() {
 }
 
 if (window.location.pathname === "/admin/approveletters") {
-    const handleSubmit = (event) => {
+    let handleSubmit = (event) => {
         event.preventDefault();
         let ele = event.submitter;
         const indexNumber = ele.className;
