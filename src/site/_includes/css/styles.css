@@ -582,7 +582,7 @@ div[data-netlify-identity-button] {
     padding:0;
 }
 #membersbox {
-
+    display: none;
 }
 #contentbox {
     top: 44%;
