@@ -53,10 +53,9 @@ module.exports = () => {
         }
 
         let letter = {
-            type: 'final',
             signature: entry.data.signature,
             nickname: entry.data.nickname,
-            message: entry.data.lettercontent,
+            message: entry.data.message,
             member: letterTo,
             src: postcardLink
         };
