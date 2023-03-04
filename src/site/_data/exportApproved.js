@@ -3,11 +3,21 @@
 const approved = require('./approved-letters_submissions.json');
 
 module.exports = () => {
+    let objList = {"human_fields":{"Lettercontent":"Hi Sebin!"}}
+    console.log(objList.human_fields.Lettercontent)
+
+    let objList2 = {"human_fields":{"Lettercontent":"I love you so \r\nmuch 💚"}}
+    let grr = objList2.human_fields.Lettercontent;
+    console.log(grr)
+    console.log(grr.escape())
+    console.log(grr)
+
     let letters = {};
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
-        console.log("entry ["+ i + "] =" + entry) //delete
+        console.log("entry["+ i + "] = " + entry.data) //delete
+
         let postcardLink = '';
         if(entry.data.members === 'Jaehan'){
             postcardLink = '/assets/base/jaehanbase.svg';
@@ -45,19 +55,20 @@ module.exports = () => {
         else{
             postcardLink = '/assets/small borders postcard.svg';
         }
-        console.log(postcardLink); //delete
+        // console.log(postcardLink); //delete
+
         let letterTo = "";
         if(entry.data.members === "") {
             letterTo = "All";
         } else {
             letterTo = entry.data.members;
         }
-        console.log(letterTo); //delete
+        // console.log(letterTo); //delete
+
         let letter = {
             signature: entry.data.signature,
             nickname: entry.data.nickname,
-            // message: entry.data.lettercontent
-            message: entry.body,
+            message: entry.data.lettercontent,
             member: letterTo,
             src: postcardLink
         };
