@@ -7,6 +7,7 @@ module.exports = () => {
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
+        console.log("entry ["+ i + "] =" + entry) //delete
         let postcardLink = '';
         if(entry.data.members === 'Jaehan'){
             postcardLink = '/assets/base/jaehanbase.svg';
@@ -44,21 +45,23 @@ module.exports = () => {
         else{
             postcardLink = '/assets/small borders postcard.svg';
         }
-
+        console.log(postcardLink); //delete
         let letterTo = "";
         if(entry.data.members === "") {
             letterTo = "All";
         } else {
             letterTo = entry.data.members;
         }
-
+        console.log(letterTo); //delete
         let letter = {
             signature: entry.data.signature,
             nickname: entry.data.nickname,
-            message: entry.data.lettercontent,
+            // message: entry.data.lettercontent
+            message: entry.body,
             member: letterTo,
             src: postcardLink
         };
+        console.log(letter); // delete
         // Add it to an existing array or create a new one in the comments object
         if(letters[entry.data.path]){
             letters[entry.data.path].push(letter);
@@ -72,10 +75,14 @@ module.exports = () => {
     //     text += letters['/default'][i] + " & ";
     // }
     // console.log("/default = " + text)
-    console.log("letters['default'] = ");
-    console.log(letters['default']);
-    console.log("letters = ");
-    console.log(letters);
+
+
+
+//actually helpful and working tests.... :
+    // console.log("letters['default'] = ");
+    // console.log(letters['default']);
+    // console.log("letters = ");
+    // console.log(letters);
 
 
     return letters;
