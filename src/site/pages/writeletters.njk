@@ -2,11 +2,11 @@
 templateEngineOverride: njk
 title: Write Letters
 ---
-<div id="special-announcement">
-  <img src="/assets/xen bday graphic.jpg" alt="" width="130" height="130">
-  <p>It's Xen's birthday today! Send in your birthday wishes below.</p>
-  <button id="toggler" onclick="toggleAnnouncement(this)">HIDE</button>
-</div>
+{#<div id="special-announcement" style="display: none">#}
+{#  <img src="/assets/xen bday graphic.jpg" alt="" width="130" height="130">#}
+{#  <p>It's Xen's birthday today! Send in your birthday wishes below.</p>#}
+{#  <button id="toggler" onclick="toggleAnnouncement(this)">HIDE</button>#}
+{#</div>#}
 
 <div id="letter-form-div">
   <form name="letter-form" id="letter-form" method="POST" action="/success" data-netlify="true" accept-charset="UTF-8">
