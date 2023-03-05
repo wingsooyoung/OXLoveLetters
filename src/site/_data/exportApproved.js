@@ -16,7 +16,7 @@ module.exports = () => {
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
-        console.log("entry["+ i + "] = " + entry.data.values) //delete
+        console.log("entry["+ i + "] = " + JSON.stringify(entry.data)) //delete
 
         let postcardLink = '';
         if(entry.data.members === 'Jaehan'){

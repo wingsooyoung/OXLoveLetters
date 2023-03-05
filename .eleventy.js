@@ -4,7 +4,6 @@ module.exports = function(config) {
     // eleventy config settings
     config.addPassthroughCopy("assets");
     config.addPassthroughCopy("index.html");
-    config.addPassthroughCopy("sheets");
     config.addPassthroughCopy("oxllstamp.ico");
     config.addPassthroughCopy("favicon-16x16.png");
     config.addPassthroughCopy("favicon-32x32.png");
