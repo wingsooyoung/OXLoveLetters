@@ -1,7 +1,7 @@
 // massage the approved letters data into the shape we'd like
 
 const approved = require('./approved-letters_submissions.json');
-console.log("app " + JSON.stringify(approved)); // delete
+// console.log("app " + JSON.stringify(approved)); // delete
 
 
 module.exports = () => {
@@ -16,7 +16,7 @@ module.exports = () => {
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
-        console.log("entry["+ i + "] = " + JSON.stringify(entry.data)) //delete
+        // console.log("entry["+ i + "] = " + JSON.stringify(entry.data)) //delete
 
         let postcardLink = '';
         if(entry.data.members === 'Jaehan'){

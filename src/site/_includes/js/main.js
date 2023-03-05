@@ -215,13 +215,13 @@ if (window.location.pathname === "/admin/approveletters") {
             headers: {"Content-Type": "application/x-www-form-urlencoded"},
             body: new URLSearchParams(formData).toString(),
         })
-            .then(() => console.log("Thank you for your submission = " + new URLSearchParams(formData).toString(),))
+            .then(() => console.log("Thank you for your submission"))
             .catch((error) => alert(error));
 
     };
 
     document
-        .querySelector("form")
+        .querySelector("form#approver")
         .addEventListener("submit", handleSubmit);
 }
 
