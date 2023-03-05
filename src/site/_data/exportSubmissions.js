@@ -70,15 +70,6 @@ module.exports = () => {
         }
     }
 
-
-//delete below...
-    let text = "";
-    for (var i = 0; i < previews['/pages/writeletters/']; i++) {
-        text += previews['/pages/writeletters/'][i] + " & ";
-    }
-    console.log("/pages/writeletters/ = " + text)
-// delete till here ^
-
     return previews;
 };
 

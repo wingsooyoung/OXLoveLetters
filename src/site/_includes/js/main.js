@@ -192,7 +192,7 @@ if (window.location.pathname === "/admin/approveletters") {
         const formData = new FormData(myForm);
 
         let cbox = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`);
-        let message = cbox.innerHTML;
+        // let message = cbox.innerHTML;
 
         let name = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
         let member = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
@@ -202,7 +202,7 @@ if (window.location.pathname === "/admin/approveletters") {
         formData.set('path', 'default');
         formData.set('signature', 'bool');
         formData.set('nickname', name);
-        formData.set('lettercontent', message);
+        formData.set('lettercontent', cbox.innerHTML);
         formData.set('members', member);
 
         for (const pair of formData.entries()) {
