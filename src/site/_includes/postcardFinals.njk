@@ -2,7 +2,7 @@
 {%- for letter in exportApproved["default"] -%}
     <div class="containerbox grid-item" onclick="modalZoom(this)">
         <img src="{{ letter.src }}" alt="" id="postcard">
-        <div id="contentbox" class="template">{{ letter.message | safe }}</div>
+        <div id="contentbox" class="template">{{ letter.message }}</div>
 
         {% if letter.signature %}
             <div id="namebox" class="template">{{ letter.nickname }}</div>

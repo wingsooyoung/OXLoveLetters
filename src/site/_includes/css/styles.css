@@ -890,7 +890,7 @@ textarea:focus, #nickname:focus {
     width: 100%;
 }
 form#approver {
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 #success-block {
     margin-left: auto;

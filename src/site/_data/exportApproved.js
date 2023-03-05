@@ -67,12 +67,12 @@ module.exports = () => {
 
         let letter = {
             signature: entry.data.signature,
-            nickname: entry.data.nickname,
+            nickname: entry.data.nickname.trim(),
             message: entry.data.lettercontent,
             member: letterTo,
             src: postcardLink
         };
-        console.log(letter); // delete
+        console.log(letter.message); // delete
         // Add it to an existing array or create a new one in the comments object
         if(letters[entry.data.path]){
             letters[entry.data.path].push(letter);
