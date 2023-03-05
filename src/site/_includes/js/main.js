@@ -215,7 +215,7 @@ if (window.location.pathname === "/admin/approveletters") {
             headers: {"Content-Type": "application/x-www-form-urlencoded"},
             body: new URLSearchParams(formData).toString(),
         })
-            .then(() => alert("Thank you for your submission"))
+            .then(() => console.log("Thank you for your submission = " + new URLSearchParams(formData).toString(),))
             .catch((error) => alert(error));
 
     };
