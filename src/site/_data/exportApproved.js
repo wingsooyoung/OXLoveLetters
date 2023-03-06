@@ -46,7 +46,7 @@ module.exports = () => {
             type: 'final',
             signature: entry.data.signature,
             nickname: entry.data.nickname.trim(),
-            message: entry.data.lettercontent,
+            message: entry.data.message,
             member: letterTo,
             src: postcardLink
         };

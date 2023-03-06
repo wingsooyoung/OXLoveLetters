@@ -1,11 +1,20 @@
-
+const approved = require('./approved-letters_submissions.json');
 const submissions = require('./letter-form_submissions.json');
 
 module.exports = () => {
     let previews = {};
 
-    for(var i = 0; i < submissions.length; i++) {
+    myLoop: for(var i = 0; i < submissions.length; i++) {
         let entry = submissions[i];
+
+        //compare to approved, skip if it has already been moved over!
+        for(var j = 0; j < approved.length; j++) {
+            let check = approved[j];
+            if(check.data.message === entry.data.lettercontent) {
+                continue myLoop
+            }
+        }
+
         let postcardLink = '';
         if(entry.data.members === 'Jaehan'){
             postcardLink = '/assets/base/jaehanbase.svg';
@@ -54,7 +63,7 @@ module.exports = () => {
         let letter = {
             type: 'preview',
             signature: entry.data.signature,
-            nickname: entry.data.nickname,
+            nickname: entry.data.nickname.trim(),
             message: entry.data.lettercontent,
             member: letterTo,
             src: postcardLink

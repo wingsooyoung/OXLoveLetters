@@ -1,6 +1,6 @@
 
 {%- for letter in exportSubmissions["/pages/writeletters/"] -%}
-    <div class="containerbox grid-item {{ loop.index0 }}">
+    <div class="containerbox grid-item {{ loop.revindex }}">
         <img src="{{ letter.src }}" alt="" id="postcard">
         <div id="contentbox" class="template">{{ letter.message }}</div>
         {% if letter.signature %}
@@ -11,7 +11,7 @@
     </div>
     <div id="membersbox">{{ letter.member }}</div>
     <br>
-    <button class="{{ loop.index0 }}" form="approver" id="approveL" type="submit">Approve</button>
+    <button class="{{ loop.revindex }}" form="approver" id="approveL" type="submit">Approve</button>
 {#    <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>#}
 <br><br>
 {% else %}
