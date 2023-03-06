@@ -1,4 +1,4 @@
-const approved = require('./approved-letters_submissions.json');
+// const approved = require('./approved-letters_submissions.json');
 const submissions = require('./letter-form_submissions.json');
 
 module.exports = () => {
@@ -8,16 +8,16 @@ module.exports = () => {
         let entry = submissions[i];
         //compare to approved, skip if it has already been moved over!
 
-        for(var j = 0; j < approved.length; j++) {
-            let check = approved[j];
-            // console.log(check.data.lettercontent);
-            console.log(entry.data.lettercontent);
-            console.log(check.data.lettercontent == entry.data.lettercontent);
-            console.log(check.data.lettercontent === entry.data.lettercontent);
-            if(check.data.lettercontent == entry.data.lettercontent) {
-                continue myLoop
-            }
-        }
+        // for(var j = 0; j < approved.length; j++) {
+        //     let check = approved[j];
+        //     // console.log(check.data.lettercontent);
+        //     console.log(entry.data.lettercontent);
+        //     console.log(check.data.lettercontent == entry.data.lettercontent);
+        //     console.log(check.data.lettercontent === entry.data.lettercontent);
+        //     if(check.data.lettercontent == entry.data.lettercontent) {
+        //         continue myLoop
+        //     }
+        // }
 
         let postcardLink = '';
         if(entry.data.members === 'Jaehan'){
