@@ -10,10 +10,11 @@ module.exports = () => {
 
         for(var j = 0; j < approved.length; j++) {
             let check = approved[j];
-            console.log(check.data.message);
+            // console.log(check.data.lettercontent);
             console.log(entry.data.lettercontent);
-            console.log(check.data.message == entry.data.lettercontent);
-            if(check.data.message == entry.data.lettercontent) {
+            console.log(check.data.lettercontent == entry.data.lettercontent);
+            console.log(check.data.lettercontent === entry.data.lettercontent);
+            if(check.data.lettercontent == entry.data.lettercontent) {
                 continue myLoop
             }
         }
