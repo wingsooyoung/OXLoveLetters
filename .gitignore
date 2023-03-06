@@ -23,10 +23,8 @@ src/functions/
 
 .netlify
 
-src/site/_data/credentials.json
 
-src/site/_data/approvedLoveLetters.js
 
-src/site/_data/allLoveLetters.js
+
 
 /dist/

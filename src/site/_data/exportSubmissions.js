@@ -1,7 +1,5 @@
-// massage the approved letters data into the shape we'd like
 
 const submissions = require('./letter-form_submissions.json');
-// console.log("sub " + JSON.stringify(submissions)); // delete
 
 module.exports = () => {
     let previews = {};
@@ -61,7 +59,6 @@ module.exports = () => {
             member: letterTo,
             src: postcardLink
         };
-        // console.log(letter);
         // Add it to an existing array or create a new one in the comments object
         if(previews[entry.data.path]){
             previews[entry.data.path].push(letter);

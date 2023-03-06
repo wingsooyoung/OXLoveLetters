@@ -106,6 +106,7 @@ function modalZoom(x) {
     modal.style.display = "block";
     let m = modalLetter.children;
     let y = x.children;
+    m["postcardM"].src = y[0].src;
     m["contentboxM"].textContent = y[1].innerHTML;
     m["nameboxM"].textContent = y[2].innerHTML;
     m["lettercountM"].textContent = y[3].innerHTML;

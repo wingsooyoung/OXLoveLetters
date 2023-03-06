@@ -1,81 +1,66 @@
 
 {%- for letter in exportSubmissions["/pages/writeletters/"] -%}
     <div class="containerbox grid-item {{ loop.index0 }}">
-
         <img src="{{ letter.src }}" alt="" id="postcard">
-
         <div id="contentbox" class="template">{{ letter.message }}</div>
-
         {% if letter.signature %}
             <div id="namebox" class="template">{{ letter.nickname }}</div>
         {% else %}
             <div id="namebox" class="template">FOR X</div>
         {% endif %}
-
     </div>
     <div id="membersbox">{{ letter.member }}</div>
-
     <br>
-    <button class="{{ loop.index0 }}" id="approveL" onclick="fillOutForm(this)">Approve</button>
+    <button class="{{ loop.index0 }}" form="approver" id="approveL" type="submit">Approve</button>
 {#    <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>#}
 <br><br>
-
 {% else %}
-
     <li>No new letter submissions.</li>
-
 {%- endfor -%}
 
-{#<form id="approver" name="approved-letters" netlify netlify-honeypot="full-name">
-#}
-<form id="approver" name="approved-letters" action="" data-netlify="true">
-    <input type="hidden" name="approved-letters" value="approved-letters" />
+<form id="approver" name="approved-letters" data-netlify="true">
     <input type="text" name="path" id="path">
     <input type="text" name="signature" id="signature">
     <input type="text" name="nickname" id="nickname">
-{#    make the two below input text instead of textarea and select???????   #}
+{#    make the two below input text instead of textarea and select   #}
     <input type="text" name="lettercontent" id="lettercontent">
-    <input type="text" id="members" name="members">
-
-    <input type="submit" value="Submit">
+    <input type="text" name="members" id="members">
 </form>
 
-
 <script>
-    function fillOutForm(sendThis) {
-        const indexNumber = sendThis.className;
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let ele = event.submitter;
+        const indexNumber = ele.className;
+        let dex = CSS.escape(indexNumber);
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
 
         let message = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
         let name = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
         let member = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
 
-        document.forms["approved-letters"]["path"].value = "default";
-        document.forms["approved-letters"]["signature"].value = "bool";
-        document.forms["approved-letters"]["nickname"].value = name;
-        document.forms["approved-letters"]["lettercontent"].value = message;
-        document.forms["approved-letters"]["members"].value = member;
-    }
+        //manually enter form data
+        formData.set('path', 'default');
+        formData.set('signature','bool');
+        formData.set('nickname', name);
+        formData.set('lettercontent', message);
+        formData.set('members', member);
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-
+        //send data above to the READ page
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
         })
-            .then(() => alert("Thank you for your submission"))
+            .then(() => alert("The letter has been submitted!"))
             .catch((error) => alert(error));
     };
 
     document
         .querySelector("form")
         .addEventListener("submit", handleSubmit);
-
-
 </script>
 
 
