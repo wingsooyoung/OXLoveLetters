@@ -1,6 +1,6 @@
-{{ exportApproved["default"][0] | dump(1) }}
+{{ exportApproved["default"][0] | dump(2) }}
 
-{{ exportApproved["default"] | dump(1) }}
+{#{{ exportApproved["default"] | dump(2) }}#}
 
 {%- for letter in exportSubmissions["/pages/writeletters/"] -%}
     <div class="containerbox grid-item {{ loop.revindex }}">
