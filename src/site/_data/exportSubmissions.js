@@ -6,11 +6,14 @@ module.exports = () => {
 
     myLoop: for(var i = 0; i < submissions.length; i++) {
         let entry = submissions[i];
-
         //compare to approved, skip if it has already been moved over!
+
         for(var j = 0; j < approved.length; j++) {
             let check = approved[j];
-            if(check.data.message === entry.data.lettercontent) {
+            console.log(check.data.message);
+            console.log(entry.data.lettercontent);
+            console.log(check.data.message == entry.data.lettercontent);
+            if(check.data.message == entry.data.lettercontent) {
                 continue myLoop
             }
         }
