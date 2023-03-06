@@ -1,23 +1,19 @@
 
 {%- for letter in exportSubmissions["/pages/writeletters/"] -%}
-    {%- for app in exportApproved["default"] -%}
-        {% if letter.message != app.message %}
-            <div class="containerbox grid-item {{ loop.revindex }}">
-                <img src="{{ letter.src }}" alt="" id="postcard">
-                <div id="contentbox" class="template">{{ letter.message }}</div>
-                {% if letter.signature %}
-                    <div id="namebox" class="template">{{ letter.nickname }}</div>
-                {% else %}
-                    <div id="namebox" class="template">FOR X</div>
-                {% endif %}
-            </div>
-            <div id="membersbox">{{ letter.member }}</div>
-            <br>
-            <button class="{{ loop.revindex }}" form="approver" id="approveL" type="submit">Approve</button>
-            {#    <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>#}
-            <br><br>
+    <div class="containerbox grid-item {{ loop.revindex }}">
+        <img src="{{ letter.src }}" alt="" id="postcard">
+        <div id="contentbox" class="template">{{ letter.message }}</div>
+        {% if letter.signature %}
+            <div id="namebox" class="template">{{ letter.nickname }}</div>
+        {% else %}
+            <div id="namebox" class="template">FOR X</div>
         {% endif %}
-    {%- endfor -%}
+    </div>
+    <div id="membersbox">{{ letter.member }}</div>
+    <br>
+    <button class="{{ loop.revindex }}" form="approver" id="approveL" type="submit">Approve</button>
+{#    <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>#}
+<br><br>
 {% else %}
     <li>No new letter submissions.</li>
 {%- endfor -%}
@@ -32,6 +28,10 @@
 </form>
 
 <script>
+    console.log({{ exportApproved["default"] | dump }})
+
+
+
     const handleSubmit = (event) => {
         event.preventDefault();
         let ele = event.submitter;
