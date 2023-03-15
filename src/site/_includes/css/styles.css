@@ -1338,6 +1338,9 @@ dd {
     }
 }
 @media screen and (min-width: 280px) and (max-width: 800px) {
+    #special-announcement {
+        width: min-content!important;
+    }
     body {
         background-image: url("/assets/mobile bg rough darker.png");
     }
