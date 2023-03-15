@@ -591,7 +591,7 @@ div[data-netlify-identity-button] {
     height: 43%;
     width: 68%;
     font-size: 0.8em;
-    line-height: 20px;
+    /*line-height: 20px;*/
     overflow-x: hidden;
     overflow-y: scroll;
     overflow-wrap: break-word;
@@ -604,15 +604,15 @@ div[data-netlify-identity-button] {
     scrollbar-width: thin;
 }
 #contentboxM{
-    /*font-size: medium;*/
-    /*line-height: 28px;*/
-    top: 46%;
-    left: 51%;
+    font-size: medium;
+    line-height: 32px;
+    top: 45%;
+    left: 50%;
     transform: translate(-50%, -49%);
-    height: 40%;
-    width: 60%;
-    font-size: x-small;
-    line-height: 16px;
+    height: 44%;
+    width: 67%;
+    /*font-size: x-small;*/
+    /*line-height: 16px;*/
     overflow-x: hidden;
     overflow-y: scroll;
     overflow-wrap: break-word;
