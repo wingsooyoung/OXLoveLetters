@@ -4,22 +4,28 @@ title: Read Letters
 
 {# figure out some way to resubmit all the approved letters with the correct members input selected!! #}
 <div class="grid-container">
-    <div class="filter-container">
-        <span id="filterTitle" onclick="filterToggle()">FILTER +</span>
-        <span id="buttons" style="display:none;">
-            <button class="filter" onclick="myFilter('All')">All</button>
-            <button class="filter" onclick="myFilter('Jaehan')">Jaehan</button>
-            <button class="filter" onclick="myFilter('Hwichan')">Hwichan</button>
-            <button class="filter" onclick="myFilter('Sebin')">Sebin</button>
-            <button class="filter" onclick="myFilter('Hangyeom')">Hangyeom</button>
-            <button class="filter" onclick="myFilter('Taedong')">Taedong</button>
-            <button class="filter" onclick="myFilter('Xen')">Xen</button>
-            <button class="filter" onclick="myFilter('Jehyun')">Jehyun</button>
-            <button class="filter" onclick="myFilter('Kevin')">Kevin</button>
-            <button class="filter" onclick="myFilter('Junghoon')">Junghoon</button>
-            <button class="filter" onclick="myFilter('Hyuk')">Hyuk</button>
-            <button class="filter" onclick="myFilter('Yechan')">Yechan</button>
-        </span>
+    <div class="container">
+        <div class="filterer">
+            <span id="filterTitle" onclick="filterToggle()">FILTER +</span>
+        </div>
+        <div id="buttons" style="display: contents">
+            <div class="row1">
+                <button class="filter" onclick="myFilter('All')">All</button>
+                <button class="filter" onclick="myFilter('Jaehan')">Jaehan</button>
+                <button class="filter" onclick="myFilter('Hwichan')">Hwichan</button>
+                <button class="filter" onclick="myFilter('Sebin')">Sebin</button>
+                <button class="filter" onclick="myFilter('Hangyeom')">Hangyeom</button>
+                <button class="filter" onclick="myFilter('Taedong')">Taedong</button>
+            </div>
+            <div class="row2">
+                <button class="filter" onclick="myFilter('Xen')">Xen</button>
+                <button class="filter" onclick="myFilter('Jehyun')">Jehyun</button>
+                <button class="filter" onclick="myFilter('Kevin')">Kevin</button>
+                <button class="filter" onclick="myFilter('Junghoon')">Junghoon</button>
+                <button class="filter" onclick="myFilter('Hyuk')">Hyuk</button>
+                <button class="filter" onclick="myFilter('Yechan')">Yechan</button>
+            </div>
+        </div>
     </div>
     {% include "postcardFinals.njk" %}
 </div>
