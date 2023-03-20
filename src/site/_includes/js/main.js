@@ -174,11 +174,11 @@ function myFilter(member) {
 function filterToggle() {
     var x = document.getElementById("buttons");
     var y = document.getElementById("filterTitle");
-    if (x.style.display === "none") {
-        x.style.display = "contents";
+    if (x.style.visibility === "hidden") {
+        x.style.visibility = "visible";
         y.innerHTML = "FILTER -";
     } else {
-        x.style.display = "none";
+        x.style.visibility = "hidden";
         y.innerHTML = "FILTER +";
     }
 }

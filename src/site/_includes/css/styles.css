@@ -710,6 +710,9 @@ div#griddy {
     background: #d1c4e9;
     font-weight: 700;
 }
+#buttons {
+    display: contents;
+}
 button.filter {
     color: #46494c;
     margin: 5px;
