@@ -719,6 +719,12 @@ button.filter {
     border-radius: 15px;
     background: #e8e8e8;
     cursor: pointer;
+    display: inline;
+}
+.filter-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: inline;
 }
 .container {
     display: grid;

@@ -175,7 +175,7 @@ function filterToggle() {
     var x = document.getElementById("buttons");
     var y = document.getElementById("filterTitle");
     if (x.style.display === "none") {
-        x.style.display = "inline";
+        x.style.display = "contents";
         y.innerHTML = "FILTER -";
     } else {
         x.style.display = "none";

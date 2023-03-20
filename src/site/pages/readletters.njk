@@ -4,11 +4,12 @@ title: Read Letters
 
 {# figure out some way to resubmit all the approved letters with the correct members input selected!! #}
 <div class="grid-container">
+    <div class="filter-container">
     <div class="container">
         <div class="filterer">
             <span id="filterTitle" onclick="filterToggle()">FILTER +</span>
         </div>
-        <div id="buttons" style="display: contents">
+        <div id="buttons" style="display: none">
             <div class="row1">
                 <button class="filter" onclick="myFilter('All')">All</button>
                 <button class="filter" onclick="myFilter('Jaehan')">Jaehan</button>
@@ -26,6 +27,7 @@ title: Read Letters
                 <button class="filter" onclick="myFilter('Yechan')">Yechan</button>
             </div>
         </div>
+    </div>
     </div>
     {% include "postcardFinals.njk" %}
 </div>
