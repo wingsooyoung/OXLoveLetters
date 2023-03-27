@@ -145,7 +145,7 @@ for (let i = 0; i < ele.length; i++) {
 
 function myFilter(member) {
     var x, i;
-    x = document.getElementsByClassName("memberbox");
+    x = document.getElementsByClassName("membersbox");
     // if (member === "All") member = "";
     for (i = 0; i < x.length; i++) {
         // w3RemoveClass(x[i], "show");
