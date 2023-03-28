@@ -671,13 +671,13 @@ div[data-netlify-identity-button] {
     text-align: center;
 }
 #nameboxM {
-    bottom: 18%;
+    bottom: 14%;
     right: 14%;
     width: 27%;
     height: 8%;
     overflow: clip;
-    line-height: 15px;
-    font-size: x-small;
+    /*line-height: 15px;*/
+    font-size: large;
     text-align: center;
 }
 #lettercount, #lettercountM {
@@ -1516,6 +1516,7 @@ dd {
         font-size: 1.025em!important;
     }
     #nameboxM {
+
         bottom: 18%;
         right: 14%;
         line-height: 26px!important;
