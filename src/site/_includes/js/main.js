@@ -149,10 +149,10 @@ function myFilter(member) {
     // if (member === "All") member = "";
     for (i = 0; i < x.length; i++) {
         // w3RemoveClass(x[i], "show");
-        if (x[i].parentElement.classList.contains("visible")) {
-            x[i].parentElement.classList.remove("visible");
-            x[i].parentElement.classList.add("notvisible");
-        }
+        // if (x[i].parentElement.classList.contains("visible")) {
+        //     x[i].parentElement.classList.remove("visible");
+        //     x[i].parentElement.classList.add("notvisible");
+        // }
         // if (x[i].innerHTML === member) {
         //     // w3AddClass(x[i], "show");
         //     x[i].parentElement.classList.add("visible");
