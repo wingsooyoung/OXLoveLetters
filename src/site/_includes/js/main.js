@@ -148,29 +148,32 @@ function myFilter(member) {
     x = document.getElementsByClassName("membersbox");
     // if (member === "All") member = "";
     for (i = 0; i < x.length; i++) {
-        // w3RemoveClass(x[i], "show");
-        // if (x[i].parentElement.classList.contains("visible")) {
-        //     x[i].parentElement.classList.remove("visible");
-        //     x[i].parentElement.classList.add("notvisible");
-        // }
-        // if (x[i].innerHTML === member) {
-        //     // w3AddClass(x[i], "show");
-        //     x[i].parentElement.classList.add("visible");
-        // }
-        switch (x[i].innerHTML) {
-            case 'All':
-                x[i].parentElement.classList.add("visible");
-                x[i].parentElement.classList.remove("notvisible");
-                break
-            case '':
-                x[i].parentElement.classList.add("visible");
-                x[i].parentElement.classList.remove("notvisible");
-                break
-            case member:
-                x[i].parentElement.classList.add("visible");
-                x[i].parentElement.classList.remove("notvisible");
-                break
+        if (member === 'All' || member === 'all' || member === '' || member === 'ALL') {
+            x[i].parentElement.classList.add("visible");
         }
+
+        if (x[i].innerHTML === member) {
+            x[i].parentElement.classList.add("visible");
+            x[i].parentElement.classList.remove("notvisible");
+        } else {
+            x[i].parentElement.classList.remove("visible");
+            x[i].parentElement.classList.add("notvisible");
+        }
+
+        // switch (x[i].innerHTML) {
+        //     case 'All':
+        //         x[i].parentElement.classList.add("visible");
+        //         x[i].parentElement.classList.remove("notvisible");
+        //         break
+        //     case '':
+        //         x[i].parentElement.classList.add("visible");
+        //         x[i].parentElement.classList.remove("notvisible");
+        //         break
+        //     case member:
+        //         x[i].parentElement.classList.add("visible");
+        //         x[i].parentElement.classList.remove("notvisible");
+        //         break
+        // }
     }
 }
 
