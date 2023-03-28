@@ -149,7 +149,9 @@ function myFilter(member) {
     // if (member === "All") member = "";
     for (i = 0; i < x.length; i++) {
         if (member === 'All' || member === 'all' || member === '' || member === 'ALL') {
-            x[i].parentElement.classList.add("visible");
+            if (x[i].innerHTML === member || x[i].innerHTML === '') {
+                x[i].parentElement.classList.add("visible");
+            }
         }
 
         if (x[i].innerHTML === member) {
