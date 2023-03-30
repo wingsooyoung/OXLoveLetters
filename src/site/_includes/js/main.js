@@ -144,38 +144,32 @@ for (let i = 0; i < ele.length; i++) {
 }
 
 function myFilter(member) {
-    var x, i;
+    var x, i, cards, j;
     x = document.getElementsByClassName("membersbox");
-    // if (member === "All") member = "";
+    cards = document.getElementsByClassName("containerbox");
+
+    //start by making all the cards visible
+    for (j = 0; j < cards.length; j++) {
+        if (cards[j].classList.contains("notvisible")) {
+            cards[j].classList.remove("notvisible")
+        }
+    }
+
+    //go through each card, check the membersbox, if it doesn't match the member filter then hide that card
+    let buttonNameClicked;
+    let membersboxNameInside;
     for (i = 0; i < x.length; i++) {
-        if (member === 'All' || member === 'all' || member === '' || member === 'ALL') {
-            if (x[i].innerHTML === member || x[i].innerHTML === '') {
-                x[i].parentElement.classList.add("visible");
-            }
+        buttonNameClicked = member;
+
+        if (x[i].innerHTML === '') {
+            membersboxNameInside = 'All';
+        } else {
+            membersboxNameInside = x[i].innerHTML;
         }
 
-        if (x[i].innerHTML === member) {
-            x[i].parentElement.classList.add("visible");
-            x[i].parentElement.classList.remove("notvisible");
-        } else {
-            x[i].parentElement.classList.remove("visible");
+        if (buttonNameClicked !== membersboxNameInside) {
             x[i].parentElement.classList.add("notvisible");
         }
-
-        // switch (x[i].innerHTML) {
-        //     case 'All':
-        //         x[i].parentElement.classList.add("visible");
-        //         x[i].parentElement.classList.remove("notvisible");
-        //         break
-        //     case '':
-        //         x[i].parentElement.classList.add("visible");
-        //         x[i].parentElement.classList.remove("notvisible");
-        //         break
-        //     case member:
-        //         x[i].parentElement.classList.add("visible");
-        //         x[i].parentElement.classList.remove("notvisible");
-        //         break
-        // }
     }
 }
 
