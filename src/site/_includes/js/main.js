@@ -185,3 +185,17 @@ function filterToggle() {
         y.innerHTML = "FILTER +";
     }
 }
+
+function removeFilters() {
+    //code ... here!
+    //code below is just copied from the first couple lines of myFilter(member) lol
+    var cards, j;
+    cards = document.getElementsByClassName("containerbox");
+
+    //start by making all the cards visible
+    for (j = 0; j < cards.length; j++) {
+        if (cards[j].classList.contains("notvisible")) {
+            cards[j].classList.remove("notvisible")
+        }
+    }
+}
