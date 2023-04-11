@@ -176,12 +176,15 @@ function myFilter(member) {
 
 function filterToggle() {
     var x = document.getElementById("buttons");
+    var x2 = document.getElementById("filterCloser");
     var y = document.getElementById("filterTitle");
-    if (x.style.visibility === "hidden") {
+    if (x.style.visibility === "hidden" && x2.style.visibility === "hidden") {
         x.style.visibility = "visible";
+        x2.style.visibility = "visible";
         y.innerHTML = "FILTER -";
     } else {
         x.style.visibility = "hidden";
+        x2.style.visibility = "hidden";
         y.innerHTML = "FILTER +";
     }
 }
