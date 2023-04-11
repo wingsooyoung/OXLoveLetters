@@ -939,11 +939,12 @@ form#approver {
     color: rgba(0,0,0,1);
     text-align: center;
     text-overflow: fade;
-    background: rgba(255,163,212,1);
+    background: rgb(255 239 239);
     font-size: 1.05em;
 }
 .abouth1.project {
     background-size: initial!important;
+    margin-bottom: 10px;
 }
 #contact a {
     font-variant: small-caps;
