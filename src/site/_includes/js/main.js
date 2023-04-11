@@ -181,11 +181,11 @@ function filterToggle() {
     if (x.style.visibility === "hidden" && x2.style.visibility === "hidden") {
         x.style.visibility = "visible";
         x2.style.visibility = "visible";
-        y.innerHTML = "FILTER <i class=\"ph ph-minus\"></i>";
+        y.innerHTML = "FILTER <i class=\"ph-bold ph-minus\"></i>";
     } else {
         x.style.visibility = "hidden";
         x2.style.visibility = "hidden";
-        y.innerHTML = "FILTER <i class=\"ph ph-plus\"></i>";
+        y.innerHTML = "FILTER <i class=\"ph-bold ph-plus\"></i>";
     }
 }
 
