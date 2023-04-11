@@ -7,7 +7,7 @@
     "start": "npx @11ty/eleventy --serve"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^3.0.0",
     "@netlify/functions": "^0.7.2",
     "axios": "1.2.1",
