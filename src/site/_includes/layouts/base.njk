@@ -81,17 +81,17 @@
 
   <nav>
     <div class="dropdown">
-        <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph ph-house-bold"></i><span class="nav-text"> HOME</span></a>
+        <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-bold ph-house"></i><span class="nav-text"> HOME</span></a>
 
           {%- for page in collections.pages -%}
               {% if page.data.title == 'Read Letters' %}
-                  <a href="{{ page.url }}"><i class="ph ph-envelope-open-bold"></i><span class="nav-text"> READ LETTERS</span></a>
+                  <a href="{{ page.url }}"><i class="ph-bold ph-envelope-open"></i><span class="nav-text"> READ LETTERS</span></a>
               {% elseif page.data.title == 'Write Letters' %}
-                  <a href="{{ page.url }}"><i class="ph ph-pencil-line-bold"></i><span class="nav-text"> WRITE A LETTER</span></a>
+                  <a href="{{ page.url }}"><i class="ph-bold ph-pencil-line"></i><span class="nav-text"> WRITE A LETTER</span></a>
               {% endif %}
           {%- endfor -%}
 
-          <a onclick="showDrop();" id="aboutbtn" class=""><i class="ph ph-info-bold"></i><span class="nav-text"> ABOUT</span> <i class="ph ph-caret-down"></i></a>
+          <a onclick="showDrop();" id="aboutbtn" class=""><i class="ph-bold ph-info"></i><span class="nav-text"> ABOUT</span> <i class="ph ph-caret-down"></i></a>
 
           <div id="dropdowncontent" class="">
               {%- for page in collections.pages -%}
