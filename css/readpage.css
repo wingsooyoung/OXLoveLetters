@@ -291,3 +291,13 @@ button.filter {
     grid-area: 2 / 2 / 3 / 4;
     width: fit-content;
 }
+
+
+/*select box filter version*/
+.selectering {
+    border: 1px solid white;
+    width: fit-content;
+    margin: auto auto 30px auto;
+    padding: 20px 120px;
+    background: white;
+}
