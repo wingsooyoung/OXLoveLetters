@@ -213,7 +213,18 @@ selectElement.addEventListener("change", (event) => {
     //change result text to the selected option:
     // result.textContent = `You like ${event.target.value}`;
     let member = event.target.value;
-    myFilter(member);
+
+    if (member === "ALL MEMBERS") {
+        member = "All";
+        myFilter(member);
+    }
+    else if (member === "(view all letters)") {
+        removeFilters();
+    }
+    else {
+        myFilter(member);
+    }
+
 
     // ***yuh wait... can i just call myFilter(${event.target.value}) ?
     // do i need to actually change anything... O_O
