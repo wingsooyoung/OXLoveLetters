@@ -1,25 +1,14 @@
 /* SECTIONS! */
 /*
-BASE
-    - nav, banner, header, footer
-HOME
-    - mailbox, choices
-READ
-    - grid, postcard
-WRITE
-    - form, success page
-ABOUT OX
-    - groupphoto, box/oddboxinner, .wrapper.share and svgs
-ABOUT THIS
-    - contact
+
+essentials
+BASE - nav, banner, header
+ABOUT MODAL
+FOOTER
+HOME - mailbox, choices
 TIPPYS
-COMING SOON
-    - csModal
-SITEMAP
-    - ul, li
-FAQ
-    - dt, dd
-RESPONSIVENESS
+COMING SOON - csModal
+
 */
 
 /*FONTS:
@@ -42,6 +31,8 @@ x    font-family: 'Patrick Hand SC', cursive;
 */
  @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kalam:wght@300;400;700&family=Mali:wght@400;500;600;700&family=Single+Day&family=Stylish&family=Fuzzy+Bubbles:wght@400;700&family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
 
+
+/* essentials */
 html {
     margin: 0;
     width: 100%;
@@ -133,8 +124,18 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
 /*BASE*/
-/*nav, banner, header, footer*/
+
+/*nav, banner, header*/
 header {
     text-align: center;
     width: 100%;
@@ -221,6 +222,16 @@ nav a:hover {
 .corners {
     border-bottom-right-radius: 0!important;
 }
+
+
+
+
+
+
+
+
+
+
 
 /*ABOUT MODAL*/
 
@@ -346,6 +357,14 @@ nav a:hover {
 }
 
 
+
+
+
+
+
+
+
+
 /*FOOTER*/
 
 footer {
@@ -412,6 +431,15 @@ div[data-netlify-identity-button] {
     padding: 2px 12px;
     display: contents;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -542,6 +570,9 @@ div[data-netlify-identity-button] {
 .tippy-box[data-theme~='custom3'][data-placement^='right'] > .tippy-arrow::before {
     border-right-color: #320A28;
 }
+
+
+
 
 
 
