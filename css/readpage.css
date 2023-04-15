@@ -1,0 +1,293 @@
+/*READ*/
+
+/*postcard*/
+.grid-container {
+    display: grid;
+    max-width: 85%;
+    column-gap: 30px;
+    row-gap: 42px;
+    justify-content: space-between;
+    justify-items: stretch;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    align-items: stretch;
+    align-content: stretch;
+    border: 2px solid brown;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+    padding: 25px 35px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.grid-container > * {
+    min-width: 0;
+}
+.grid-item img {
+    max-width: 335px;
+    width: 200px;
+    margin: 0;
+    display: initial;
+}
+/*POSTCARD TEMPLATE*/
+.containerbox, .containerboxM {
+    position: relative;
+    min-width: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.containerboxM {
+    width: fit-content!important;
+    margin: auto;
+}
+.containerbox:hover {opacity: 0.7;}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+/*.modal-content {*/
+/*    margin: auto;*/
+/*    display: block;*/
+/*    width: 80%;*/
+/*    max-width: 700px;*/
+/*}*/
+/*.modal-content, #caption {*/
+/*    animation-name: zoom;*/
+/*    animation-duration: 0.6s;*/
+/*}*/
+/*@keyframes zoom {*/
+/*    from {transform:scale(0)}*/
+/*    to {transform:scale(1)}*/
+/*}*/
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+#postcard, #postcardM {
+    object-fit: contain;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+    border: 1.5px solid #000000;
+    box-shadow: 1px 1px 5px 1px #380614;
+    border-radius: 2px;
+}
+#postcardM {
+    max-width: fit-content;
+}
+.template {
+    position: absolute;
+    padding:0;
+}
+#memberbox {
+    display: none;
+}
+#contentbox {
+    top: 44%;
+    left: 51%;
+    transform: translate(-50%, -49%);
+    height: 43%;
+    width: 68%;
+    font-size: 0.8em;
+    line-height: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    padding-right: 11px;
+    padding-left: 6px;
+    box-sizing: initial;
+    border-radius: 8px;
+    background: rgb(1 0 1 / 10%);
+    scrollbar-color: var(--purple2) var(--pink4);
+    scrollbar-width: thin;
+}
+#contentboxM{
+    font-size: medium;
+    line-height: 32px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -49%);
+    height: 44%;
+    width: 67%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    padding-right: 15px;
+    padding-left: 5px;
+    box-sizing: initial;
+    border-radius: 8px;
+    background: rgb(1 0 1 / 10%);
+    scrollbar-color: var(--purple2) var(--pink4);
+    scrollbar-width: thin;
+}
+#contentbox::-webkit-scrollbar, textarea::-webkit-scrollbar, #contentboxM::-webkit-scrollbar {
+    width: 8px;
+}
+#contentbox::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track, #contentboxM::-webkit-scrollbar-track {
+    background: var(--pink4);
+    box-shadow: inset 0 0 5px var(--pink3);
+    border-radius: 10px;
+}
+#contentbox::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb, #contentboxM::-webkit-scrollbar-thumb {
+    background: var(--purple2);
+    border-radius: 10px;
+}
+#contentbox::-webkit-scrollbar-thumb:hover, textarea::-webkit-scrollbar-thumb:hover, #contentboxM::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+::-webkit-scrollbar-button:single-button {
+    background-repeat: no-repeat;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    height: 14px;
+    width: 16px;
+    background-position: center 4px;
+    background-image: url("/assets/scrollbarUP.svg");
+}
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    height: 14px;
+    width: 16px;
+    background-position: center 5px;
+    background-image: url("/assets/scrollbarDOWN.svg");
+}
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement,
+::-webkit-scrollbar-button:horizontal:start:increment,
+::-webkit-scrollbar-button:horizontal:end:decrement {
+    display: none;
+}
+#namebox {
+    bottom: 15%;
+    right: 11%;
+    width: 27%;
+    height: 8%;
+    overflow: clip;
+    line-height: 15px;
+    font-size: x-small;
+    text-align: center;
+}
+#nameboxM {
+    bottom: 14%;
+    right: 14%;
+    width: 27%;
+    height: 8%;
+    overflow: clip;
+    /*line-height: 15px;*/
+    font-size: large;
+    text-align: center;
+}
+#lettercount, #lettercountM {
+    bottom: 9px;
+    left: 9px;
+    background: #e592ab91;
+    padding: 0 5px;
+    border-radius: 7px;
+}
+#lettercountM {
+    bottom: 14px;
+    left: 14px;
+}
+iframe {
+    height: 180px;
+    width: 272px;
+}
+div#griddy {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.visible {
+    display: block;
+}
+.notvisible {
+    display: none;
+}
+#filterTitle {
+    border:  2px solid #c1b0e0;
+    border-radius: 8px;
+    padding: 5px 15px;
+    background: #d1c4e9;
+    font-weight: 700;
+}
+#filterCloser {
+    color: #e6e6e6;
+    padding: 5px 13px;
+    margin: 5px;
+    width: 76px;
+    border: none;
+    height: 3em;
+    border-radius: 15px;
+    background: #d60000;
+    cursor: pointer;
+    display: inline;
+}
+#buttons {
+    display: contents;
+}
+button.filter {
+    color: #46494c;
+    margin: 5px;
+    width: 76px;
+    border: none;
+    height: 2em;
+    border-radius: 15px;
+    background: #e8e8e8;
+    cursor: pointer;
+    display: inline;
+}
+.filter-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: inline;
+}
+.container {
+    display: grid;
+    grid-template-columns: 100px 535px 90px;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 0;
+    grid-auto-flow: row;
+}
+.filterer {
+    min-width: max-content;
+    grid-area: 1 / 1 / 3 / 2;
+    justify-self: center;
+    align-self: center;
+}
+.closefilterer {
+    min-width: max-content;
+    grid-area: 1 / 3 / 3 / 4;
+    justify-self: center;
+    align-self: center;
+}
+.row1 {
+    grid-area: 1 / 2 / 2 / 4;
+    width: fit-content;
+}
+.row2 {
+    grid-area: 2 / 2 / 3 / 4;
+    width: fit-content;
+}

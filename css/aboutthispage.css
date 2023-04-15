@@ -1,0 +1,37 @@
+/*ABOUT THIS*/
+
+/*contact*/
+#aboutme {
+    width: 650px;
+    margin: auto;
+    padding: 20px;
+    border: 5px double #cd0b24;
+    outline: 5px outset #cd0b24;
+    border-radius: 15px 5px;
+    color: rgba(0,0,0,1);
+    text-align: center;
+    text-overflow: fade;
+    background: rgb(255 239 239);
+    font-size: 1.05em;
+}
+.abouth1.project {
+    background-size: initial!important;
+    margin-bottom: 10px;
+}
+#contact a {
+    font-variant: small-caps;
+    font-size: large;
+}
+#contact a:hover {
+    font-style: oblique;
+    color: var(--pink3);
+}
+#contact svg {
+    vertical-align: middle;
+    margin-left: 4px;
+}
+#contact i {
+    font-size: initial;
+    vertical-align: middle;
+    margin-left: 4px;
+}

@@ -1,0 +1,74 @@
+/*SITEMAP*/
+
+/*list*/
+ul#sitemap-ul {
+    list-style-position: inside;
+    list-style-image: url("/assets/stamp-empty-svgrepo-com.svg");
+    width: fit-content;
+    margin-left: 30%;
+    margin-right: 50%;
+    font-size: large;
+}
+div#sitemap-links {
+    margin-bottom: 170px;
+}
+div#sitemap-links a {
+    vertical-align: 17%;
+    color: var(--eggshell);
+    text-decoration: none;
+}
+div#sitemap-links a:hover {
+    font-style: oblique;
+    color: var(--pink3);
+}
+li.sitemap-li {
+    margin: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*FAQ*/
+
+/*dt, dd*/
+div#faq {
+    width: 650px;
+    margin: auto;
+    padding: 20px;
+    border: 5px double #cd0b24;
+    outline: 5px outset #cd0b24;
+    border-radius: 15px 5px;
+    color: rgba(0,0,0,1);
+    background: rgba(255,163,212,1);
+    font-size: 1.05em;
+}
+dt {
+    font-weight: 800;
+    font-size: 1.2em;
+    padding: 3px;
+}
+dd {
+    margin-left: 28px;
+    margin-bottom: 10px;
+    font-size: 1.15em;
+}
+.answers {
+    display: none;
+    overflow: hidden;
+}
+.questions:hover {
+    text-decoration: underline;
+}
+.questions::before {
+    content: '♡ ';
+    color: red;
+    vertical-align: -1px;
+}

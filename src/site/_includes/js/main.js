@@ -202,3 +202,18 @@ function removeFilters() {
         }
     }
 }
+
+
+// code below - filter as select element test
+const selectElement = document.querySelector("#filterSelect");
+
+selectElement.addEventListener("change", (event) => {
+    //get result text box element:
+    const result = document.querySelector(".result");
+    //change result text to the selected option:
+    result.textContent = `You like ${event.target.value}`;
+
+    // ***yuh wait... can i just call myFilter(${event.target.value}) ?
+    // do i need to actually change anything... O_O
+});
+

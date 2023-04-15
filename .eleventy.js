@@ -3,6 +3,7 @@ const { EleventyServerlessBundlerPlugin } = require("@11ty/eleventy");
 module.exports = function(config) {
     // eleventy config settings
     config.addPassthroughCopy("assets");
+    // config.addPassthroughCopy("css");
     config.addPassthroughCopy("index.html");
     config.addPassthroughCopy("oxllstamp.ico");
     config.addPassthroughCopy("favicon-16x16.png");

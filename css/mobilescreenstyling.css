@@ -1,0 +1,252 @@
+/*RESPONSIVENESS*/
+
+/* my phone = 360w x 649h */
+
+@media screen and (min-width: 550px) and (max-width: 800px) {
+    body {
+        background-size: 50% 100%;
+        background-repeat: repeat;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    nav a {
+        padding: initial;
+    }
+    .nav-text {
+        display: initial;
+    }
+    nav {
+        margin-right: 3vw;
+    }
+    #banner {
+        margin-left: 24px;
+    }
+    #bannerA {
+        max-width: 25px;
+        --leftorigin: 60px;
+    }
+    #bannerH {
+        max-width: 35px;
+        margin-left: 18px;
+    }
+    nav i {
+        vertical-align: -3px;
+    }
+    #static-mailbox {
+        width: 300px!important;
+    }
+    #mailbox {
+        margin-top: 11%;
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 600px) {
+    nav {
+        max-width: 88%;
+        font-size: 0.65em;
+        margin-left: auto;
+        margin-right: 53px;
+    }
+    nav a {
+        padding: 8px 15px;
+        font-size: 1.15em;
+    }
+    nav i {
+        font-size: 1.6em;
+    }
+    .nav-text {
+        display: none;
+    }
+    #dropdowncontent a {
+        font-size: 1.4em;
+        padding: 8px 10px;
+    }
+}
+@media screen and (min-width: 280px) and (max-width: 800px) {
+    body {
+        background-image: url("/assets/mobile bg rough darker.png");
+    }
+    #static-mailbox {
+        width: 215px!important;
+    }
+    #readbtn {
+        margin-right: 40px!important;
+    }
+    .choicesbtn {
+        font-size: 0.9em!important;
+        width: 95px!important;
+    }
+    .centerbtns i {
+        font-size: larger;
+    }
+    #banner {
+        max-width: 25px;
+        max-height: 25px;
+        margin-top: 16px;
+        margin-left: 38px!important;
+    }
+    footer {
+        font-size: smaller;
+        padding-top: 25%;
+    }
+    footer p#line1 {
+        font-size: 0.8em!important;
+        margin: 5px;
+    }
+    footer p#disclaimer {
+        font-size: 0.2em!important;
+        margin: 5px;
+        width: 97%;
+    }
+    #letter-form-div {
+        width:90%;
+        font-size: 0.8em;
+    }
+    #nickname {
+        font-size: 0.8em;
+    }
+    form {
+        margin: 0;
+        padding: 0 8px 5px!important;
+    }
+    #sendbtn {
+        padding: 3px 5px!important;
+        font-size: 1.1em!important;
+    }
+    div[data-netlify-identity-button] {
+        margin: 5px;
+    }
+    #csModal img {
+        height: 200px!important;
+    }
+    #csModal {
+        padding-top: 55px;
+    }
+    .grid-container {
+        grid-template-columns: auto!important;
+        row-gap: 15px!important;
+        padding: 15px 30px!important;
+        justify-content: center!important;
+    }
+    .modal-content {
+        max-width: 90%!important;
+    }
+    #modContainer {
+        padding: 10px 0 40px!important;
+    }
+    #contentbox {
+        top: 45%;
+        height: 44%;
+        width: 68%;
+        font-size: 12px;
+        line-height: 20px!important;
+        padding-right: 12px;
+        padding-left: 6px;
+    }
+    #namebox {
+        bottom: 15%;
+        right: 11%;
+        font-size: 12px;
+        line-height: 17px!important;
+    }
+    #contentboxM {
+        height: 38%;
+        width: 62%;
+        line-height: 26px!important;
+        font-size: 1.025em!important;
+    }
+    #nameboxM {
+
+        bottom: 18%;
+        right: 14%;
+        line-height: 26px!important;
+        font-size: 1.025em!important;
+    }
+    .filter-container {
+        grid-column-start: initial;
+        grid-column-end: initial;
+        display: initial;
+    }
+    .modal {
+        padding-top: 200px!important;
+    }
+    .wrapper { /*figure out how to deal with tippy insta dropdown on mobile...*/
+        width: 100%!important;
+    }
+    .share {
+        height: 2.5rem!important;
+        width: 2.5rem!important;
+    }
+    .connect2 > .share {
+        margin: 0.5rem 0.3rem 0.5rem 0!important;
+        height: 2rem!important;
+        width: 2rem!important;
+    }
+    #aboutox {
+        max-width: 100%;
+    }
+    .box {
+        max-width: 92%;
+        height: fit-content!important;
+        font-size: 0.95em;
+    }
+    .oddboxinner {
+        height: 100%;
+    }
+    .box2F, .box2 {
+        max-width: 90%;
+    }
+    .evenboxinnerF, .evenboxinner {
+
+    }
+    .abouth1 { /*fix the background image!!!!!!!!!!!*/
+        font-size: 2.6em!important;
+        margin-bottom: 25px!important;
+        background-position: center;
+        background-size: cover;
+    }
+    #groupphoto {
+        height: 260px!important;
+    }
+    #aboutme {
+        max-width: fit-content;
+        margin: 0 20px!important;
+        font-size: 0.9em!important;
+        padding: 5px 15px!important;
+    }
+    #sitemap-ul {
+        width: max-content!important;
+        margin-left: 10%!important;
+        font-size: 1.1em!important;
+    }
+    div#sitemap-links a {
+        vertical-align: 19%!important;
+    }
+    #faq {
+        max-width: fit-content;
+        margin: 0 20px!important;
+        font-size: 0.9em!important;
+        padding: 5px 15px!important;
+    }
+    .modalabout {
+        padding-top: 70px!important;
+    }
+    #section1 {
+        padding: 10px 30px !important;
+    }
+    #section2 {
+        padding: 10px 17px !important;
+    }
+    #section3 {
+        padding: 10px 17px !important;
+    }
+    #modContainer hr {
+        margin-left: -0.5em!important;
+        margin-right: -0.5em!important;
+    }
+}
+@media only screen and (max-width: 700px){ /* 100% Image Width on Smaller Screens */
+    #modContainer {
+        width: 100%;
+    }
+}
+
