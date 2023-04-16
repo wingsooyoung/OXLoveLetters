@@ -10,7 +10,7 @@ function myReadURL() {
 }
 
 function writebtnFunc() {
-    setTimeout(myWriteURL, 1000);
+    // setTimeout(myWriteURL, 1000);
 }
 function myWriteURL() {
     document.location.href = '/pages/writeletters/';
