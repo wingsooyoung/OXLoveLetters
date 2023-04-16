@@ -2,53 +2,24 @@
 
 /* my phone = 360w x 649h */
 
-@media screen and (min-width: 550px) and (max-width: 800px) {
-    body {
-        background-size: 50% 100%;
-        background-repeat: repeat;
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
     }
 }
-@media screen and (min-width: 600px) and (max-width: 800px) {
-    nav a {
-        padding: initial;
-    }
-    .nav-text {
-        display: initial;
-    }
-    nav {
-        margin-right: 3vw;
-    }
-    #banner {
-        margin-left: 24px;
-    }
-    #bannerA {
-        max-width: 25px;
-        --leftorigin: 60px;
-    }
-    #bannerH {
-        max-width: 35px;
-        margin-left: 18px;
-    }
-    nav i {
-        vertical-align: -3px;
-    }
-    #static-mailbox {
-        width: 300px!important;
-    }
-    #mailbox {
-        margin-top: 11%;
-    }
-}
-@media screen and (min-width: 280px) and (max-width: 600px) {
+
+/*things that look good on galaxy fold only: 280px width*/
+@media screen and (min-width: 279px) and (max-width: 600px) {
     nav {
         max-width: 88%;
         font-size: 0.65em;
         margin-left: auto;
-        margin-right: 53px;
+        margin-right: 10%;
     }
     nav a {
-        padding: 8px 15px;
+        padding: 6px 10px;
         font-size: 1.15em;
+        margin: 0;
     }
     nav i {
         font-size: 1.6em;
@@ -61,7 +32,7 @@
         padding: 8px 10px;
     }
 }
-@media screen and (min-width: 280px) and (max-width: 800px) {
+@media screen and (min-width: 279px) and (max-width: 800px) {
     body {
         background-image: url("/assets/mobile bg rough darker.png");
     }
@@ -126,6 +97,9 @@
         row-gap: 15px!important;
         padding: 15px 30px!important;
         justify-content: center!important;
+    }
+    .grid-item img {
+        max-width: 100%;
     }
     .modal-content {
         max-width: 90%!important;
@@ -242,6 +216,60 @@
     #modContainer hr {
         margin-left: -0.5em!important;
         margin-right: -0.5em!important;
+    }
+}
+
+/*slight changes for my phone galaxy s22: 360px width*/
+@media screen and (min-width: 360px) and (max-width: 600px) {
+            /*code here*/
+    nav a {
+        padding: 8px 15px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 800px) {
+            /*code here*/
+}
+
+/*slight changes for screens above that:*/
+    /* surface duo    540px */
+    /* ipad mini      768px */
+    /* ipad air       820px */
+    /* surface pro    912px */
+@media screen and (min-width: 550px) and (max-width: 800px) {
+    body {
+        background-size: 50% 100%;
+        background-repeat: repeat;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    nav a {
+        padding: initial;
+    }
+    .nav-text {
+        display: initial;
+    }
+    nav {
+        margin-right: 3vw;
+    }
+    #banner {
+        margin-left: 24px;
+    }
+    #bannerA {
+        max-width: 25px;
+        --leftorigin: 60px;
+    }
+    #bannerH {
+        max-width: 35px;
+        margin-left: 18px;
+    }
+    nav i {
+        vertical-align: -3px;
+    }
+    #static-mailbox {
+        width: 300px!important;
+    }
+    #mailbox {
+        margin-top: 11%;
     }
 }
 @media only screen and (max-width: 700px){ /* 100% Image Width on Smaller Screens */
