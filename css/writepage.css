@@ -153,3 +153,31 @@ form#approver {
     margin-right: auto;
     width: max-content;
 }
+
+.writepg-select-wrapper {
+    position: relative;
+    border-radius: 5px;
+}
+.writepg-select-wrapper select option {
+    font-variant: small-caps!important;
+}
+.writepg-select-wrapper::after {
+    content: "▼";
+    font-size: 1rem;
+    top: 6px;
+    right: 5px;
+    position: absolute;
+}
+.writepg-select-wrapper:active, .writepg-select-wrapper:focus {
+    outline: none;
+    box-shadow: 0 0 5px 1px #930ede;
+}
+select#members {
+    appearance: none;
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-variant: small-caps;
+    font-size: 100%;
+    box-sizing: border-box;
+}

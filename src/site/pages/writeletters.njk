@@ -27,7 +27,8 @@ title: Write Letters
 
 {#    not styled - add to styles.css    #}
     <label for="members">Which member would you like to write your letter to?</label>
-    <select id="members" name="members">
+    <div class="writepg-select-wrapper">
+      <select id="members" name="members">
       <option selected>ALL</option>
       <option>Jaehan</option>
       <option>Hwichan</option>
@@ -41,7 +42,7 @@ title: Write Letters
       <option>Hyuk</option>
       <option>Yechan</option>
     </select>
-
+    </div>
 
     <p>What would you like your letter to say?</p>
     <textarea name="lettercontent" id="lettercontent" required wrap="soft" cols="100"></textarea><br>
