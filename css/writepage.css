@@ -131,12 +131,15 @@ form {
 #nickname {
     border-radius: 5px;
     padding: 3px 7px;
+    height: 25px;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 #lettercontent {
     height: 150px;
     width: 100%;
     resize: none;
     border-radius: 5px;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 textarea:focus, #nickname:focus {
     outline: medium ridge darkslateblue;
@@ -156,14 +159,13 @@ form#approver {
 
 .writepg-select-wrapper {
     position: relative;
+    width: 90px;
     border-radius: 5px;
-}
-.writepg-select-wrapper select option {
-    font-variant: small-caps!important;
+    height: 25px;
 }
 .writepg-select-wrapper::after {
     content: "▼";
-    font-size: 1rem;
+    font-size: 1em;
     top: 6px;
     right: 5px;
     position: absolute;
@@ -177,7 +179,9 @@ select#members {
     box-shadow: inset 1px 1px 3px #ccc;
     border-radius: 5px;
     font-family: inherit;
-    font-variant: small-caps;
-    font-size: 100%;
+    font-size: 1em;
     box-sizing: border-box;
+    height: 25px;
+    width: 90px;
+    padding: 0px 7px;
 }
