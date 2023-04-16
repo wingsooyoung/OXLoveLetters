@@ -214,7 +214,7 @@ selectElement.addEventListener("change", (event) => {
     // result.textContent = `You like ${event.target.value}`;
     let member = event.target.value;
 
-    if (member === "ALL MEMBERS") {
+    if (member === "All Members") {
         member = "All";
         myFilter(member);
     }

@@ -292,9 +292,40 @@ button.filter {
 /*select box filter version*/
 .selectering {
     text-align: center;
-    border: 1px solid white;
+    border: 2px solid white;
+    border-radius: 10px;
     width: 95%;
     margin: auto auto 30px auto;
     padding: 20px 55px;
-    background: white;
+    background: #f3e5f5;
+}
+.selectering label {
+    font-size: 1.1em;
+}
+.select-wrapper {
+    position: relative;
+}
+#filterSelect {
+    appearance: none;
+    width: 150px;
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+    display: block;
+    font-family: inherit;
+    font-variant: small-caps;
+    font-size: 100%;
+    margin: 10px auto 0 auto;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 8px;
+    height: 30px;
+}
+.select-wrapper select option {
+    font-variant: small-caps!important;
+}
+.select-wrapper::after {
+    content: "▼";
+    font-size: 1rem;
+    top: 6px;
+    right: 46px;
+    position: absolute;
 }
