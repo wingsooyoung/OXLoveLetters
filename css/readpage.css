@@ -304,6 +304,9 @@ button.filter {
 }
 .select-wrapper {
     position: relative;
+    width: 150px;
+    margin: 10px auto 0 auto;
+    border-radius: 5px;
 }
 #filterSelect {
     appearance: none;
@@ -326,6 +329,10 @@ button.filter {
     content: "▼";
     font-size: 1rem;
     top: 6px;
-    right: 46px;
+    right: 5px;
     position: absolute;
+}
+.select-wrapper:active, .select-wrapper:focus {
+    outline: none;
+    box-shadow: 0 0 5px 1px #930ede;
 }
