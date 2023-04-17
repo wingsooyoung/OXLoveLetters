@@ -376,20 +376,47 @@
 }
 
 @media screen and (min-width: 820px) and (max-width: 913px) {
+    nav {
+        font-size: 1em;
+        padding: 20px 0 23px;
+    }
     nav a {
         padding: 8px 12px;
     }
     nav i {
-        vertical-align: 0;
+        font-size: 1.2em;
+        vertical-align: -2px;
     }
 
     #letter-form-div {
         margin-top: 160px;
+        max-width: 600px;
+        font-size: 1.5em;
+        padding: 15px 25px 20px;
+    }
+    small {
+        font-size: 0.7em;
+    }
+    .writepg-select-wrapper {
+        margin-left: 22px;
+        height: 35px;
+        width: 130px;
+    }
+    select#members {
+        width: 130px;
+        height: 35px;
+    }
+    .writepg-select-wrapper::after {
+        right: 6px;
     }
 
     footer {
         font-size: medium;
         padding-top: 38px;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: 3%;
     }
 }
 
