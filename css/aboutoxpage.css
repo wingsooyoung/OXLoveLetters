@@ -224,8 +224,14 @@ hr {
     display: none;
     margin-top: -10px;
 }
+span.item {
+    flex-grow: 2;
+    flex-basis: 81px;
+    display: flex;
+    justify-content: center;
+}
 a#memberstoggle:hover + .connect2, .connect2:hover  {
-    display: block;
+    display: flex;
 }
 .twitter:hover, .twitter:focus {
     color: #00aced;
