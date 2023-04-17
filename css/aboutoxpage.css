@@ -19,6 +19,13 @@
     transform: rotate(1deg);
     box-shadow:2px 2px 8px 3px #722d5a;
 }
+.box.box2.two {
+    width: max-content!important;
+}
+.two .evenboxinner h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
 .box1{
     margin:25px auto;
     padding: 7px 7px 15px;
@@ -26,6 +33,10 @@
     height:250px;
     background:#fff;
     border: solid #09700f;
+}
+.para {
+    text-indent: -20px;
+    padding-left: 24px;
 }
 .box3{
     margin:25px auto;
