@@ -291,10 +291,16 @@
     /* surface pro    912px */
 @media screen and (min-width: 540px) and (max-width: 913px) {
     .nav-text {
+        display: block;
+    }
+    nav a {
+        max-height: 47px;
+    }
+    #aboutbtn.nav-text {
         display: initial;
     }
     #aboutbtn {
-        height: 47px;
+        max-height: 47px;
     }
     a#aboutbtn i.ph-bold.ph-info {
         display: block;
