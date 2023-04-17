@@ -224,13 +224,19 @@ hr {
     display: none;
     margin-top: -10px;
 }
-span.item {
+span.itemend {
     flex-grow: 2;
     flex-basis: 81px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
-a#memberstoggle:hover + .connect2, .connect2:hover  {
+span.itemstart {
+    flex-grow: 2;
+    flex-basis: 81px;
+    display: flex;
+    justify-content: flex-end;
+}
+span.itemend:hover + .connect2, .connect2:hover  {
     display: flex;
 }
 .twitter:hover, .twitter:focus {
