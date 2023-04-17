@@ -12,7 +12,7 @@
 }
 
 /*things that look good on galaxy fold only: 280px width*/
-@media screen and (min-width: 279px) and (max-width: 600px) {
+@media screen and (min-width: 279px) and (max-width: 913px) {
     nav {
         max-width: 88%;
         font-size: 0.65em;
@@ -34,8 +34,7 @@
         font-size: 1.4em;
         padding: 8px 10px;
     }
-}
-@media screen and (min-width: 279px) and (max-width: 821px) {
+
     #contentbox {
         top: 45%;
         height: 44%;
@@ -248,7 +247,7 @@
 }
 
 /*slight changes for my phone galaxy s22: 360px width*/
-@media screen and (min-width: 360px) and (max-width: 600px) {
+@media screen and (min-width: 360px) and (max-width: 913px) {
             /*code here*/
     nav {
         margin-right: 5%;
@@ -264,9 +263,6 @@
         max-width: 25px;
         margin-left: 60px;
     }
-}
-@media screen and (min-width: 360px) and (max-width: 821px) {
-            /*code here*/
     #contentbox {
         font-size: 0.8em!important;
         line-height: 14px!important;
@@ -293,7 +289,7 @@
     /* ipad mini      768px */
     /* ipad air       820px */
     /* surface pro    912px */
-@media screen and (min-width: 540px) and (max-width: 821px) {
+@media screen and (min-width: 540px) and (max-width: 913px) {
     .nav-text {
         display: initial;
     }
@@ -351,7 +347,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 821px) {
+@media screen and (min-width: 768px) and (max-width: 913px) {
     nav a {
         padding: 8px 12px;
     }
@@ -383,58 +379,20 @@
     nav a {
         padding: 8px 12px;
     }
-    #aboutbtn {
-        height: initial;
-    }
-    a#aboutbtn i.ph-bold.ph-info {
-        display: inline;
-    }
-
-    #bannerH {
-        max-width: 45px;
-        margin-left: 20px;
-    }
-    #bannerA {
-        max-width: 35px;
-        margin-left: 75px;
+    nav i {
+        vertical-align: 0;
     }
 
     #letter-form-div {
-        margin-top: 127px;
+        margin-top: 160px;
     }
-    .writepg-select-wrapper {
-        margin-left: 22px;
+
+    footer {
+        font-size: medium;
+        padding-top: 38px;
     }
 }
 
-
-
-
-@media screen and (min-width: 600px) and (max-width: 821px) {
-    nav {
-        margin-right: 3vw;
-    }
-    nav a {
-        padding: initial;
-    }
-    nav i {
-        vertical-align: -3px;
-    }
-    .nav-text {
-        display: initial;
-    }
-
-    #banner {
-        margin-left: 24px;
-    }
-
-    #static-mailbox {
-        width: 300px!important;
-    }
-    #mailbox {
-        margin-top: 11%;
-    }
-}
 
 
 
