@@ -206,7 +206,7 @@ hr {
     width: 3rem;
     height: 3rem;
     float: left;
-    margin: 0.5rem 1rem 0.5rem 0;
+    margin: 0.5rem;
     color: #353c4a;
     border: 0.125rem solid #f3f3f3;
     box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
