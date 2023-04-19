@@ -19,7 +19,7 @@
 <br><br>
 {% else %}
     <li>No new letter submissions.</li>
-    <li>AS OF: {{ page.date }}</li>
+    <li>AS OF: {{ page.date.toLocaleString() }}</li>
 {%- endfor -%}
 
 <form id="approver" name="approved-letters" data-netlify="true">
