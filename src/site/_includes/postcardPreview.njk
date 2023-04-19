@@ -1,3 +1,7 @@
+---
+date: Last Modified
+---
+
 {#{{ exportApproved["default"][0].message | dump(2) }}#}
 
 {#{{ exportApproved["default"] | dump(2) }}#}
@@ -19,6 +23,7 @@
 <br><br>
 {% else %}
     <li>No new letter submissions.</li>
+    <li>AS OF: {{ page.date.toUTCString() }}</li>
 {%- endfor -%}
 
 <form id="approver" name="approved-letters" data-netlify="true">
