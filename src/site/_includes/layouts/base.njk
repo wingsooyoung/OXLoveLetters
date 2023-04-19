@@ -9,13 +9,27 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>{{ title }}</title>
 
+{#    <link href="css/styles.css" rel="stylesheet" />#}
+{#    <link href="css/aboutoxpage.css" rel="stylesheet" />#}
+{#    <link href="css/aboutthispage.css" rel="stylesheet" />#}
+{#    <link href="css/readpage.css" rel="stylesheet" />#}
+{#    <link href="css/writepage.css" rel="stylesheet" />#}
+{#    <link href="css/sitemapandfaqpages.css" rel="stylesheet" />#}
+{#    <link href="css/mobilescreenstyling.css" rel="stylesheet" />#}
+
     <style>
       {% include "css/styles.css" ignore missing %}
+      {% include "css/aboutoxpage.css" ignore missing %}
+      {% include "css/aboutthispage.css" ignore missing %}
+      {% include "css/readpage.css" ignore missing %}
+      {% include "css/sitemapandfaqpages.css" ignore missing %}
+      {% include "css/writepage.css" ignore missing %}
+      {% include "css/mobilescreenstyling.css" ignore missing %}
     </style>
 
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
@@ -81,17 +95,17 @@
 
   <nav>
     <div class="dropdown">
-        <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-house-bold"></i><span class="nav-text"> HOME</span></a>
+        <a href="/" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;"><i class="ph-bold ph-house"></i><span class="nav-text"> HOME</span></a>
 
           {%- for page in collections.pages -%}
               {% if page.data.title == 'Read Letters' %}
-                  <a href="{{ page.url }}"><i class="ph-envelope-open-bold"></i><span class="nav-text"> READ LETTERS</span></a>
+                  <a href="{{ page.url }}"><i class="ph-bold ph-envelope-open"></i><span class="nav-text"> READ LETTERS</span></a>
               {% elseif page.data.title == 'Write Letters' %}
-                  <a href="{{ page.url }}"><i class="ph-pencil-line-bold"></i><span class="nav-text"> WRITE A LETTER</span></a>
+                  <a href="{{ page.url }}"><i class="ph-bold ph-pencil-line"></i><span class="nav-text"> WRITE A LETTER</span></a>
               {% endif %}
           {%- endfor -%}
 
-          <a onclick="showDrop();" id="aboutbtn" class=""><i class="ph-info-bold"></i><span class="nav-text"> ABOUT</span> <i class="ph-caret-down"></i></a>
+          <a onclick="showDrop();" id="aboutbtn" class=""><i class="ph-bold ph-info"></i><span class="nav-text"> ABOUT</span> <i class="ph ph-caret-down"></i></a>
 
           <div id="dropdowncontent" class="">
               {%- for page in collections.pages -%}

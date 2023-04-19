@@ -3,6 +3,12 @@
 All the code for my newest "silly little project"! 
 (Hosted on Netlify)
 
+## ***APRIL _ th MEMBERS UPDATE (FOR X LOVE LETTERS VERSION 2.O) NOTICE:***
+
+IT'S FINALLY HERE!!! I've worked almost nonstop for these past couple months, trying to get this update out. I know the site is probably still lacking in some areas, but GOD DAMN I am so proud of this update! Functionally, I realize all it looks like is a new dropdown list on the form to write letters, and some new postcard designs, but behind the scenes I have been making so many changes to help the site run more efficiently. I completely changed the entire submit process (goodbye Google Sheets!) which definitely took up most of my time. And when I wasn't working on that, I was fighting with my inner artist to design eleven (11!!!!) brand new postcards... And considering the "handmade" theme of the website, I think I'm pretty proud of my final creations. However, please anticipate version 2.5 where I add some more doodles to a few of the cards, which is to be released after my inspiration grows back ❤
+
+- [Brainstorming for the new postcard designs can be found here](https://www.canva.com/design/DAFbI9b_yVU/Pqeo-Ml9I1hIltYxzS7sGA/edit?utm_content=DAFbI9b_yVU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## ***FEBRUARY 14TH LAUNCH DAY NOTICE:***
 
 Thank you for visiting forxloveletters.com! While the website is functional, it's not perfect yet, so if there are any issues you notice I would really appreciate you reaching out to let me know. The mobile site may look a little off depending on what device you are using, but I'm working on fixing those issues. You can report any issues in one of the following ways:
@@ -57,6 +63,8 @@ Thank you for visiting forxloveletters.com! While the website is functional, it'
 > - [HEX Colour codes for transparency](https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4)
 > - [Transparent Textures](https://www.transparenttextures.com/)
 > - [UXPRO](https://uxpro.cc/)
+
+14. For the new postcard designs, I used Canva, Sketchbook, Photopea, and [Boxy SVG](https://boxy-svg.com/)
 
 
 Special shout out to Intellij's WebStorm (I hate that you're not free though) and the Doki Theme plugin, because coding with a Hastune Miku layout makes me work better :)

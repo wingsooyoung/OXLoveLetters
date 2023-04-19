@@ -1,43 +1,37 @@
+{#{{ exportApproved["default"][0].message | dump(2) }}#}
 
-{%- for x, y, z, q in allLoveLetters.values -%}
-    <div class="containerbox grid-item {{ loop.index0 }}">
-        <img src="/assets/postcard%20handdrawn%201.svg" alt="" id="postcard">
-        <div id="contentbox" class="template">{{ q }}</div>
-        <div id="namebox" class="template">
-            {% if y %}
-                {{ z }}
-            {% else %}
-                FOR X
-            {% endif %}
-        </div>
+{#{{ exportApproved["default"] | dump(2) }}#}
+
+{%- for letter in exportSubmissions["/pages/writeletters/"] -%}
+    <div class="containerbox grid-item {{ loop.revindex }}">
+        <img src="{{ letter.src }}" alt="" id="postcard">
+        <div id="contentbox" class="template">{{ letter.message }}</div>
+        {% if letter.signature %}
+            <div id="namebox" class="template">{{ letter.nickname }}</div>
+        {% else %}
+            <div id="namebox" class="template">FOR X</div>
+        {% endif %}
     </div>
-
-    <button class="{{ loop.index0 }}" form="approver" id="approveL" type="submit">Approve</button>
+    <div id="membersbox">{{ letter.member }}</div>
+    <br>
+    <button class="{{ loop.revindex }}" form="approver" id="approveL" type="submit">Approve</button>
+{#    <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>#}
+<br><br>
 {% else %}
-
     <li>No new letter submissions.</li>
-
 {%- endfor -%}
 
-{# turn btn class string into indexNumber,
-use number to access allLoveLetters.values[+indexNumber]
-    allLoveLetters.values[+indexNumber][0]
-    allLoveLetters.values[+indexNumber][1]
-    allLoveLetters.values[+indexNumber][2]
-    allLoveLetters.values[+indexNumber][3]
-
-
-#}
-
-<form id="approver" name="approved-letters" netlify netlify-honeypot="full-name">
-    <input type="text" name="path">
+<form id="approver" name="approved-letters" data-netlify="true">
+    <input type="text" name="path" id="path">
     <input type="text" name="signature" id="signature">
     <input type="text" name="nickname" id="nickname">
-    <textarea name="lettercontent" id="lettercontent"></textarea>
+{#    make the two below input text instead of textarea and select   #}
+    <input type="text" name="lettercontent" id="lettercontent">
+    <input type="text" name="members" id="members">
 </form>
 
-
 <script>
+
     const handleSubmit = (event) => {
         event.preventDefault();
         let ele = event.submitter;
@@ -49,12 +43,14 @@ use number to access allLoveLetters.values[+indexNumber]
 
         let message = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
         let name = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
+        let member = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
 
         //manually enter form data
         formData.set('path', 'default');
         formData.set('signature','bool');
-        formData.set('nickname', name); //figure out how to get it to NAME or FOR X
+        formData.set('nickname', name);
         formData.set('lettercontent', message);
+        formData.set('members', member);
 
         //send data above to the READ page
         fetch("/", {
@@ -62,14 +58,13 @@ use number to access allLoveLetters.values[+indexNumber]
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
         })
-            .then(() => alert("Thank you for your submission"))
+            .then(() => alert("The letter has been submitted!"))
             .catch((error) => alert(error));
     };
 
     document
         .querySelector("form")
         .addEventListener("submit", handleSubmit);
-
 </script>
 
 

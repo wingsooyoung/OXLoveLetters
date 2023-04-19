@@ -10,7 +10,7 @@ function myReadURL() {
 }
 
 function writebtnFunc() {
-    setTimeout(myWriteURL, 1000);
+    setTimeout(myWriteURL, 350);
 }
 function myWriteURL() {
     document.location.href = '/pages/writeletters/';
@@ -106,6 +106,7 @@ function modalZoom(x) {
     modal.style.display = "block";
     let m = modalLetter.children;
     let y = x.children;
+    m["postcardM"].src = y[0].src;
     m["contentboxM"].textContent = y[1].innerHTML;
     m["nameboxM"].textContent = y[2].innerHTML;
     m["lettercountM"].textContent = y[3].innerHTML;
@@ -142,4 +143,90 @@ for (let i = 0; i < ele.length; i++) {
     }
 }
 
+function myFilter(member) {
+    var x, i, cards, j;
+    x = document.getElementsByClassName("membersbox");
+    cards = document.getElementsByClassName("containerbox");
+
+    //start by making all the cards visible
+    for (j = 0; j < cards.length; j++) {
+        if (cards[j].classList.contains("notvisible")) {
+            cards[j].classList.remove("notvisible")
+        }
+    }
+
+    //go through each card, check the membersbox, if it doesn't match the member filter then hide that card
+    let buttonNameClicked;
+    let membersboxNameInside;
+    for (i = 0; i < x.length; i++) {
+        buttonNameClicked = member;
+
+        if (x[i].innerHTML === '') {
+            membersboxNameInside = 'All';
+        } else {
+            membersboxNameInside = x[i].innerHTML;
+        }
+
+        if (buttonNameClicked !== membersboxNameInside) {
+            x[i].parentElement.classList.add("notvisible");
+        }
+    }
+}
+
+
+function filterToggle() {
+    var x = document.getElementById("buttons");
+    var x2 = document.getElementById("filterCloser");
+    var y = document.getElementById("filterTitle");
+    if (x.style.visibility === "hidden" && x2.style.visibility === "hidden") {
+        x.style.visibility = "visible";
+        x2.style.visibility = "visible";
+        y.innerHTML = "FILTER <i class=\"ph-bold ph-minus\"></i>";
+    } else {
+        x.style.visibility = "hidden";
+        x2.style.visibility = "hidden";
+        y.innerHTML = "FILTER <i class=\"ph-bold ph-plus\"></i>";
+    }
+}
+
+function removeFilters() {
+    //code ... here!
+    //code below is just copied from the first couple lines of myFilter(member) lol
+    var cards, j;
+    cards = document.getElementsByClassName("containerbox");
+
+    //start by making all the cards visible
+    for (j = 0; j < cards.length; j++) {
+        if (cards[j].classList.contains("notvisible")) {
+            cards[j].classList.remove("notvisible")
+        }
+    }
+}
+
+
+// code below - filter as select element test
+const selectElement = document.querySelector("#filterSelect");
+
+selectElement.addEventListener("change", (event) => {
+    //get result text box element:
+    // const result = document.querySelector(".result");
+    //change result text to the selected option:
+    // result.textContent = `You like ${event.target.value}`;
+    let member = event.target.value;
+
+    if (member === "All Members") {
+        member = "All";
+        myFilter(member);
+    }
+    else if (member === "(view all letters)") {
+        removeFilters();
+    }
+    else {
+        myFilter(member);
+    }
+
+
+    // ***yuh wait... can i just call myFilter(${event.target.value}) ?
+    // do i need to actually change anything... O_O
+});
 

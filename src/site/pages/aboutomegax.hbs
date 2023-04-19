@@ -2,6 +2,10 @@
 templateEngineOverride: hbs
 title: About OMEGA X
 ---
+
+<!--add in links for the timeline items without any photos!!!!!-->
+
+
 <h1 class="abouth1">{{title}}</h1>
 
 <div class="imgcontainer">
@@ -83,30 +87,30 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
 </svg>
 
 <div class="wrapper">
-    <a href="https://www.youtube.com/@OMEGAXOfficial" class="share  youtube" title="youtube">
+    <span class="itemstart"><a href="https://www.youtube.com/@OMEGAXOfficial" class="share youtube" title="youtube (with spire)">
         <svg role="presentation" class="svg--icon">
             <use xlink:href="#svg--youtube"></use>
         </svg>
         <span class="clip">YOU-TUBE</span>
-    </a>
-    <a href="https://twitter.com/OmegaX_members" class="share twitter" title="member's twitter">
+    </a></span>
+    <span class="itemmid"><a href="https://twitter.com/OmegaX_members" class="share twitter" title="members' twitter (with spire)">
         <svg role="presentation" class="svg--icon">
             <use xlink:href="#svg--twitter"></use>
         </svg>
         <span class="clip">TWITTER</span>
-    </a>
-    <a href="https://www.instagram.com/omega_x__for_x/" title="main" class="share instagram">
+    </a></span>
+    <span class="itemmid"><a href="https://www.instagram.com/omega_x__for_x/" title="official instagram" class="share instagram">
         <svg role="presentation" class="svg--icon">
             <use xlink:href="#svg--instagram"></use>
         </svg>
         <span class="clip">INSTAGRAM</span>
-    </a>
-    <a title="all members" class="share instagram" id="memberstoggle">
+    </a></span>
+    <span class="itemend"><a title="all members" class="share instagram" id="memberstoggle">
         <svg role="presentation" class="svg--icon">
             <use xlink:href="#svg--more"></use>
         </svg>
         <span class="clip">INSTAGRAM</span>
-    </a>
+    </a></span>
     <div class="connect2">
         <a href="https://www.instagram.com/jaehan._.film/" title="jaehan (film)" class="instagram members share">
             <svg role="presentation" class="svg--icon">
@@ -167,24 +171,49 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
 
 <div id="aboutox">
 
-    <div class="box box1">
-        <div class="oddboxinner"> OMEGA X is an 11 member boy group that was formed by Spire Entertainment. (As of January
-            11th, 2023, their contracts with Spire have all been terminated &ndash; <a href="https://docs.google.com/document/d/1PhF25EFAAwOjlc56iU40nmyiKrPiTcj0nENWqhR2eRo/edit?usp=sharing">read more on that situation here</a>). Announced on March 1st, 2021, the group is made up of idols who have previously debuted and/or participated in various idol competition shows. With the theme being "second chance", Spire released the aptly named predebut show <a href="https://youtube.com/playlist?list=PLHALcViYRLdaJzPSObnldeZ_XvXhnfBeR&si=EnSIkaIECMiOmarE">"One More ChanX"</a> on OMEGA X's official YouTube channel. The group then made their official debut on June 30th, 2021 with VAMOS. </div>
-    </div>
     <div class="box box3">
         <div class="oddboxinner">
             Check out <a href="https://omegaxmasterlist.tumblr.com">OMEGA X Masterlist</a> for an easy to navigate and up-to-date resource of everything OMEGA X!
         </div>
     </div>
 
+    <div class="box box1">
+        <div class="oddboxinner">
+            <h2>INTRO</h2>
+            <div class="para">
+                OMEGA X is an 11 member boy group that was formed by Spire Entertainment. (As of January
+                11th, 2023, their contracts with Spire have all been terminated &ndash; <a href="https://docs.google.com/document/d/1PhF25EFAAwOjlc56iU40nmyiKrPiTcj0nENWqhR2eRo/edit?usp=sharing">read more on that situation here</a>).
+            </div>
+            <div class="para">
+                Announced on March 1st, 2021, the group is made up of idols who have previously debuted and/or participated in various idol competition shows.
+            </div>
+            <div class="para">
+                With the theme being "second chance", Spire released the aptly named predebut show <a href="https://youtube.com/playlist?list=PLHALcViYRLdaJzPSObnldeZ_XvXhnfBeR&si=EnSIkaIECMiOmarE">"One More ChanX"</a> on OMEGA X's official YouTube channel.
+            </div>
+            <div class="para">
+                The group then made their official debut on June 30th, 2021 with VAMOS.
+            </div>
+        </div>
+    </div>
+
+    <div class="box box2 two">
+        <div class="evenboxinner">
+            <h2>IMPORTANT MILESTONES</h2>
+        </div>
+    </div>
+    <br>
+
     <div class="box2">
+<!--        YUH ADD A LINK TO AN ARTICLE OR SMTH ABOUT THE ANNOUNCEMENT         -->
         <div class="evenboxinner">
             <div class="timeline"><span class="date">March 1<span>st</span>, 2021</span> Spire announces their new boy
                 group, OMEGA
                 X, will debut in 2021</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F">
         <div class="placeholder">
@@ -194,7 +223,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
             <div class="timeline"><span class="date">March 14<span>th</span>, 2021</span> First debut trailer is posted</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F">
         <div class="placeholder">
@@ -204,21 +235,27 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
             <div class="timeline"><span class="date">April 8<span>th</span>, 2021</span> First teaser for One More ChanX is posted</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2">
         <div class="evenboxinner">
             <div class="timeline"><span class="date">April 24<span>th</span>, 2021</span> First episode of OMCX is posted</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2">
         <div class="evenboxinner">
             <div class="timeline"><span class="date">May 22<span>nd</span>, 2021</span> Last episode of OMCX is posted</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F album">
         <div class="placeholder album">
@@ -228,7 +265,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
             <div class="timeline"><span class="date">June 4<span>th</span>, 2021</span> First VAMOS teaser is posted</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F album">
         <div class="placeholder album">
@@ -238,7 +277,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
             <div class="timeline"><span class="date">June 30<span>th</span>, 2021</span> First mini album, VAMOS, is released, along with the accompanying MV</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F album">
         <div class="placeholder album">
@@ -248,7 +289,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
             <div class="timeline"><span class="date">August 19<span>th</span>, 2021</span> First comeback schedule is posted</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F album">
         <div class="placeholder album">
@@ -258,14 +301,18 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
             <div class="timeline"><span class="date">September 6<span>th</span>, 2021</span> First comeback single album, WHAT'S GOIN' ON, is released, along with the accompanying MV</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2">
         <div class="evenboxinner">
             <div class="timeline"><span class="date">December 16<span>th</span>, 2021</span> First teaser for LOVE ME LIKE is posted</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F album">
         <div class="placeholder album">
@@ -275,7 +322,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
             <div class="timeline"><span class="date">January 5<span>th</span>, 2022</span> Second mini album, LOVE ME LIKE, is released, along with the accompanying MV</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F">
         <div class="placeholder">
@@ -286,7 +335,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
                 31st Seoul Music Awards!</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F album">
         <div class="placeholder album">
@@ -296,7 +347,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
             <div class="timeline"><span class="date">May 30<span>th</span>, 2022</span> First teaser for their first full album, Story Written in Music, is posted</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F album">
         <div class="placeholder album">
@@ -306,7 +359,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
             <div class="timeline"><span class="date">June 15<span>th</span>, 2022</span> First full album, SWIM, is released, along with the accompanying MV for the title track, Play Dumb</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2">
         <div class="evenboxinner">
@@ -314,7 +369,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
                 upcoming Japanese mini album is posted</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2">
         <div class="evenboxinner">
@@ -322,7 +379,9 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
                 title track, Stand Up, is released</div>
         </div>
     </div>
-    <div class="timelineArrow"><i class="ph-arrow-fat-down-fill"></i></div>
+    <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
 
     <div class="box2F album">
         <div class="placeholder album">
@@ -334,18 +393,26 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z" 
         </div>
     </div>
     <br>
-<!--    <hr />  horizontal line    -->
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
+    <!--    <hr />  horizontal line    -->
 
     <div class="box box3">
         <div class="oddboxinner timeline">
+            <h2>USA AND LATAM WORLD TOUR 2022</h2>
+            <span class="date"> September 16<span>th</span> to October 22<span>nd</span>, 2022 </span>
             For everything involving the group's USA and Latin American tour, <a
                     href="https://docs.google.com/presentation/d/12qaufWi1kjCLNJk6bTxXvBbobr2hyh5Eg2w4o3Ryv38/edit?usp=share_link">please refer to this slideshow</a>. It covers everything from the day the tour was announced up until the very end of the tour.
         </div>
     </div>
-
     <br>
+    <div class="timelineArrow"><i class="ph-fill ph-arrow-fat-down"></i></div>
+    <br>
+
     <div class="box box3">
         <div class="oddboxinner timeline">
+            <h2>AFTER THE WORLD TOUR</h2>
+            <span class="date"> October 22<span>nd</span>, 2022 to the present day</span>
             For all the events that happened after their tour ended, including their subsequent legal
                 battles, <a
                         href="https://docs.google.com/document/d/1PhF25EFAAwOjlc56iU40nmyiKrPiTcj0nENWqhR2eRo/edit?usp=sharing">please refer to this document here</a>.

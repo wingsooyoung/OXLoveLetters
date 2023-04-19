@@ -19,7 +19,7 @@
             } else if (defaultSign.checked) {
                 inputByName.value = 'FOR X';
             } else {
-                console.log ('something didnt go write with the name part...')
+                console.log ('something didnt go right with the name part...')
             }
 
             // let nickname = form.get('nickname');

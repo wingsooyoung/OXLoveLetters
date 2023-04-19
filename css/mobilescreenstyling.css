@@ -1,0 +1,435 @@
+/*RESPONSIVENESS*/
+
+/* my phone = 360w x 649h */
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+    #modContainer { /* 100% Image Width on Smaller Screens */
+        width: 100%;
+    }
+}
+
+/*things that look good on galaxy fold only: 280px width*/
+@media screen and (min-width: 279px) and (max-width: 913px) {
+    nav {
+        max-width: 88%;
+        font-size: 0.65em;
+        margin-left: auto;
+        margin-right: 5%;
+    }
+    nav a {
+        padding: 6px 10px;
+        font-size: 1.15em;
+        margin: 0;
+    }
+    nav i {
+        font-size: 1.6em;
+    }
+    .nav-text {
+        display: none;
+    }
+    #dropdowncontent a {
+        font-size: 1.4em;
+        padding: 8px 10px;
+    }
+
+    #contentbox {
+        top: 45%;
+        height: 44%;
+        width: 68%;
+        font-size: 0.6em!important;
+        line-height: 10px!important;
+        padding-right: 12px;
+        padding-left: 6px;
+    }
+    #namebox {
+        bottom: 17%;
+        right: 11%;
+        width: 30%;
+        font-size: 9px;
+        line-height: 8px!important;
+    }
+    #contentboxM {
+        height: 44%;
+        left: 51%;
+        width: 66%;
+        line-height: 15px!important;
+        font-size: 0.8em!important;
+    }
+    #nameboxM {
+        bottom: 16%;
+        width: 30%;
+        right: 11%;
+        line-height: 14px!important;
+        font-size: 0.7em!important;
+    }
+    .grid-container {
+        grid-template-columns: auto!important;
+        row-gap: 15px!important;
+        padding: 15px 30px!important;
+        justify-content: center!important;
+    }
+    .grid-item img {
+        max-width: 100%;
+    }
+    .modal-content {
+        max-width: 90%!important;
+    }
+    #modContainer {
+        padding: 10px 0 40px!important;
+    }
+    .filter-container {
+        grid-column-start: initial;
+        grid-column-end: initial;
+        display: initial;
+    }
+
+    #bannerH {
+        max-width: 33px;
+        margin-left: 10px;
+        margin-top: 12px;
+    }
+    #bannerA {
+        max-width: 24px;
+        margin-left: 49px;
+        margin-top: 10px;
+    }
+    #banner {
+        max-width: 25px;
+        max-height: 25px;
+        margin-top: 16px;
+        margin-left: 38px!important;
+    }
+
+    body {
+        background-image: url("/assets/mobile bg rough darker.png");
+    }
+
+    #static-mailbox {
+        width: 215px!important;
+    }
+    #readbtn {
+        margin-right: 40px!important;
+    }
+    .choicesbtn {
+        font-size: 0.9em!important;
+        width: 95px!important;
+    }
+    .centerbtns i {
+        font-size: larger;
+    }
+
+    footer {
+        font-size: smaller;
+        padding-top: 25%;
+    }
+    footer p#line1 {
+        font-size: 0.8em!important;
+        margin: 5px;
+    }
+    footer p#disclaimer {
+        font-size: 0.2em!important;
+        margin: 5px;
+        width: 97%;
+    }
+
+    #letter-form-div {
+        width:90%;
+        font-size: 0.8em;
+    }
+    #nickname {
+        font-size: 0.9em;
+    }
+    form {
+        margin: 0;
+        padding: 0 8px 5px!important;
+    }
+    #sendbtn {
+        padding: 3px 5px!important;
+        font-size: 1.1em!important;
+    }
+
+    div[data-netlify-identity-button] {
+        margin: 5px;
+    }
+
+    #csModal img {
+        height: 200px!important;
+    }
+    #csModal {
+        padding-top: 55px;
+    }
+
+    .modal {
+        padding-top: 200px!important;
+    }
+
+    .wrapper { /*figure out how to deal with tippy insta dropdown on mobile...*/
+        width: 100%!important;
+    }
+
+    .share {
+        height: 2.5rem!important;
+        width: 2.5rem!important;
+    }
+    .connect2 > .share {
+        margin: 0.5rem 0.3rem 0.5rem 0!important;
+        height: 2rem!important;
+        width: 2rem!important;
+    }
+    #aboutox {
+        max-width: 100%;
+    }
+    .box {
+        max-width: 92%;
+        height: fit-content!important;
+        font-size: 0.95em;
+    }
+    .oddboxinner {
+        height: 100%;
+    }
+    .box2F, .box2 {
+        max-width: 90%;
+    }
+    .evenboxinnerF, .evenboxinner {
+
+    }
+    .abouth1 { /*fix the background image!!!!!!!!!!!*/
+        font-size: 2.6em!important;
+        margin-bottom: 25px!important;
+        background-position: center;
+        background-size: cover;
+    }
+    #groupphoto {
+        height: 260px!important;
+    }
+    #aboutme {
+        max-width: fit-content;
+        margin: 0 20px!important;
+        font-size: 0.9em!important;
+        padding: 5px 15px!important;
+    }
+
+    #sitemap-ul {
+        width: max-content!important;
+        margin-left: 10%!important;
+        font-size: 1.1em!important;
+    }
+    div#sitemap-links a {
+        vertical-align: 19%!important;
+    }
+
+    #faq {
+        max-width: fit-content;
+        margin: 0 20px!important;
+        font-size: 0.9em!important;
+        padding: 5px 15px!important;
+    }
+
+    .modalabout {
+        padding-top: 70px!important;
+    }
+    #section1 {
+        padding: 10px 30px !important;
+    }
+    #section2 {
+        padding: 10px 17px !important;
+    }
+    #section3 {
+        padding: 10px 17px !important;
+    }
+    #modContainer hr {
+        margin-left: -0.5em!important;
+        margin-right: -0.5em!important;
+    }
+}
+
+/*slight changes for my phone galaxy s22: 360px width*/
+@media screen and (min-width: 360px) and (max-width: 913px) {
+            /*code here*/
+    nav {
+        margin-right: 5%;
+    }
+    nav a {
+        padding: 8px 15px;
+    }
+    #bannerH {
+        max-width: 35px;
+        margin-left: 18px;
+    }
+    #bannerA {
+        max-width: 25px;
+        margin-left: 60px;
+    }
+    #contentbox {
+        font-size: 0.8em!important;
+        line-height: 14px!important;
+    }
+    #namebox {
+        width: 30%;
+        bottom: 16%;
+        right: 11%;
+        font-size: 10px;
+        line-height: 12px!important;
+    }
+    #contentboxM {
+        line-height: 19px!important;
+        font-size: 0.9em!important;
+    }
+    #nameboxM {
+        line-height: 17px!important;
+        font-size: 0.9em!important;
+    }
+}
+
+/*slight changes for screens above that:*/
+    /* surface duo    540px */
+    /* ipad mini      768px */
+    /* ipad air       820px */
+    /* surface pro    912px */
+@media screen and (min-width: 540px) and (max-width: 913px) {
+    .nav-text {
+        display: block;
+    }
+    nav a {
+        max-height: 47px;
+    }
+    #aboutbtn.nav-text {
+        display: initial;
+    }
+    #aboutbtn {
+        max-height: 47px;
+    }
+    a#aboutbtn i.ph-bold.ph-info {
+        display: block;
+    }
+    a#aboutbtn .nav-text {
+        display: inline;
+    }
+    a#aboutbtn i.ph.ph-caret-down {
+         display: inline;
+     }
+
+    #bannerH {
+        max-width: 45px;
+        margin-top: 15px;
+    }
+    #bannerA {
+        max-width: 30px;
+        margin-left: 72px;
+        margin-top: 15px;
+    }
+
+    #letter-form-div {
+        width:90%;
+        font-size: 1.2em;
+    }
+    small {
+        font-size: small;
+    }
+    #nickname {
+        font-size: 0.9em;
+    }
+    form {
+        margin: 0;
+        padding: 0 8px 5px!important;
+    }
+    #sendbtn {
+        padding: 3px 5px!important;
+        font-size: 1.1em!important;
+    }
+    .writepg-select-wrapper {
+        width: 115px;
+    }
+    select#members {
+        width: 115px;
+    }
+
+    body {
+        background-size: 50% 100%;
+        background-repeat: repeat;
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 913px) {
+    nav a {
+        padding: 8px 12px;
+    }
+    #aboutbtn {
+        height: initial;
+    }
+    a#aboutbtn i.ph-bold.ph-info {
+        display: inline;
+    }
+
+    #bannerH {
+        max-width: 45px;
+        margin-left: 20px;
+    }
+    #bannerA {
+        max-width: 35px;
+        margin-left: 75px;
+    }
+
+    #letter-form-div {
+        margin-top: 127px;
+    }
+    .writepg-select-wrapper {
+        margin-left: 22px;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 913px) {
+    nav {
+        font-size: 1em;
+        padding: 20px 0 23px;
+    }
+    nav a {
+        padding: 8px 12px;
+    }
+    nav i {
+        font-size: 1.2em;
+        vertical-align: -2px;
+    }
+
+    #letter-form-div {
+        margin-top: 160px;
+        max-width: 600px;
+        font-size: 1.5em;
+        padding: 15px 25px 20px;
+    }
+    small {
+        font-size: 0.7em;
+    }
+    .writepg-select-wrapper {
+        margin-left: 22px;
+        height: 35px;
+        width: 130px;
+    }
+    select#members {
+        width: 130px;
+        height: 35px;
+    }
+    .writepg-select-wrapper::after {
+        right: 6px;
+    }
+
+    footer {
+        font-size: medium;
+        padding-top: 38px;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: 3%;
+    }
+}
+
+
+
+
