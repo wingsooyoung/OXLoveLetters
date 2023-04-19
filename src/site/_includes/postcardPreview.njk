@@ -3,20 +3,25 @@
 {#{{ exportApproved["default"] | dump(2) }}#}
 
 {%- for letter in exportSubmissions["/pages/writeletters/"] -%}
-    <div class="containerbox grid-item {{ loop.revindex }}">
-        <img src="{{ letter.src }}" alt="" id="postcard">
-        <div id="contentbox" class="template">{{ letter.message }}</div>
-        {% if letter.signature %}
-            <div id="namebox" class="template">{{ letter.nickname }}</div>
-        {% else %}
-            <div id="namebox" class="template">FOR X</div>
-        {% endif %}
-    </div>
-    <div id="membersbox">{{ letter.member }}</div>
-    <br>
-    <button class="{{ loop.revindex }}" form="approver" id="approveL" type="submit">Approve</button>
-{#    <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>#}
-<br><br>
+    {% if loop.first %}
+        <div>LETTERS WAITING FOR APPROVAL: {{ loop.length }}</div>
+    {% endif %}
+        <div class="griddywrap">
+            <div class="containerbox grid-item {{ loop.revindex }}">
+                <img src="{{ letter.src }}" alt="" id="postcard">
+                <div id="contentbox" class="template">{{ letter.message }}</div>
+                {% if letter.signature %}
+                    <div id="namebox" class="template">{{ letter.nickname }}</div>
+                {% else %}
+                    <div id="namebox" class="template">FOR X</div>
+                {% endif %}
+            </div>
+            <div id="membersbox">{{ letter.member }} / {{ loop.revindex }}</div>
+            <br>
+            <button class="{{ loop.revindex }}" form="approver" id="approveL" type="submit">Approve</button>
+            {#    <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>#}
+            <br><br>
+        </div>
 {% else %}
     <li>No new letter submissions.</li>
     <li>AS OF: {{ page.date.toLocaleString() }}</li>

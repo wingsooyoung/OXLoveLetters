@@ -216,6 +216,9 @@ div#griddy {
     margin-left: auto;
     margin-right: auto;
 }
+.griddywrap {
+/*    code      */
+}
 .visible {
     display: block;
 }
