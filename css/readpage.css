@@ -212,12 +212,22 @@ iframe {
     width: 272px;
 }
 div#griddy {
-    width: 300px;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 0 0;
+    grid-auto-flow: row;
+    column-gap: 10px;
+    justify-content: center;
+
     margin-left: auto;
     margin-right: auto;
 }
 .griddywrap {
-/*    code      */
+
+}
+.waiting {
+    grid-area: 1 / 1 / 2 / 5;
 }
 .visible {
     display: block;

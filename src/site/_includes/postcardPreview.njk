@@ -4,7 +4,7 @@
 
 {%- for letter in exportSubmissions["/pages/writeletters/"] -%}
     {% if loop.first %}
-        <div>LETTERS WAITING FOR APPROVAL: {{ loop.length }}</div>
+        <div class="waiting">LETTERS WAITING FOR APPROVAL: {{ loop.length }}</div>
     {% endif %}
         <div class="griddywrap">
             <div class="containerbox grid-item {{ loop.revindex }}">
