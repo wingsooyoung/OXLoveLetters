@@ -47,9 +47,9 @@
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        let message = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
-        let name = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
-        let member = document.querySelector(`#griddy > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
+        let message = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
+        let name = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
+        let member = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
 
         //manually enter form data
         formData.set('path', 'default');
@@ -65,6 +65,7 @@
             body: new URLSearchParams(formData).toString(),
         })
             .then(() => alert("The letter has been submitted!"))
+            .then(() => ele.parentElement.remove())
             .catch((error) => alert(error));
     };
 
