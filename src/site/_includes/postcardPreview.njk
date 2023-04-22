@@ -16,7 +16,7 @@
                     <div id="namebox" class="template">FOR X</div>
                 {% endif %}
             </div>
-            <div id="membersbox">{{ letter.member }} / {{ loop.revindex }}</div>
+            <div id="membersbox">{{ letter.member }}</div>
             <br>
             <button class="{{ loop.revindex }}" form="approver" id="approveL" type="submit">Approve</button>
             {#    <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>#}
@@ -49,7 +49,8 @@
 
         let message = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
         let name = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
-        let member = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
+        let prem = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
+        let member = prem.substring(0, prem.indexOf("/"));
 
         //manually enter form data
         formData.set('path', 'default');

@@ -9,7 +9,7 @@ publish = "dist"
 # directory = "src/functions"
 
 [[plugins]]
-package = "netlify-plugin-form-submissions"
+package = "netlify-plugin-form-submissions-twos"
 
   [plugins.inputs]
   formNames = "ALL"
