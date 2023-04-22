@@ -18,6 +18,7 @@
 #src/site/_includes/css/*
 
 src/site/_data/*.json
+/src/site/_data/approved-letters_submissions.json
 
 src/functions/
 
