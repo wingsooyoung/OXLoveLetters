@@ -11,27 +11,27 @@ module.exports = () => {
 
 
         let postcardLink = '';
-        if (picked.trim() === 'Jaehan') {
+        if (picked === 'Jaehan') {
             postcardLink = '/assets/base/jaehanbase.svg';
-        } else if (picked.trim() === 'Hwichan') {
+        } else if (picked === 'Hwichan') {
             postcardLink = '/assets/base/hwichanbase.svg';
-        } else if (picked.trim() === 'Sebin') {
+        } else if (picked === 'Sebin') {
             postcardLink = '/assets/base/sebinbase.svg';
-        } else if (picked.trim() === 'Hangyeom') {
+        } else if (picked === 'Hangyeom') {
             postcardLink = '/assets/base/hangyeombase.svg';
-        } else if (picked.trim() === 'Taedong') {
+        } else if (picked === 'Taedong') {
             postcardLink = '/assets/base/taedongbase.svg';
-        } else if (picked.trim() === 'Xen') {
+        } else if (picked === 'Xen') {
             postcardLink = '/assets/base/xenbase.svg';
-        } else if (picked.trim() === 'Jehyun') {
+        } else if (picked === 'Jehyun') {
             postcardLink = '/assets/base/jehyunbase.svg';
-        } else if (picked.trim() === 'Kevin') {
+        } else if (picked === 'Kevin') {
             postcardLink = '/assets/base/kevinbase.svg';
-        } else if (picked.trim() === 'Junghoon') {
+        } else if (picked === 'Junghoon') {
             postcardLink = '/assets/base/junghoonbase.svg';
-        } else if (picked.trim() === 'Hyuk') {
+        } else if (picked === 'Hyuk') {
             postcardLink = '/assets/base/hyukbase.svg';
-        } else if (picked.trim() === 'Yechan') {
+        } else if (picked === 'Yechan') {
             postcardLink = '/assets/base/yechanbase.svg';
         } else {
             postcardLink = '/assets/small borders postcard.svg';
@@ -43,7 +43,7 @@ module.exports = () => {
         if (entry.data.members === "") {
             letterTo = "All";
         } else {
-            letterTo = picked.trim();
+            letterTo = picked;
         }
 
         let mydearest = entry.data.lettercontent.replace(/(\r\n|\n|\r)/gm," ");
