@@ -7,46 +7,53 @@ module.exports = () => {
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
+        let picked = entry.data.members.substring(0, entry.data.members.indexOf("/") - 1)
+        //         let member = prem.substring(0, prem.);
 
         let postcardLink = '';
-        if (entry.data.members === 'Jaehan') {
+        if (picked === 'Jaehan') {
             postcardLink = '/assets/base/jaehanbase.svg';
-        } else if (entry.data.members === 'Hwichan') {
+        } else if (picked === 'Hwichan') {
             postcardLink = '/assets/base/hwichanbase.svg';
-        } else if (entry.data.members === 'Sebin') {
+        } else if (picked === 'Sebin') {
             postcardLink = '/assets/base/sebinbase.svg';
-        } else if (entry.data.members === 'Hangyeom') {
+        } else if (picked === 'Hangyeom') {
             postcardLink = '/assets/base/hangyeombase.svg';
-        } else if (entry.data.members === 'Taedong') {
+        } else if (picked === 'Taedong') {
             postcardLink = '/assets/base/taedongbase.svg';
-        } else if (entry.data.members === 'Xen') {
+        } else if (picked === 'Xen') {
             postcardLink = '/assets/base/xenbase.svg';
-        } else if (entry.data.members === 'Jehyun') {
+        } else if (picked === 'Jehyun') {
             postcardLink = '/assets/base/jehyunbase.svg';
-        } else if (entry.data.members === 'Kevin') {
+        } else if (picked === 'Kevin') {
             postcardLink = '/assets/base/kevinbase.svg';
-        } else if (entry.data.members === 'Junghoon') {
+        } else if (picked === 'Junghoon') {
             postcardLink = '/assets/base/junghoonbase.svg';
-        } else if (entry.data.members === 'Hyuk') {
+        } else if (picked === 'Hyuk') {
             postcardLink = '/assets/base/hyukbase.svg';
-        } else if (entry.data.members === 'Yechan') {
+        } else if (picked === 'Yechan') {
             postcardLink = '/assets/base/yechanbase.svg';
         } else {
             postcardLink = '/assets/small borders postcard.svg';
         }
 
+        //**** ADD IN THE TRANSLATED MEMBER NAMES + TRANSLATED 'ALL' SO THEY ARE CORRECTED TO THE PROPER VALUE!!!
+
         let letterTo = "";
         if (entry.data.members === "") {
             letterTo = "All";
         } else {
-            letterTo = entry.data.members;
+            letterTo = picked;
         }
+
+        let mydearest = entry.data.lettercontent.replace(/(\r\n|\n|\r)/gm," ");
+        mydearest = mydearest.replace(/\s+/g," ");
 
         let letter = {
             type: 'final',
             signature: entry.data.signature,
             nickname: entry.data.nickname.trim(),
-            message: entry.data.lettercontent,
+            message: mydearest,
             member: letterTo,
             src: postcardLink
         };

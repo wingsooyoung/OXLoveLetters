@@ -19,6 +19,8 @@
 
 src/site/_data/*.json
 /src/site/_data/approved-letters_submissions.json
+src/site/_data/manual-json/*
+
 
 src/functions/
 

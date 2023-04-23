@@ -134,6 +134,9 @@ form {
     height: 25px;
     font-family: 'Hanken Grotesk', sans-serif;
 }
+#nickname:invalid {
+
+}
 #lettercontent {
     height: 150px;
     width: 100%;

@@ -16,19 +16,18 @@
 
             if (wannaSign.checked) {
                 console.log("signing my own name");
+                inputByName.required = true;
             } else if (defaultSign.checked) {
                 inputByName.value = 'FOR X';
+                inputByName.required = false;
             } else {
-                console.log ('something didnt go right with the name part...')
+                console.log ('something didnt go right with the name part... how did we get here...')
             }
 
-            // let nickname = form.get('nickname');
-
-
-            if(inputByName.length === 0) {
-                return false;
-            } else {
+            if (inputByName.checkValidity()) {
                 form.submit();
+            } else {
+                return false;
             }
 
         }, false);

@@ -23,6 +23,13 @@ function yesCheck() {
 function noCheck() {
     nname.setAttribute('readonly', 'readonly')
 }
+nname.addEventListener("input", (event) => {
+    if (nname.validity.valueMissing) {
+        nname.setCustomValidity("Please enter your name or select 'No' above!");
+    } else {
+        nname.setCustomValidity("");
+    }
+});
 
 function toggleAnnouncement(btn) {
     const outerDiv = document.getElementById("special-announcement");
