@@ -49,8 +49,8 @@
 
         let message = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
         let name = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
-        let prem = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
-        let member = prem.substring(0, prem.indexOf("/"));
+        let member = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
+        // let member = prem.substring(0, prem.indexOf("/"));
 
         //manually enter form data
         formData.set('path', 'default');
