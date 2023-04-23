@@ -7,38 +7,31 @@ module.exports = () => {
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
-        let dude = entry.data.members;
-        let backslash = dude.indexOf("/");
-        let picked = "";
-        if (backslash > 0) {
-            picked = dude.substring(0, (backslash - 1));
-        } else {
-            picked = dude.trim();
-        }
+        let picked = entry.data.members;
 
 
         let postcardLink = '';
-        if (picked === 'Jaehan') {
+        if (picked.trim() === 'Jaehan') {
             postcardLink = '/assets/base/jaehanbase.svg';
-        } else if (picked === 'Hwichan') {
+        } else if (picked.trim() === 'Hwichan') {
             postcardLink = '/assets/base/hwichanbase.svg';
-        } else if (picked === 'Sebin') {
+        } else if (picked.trim() === 'Sebin') {
             postcardLink = '/assets/base/sebinbase.svg';
-        } else if (picked === 'Hangyeom') {
+        } else if (picked.trim() === 'Hangyeom') {
             postcardLink = '/assets/base/hangyeombase.svg';
-        } else if (picked === 'Taedong') {
+        } else if (picked.trim() === 'Taedong') {
             postcardLink = '/assets/base/taedongbase.svg';
-        } else if (picked === 'Xen') {
+        } else if (picked.trim() === 'Xen') {
             postcardLink = '/assets/base/xenbase.svg';
-        } else if (picked === 'Jehyun') {
+        } else if (picked.trim() === 'Jehyun') {
             postcardLink = '/assets/base/jehyunbase.svg';
-        } else if (picked === 'Kevin') {
+        } else if (picked.trim() === 'Kevin') {
             postcardLink = '/assets/base/kevinbase.svg';
-        } else if (picked === 'Junghoon') {
+        } else if (picked.trim() === 'Junghoon') {
             postcardLink = '/assets/base/junghoonbase.svg';
-        } else if (picked === 'Hyuk') {
+        } else if (picked.trim() === 'Hyuk') {
             postcardLink = '/assets/base/hyukbase.svg';
-        } else if (picked === 'Yechan') {
+        } else if (picked.trim() === 'Yechan') {
             postcardLink = '/assets/base/yechanbase.svg';
         } else {
             postcardLink = '/assets/small borders postcard.svg';
@@ -50,7 +43,7 @@ module.exports = () => {
         if (entry.data.members === "") {
             letterTo = "All";
         } else {
-            letterTo = picked;
+            letterTo = picked.trim();
         }
 
         let mydearest = entry.data.lettercontent.replace(/(\r\n|\n|\r)/gm," ");
