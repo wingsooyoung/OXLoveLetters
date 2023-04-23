@@ -7,8 +7,15 @@ module.exports = () => {
 
     for(var i = 0; i < approved.length; i++) {
         let entry = approved[i];
-        let picked = entry.data.members.substring(0, entry.data.members.indexOf("/") - 1)
-        //         let member = prem.substring(0, prem.);
+        let dude = entry.data.members;
+        let backslash = dude.indexOf("/");
+        let picked = "";
+        if (backslash > 0) {
+            picked = dude.substring(0, (backslash - 1));
+        } else {
+            picked = dude.trim();
+        }
+
 
         let postcardLink = '';
         if (picked === 'Jaehan') {
