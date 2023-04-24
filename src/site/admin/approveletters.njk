@@ -3,14 +3,14 @@ title: Moderate Letter Submissions
 date: Last Modified
 ---
 
-<p>i get to approve or deny letter submissions as well as preview how they look on the template</p>
+<p style="text-align: center">i get to approve or deny letter submissions as well as preview how they look on the template</p>
 
 <div id="griddy">
     {% include "postcardPreview.njk" %}
 </div>
 
 {% set jscript %}
-    {% include "js/validate.js" %}
+    {% include "js/validateapproved.js" %}
 {% endset %}
 <script>
     {{ jscript | safe }}
