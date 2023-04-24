@@ -49,6 +49,10 @@
 
         let message = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
         let name = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
+        if (name.length === 0) {
+            name = "FOR X";
+            console.log("WE MADE IT INTO THE LOOP")
+        }
         let member = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
         // let member = prem.substring(0, prem.indexOf("/"));
 
