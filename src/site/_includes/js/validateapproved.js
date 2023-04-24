@@ -25,14 +25,42 @@
             if (inputByName.length === 0) {
                 console.log("FIX THE DAMN FORM ISTG")
             } else {
-                form.submit()
-            }
+                const handleSubmit = (event) => {
+                    event.preventDefault();
+                    let ele = event.submitter;
+                    const indexNumber = ele.className;
+                    let dex = CSS.escape(indexNumber);
 
-            // if (inputByName.checkValidity()) {
-            //     form.submit();
-            // } else {
-            //     return false;
-            // }
+                    const myForm = event.target;
+                    const formData = new FormData(myForm);
+
+                    let message = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #contentbox`).innerHTML;
+                    let name = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} > #namebox`).innerHTML;
+                    let member = document.querySelector(`#griddy > .griddywrap > div.containerbox.grid-item.${CSS.escape(indexNumber)} + #membersbox`).innerHTML;
+                    // let member = prem.substring(0, prem.indexOf("/"));
+
+                    //manually enter form data
+                    formData.set('path', 'default');
+                    formData.set('signature','bool');
+                    formData.set('nickname', name);
+                    formData.set('lettercontent', message);
+                    formData.set('members', member);
+
+                    //send data above to the READ page
+                    fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams(formData).toString(),
+                    })
+                        .then(() => alert("The letter has been submitted!"))
+                        .then(() => ele.parentElement.remove())
+                        .catch((error) => alert(error));
+                };
+
+                document
+                    .querySelector("form")
+                    .addEventListener("submit", handleSubmit);
+            }
 
         }, false);
     }
