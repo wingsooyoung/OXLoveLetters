@@ -237,3 +237,10 @@ selectElement.addEventListener("change", (event) => {
     // do i need to actually change anything... O_O
 });
 
+function duperaser() {
+    let griddy = document.getElementsByClassName("griddywrap");
+
+    const result = exportSubmissions["/pages/writeletters/"].group(({ ip }) => ip);
+
+}
+

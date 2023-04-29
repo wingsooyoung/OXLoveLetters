@@ -3,6 +3,7 @@ const submissions = require('./letter-form_submissions.json');
 
 module.exports = () => {
     let previews = {};
+    console.log(submissions.length)
 
     myLoop: for(var i = 0; i < submissions.length; i++) {
         let entry = submissions[i];

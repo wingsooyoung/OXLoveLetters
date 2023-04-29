@@ -3,7 +3,14 @@ title: Moderate Letter Submissions
 date: Last Modified
 ---
 
-<p style="text-align: center">i get to approve or deny letter submissions as well as preview how they look on the template</p>
+<p style="text-align: center">
+    i get to approve or deny letter submissions as well as preview how they look on the template <br>
+    {{ page.date }}
+</p>
+
+<div>
+    <button onclick="duperaser()" class="duperaserclass" >RUN Duplicate Letter Eraser</button>
+</div>
 
 <div id="griddy">
     {% include "postcardPreview.njk" %}
