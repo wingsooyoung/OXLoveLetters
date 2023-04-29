@@ -168,6 +168,25 @@
     </script>
 {#    END tooltips here !!!   #}
 
+    <script>
+        const compareDate = () => {
+            netlifyIdentity.gotrue.currentUser().jwt()
+                .then(jwt => {
+                    const logInOut = () => {
+                        const d = Date.now()
+                        const exp = netlifyIdentity.gotrue.currentUser().token.expires_at;
+                        if (d > exp) {
+                            console.log("ERROR: Your identity session has expired and the token couldn't be refreshed!")
+                            netlifyIdentity.logout();
+                            netlifyIdentity.open();
+                        } else {
+                            console.log("SUCCESS: the token hasn't expired, yet and has been refreshed")
+                        }
+                    }
+                    setTimeout(logInOut, 1000)
+                })}
+    </script>
+
     {% set js %}
       {% include "js/main.js" %}
     {% endset %}
