@@ -70,7 +70,9 @@ module.exports = () => {
             nickname: entry.data.nickname.trim(),
             message: entry.data.lettercontent,
             member: letterTo,
-            src: postcardLink
+            src: postcardLink,
+            ip: entry.data.ip,
+            subid: entry.id
         };
         // Add it to an existing array or create a new one in the comments object
         if(previews[entry.data.path]){

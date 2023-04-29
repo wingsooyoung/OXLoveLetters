@@ -6,7 +6,7 @@
     {% if loop.first %}
         <div class="waiting">LETTERS WAITING FOR APPROVAL: {{ loop.length }}</div>
     {% endif %}
-        <div class="griddywrap">
+        <div class="griddywrap {{ loop.revindex }}">
             <div class="containerbox grid-item {{ loop.revindex }}">
                 <img src="{{ letter.src }}" alt="" id="postcard">
                 <div id="contentbox" class="template">{{ letter.message }}</div>
@@ -16,16 +16,23 @@
                     <div id="namebox" class="template">FOR X</div>
                 {% endif %}
             </div>
-            <div id="membersbox">{{ letter.member }}</div>
+            <div id="membersbox" class="{{ loop.revindex }}">{{ letter.member }}</div>
+            <div id="ippyaddy" class="{{ loop.revindex }}" style="display: none">{{ letter.ip }}</div>
+            <div id="submish-id" class="{{ loop.revindex }}" style="display: none">{{ letter.subid }}</div>
+            <div id="formish-id" class="{{ loop.revindex }}" style="display: none">{{ letter.forid }}</div>
             <br>
             <button class="{{ loop.revindex }}" form="approver" id="approveL" type="submit">Approve</button>
-            {#    <button class="{{ loop.index0 }}" id="deleteL">Delete (not yet activated)</button>#}
             <br><br>
         </div>
 {% else %}
     <li>No new letter submissions.</li>
     <li>AS OF: {{ page.date.toLocaleString() }}</li>
 {%- endfor -%}
+
+<div id="deletiongriddy">
+    <button id="deleteL" onclick="massDeleter()">Delete (not yet activated)</button>
+
+</div>
 
 <form id="approver" name="approved-letters" data-netlify="true">
     <input type="text" name="path" id="path">
@@ -37,6 +44,37 @@
 </form>
 
 <script>
+    function massDeleter() {
+    //get ips of all deletion griddy cards and call api to remove them
+        //let theletterid = document.querySelector(`#deletiongriddy > #submish-id`).innerHTML;
+        //let theformid = document.querySelector(`#deletiongriddy > #formish-id`).innerHTML;
+
+        // const deletions = await fetch(`https://api.netlify.com/api/v1/forms/${theformid}/submissions?access_token=${NETLIFY_AUTH_TOKEN}/${theletterid}`, {
+        //     method: "DELETE"
+        // })
+    }
+
+    //once submit is completed, THEN trigger move to deletiongriddy
+    async function deleteFunction(x) {
+        const indexNumber = x.className;
+
+        const node = document.querySelectorAll(`div.griddywrap.${CSS.escape(indexNumber)}`);
+        const ch = node.item(1);
+        const clone = ch.cloneNode(false);
+
+        // const node = document.querySelector(`div.griddywrap.${CSS.escape(indexNumber)}`);
+        // const clone = node.cloneNode(false);
+
+        document.getElementById("deletiongriddy").appendChild(clone);
+
+
+
+
+    }
+
+    document
+        .querySelector("form")
+        .addEventListener("click", deleteFunction());
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -70,6 +108,7 @@
             body: new URLSearchParams(formData).toString(),
         })
             .then(() => alert("The letter has been submitted!"))
+            .then(() => deleteFunction(ele))
             .then(() => ele.parentElement.remove())
             .catch((error) => alert(error));
     };
