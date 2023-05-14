@@ -7,7 +7,7 @@
         <div class="waiting">LETTERS WAITING FOR APPROVAL: {{ loop.length }}</div>
     {% endif %}
         <div class="griddywrap {{ loop.revindex }}">
-            <div class="containerbox grid-item {{ loop.revindex }}">
+            <div class="containerbox grid-item {{ loop.revindex }}" onclick="modalZoom(this)">
                 <img src="{{ letter.src }}" alt="" id="postcard">
                 <div id="contentbox" class="template">{{ letter.message }}</div>
                 {% if letter.signature %}
