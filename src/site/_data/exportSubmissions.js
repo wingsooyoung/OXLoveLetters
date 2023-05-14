@@ -73,7 +73,9 @@ module.exports = () => {
             member: letterTo,
             src: postcardLink,
             ip: entry.data.ip,
-            subid: entry.id
+            subid: entry.id,
+            forid: entry.form_id
+
         };
         // Add it to an existing array or create a new one in the comments object
         if(previews[entry.data.path]){

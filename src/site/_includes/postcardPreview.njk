@@ -60,7 +60,7 @@
         const node = document.querySelectorAll(`div.griddywrap.${CSS.escape(x)}`);
         console.log("type: "+typeof node+"; "+"node: "+node)
 
-        const ch = node.item(1);
+        var ch = node.item(0);
         console.log("type: "+typeof ch+"; "+"node item: "+ch)
 
         const clone = ch.cloneNode(true);
