@@ -46,14 +46,22 @@
 </form>
 
 <script>
-    function massDeleter() {
-    //get ips of all deletion griddy cards and call api to remove them
-        //let theletterid = document.querySelector(`#innerDeletionGriddy > #submish-id`).innerHTML;
-        //let theformid = document.querySelector(`#innerDeletionGriddy > #formish-id`).innerHTML;
+    async function massDeleter() {
+        //get ips of all deletion griddy cards and call api to remove them
+        let theletterid = document.querySelectorAll(`#innerDeletionGriddy #submish-id`)
+        let theformid = document.querySelector(`#innerDeletionGriddy #formish-id`);
+        const urls = [];
+        theletterid.forEach(
+            function (node) {
+                //create promise url
+                urls.push(`https://api.netlify.com/api/v1/forms/${theformid}/submissions?access_token=${NETLIFY_AUTH_TOKEN}/${node}`)
+            }
+        )
+        const promiseResponses = await Promise.allSettled(urls.map(async url => {
+            const resp = await fetch(url, {method: "DELETE"}).then(() => console.log("deletion successful!")).catch((error) => console.log("Error Message: " + error));
+            return resp.text();
+        }));
 
-        // const deletions = await fetch(`https://api.netlify.com/api/v1/forms/${theformid}/submissions?access_token=${NETLIFY_AUTH_TOKEN}/${theletterid}`, {
-        //     method: "DELETE"
-        // })
     }
 
     //once submit is completed, THEN trigger move to deletiongriddy

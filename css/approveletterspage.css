@@ -2,6 +2,10 @@
     /* code */
 }
 
+#deleteL {
+    width: max-content;
+}
+
 #deletiongriddy {
     grid-column-start: 1;
     grid-column-end: 5;
