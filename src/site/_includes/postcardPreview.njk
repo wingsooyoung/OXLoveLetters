@@ -56,9 +56,8 @@
 
     //once submit is completed, THEN trigger move to deletiongriddy
     async function deleteFunction(x) {
-        const indexNumber = x.className;
 
-        const node = document.querySelectorAll(`div.griddywrap.${CSS.escape(indexNumber)}`);
+        const node = document.querySelectorAll(`div.griddywrap.${CSS.escape(x)}`);
         const ch = node.item(1);
         const clone = ch.cloneNode(false);
 
@@ -76,7 +75,7 @@
     const handleSubmit = (event) => {
         event.preventDefault();
         var ele = event.submitter;
-        const indexNumber = ele.className;
+        var indexNumber = ele.className;
         let dex = CSS.escape(indexNumber);
 
         const myForm = event.target;
@@ -105,7 +104,7 @@
             body: new URLSearchParams(formData).toString(),
         })
             .then(() => alert("The letter has been submitted!"))
-            .then((ele) => deleteFunction(ele))
+            .then(() => deleteFunction(indexNumber))
             .then(() => ele.parentElement.remove())
             .catch((error) => alert(error));
     };
