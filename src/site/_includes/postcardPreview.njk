@@ -78,7 +78,7 @@
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        let ele = event.submitter;
+        var ele = event.submitter;
         const indexNumber = ele.className;
         let dex = CSS.escape(indexNumber);
 
@@ -108,7 +108,7 @@
             body: new URLSearchParams(formData).toString(),
         })
             .then(() => alert("The letter has been submitted!"))
-            .then(() => deleteFunction(ele))
+            .then((ele) => deleteFunction(ele))
             .then(() => ele.parentElement.remove())
             .catch((error) => alert(error));
     };
