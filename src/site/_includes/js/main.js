@@ -214,28 +214,30 @@ function removeFilters() {
 // code below - filter as select element test
 const selectElement = document.querySelector("#filterSelect");
 
-selectElement.addEventListener("change", (event) => {
-    //get result text box element:
-    // const result = document.querySelector(".result");
-    //change result text to the selected option:
-    // result.textContent = `You like ${event.target.value}`;
-    let member = event.target.value;
+try {
+    selectElement.addEventListener("change", (event) => {
+        //get result text box element:
+        // const result = document.querySelector(".result");
+        //change result text to the selected option:
+        // result.textContent = `You like ${event.target.value}`;
+        let member = event.target.value;
 
-    if (member === "All Members") {
-        member = "All";
-        myFilter(member);
-    }
-    else if (member === "(view all letters)") {
-        removeFilters();
-    }
-    else {
-        myFilter(member);
-    }
+        if (member === "All Members") {
+            member = "All";
+            myFilter(member);
+        } else if (member === "(view all letters)") {
+            removeFilters();
+        } else {
+            myFilter(member);
+        }
 
 
-    // ***yuh wait... can i just call myFilter(${event.target.value}) ?
-    // do i need to actually change anything... O_O
-});
+        // ***yuh wait... can i just call myFilter(${event.target.value}) ?
+        // do i need to actually change anything... O_O
+    });
+} catch (e) {
+    console.log("error message: " + e)
+}
 
 function duperaser() {
     let griddy = document.getElementsByClassName("griddywrap");
