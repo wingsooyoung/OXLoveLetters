@@ -58,8 +58,14 @@
     async function deleteFunction(x) {
 
         const node = document.querySelectorAll(`div.griddywrap.${CSS.escape(x)}`);
+        console.log("type: "+typeof node+"; "+"node: "+node)
+
         const ch = node.item(1);
-        const clone = ch.cloneNode(false);
+        console.log("type: "+typeof ch+"; "+"node item: "+ch)
+
+        const clone = ch.cloneNode(true);
+        console.log("type: "+typeof clone+"; "+"cloned node: "+clone)
+
 
         // const node = document.querySelector(`div.griddywrap.${CSS.escape(indexNumber)}`);
         // const clone = node.cloneNode(false);
