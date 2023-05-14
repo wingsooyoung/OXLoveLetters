@@ -31,7 +31,9 @@
 
 <div id="deletiongriddy">
     <button id="deleteL" onclick="massDeleter()">Delete (not yet activated)</button>
+    <div id="innerDeletionGriddy">
 
+    </div>
 </div>
 
 <form id="approver" name="approved-letters" data-netlify="true">
@@ -46,8 +48,8 @@
 <script>
     function massDeleter() {
     //get ips of all deletion griddy cards and call api to remove them
-        //let theletterid = document.querySelector(`#deletiongriddy > #submish-id`).innerHTML;
-        //let theformid = document.querySelector(`#deletiongriddy > #formish-id`).innerHTML;
+        //let theletterid = document.querySelector(`#innerDeletionGriddy > #submish-id`).innerHTML;
+        //let theformid = document.querySelector(`#innerDeletionGriddy > #formish-id`).innerHTML;
 
         // const deletions = await fetch(`https://api.netlify.com/api/v1/forms/${theformid}/submissions?access_token=${NETLIFY_AUTH_TOKEN}/${theletterid}`, {
         //     method: "DELETE"
@@ -70,7 +72,7 @@
         // const node = document.querySelector(`div.griddywrap.${CSS.escape(indexNumber)}`);
         // const clone = node.cloneNode(false);
 
-        document.getElementById("deletiongriddy").appendChild(clone);
+        document.getElementById("innerDeletionGriddy").appendChild(clone);
 
 
 

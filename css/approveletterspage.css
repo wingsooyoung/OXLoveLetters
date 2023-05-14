@@ -13,3 +13,11 @@
 .duperaserclass {
     /* code */
 }
+
+#innerDeletionGriddy {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+}
