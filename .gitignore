@@ -22,7 +22,7 @@ src/site/_data/*.json
 src/site/_data/manual-json/*
 
 
-src/functions/
+#src/functions/
 
 .netlify
 

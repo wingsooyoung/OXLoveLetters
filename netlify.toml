@@ -5,8 +5,9 @@ publish = "dist"
   [build.environment]
   NODE_VERSION = "18.12.1"
 
-# [functions]
-# directory = "src/functions"
+ [functions]
+ directory = "src/functions"
+
 
 [[plugins]]
 package = "netlify-plugin-form-submissions-twos"
