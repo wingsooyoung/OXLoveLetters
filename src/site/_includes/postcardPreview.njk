@@ -46,60 +46,45 @@
 </form>
 
 <script>
-     async function postData(url = '', data = {}) {
-     // A wrapper function for standard JS fetch
-     const response = await fetch(url, {
-         method: 'POST',
-         mode: 'cors',
-         cache: 'no-cache',
-         credentials: 'same-origin',
-         headers: {
-             'Content-Type': 'application/json'
-         },
-         body: JSON.stringify(data)
-     });
-     return response.json(); // parses JSON response into native JavaScript objects
-     }
+    async function massDeleter() {
+        let theLetterID = document.querySelectorAll(`#innerDeletionGriddy #submish-id`);
+        var letterIDs = [];
+        theLetterID.forEach(function (node) {
+            letterIDs.push(node)
+        })
+        let theFormID = document.querySelector(`#innerDeletionGriddy #formish-id`);
 
-    // Formats the data for posting
-    let theLetterID = document.querySelectorAll(`#innerDeletionGriddy #submish-id`);
-    var letterIDs = [];
-            theLetterID.forEach(function (node) {
-                letterIDs.push(node)
-            })
-    let theFormID = document.querySelector(`#innerDeletionGriddy #formish-id`);
+        const finalData = {
+            theFormID,
+            letterIDs
+        }
 
-    const finalData = {
-        theFormID,
-        letterIDs
+        postData('/.netlify/functions/submission-created', finalData)
+            .then(data => {
+                // When post is successful...
+                console.log("postData to submission-created endpoint was a SUCCESS")
+
+            }).catch(error => {
+            // When errors happen, do something with them
+            console.log(error)
+            window.alert("postData to submission-created endpoint was a FAILURE")
+        });
     }
 
-    postData('/.netlify/functions/submission-created', finalData)
-        .then(data => {
-            // When post is successful...
+    async function postData(url = '', data = {}) {
+        // A wrapper function for standard JS fetch
+        const response = await fetch(url, {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
 
-        }).catch(error => {
-        // When errors happen, do something with them
-        console.log(error)
-        window.alert(error)
-    });
-
-    async function massDeleter() {
-        //get ips of all deletion griddy cards and call api to remove them
-        // let theletterid = document.querySelectorAll(`#innerDeletionGriddy #submish-id`)
-        // let theformid = document.querySelector(`#innerDeletionGriddy #formish-id`);
-        // const urls = [];
-        // theletterid.forEach(
-        //     function (node) {
-        //         //create promise url
-        //         urls.push(`https://api.netlify.com/api/v1/forms/${theformid}/submissions?access_token=${NETLIFY_AUTH_TOKEN}/${node}`)
-        //     }
-        // )
-        // const promiseResponses = await Promise.allSettled(urls.map(async url => {
-        //     const resp = await fetch(url, {method: "DELETE"}).then(() => console.log("deletion successful!")).catch((error) => console.log("Error Message: " + error));
-        //     return resp.text();
-        // }));
-
+        return response.json(); // parses JSON response into native JavaScript objects
     }
 
     //once submit is completed, THEN trigger move to deletiongriddy
@@ -119,7 +104,6 @@
         // const clone = node.cloneNode(false);
 
         document.getElementById("innerDeletionGriddy").appendChild(clone);
-
 
 
 
