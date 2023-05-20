@@ -50,9 +50,10 @@
         let theLetterID = document.querySelectorAll(`#innerDeletionGriddy #submish-id`);
         var letterIDs = [];
         theLetterID.forEach(function (node) {
-            letterIDs.push(node)
+            letterIDs.push(node.innerHTML)
         })
-        let theFormID = document.querySelector(`#innerDeletionGriddy #formish-id`);
+        let theFormIDdiv = document.querySelector(`#innerDeletionGriddy #formish-id`);
+        let theFormID = theFormIDdiv.innerHTML;
 
         const finalData = {
             theFormID,
