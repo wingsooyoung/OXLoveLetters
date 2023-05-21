@@ -32,13 +32,13 @@ exports.handler = async (event) => {
 
     const responses = [];
 
-    return async function doThis() {
+    return (async () => {
         for await (var thisID of letterIDs) {
             responses.push(await purgeComment(theFormID, thisID))
         }
         return responses
 
-    }()
+    })
         .then((res) => {
             console.log(`doThis function worked! ${res} `)
             return { statusCode: 200, body: "this is so sick" };
