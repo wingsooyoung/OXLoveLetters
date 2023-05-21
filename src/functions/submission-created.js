@@ -13,18 +13,23 @@ const {
     NETLIFY_AUTH_TOKEN
 } = process.env;
 
+const NetlifyAPI = require('netlify')
+
+
 //ONLY RUN THE PURGE CALL WHEN DELETION-GRIDDY REACHES 10 LETTERS..???? or something
 
 async function purgeComment(formID, id) {
     var url = `https://api.netlify.com/api/v1/forms/${formID}/submissions/${id}?access_token=${NETLIFY_AUTH_TOKEN}`;
 
     await fetch(url, {method: "DELETE"})
-        .then(r => console.log(r))
+        .then((r) => console.log(r))
         .then(() => console.log("deletion successful!"))
         .catch((error) => console.log("Error Message: " + error));
 }
 //---------------------------------------------------------------------
 exports.handler = async (event) => {
+    const client = new NetlifyAPI(process.env.NETLIFY_API_ACCESS_TOKEN)
+
     const {
         theFormID,
         letterIDs
@@ -34,7 +39,8 @@ exports.handler = async (event) => {
 
     return (async () => {
         for await (var thisID of letterIDs) {
-            responses.push(await purgeComment(theFormID, thisID))
+            const resp = await purgeComment(theFormID, thisID)
+            responses.push(resp)
         }
         return responses
 
