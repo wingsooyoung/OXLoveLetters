@@ -13,7 +13,7 @@ const {
     NETLIFY_AUTH_TOKEN
 } = process.env;
 
-const NetlifyAPI = require('netlify')
+// const NetlifyAPI = require('netlify')
 
 
 //ONLY RUN THE PURGE CALL WHEN DELETION-GRIDDY REACHES 10 LETTERS..???? or something
@@ -28,7 +28,7 @@ async function purgeComment(formID, id) {
 }
 //---------------------------------------------------------------------
 exports.handler = async (event) => {
-    const client = new NetlifyAPI(process.env.NETLIFY_API_ACCESS_TOKEN)
+    // const client = new NetlifyAPI(process.env.NETLIFY_API_ACCESS_TOKEN)
 
     const {
         theFormID,

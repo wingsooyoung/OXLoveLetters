@@ -61,8 +61,8 @@
         }
 
         await postData('/.netlify/functions/submission-created', finalData)
-            .then(data => {
-                console.log("postData to submission-created endpoint was a SUCCESS: " + JSON.stringify(data))
+            .then(finalData => {
+                console.log("postData to submission-created endpoint was a SUCCESS: " + JSON.stringify(finalData))
             }).catch(error => {
                 console.log(error)
                 window.alert("postData to submission-created endpoint was a FAILURE")
