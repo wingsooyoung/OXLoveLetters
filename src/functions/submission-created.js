@@ -24,7 +24,7 @@ function purgeComment(formID, id) {
         .catch((error) => console.log("Error Message: " + error));
 }
 //---------------------------------------------------------------------
-exports.handler = async function (event, context, callback) {
+exports.handler = async (event) => {
     // Get data off the event body
     const {
         theFormID,
@@ -32,10 +32,12 @@ exports.handler = async function (event, context, callback) {
     } = JSON.parse(event.body)
 
     // letterIDs.forEach(purgeComment(theFormID))
-    for (const thisID of letterIDs) {
-        await purgeComment(theFormID, thisID)
+    async function doThis() {
+        for (const thisID of letterIDs) {
+            await purgeComment(theFormID, thisID)
+        }
+        return "cool"
     }
-
 
     //below here is just log checking!
 
@@ -43,10 +45,21 @@ exports.handler = async function (event, context, callback) {
 
     console.log(bodyAlt)
 
-    callback(null, {
-        statusCode: 200,
-        body: "sub create func worked! conga rat my dude"
-    });
+    return doThis()
+        .then((res) => {
+            // Log the success into our function log
+            console.log(`doThis function worked! ${res} `)
+            // return with a 200 status and a stringified JSON object we get from the Sanity API
+            return { statusCode: 200, body: "this is so sick" };
+        })
+        .catch(err => {
+            // If there's an error, log it
+            // and return a 500 error and a JSON string of the error
+            console.log(err)
+            return {
+                statusCode: 500, body: JSON.stringify(err)
+            }
+        })
 
 }
 
