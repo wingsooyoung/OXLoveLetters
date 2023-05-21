@@ -60,17 +60,13 @@
             letterIDs
         }
 
-        //postData('/.netlify/functions/submission-created', finalData) replace when testing done
-        postData('https://eoluzosc67e82zu.m.pipedream.net', finalData)
+        postData('/.netlify/functions/submission-created', finalData)
             .then(data => {
-                // When post is successful...
-                console.log("postData to submission-created endpoint was a SUCCESS: " +data)
-
+                console.log("postData to submission-created endpoint was a SUCCESS: " + data)
             }).catch(error => {
-            // When errors happen, do something with them
-            console.log(error)
-            window.alert("postData to submission-created endpoint was a FAILURE")
-        });
+                console.log(error)
+                window.alert("postData to submission-created endpoint was a FAILURE")
+            });
     }
 
     async function postData(url = '', data = {}) {
