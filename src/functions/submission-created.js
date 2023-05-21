@@ -31,6 +31,7 @@ exports.handler = async (event) => {
         letterIDs
     } = JSON.parse(event.body)
 
+    console.log("this is typeof letterIDs "+typeof letterIDs)
     // letterIDs.forEach(purgeComment(theFormID))
     async function doThis() {
         for (const thisID in letterIDs) {
