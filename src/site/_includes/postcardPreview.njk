@@ -63,7 +63,7 @@
         postData('/.netlify/functions/submission-created', finalData)
             .then(data => {
                 // When post is successful...
-                console.log("postData to submission-created endpoint was a SUCCESS")
+                console.log("postData to submission-created endpoint was a SUCCESS: " +data)
 
             }).catch(error => {
             // When errors happen, do something with them
@@ -74,7 +74,7 @@
 
     async function postData(url = '', data = {}) {
         // A wrapper function for standard JS fetch
-        const response = await fetch(url, {
+        return await fetch(url, {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
@@ -84,8 +84,6 @@
             },
             body: JSON.stringify(data)
         });
-
-        return response.json(); // parses JSON response into native JavaScript objects
     }
 
     //once submit is completed, THEN trigger move to deletiongriddy
