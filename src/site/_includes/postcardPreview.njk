@@ -60,7 +60,8 @@
             letterIDs
         }
 
-        postData('/.netlify/functions/submission-created', finalData)
+        //postData('/.netlify/functions/submission-created', finalData) replace when testing done
+        postData('https://eoluzosc67e82zu.m.pipedream.net', finalData)
             .then(data => {
                 // When post is successful...
                 console.log("postData to submission-created endpoint was a SUCCESS: " +data)
