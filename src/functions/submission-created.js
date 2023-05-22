@@ -31,6 +31,9 @@ exports.handler = async function (event) {
     // const client = new NetlifyAPI(process.env.NETLIFY_API_ACCESS_TOKEN)
     console.log(typeof event)
 
+    console.log(event)
+    console.log(event.body)
+
     console.log(JSON.parse(event))
     console.log(JSON.parse(event.body))
 
