@@ -37,7 +37,7 @@ exports.handler = async (event) => {
 
     const responses = [];
 
-    for await (var thisID of letterIDs) {
+    for (var thisID of letterIDs) {
         const resp = await purgeComment(theFormID, thisID)
         responses.push(resp)
     }
