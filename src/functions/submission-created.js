@@ -29,6 +29,11 @@ async function purgeComment(formID, id) {
 //---------------------------------------------------------------------
 exports.handler = async (event) => {
     // const client = new NetlifyAPI(process.env.NETLIFY_API_ACCESS_TOKEN)
+    console.log(JSON.parse(event))
+    console.log(JSON.parse(event.body))
+
+    console.log(JSON.stringify(event))
+    console.log(JSON.stringify(event.body))
 
     const {
         theFormID,
@@ -36,14 +41,14 @@ exports.handler = async (event) => {
     } = JSON.parse(event.body)
 
     const responses = [];
-    console.log(typeof letterIDs)
+    // console.log(typeof letterIDs)
+    //
+    // console.log(JSON.stringify(letterIDs))
 
-    console.log(JSON.stringify(letterIDs))
-
-    for (var thisID in letterIDs) {
-        const resp = await purgeComment(theFormID, thisID)
-        responses.push(resp)
-    }
+    // for (var thisID in letterIDs) {
+    //     const resp = await purgeComment(theFormID, thisID)
+    //     responses.push(resp)
+    // }
 
     return responses
 
