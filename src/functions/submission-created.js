@@ -27,8 +27,10 @@ async function purgeComment(formID, id) {
 
 }
 //---------------------------------------------------------------------
-exports.handler = async (event) => {
+exports.handler = async function (event) {
     // const client = new NetlifyAPI(process.env.NETLIFY_API_ACCESS_TOKEN)
+    console.log(typeof event)
+
     console.log(JSON.parse(event))
     console.log(JSON.parse(event.body))
 
