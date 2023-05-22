@@ -1,9 +1,20 @@
 #griddy {
-    /* code */
+    background: #74b7f191;
+    padding: 4px 30px;
+    border-radius: 1rem;
+    outline: 8px ridge rgb(114 50 220 / 60%);
+    outline-offset: 5px;
+}
+
+.griddywrap {
+    margin: 4px auto;
 }
 
 #deleteL {
     width: max-content;
+    margin: 11px auto;
+    grid-column-start: 1;
+    grid-column-end: 5;
 }
 
 #deletiongriddy {
@@ -14,6 +25,11 @@
     margin-right: auto;
     display: grid;
     grid-auto-columns: 25% 25% 25% 25%;
+    background: #ff7f508f;
+    outline: 10px ridge coral;
+    border-radius: 1rem;
+    outline-offset: 7px;
+    padding: 0 9px 9px;
 }
 
 .deletiongriddywrap {
@@ -21,7 +37,8 @@
 }
 
 .duperaserclass {
-    /* code */
+    margin: 0 auto;
+    display: block;
 }
 
 #innerDeletionGriddy {
@@ -34,4 +51,8 @@
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.waiting {
+    margin: 8px auto;
 }

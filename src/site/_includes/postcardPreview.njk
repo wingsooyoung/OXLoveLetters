@@ -22,6 +22,7 @@
             <div id="formish-id" class="{{ loop.revindex }}" style="display: none">{{ letter.forid }}</div>
             <br>
             <button class="{{ loop.revindex }}" form="approver" id="approveL" type="submit">Approve</button>
+            <button class="{{ loop.revindex }}" id="undoer" onclick="undoerFunc({{ loop.revindex }})">Undo</button>
             <br><br>
         </div>
 {% else %}
@@ -30,7 +31,7 @@
 {%- endfor -%}
 
 <div id="deletiongriddy">
-    <button id="deleteL" onclick="massDeleter()">Delete (not yet activated)</button>
+    <button id="deleteL" onclick="massDeleter()">Delete All Letters Below</button>
     <div id="innerDeletionGriddy">
 
     </div>
@@ -40,12 +41,18 @@
     <input type="text" name="path" id="path">
     <input type="text" name="signature" id="signature">
     <input type="text" name="nickname" id="nickname">
-{#    make the two below input text instead of textarea and select   #}
     <input type="text" name="lettercontent" id="lettercontent">
     <input type="text" name="members" id="members">
 </form>
 
 <script>
+
+    function duperaser() {
+
+
+    }
+
+
     async function massDeleter() {
         let theLetterID = document.querySelectorAll(`#innerDeletionGriddy #submish-id`);
         var letterIDs = [];
@@ -83,26 +90,21 @@
         });
     }
 
-    //once submit is completed, THEN trigger move to deletiongriddy
     async function deleteFunction(x) {
+        const nodeSelect = document.querySelectorAll(`div.griddywrap.${CSS.escape(x)}`);
+        var ch = nodeSelect.item(0);
+        const cloneThis = ch.cloneNode(true);
 
-        const node = document.querySelectorAll(`div.griddywrap.${CSS.escape(x)}`);
-        // console.log("type: "+typeof node+"; "+"node: "+node)
+        document.getElementById("innerDeletionGriddy").appendChild(cloneThis);
+    }
 
-        var ch = node.item(0);
-        // console.log("type: "+typeof ch+"; "+"node item: "+ch)
+    function undoerFunc(x) {
+        const nodeSelect = document.querySelectorAll(`div.griddywrap.${CSS.escape(x)}`);
+        var ch = nodeSelect.item(0);
+        const cloneThis = ch.cloneNode(true);
 
-        const clone = ch.cloneNode(true);
-        // console.log("type: "+typeof clone+"; "+"cloned node: "+clone)
-
-
-        // const node = document.querySelector(`div.griddywrap.${CSS.escape(indexNumber)}`);
-        // const clone = node.cloneNode(false);
-
-        document.getElementById("innerDeletionGriddy").appendChild(clone);
-
-
-
+        document.getElementById("griddy").appendChild(cloneThis);
+        document.getElementById("innerDeletionGriddy").removeChild(ch);
     }
 
 
@@ -137,9 +139,16 @@
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
         })
-            .then(() => console.log("The letter has been submitted!"))
-            .then(() => deleteFunction(indexNumber))
-            .then(() => ele.parentElement.remove())
+            .then((response) => {
+                if (response.status === 200) {
+                    console.log("The letter has been submitted!")
+                    deleteFunction(indexNumber);
+                    ele.parentElement.remove()
+                } else if (response.status === 429) {
+                    alert("Too many requests, try again later!")
+                } else {
+                    alert("Error: "+response.status)}
+            })
             .catch((error) => alert(error));
     };
 

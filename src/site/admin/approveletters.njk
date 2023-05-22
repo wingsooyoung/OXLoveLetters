@@ -1,18 +1,18 @@
 ---
 title: Moderate Letter Submissions
-date: Last Modified
+date: git Last Modified
 ---
 
 <p style="text-align: center">
-    i get to approve or deny letter submissions as well as preview how they look on the template <br>
-    {{ page.date }}
+    i get to approve or deny letter submissions as well as preview how they look on the template <br><br>
+    {{ page.date.toUTCString() }}
 </p>
 
-<div>
+<div style="margin-bottom: 25px;">
     <button onclick="duperaser()" class="duperaserclass" >RUN Duplicate Letter Eraser (don't click yet - not working)</button>
 </div>
 
-<div id="griddy">
+<div id="griddy" style="width: 85%!important;">
     {% include "postcardPreview.njk" %}
 </div>
 

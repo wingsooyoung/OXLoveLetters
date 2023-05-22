@@ -239,12 +239,7 @@ try {
     console.log("error message: " + e)
 }
 
-function duperaser() {
-    let griddy = document.getElementsByClassName("griddywrap");
 
-    const result = exportSubmissions["/pages/writeletters/"].group(({ ip }) => ip);
-
-}
 
 
 
