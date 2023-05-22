@@ -21,10 +21,10 @@ const {
 async function purgeComment(formID, id) {
     var url = `https://api.netlify.com/api/v1/forms/${formID}/submissions/${id}?access_token=${NETLIFY_AUTH_TOKEN}`;
 
-    await fetch(url, {method: "DELETE"})
-        .then((r) => console.log(r))
+    return await fetch(url, {method: "DELETE"})
         .then(() => console.log("deletion successful!"))
         .catch((error) => console.log("Error Message: " + error));
+
 }
 //---------------------------------------------------------------------
 exports.handler = async (event) => {
@@ -37,24 +37,23 @@ exports.handler = async (event) => {
 
     const responses = [];
 
-    return (async () => {
-        for await (var thisID of letterIDs) {
-            const resp = await purgeComment(theFormID, thisID)
-            responses.push(resp)
-        }
-        return responses
+    for await (var thisID of letterIDs) {
+        const resp = await purgeComment(theFormID, thisID)
+        responses.push(resp)
+    }
+    return responses
 
-    })
-        .then((res) => {
-            console.log(`doThis function worked! ${res} `)
-            return { statusCode: 200, body: "this is so sick" };
-        })
-        .catch(err => {
-            console.log("errormesage = " +err)
-            return {
-                statusCode: 500, body: JSON.stringify(err)
-            }
-        })
+
+        // .then((res) => {
+        //     console.log(`doThis function worked! ${res} `)
+        //     return { statusCode: 200, body: "this is so sick" };
+        // })
+        // .catch(err => {
+        //     console.log("errormesage = " +err)
+        //     return {
+        //         statusCode: 500, body: JSON.stringify(err)
+        //     }
+        // })
 
 }
 
