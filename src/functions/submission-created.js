@@ -33,16 +33,18 @@ exports.handler = async (event) => {
     const {
         theFormID,
         letterIDs
-    } = event.body
+    } = JSON.parse(event.body)
 
     const responses = [];
     console.log(typeof letterIDs)
+
     console.log(JSON.stringify(letterIDs))
 
     for (var thisID in letterIDs) {
         const resp = await purgeComment(theFormID, thisID)
         responses.push(resp)
     }
+
     return responses
 
 
