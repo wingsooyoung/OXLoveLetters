@@ -71,7 +71,9 @@
         await postData('https://eoluzosc67e82zu.m.pipedream.net', finalData)
             .then(finalData => {
                 console.log("postData to submission-created endpoint was a SUCCESS: " + JSON.stringify(finalData))
-            }).catch(error => {
+            })
+            .then((res) => alert(res.body))
+            .catch(error => {
                 console.log(error)
                 window.alert("postData to submission-created endpoint was a FAILURE")
             });
