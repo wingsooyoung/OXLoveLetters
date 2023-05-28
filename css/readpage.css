@@ -1,5 +1,9 @@
 /*READ*/
 
+[aria-current] {
+    background-color: #eee;
+}
+
 /*postcard*/
 .grid-container {
     display: grid;

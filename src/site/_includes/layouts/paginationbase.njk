@@ -1,0 +1,109 @@
+{#---#}
+{#pagination:#}
+{#data: collections.exampleData#}
+{#size: 100#}
+{#reverse: true#}
+{#---#}
+
+{#    {%- for item in pagination.items %}#}
+{#        <div style="background-color: #00f7ff; margin: 10px; width: 100px;">{{ item.text }}</div>#}
+{#    {% endfor -%}#}
+
+{#    {% if pagination.href.previous %}#}
+{#      <span><a href="{{ pagination.href.previous }}">&lt;</a></span>#}
+{#    {% endif %}#}
+
+{#    {% if pagination.href.next %}#}
+{#      <span><a href="{{ pagination.href.next }}">&gt;</a></span>#}
+{#    {% endif %} #}
+---
+layout: base.njk
+title: Read Letters but paginated (i hope)
+---
+
+<nav aria-labelledby="nav-for-page">
+    <h2 id="nav-for-page">nav links for read pages</h2>
+    <ol>
+        <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">First</a>{% else %}First{% endif %}</li>
+        <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+        {%- for pageEntry in pagination.pages %}
+            <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
+        {%- endfor %}
+        <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+        <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Last</a>{% else %}Last{% endif %}</li>
+    </ol>
+</nav>
+
+<div class="selectering">
+    <label for="filterSelect">Read letters written to:</label>
+    <div class="select-wrapper">
+        <select id="filterSelect" name="filterSelect">
+            <option selected>(view all letters)</option>
+            <option>All Members</option>
+            <option>Jaehan</option>
+            <option>Hwichan</option>
+            <option>Sebin</option>
+            <option>Hangyeom</option>
+            <option>Taedong</option>
+            <option>Xen</option>
+            <option>Jehyun</option>
+            <option>Kevin</option>
+            <option>Junghoon</option>
+            <option>Hyuk</option>
+            <option>Yechan</option>
+        </select>
+    </div>
+</div>
+<div class="grid-container">
+    <div class="filter-container" style="display: none;">
+        <div class="container">
+            <div class="filterer">
+                <span id="filterTitle" onclick="filterToggle()">FILTER <i class="ph-bold ph-plus"></i></span>
+            </div>
+            <div id="buttons" style="visibility: hidden">
+                <div class="row1">
+                    <button class="filter" onclick="myFilter('All')">OMEGA X</button>
+                    <button class="filter" onclick="myFilter('Jaehan')">Jaehan</button>
+                    <button class="filter" onclick="myFilter('Hwichan')">Hwichan</button>
+                    <button class="filter" onclick="myFilter('Sebin')">Sebin</button>
+                    <button class="filter" onclick="myFilter('Hangyeom')">Hangyeom</button>
+                    <button class="filter" onclick="myFilter('Taedong')">Taedong</button>
+                </div>
+                <div class="row2">
+                    <button class="filter" onclick="myFilter('Xen')">Xen</button>
+                    <button class="filter" onclick="myFilter('Jehyun')">Jehyun</button>
+                    <button class="filter" onclick="myFilter('Kevin')">Kevin</button>
+                    <button class="filter" onclick="myFilter('Junghoon')">Junghoon</button>
+                    <button class="filter" onclick="myFilter('Hyuk')">Hyuk</button>
+                    <button class="filter" onclick="myFilter('Yechan')">Yechan</button>
+                </div>
+            </div>
+
+            <div class="closefilterer">
+                <span style="visibility: hidden" id="filterCloser" onclick="removeFilters()">CLEAR <i class="ph-bold ph-x"></i></span>
+            </div>
+        </div>
+    </div>
+{#    {% include "postcardFinals.njk" %}#}
+    {{ content | safe }}
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <div class="containerboxM grid-item modal-content" id="modal1">
+        <img src="/assets/small%20borders%20postcard.svg" alt="" id="postcardM">
+        <div id="contentboxM" class="template"></div>
+        <div id="nameboxM" class="template"></div>
+        <div id="lettercountM" class="template"></div>
+    </div>
+
+</div>
+
+
+
+

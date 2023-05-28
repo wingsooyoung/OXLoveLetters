@@ -32,3 +32,4 @@ src/site/_data/manual-json/*
 
 
 /dist/
+/node_modules/
