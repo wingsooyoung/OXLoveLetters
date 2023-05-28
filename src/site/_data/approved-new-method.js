@@ -52,10 +52,12 @@ async function requestSubmissions(urlParams) {
             method: "get",
             headers: { "Accept-Encoding": "gzip,deflate,compress" },
         })
+        console.log("site api call result type: "+typeof siteRes.body)
+        console.log("site api call result body: "+ siteRes.body)
 
         // return the total number of items to fetch and the data
         return {
-            total: parseInt(siteRes.body.submission_count, 10),
+            total: parseInt(siteRes.body[1].submission_count, 10),
             data: otherRes.data,
         };
     } catch (err) {
