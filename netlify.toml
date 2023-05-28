@@ -16,8 +16,6 @@ package = "netlify-plugin-form-submissions-twos"
   formNames = "ALL"
   dataDirectory = "src/site/_data"
 
-[[plugins]]
-package = "netlify-plugin-bundle-env"
 
 [[plugins]]
 package = "netlify-plugin-cache"

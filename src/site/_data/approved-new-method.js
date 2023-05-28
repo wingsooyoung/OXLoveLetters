@@ -55,7 +55,7 @@ async function requestSubmissions(urlParams) {
 
         // return the total number of items to fetch and the data
         return {
-            total: parseInt(siteRes.body[1].submission_count, 10),
+            total: parseInt(siteRes.body.submission_count, 10),
             data: otherRes.data,
         };
     } catch (err) {
