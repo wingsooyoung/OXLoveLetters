@@ -7,7 +7,6 @@ pagination:
 permalink: "approved-new-method/page-{{ pagination.pageNumber + 1 }}/"
 ---
 
-
 {%- for item in pagination.items -%}
     <div class="containerbox grid-item" onclick="modalZoom(this)">
         {% if item.data.member === ("Jaehan" or "在汉") %}

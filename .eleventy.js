@@ -30,7 +30,6 @@ module.exports = function(config) {
             input: "src/site",
             output: "dist",
             includes: "_includes",
-            layouts: "_includes/layouts",
             data: "_data"
         },
         templateFormats : ["hbs", "md", "html", "css", "js", "njk"],
