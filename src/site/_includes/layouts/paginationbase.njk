@@ -1,21 +1,3 @@
-{#---#}
-{#pagination:#}
-{#data: collections.exampleData#}
-{#size: 100#}
-{#reverse: true#}
-{#---#}
-
-{#    {%- for item in pagination.items %}#}
-{#        <div style="background-color: #00f7ff; margin: 10px; width: 100px;">{{ item.text }}</div>#}
-{#    {% endfor -%}#}
-
-{#    {% if pagination.href.previous %}#}
-{#      <span><a href="{{ pagination.href.previous }}">&lt;</a></span>#}
-{#    {% endif %}#}
-
-{#    {% if pagination.href.next %}#}
-{#      <span><a href="{{ pagination.href.next }}">&gt;</a></span>#}
-{#    {% endif %} #}
 ---
 layout: layouts/base.njk
 title: Read Letters but paginated (i hope)
