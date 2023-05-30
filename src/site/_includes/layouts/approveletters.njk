@@ -13,6 +13,24 @@ date: git Last Modified
     <button onclick="duperaser()" class="duperaserclass" >RUN Duplicate Letter Eraser (don't click yet - not working)</button>
 </div>
 
+<div aria-labelledby="nav-for-page">
+    {% if pagination.href.first %}
+        <span><a href="{{ pagination.href.first }}" class="navLink">&#8810; </a></span>
+    {% endif %}
+    {% if pagination.href.previous %}
+        <span><a href="{{ pagination.href.previous }}"> &lt; </a></span>
+    {% endif %}
+    {%- for pageEntry in pagination.pages %}
+        <span><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}> Page {{ loop.index }} </a></span>
+    {%- endfor %}
+    {% if pagination.href.next %}
+        <span><a href="{{ pagination.href.next }}"> &gt; </a></span>
+    {% endif %}
+    {% if pagination.href.last %}
+        <span><a href="{{ pagination.href.last }}"> &#8811;</a></span>
+    {% endif %}
+</div>
+
 <div id="griddy" style="width: 85%!important;">
     {{ content | safe }}
 </div>

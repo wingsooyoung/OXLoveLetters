@@ -622,5 +622,9 @@ div[data-netlify-identity-button] {
 }
 
 
+.navLink {
+    text-decoration: underline;
+}
+
 
 

@@ -100,7 +100,7 @@
 
           {%- for page in collections.pages -%}
               {% if page.data.title == 'Read Letters' %}
-                  <a href="{{ page.url }}"><i class="ph-bold ph-envelope-open"></i><span class="nav-text"> READ LETTERS</span></a>
+                  <a href="/pages/readletters/page-1/"><i class="ph-bold ph-envelope-open"></i><span class="nav-text"> READ LETTERS</span></a>
               {% elseif page.data.title == 'Write Letters' %}
                   <a href="{{ page.url }}"><i class="ph-bold ph-pencil-line"></i><span class="nav-text"> WRITE A LETTER</span></a>
               {% endif %}
@@ -181,7 +181,7 @@
                             netlifyIdentity.logout();
                             netlifyIdentity.open();
                         } else {
-                            console.log("SUCCESS: the token hasn't expired, yet and has been refreshed")
+                            console.log("SUCCESS: the token hasn't expired yet and has been refreshed")
                         }
                     }
                     setTimeout(logInOut, 1000)
