@@ -9,27 +9,27 @@ permalink: "pages/readletters/page-{{ pagination.pageNumber + 1 }}/"
 
 {%- for item in pagination.items -%}
     <div class="containerbox grid-item" onclick="modalZoom(this)">
-        {% if (item.data.member == "Jaehan") or (item.data.member == "在汉") %}
+        {% if (item.data.members == "Jaehan") or (item.data.members == "在汉") %}
             <img src="/assets/base/jaehanbase.svg" alt="" id="postcard">
-        {% elseif item.data.member == 'Hwichan' %}
+        {% elseif item.data.members == 'Hwichan' %}
             <img src="/assets/base/hwichanbase.svg" alt="" id="postcard">
-        {% elseif (item.data.member == "Sebin") or (item.data.member == "سيبين") %}
+        {% elseif (item.data.members == "Sebin") or (item.data.members == "سيبين") %}
             <img src="/assets/base/sebinbase.svg" alt="" id="postcard">
-        {% elseif (item.data.member == "Hangyeom") or (item.data.member == "هانجيوم") %}
+        {% elseif (item.data.members == "Hangyeom") or (item.data.members == "هانجيوم") %}
             <img src="/assets/base/hangyeombase.svg" alt="" id="postcard">
-        {% elseif item.data.member == 'Taedong' %}
+        {% elseif item.data.members == 'Taedong' %}
             <img src="/assets/base/taedongbase.svg" alt="" id="postcard">
-        {% elseif item.data.member == 'Xen' %}
+        {% elseif item.data.members == 'Xen' %}
             <img src="/assets/base/xenbase.svg" alt="" id="postcard">
-        {% elseif item.data.member == 'Jehyun' %}
+        {% elseif item.data.members == 'Jehyun' %}
             <img src="/assets/base/jehyunbase.svg" alt="" id="postcard">
-        {% elseif item.data.member == 'Kevin' %}
+        {% elseif item.data.members == 'Kevin' %}
             <img src="/assets/base/kevinbase.svg" alt="" id="postcard">
-        {% elseif (item.data.member == "Junghoon") or (item.data.member == "正勋") %}
+        {% elseif (item.data.members == "Junghoon") or (item.data.members == "正勋") %}
             <img src="/assets/base/junghoonbase.svg" alt="" id="postcard">
-        {% elseif item.data.member == 'Hyuk' %}
+        {% elseif item.data.members == 'Hyuk' %}
             <img src="/assets/base/hyukbase.svg" alt="" id="postcard">
-        {% elseif (item.data.member == "Yechan") or (item.data.member == "叶蝉") or (item.data.member == "叶禅") %}
+        {% elseif (item.data.members == "Yechan") or (item.data.members == "叶蝉") or (item.data.members == "叶禅") %}
             <img src="/assets/base/yechanbase.svg" alt="" id="postcard">
         {% else %}
             <img src="/assets/small borders postcard.svg" alt="" id="postcard">
@@ -43,7 +43,7 @@ permalink: "pages/readletters/page-{{ pagination.pageNumber + 1 }}/"
         {% endif %}
 
         <div id="lettercount" class="template"> {{ loop.revindex }} </div>
-        <div id="membersbox" class="membersbox" style="display: none">{% if item.data.member === ("Jaehan" or "在汉") %}Jaehan{% elseif item.data.member === 'Hwichan' %}Hwichan{% elseif item.data.member === ("Sebin" or "سيبين") %}Sebin{% elseif item.data.member === ("Hangyeom" or "هانجيوم") %}Hangyeom{% elseif item.data.member === 'Taedong' %}Taedong{% elseif item.data.member === 'Xen' %}Xen{% elseif item.data.member === 'Jehyun' %}Jehyun{% elseif item.data.member === 'Kevin' %}Kevin{% elseif item.data.member === ("Junghoon" or "正勋") %}Junghoon{% elseif item.data.member === 'Hyuk' %}Hyuk{% elseif item.data.member === ("Yechan" or "叶蝉" or "叶禅") %}Yechan{% else %}ALL{% endif %}
+        <div id="membersbox" class="membersbox" style="display: none">{% if item.data.members === ("Jaehan" or "在汉") %}Jaehan{% elseif item.data.members === 'Hwichan' %}Hwichan{% elseif item.data.members === ("Sebin" or "سيبين") %}Sebin{% elseif item.data.members === ("Hangyeom" or "هانجيوم") %}Hangyeom{% elseif item.data.members === 'Taedong' %}Taedong{% elseif item.data.members === 'Xen' %}Xen{% elseif item.data.members === 'Jehyun' %}Jehyun{% elseif item.data.members === 'Kevin' %}Kevin{% elseif item.data.members === ("Junghoon" or "正勋") %}Junghoon{% elseif item.data.members === 'Hyuk' %}Hyuk{% elseif item.data.members === ("Yechan" or "叶蝉" or "叶禅") %}Yechan{% else %}ALL{% endif %}
         </div>
     </div>
 {% else %}

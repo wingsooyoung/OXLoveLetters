@@ -24,15 +24,15 @@ package = "netlify-plugin-cache"
     paths = [ ".cache" ]
 
 [[redirects]]
-from = "/admin/approveletters"
-to = "/admin/approveletters"
+from = "/admin/*"
+to = "/admin/*"
 force = true
 status = 200
   [redirects.conditions]
   Role = [ "admin" ]
 
 [[redirects]]
-from = "/admin/approveletters"
+from = "/admin/*"
 to = "/pages/notallowed"
 force = true
 status = 401
