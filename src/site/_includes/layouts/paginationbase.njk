@@ -4,7 +4,7 @@ title: Read Letters
 ---
 
 <div aria-labelledby="nav-for-page">
-    {% if pagination.href.first %}
+    {% if page.url !== pagination.href.first %}
         <span><a href="{{ pagination.href.first }}" class="navLink">&#8810; </a></span>
     {% endif %}
     {% if pagination.href.previous %}

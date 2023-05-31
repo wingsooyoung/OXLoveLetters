@@ -624,6 +624,10 @@ div[data-netlify-identity-button] {
 
 .navLink {
     text-decoration: underline;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-size: math;
 }
 
 
