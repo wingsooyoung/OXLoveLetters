@@ -29,7 +29,7 @@ x    font-family: 'Patrick Hand', cursive;
 x    font-family: 'Patrick Hand SC', cursive;
 
 */
- @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kalam:wght@300;400;700&family=Mali:wght@400;500;600;700&family=Single+Day&family=Stylish&family=Fuzzy+Bubbles:wght@400;700&family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300;400;500;600;700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kalam:wght@300;400;700&family=Mali:wght@400;500;600;700&family=Single+Day&family=Stylish&family=Fuzzy+Bubbles:wght@400;700&family=Patrick+Hand&family=Patrick+Hand+SC&Konkhmer+Sleokchher&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 
 /* essentials */
@@ -621,13 +621,48 @@ div[data-netlify-identity-button] {
     color: var(--pink3);
 }
 
+.centered {
+    text-align: center;
+}
+#pagNavCentered {
+/*    refers to same element as above   */
+}
 
-.navLink {
-    text-decoration: underline;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    font-size: math;
+#pagNavDiv {
+    display: inline-block;
+}
+
+#pagNavDiv a.navLink {
+    font-family: 'Shantell Sans', cursive;
+    font-weight: bold;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+#pagNavDiv a#leftArrow {
+
+}
+#pagNavDiv a#rightArrow {
+
+}
+#pagNavDiv a.activated {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+#pagNavDiv a:hover:not(.activated) {background-color: #ddd;}
+#pagNavDiv a:hover.activated {background-color: #367A38FF;}
+
+#pagNavDiv a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#pagNavDiv a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 

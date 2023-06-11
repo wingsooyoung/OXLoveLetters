@@ -3,22 +3,20 @@ layout: layouts/base.njk
 title: Read Letters
 ---
 
-<div aria-labelledby="nav-for-page">
-    {% if page.url !== pagination.href.first %}
-        <span><a href="{{ pagination.href.first }}" class="navLink">&#8810; </a></span>
-    {% endif %}
-    {% if pagination.href.previous %}
-        <span><a href="{{ pagination.href.previous }}"> &lt; </a></span>
-    {% endif %}
-    {%- for pageEntry in pagination.pages %}
-        <span><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}> Page {{ loop.index }} </a></span>
-    {%- endfor %}
-    {% if pagination.href.next %}
-        <span><a href="{{ pagination.href.next }}"> &gt; </a></span>
-    {% endif %}
-    {% if pagination.href.last %}
-        <span><a href="{{ pagination.href.last }}"> &#8811;</a></span>
-    {% endif %}
+<div class="centered" id="pagNavCentered">
+    <div aria-labelledby="nav-for-page" id="pagNavDiv">
+        {% if page.url !== pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}" class="navLink" id="leftArrow">&laquo;</a>
+        {% endif %}
+
+        {%- for pageEntry in pagination.pages %}
+            <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page" class="navLink activated" {% else %} class="navLink"{% endif %}> {{ loop.index }} </a>
+        {%- endfor %}
+
+        {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}" class="navLink" id="rightArrow">&raquo;</a>
+        {% endif %}
+    </div>
 </div>
 
 <div class="selectering">

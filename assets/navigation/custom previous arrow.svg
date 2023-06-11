@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 88.835 88.835" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="256" y1="10" x2="256" y2="502" id="gradient-0">
+      <stop offset="0" style="stop-color: rgba(0, 0, 0, 1)"/>
+      <stop offset="1" style="stop-color: rgba(0, 0, 0, 1)"/>
+    </linearGradient>
+  </defs>
+  <g id="SVGRepo_bgCarrier" stroke-width="0" transform="matrix(0.124235, 0, 0, 0.124235, 13.877398, 13.614319)" style=""/>
+  <rect fill="#d1c4e9" strokewidth="0" style="" x="1.77" y="1.77" width="87.065" height="87.065" rx="330.02" ry="330.02"/>
+  <g id="SVGRepo_iconCarrier" transform="matrix(0.176962, 0, 0, 0.176962, 0, 0.000001)" style="">
+    <circle class="cls-1" cx="255.987" cy="255.987" r="237.339" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(255, 255, 255); stroke-width: 16.9528px;"/>
+    <circle class="cls-1" cx="256" cy="256" r="246" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(0, 0, 0); stroke-width: 5.65093px;"/>
+    <polyline class="cls-1" points="155.576 137.874 311.216 265.021 155.576 392.166" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 39.5565px;" transform="matrix(-1, 0, 0, -1, 466.791882, 532.674356)" bx:origin="0.5 0.50518"/>
+  </g>
+</svg>
