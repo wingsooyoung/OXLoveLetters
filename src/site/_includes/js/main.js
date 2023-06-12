@@ -239,7 +239,39 @@ try {
     console.log("error message: " + e)
 }
 
+let myButton = document.getElementById("myTopBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
+    } else {
+        myButton.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
+
+
+
+let otherBtn = document.getElementById("myBtmBtn");
+window.onscroll = function() {scrollDown()};
+function scrollDown() { //if at bottom of page, then hide, otherwise show
+    // console.log("sc h "+document.documentElement.scrollHeight)
+    // console.log("scr t "+Math.round(document.documentElement.scrollTop))
+    // console.log("cl h "+document.documentElement.clientHeight)
+    if (document.documentElement.scrollHeight - Math.round(document.documentElement.scrollTop) === document.documentElement.clientHeight) {
+        otherBtn.style.display = "none";
+    } else {
+        otherBtn.style.display = "block";
+    }
+}
+function btmFunction() {
+    document.body.scrollTop = document.body.scrollHeight; // For Safari
+    document.documentElement.scrollTop = document.documentElement.scrollHeight; // For Chrome, Firefox, IE and Opera
+}
 
 
 
