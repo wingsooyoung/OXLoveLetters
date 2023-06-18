@@ -256,8 +256,10 @@ function scrollFunction() {
     }
 }
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    // document.body.scrollTop = 0; // For Safari
+    // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    let headerEl = document.getElementById("bannerA");
+    headerEl.scrollIntoView();
 }
 
 
@@ -278,8 +280,8 @@ function scrollDown() { //if at bottom of page, then hide, otherwise show
     }
 }
 function btmFunction() {
-    document.body.scrollTop = document.body.scrollHeight; // For Safari
-    document.documentElement.scrollTop = document.documentElement.scrollHeight; // For Chrome, Firefox, IE and Opera
+    let footerEl = document.getElementById("disclaimer");
+    footerEl.scrollIntoView()
 }
 
 
