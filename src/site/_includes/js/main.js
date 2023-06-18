@@ -23,13 +23,15 @@ function yesCheck() {
 function noCheck() {
     nname.setAttribute('readonly', 'readonly')
 }
-nname.addEventListener("input", (event) => {
-    if (nname.validity.valueMissing) {
-        nname.setCustomValidity("Please enter your name or select 'No' above!");
-    } else {
-        nname.setCustomValidity("");
-    }
-});
+if (nname != null) {
+    nname.addEventListener("input", (event) => {
+        if (nname.validity.valueMissing) {
+            nname.setCustomValidity("Please enter your name or select 'No' above!");
+        } else {
+            nname.setCustomValidity("");
+        }
+    });
+}
 
 function toggleAnnouncement(btn) {
     const outerDiv = document.getElementById("special-announcement");
@@ -89,10 +91,12 @@ function myLoadFunc() {
     }
 }
 function myEndFunction() {
-    if (!aboutModal.classList.contains("hidden")) {
-        aboutModal.classList.toggle("hidden");
+    if (aboutModal.classList != null) {
+        if (!aboutModal.classList.contains("hidden")) {
+            aboutModal.classList.toggle("hidden");
+        }
+        console.log("you CANNOT see the modal");
     }
-    console.log("you CANNOT see the modal");
 }
 
 var closer = document.getElementsByClassName("closer")[0];
