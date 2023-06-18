@@ -248,10 +248,10 @@ window.onscroll = function() {scrollFunction(); scrollDown()};
 function scrollFunction() {
     // console.log("scr t "+Math.round(document.documentElement.scrollTop))
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        console.log("scrollTop > 20")
+        // console.log("scrollTop > 20")
         myButton.style.display = "block";
     } else {
-        console.log("scrollTop <= 20")
+        // console.log("scrollTop <= 20")
         myButton.style.display = "none";
     }
 }
@@ -266,16 +266,15 @@ function topFunction() {
 
 
 let otherBtn = document.getElementById("myBtmBtn");
-window.onscroll = function() {};
 function scrollDown() { //if at bottom of page, then hide, otherwise show
     // console.log("sc h "+document.documentElement.scrollHeight)
     // console.log("scr t "+Math.round(document.documentElement.scrollTop))
     // console.log("cl h "+document.documentElement.clientHeight)
     if (document.documentElement.scrollHeight - Math.round(document.documentElement.scrollTop) === document.documentElement.clientHeight) {
-        console.log("reached the bottom")
+        // console.log("reached the bottom")
         otherBtn.style.display = "none";
     } else {
-        console.log("not at the bottom")
+        // console.log("not at the bottom")
         otherBtn.style.display = "block";
     }
 }
