@@ -273,6 +273,8 @@ function scrollDown() { //if at bottom of page, then hide, otherwise show
     if (document.documentElement.scrollHeight - Math.round(document.documentElement.scrollTop) === document.documentElement.clientHeight) {
         // console.log("reached the bottom")
         otherBtn.style.display = "none";
+    } else if (document.documentElement.scrollHeight - Math.round(document.documentElement.scrollTop) === document.documentElement.clientHeight + 1) {
+        otherBtn.style.display = "none";
     } else {
         // console.log("not at the bottom")
         otherBtn.style.display = "block";
