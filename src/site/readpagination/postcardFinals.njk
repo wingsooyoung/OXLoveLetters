@@ -42,7 +42,10 @@ permalink: "pages/readletters/page-{{ pagination.pageNumber + 1 }}/"
             <div id="namebox" class="template">FOR X</div>
         {% endif %}
 
-        <div id="lettercount" class="template"> {{ loop.revindex }} </div>
+
+        {#{{ loop.revindex }}#}
+        <div id="lettercount" class="template">  </div>
+
         <div id="membersbox" class="membersbox" style="display: none">{% if item.data.members === ("Jaehan" or "在汉") %}Jaehan{% elseif item.data.members === 'Hwichan' %}Hwichan{% elseif item.data.members === ("Sebin" or "سيبين") %}Sebin{% elseif item.data.members === ("Hangyeom" or "هانجيوم") %}Hangyeom{% elseif item.data.members === 'Taedong' %}Taedong{% elseif item.data.members === 'Xen' %}Xen{% elseif item.data.members === 'Jehyun' %}Jehyun{% elseif item.data.members === 'Kevin' %}Kevin{% elseif item.data.members === ("Junghoon" or "正勋") %}Junghoon{% elseif item.data.members === 'Hyuk' %}Hyuk{% elseif item.data.members === ("Yechan" or "叶蝉" or "叶禅") %}Yechan{% else %}ALL{% endif %}
         </div>
     </div>

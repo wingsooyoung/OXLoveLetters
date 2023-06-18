@@ -75,12 +75,12 @@ async function getAllPosts() {
 
     // if we have a cache, return cached data
     if (cachedItems) {
-        console.log("Blogposts from cache");
+        console.log("Blogposts from letter cache");
         return cachedItems;
     }
 
     // if we do not, make queries
-    console.log("Blogposts from API");
+    console.log("Blogposts from letter API");
 
     // variables
     const allRequests = [];
@@ -90,7 +90,7 @@ async function getAllPosts() {
     // make first request and marge results with array
     const request = await requestSubmissions();
     apiData.push(...request.data);
-    console.log(request.total)
+    console.log("request.total for letter-form = "+request.total)
     // calculate how many additional requests we need
     additionalRequests = Math.ceil(request.total / ITEMS_PER_REQUEST) - 1;
 
