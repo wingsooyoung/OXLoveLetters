@@ -40,7 +40,7 @@ title: Read Letters
     <div aria-labelledby="nav-for-page" id="pagNavDiv">
         {% if pagination.href.first %}
             <span class="pagNavSpan">
-                <a href="{{ pagination.href.first }}" class="navArrow pagNavButton">
+                <a href="{{ pagination.href.first }}" class="navArrow pagNavButton navFirst">
                     <svg viewBox="0 0 14.565 12.001" width="14.565" height="12.001">
                         <path d="M 7.476 5.535 L 12.817 0.194 C 13.074 -0.064 13.492 -0.064 13.749 0.194 L 14.373 0.817 C 14.629 1.074 14.629 1.491 14.373 1.749 L 10.141 6 L 14.373 10.254 C 14.629 10.511 14.629 10.927 14.373 11.185 L 13.749 11.807 C 13.491 12.065 13.074 12.065 12.817 11.807 L 7.476 6.467 C 7.218 6.209 7.218 5.792 7.476 5.535 Z" style=""></path>
                         <path d="M 0.193 5.535 L 5.534 0.194 C 5.791 -0.064 6.209 -0.064 6.466 0.194 L 7.09 0.817 C 7.346 1.074 7.346 1.491 7.09 1.749 L 2.858 6 L 7.09 10.254 C 7.346 10.511 7.346 10.927 7.09 11.185 L 6.466 11.807 C 6.208 12.065 5.791 12.065 5.534 11.807 L 0.193 6.467 C -0.065 6.209 -0.065 5.792 0.193 5.535 Z" style=""></path>
@@ -51,7 +51,7 @@ title: Read Letters
 
         {% if page.url !== pagination.href.previous %}
             <span class="pagNavSpan">
-                <a href="{{ pagination.href.previous }}" class="navArrow pagNavButton">
+                <a href="{{ pagination.href.previous }}" class="navArrow pagNavButton navLeft">
                     <svg viewBox="0 0 7.282 12.001" width="7.282" height="12.001">
                         <path d="M 0.193 5.535 L 5.534 0.194 C 5.791 -0.064 6.209 -0.064 6.466 0.194 L 7.09 0.817 C 7.346 1.074 7.346 1.491 7.09 1.749 L 2.858 6 L 7.09 10.254 C 7.346 10.511 7.346 10.927 7.09 11.185 L 6.466 11.807 C 6.208 12.065 5.791 12.065 5.534 11.807 L 0.193 6.467 C -0.065 6.209 -0.065 5.792 0.193 5.535 Z" style=""></path>
                     </svg>
@@ -65,7 +65,7 @@ title: Read Letters
 
         {% if pagination.href.next %}
             <span class="pagNavSpan">
-                <a href="{{ pagination.href.next }}" class="navArrow pagNavButton">
+                <a href="{{ pagination.href.next }}" class="navArrow pagNavButton navRight">
                     <svg viewBox="0 0 7.282 12.001" width="7.282" height="12.001">
                       <path d="M 0.193 6.466 L 5.534 11.807 C 5.791 12.065 6.209 12.065 6.466 11.807 L 7.09 11.184 C 7.346 10.927 7.346 10.51 7.09 10.252 L 2.858 6.001 L 7.09 1.747 C 7.346 1.49 7.346 1.074 7.09 0.816 L 6.466 0.194 C 6.208 -0.064 5.791 -0.064 5.534 0.194 L 0.193 5.534 C -0.065 5.792 -0.065 6.209 0.193 6.466 Z" style="" transform="matrix(-1, 0, 0, -1, 7.2815, 12.000999)"></path>
                     </svg>
@@ -75,7 +75,7 @@ title: Read Letters
 
         {% if pagination.href.last %}
             <span class="pagNavSpan">
-                <a href="{{ pagination.href.last }}" class="navArrow pagNavButton">
+                <a href="{{ pagination.href.last }}" class="navArrow pagNavButton navLast">
                   <svg viewBox="0 0 14.565 12.001" width="14.565" height="12.001">
                       <path d="M 0.193 6.466 L 5.534 11.807 C 5.791 12.065 6.209 12.065 6.466 11.807 L 7.09 11.184 C 7.346 10.927 7.346 10.51 7.09 10.252 L 2.858 6.001 L 7.09 1.747 C 7.346 1.49 7.346 1.074 7.09 0.816 L 6.466 0.194 C 6.208 -0.064 5.791 -0.064 5.534 0.194 L 0.193 5.534 C -0.065 5.792 -0.065 6.209 0.193 6.466 Z" style="" transform="matrix(-1, 0, 0, -1, 7.2815, 12.000999)"></path>
                       <path d="M 7.476 6.466 L 12.817 11.807 C 13.074 12.065 13.492 12.065 13.749 11.807 L 14.373 11.184 C 14.629 10.927 14.629 10.51 14.373 10.252 L 10.141 6.001 L 14.373 1.747 C 14.629 1.49 14.629 1.074 14.373 0.816 L 13.749 0.194 C 13.491 -0.064 13.074 -0.064 12.817 0.194 L 7.476 5.534 C 7.218 5.792 7.218 6.209 7.476 6.466 Z" style="" transform="matrix(-1, 0, 0, -1, 21.847499, 12.000999)"></path>
@@ -124,7 +124,7 @@ title: Read Letters
     <div aria-labelledby="nav-for-page" id="pagNavDiv">
         {% if pagination.href.first %}
             <span class="pagNavSpan">
-                <a href="{{ pagination.href.first }}" class="navArrow pagNavButton">
+                <a href="{{ pagination.href.first }}" class="navArrow pagNavButton navFirst">
                     <svg viewBox="0 0 14.565 12.001" width="14.565" height="12.001">
                         <path d="M 7.476 5.535 L 12.817 0.194 C 13.074 -0.064 13.492 -0.064 13.749 0.194 L 14.373 0.817 C 14.629 1.074 14.629 1.491 14.373 1.749 L 10.141 6 L 14.373 10.254 C 14.629 10.511 14.629 10.927 14.373 11.185 L 13.749 11.807 C 13.491 12.065 13.074 12.065 12.817 11.807 L 7.476 6.467 C 7.218 6.209 7.218 5.792 7.476 5.535 Z" style=""></path>
                         <path d="M 0.193 5.535 L 5.534 0.194 C 5.791 -0.064 6.209 -0.064 6.466 0.194 L 7.09 0.817 C 7.346 1.074 7.346 1.491 7.09 1.749 L 2.858 6 L 7.09 10.254 C 7.346 10.511 7.346 10.927 7.09 11.185 L 6.466 11.807 C 6.208 12.065 5.791 12.065 5.534 11.807 L 0.193 6.467 C -0.065 6.209 -0.065 5.792 0.193 5.535 Z" style=""></path>
@@ -135,7 +135,7 @@ title: Read Letters
 
         {% if page.url !== pagination.href.previous %}
             <span class="pagNavSpan">
-                <a href="{{ pagination.href.previous }}" class="navArrow pagNavButton">
+                <a href="{{ pagination.href.previous }}" class="navArrow pagNavButton navLeft">
                     <svg viewBox="0 0 7.282 12.001" width="7.282" height="12.001">
                         <path d="M 0.193 5.535 L 5.534 0.194 C 5.791 -0.064 6.209 -0.064 6.466 0.194 L 7.09 0.817 C 7.346 1.074 7.346 1.491 7.09 1.749 L 2.858 6 L 7.09 10.254 C 7.346 10.511 7.346 10.927 7.09 11.185 L 6.466 11.807 C 6.208 12.065 5.791 12.065 5.534 11.807 L 0.193 6.467 C -0.065 6.209 -0.065 5.792 0.193 5.535 Z" style=""></path>
                     </svg>
@@ -149,7 +149,7 @@ title: Read Letters
 
         {% if pagination.href.next %}
             <span class="pagNavSpan">
-                <a href="{{ pagination.href.next }}" class="navArrow pagNavButton">
+                <a href="{{ pagination.href.next }}" class="navArrow pagNavButton navRight">
                     <svg viewBox="0 0 7.282 12.001" width="7.282" height="12.001">
                       <path d="M 0.193 6.466 L 5.534 11.807 C 5.791 12.065 6.209 12.065 6.466 11.807 L 7.09 11.184 C 7.346 10.927 7.346 10.51 7.09 10.252 L 2.858 6.001 L 7.09 1.747 C 7.346 1.49 7.346 1.074 7.09 0.816 L 6.466 0.194 C 6.208 -0.064 5.791 -0.064 5.534 0.194 L 0.193 5.534 C -0.065 5.792 -0.065 6.209 0.193 6.466 Z" style="" transform="matrix(-1, 0, 0, -1, 7.2815, 12.000999)"></path>
                     </svg>
@@ -159,7 +159,7 @@ title: Read Letters
 
         {% if pagination.href.last %}
             <span class="pagNavSpan">
-                <a href="{{ pagination.href.last }}" class="navArrow pagNavButton">
+                <a href="{{ pagination.href.last }}" class="navArrow pagNavButton navLast">
                   <svg viewBox="0 0 14.565 12.001" width="14.565" height="12.001">
                       <path d="M 0.193 6.466 L 5.534 11.807 C 5.791 12.065 6.209 12.065 6.466 11.807 L 7.09 11.184 C 7.346 10.927 7.346 10.51 7.09 10.252 L 2.858 6.001 L 7.09 1.747 C 7.346 1.49 7.346 1.074 7.09 0.816 L 6.466 0.194 C 6.208 -0.064 5.791 -0.064 5.534 0.194 L 0.193 5.534 C -0.065 5.792 -0.065 6.209 0.193 6.466 Z" style="" transform="matrix(-1, 0, 0, -1, 7.2815, 12.000999)"></path>
                       <path d="M 7.476 6.466 L 12.817 11.807 C 13.074 12.065 13.492 12.065 13.749 11.807 L 14.373 11.184 C 14.629 10.927 14.629 10.51 14.373 10.252 L 10.141 6.001 L 14.373 1.747 C 14.629 1.49 14.629 1.074 14.373 0.816 L 13.749 0.194 C 13.491 -0.064 13.074 -0.064 12.817 0.194 L 7.476 5.534 C 7.218 5.792 7.218 6.209 7.476 6.466 Z" style="" transform="matrix(-1, 0, 0, -1, 21.847499, 12.000999)"></path>
