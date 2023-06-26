@@ -33,3 +33,4 @@ src/site/_data/manual-json/*
 
 /dist/
 /node_modules/
+/src/site/autogenTable.js

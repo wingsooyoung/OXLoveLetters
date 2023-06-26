@@ -55,7 +55,8 @@ module.exports = () => {
             nickname: entry.data.nickname.trim(),
             message: mydearest,
             member: letterTo,
-            src: postcardLink
+            src: postcardLink,
+            indexNum: i
         };
         // Add it to an existing array or create a new one in the comments object
         if (letters[entry.data.path]) {
