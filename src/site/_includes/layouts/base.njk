@@ -18,21 +18,21 @@
 {#    <link href="css/mobilescreenstyling.css" rel="stylesheet" />#}
 
     <style>
-        {% include "/css/styles.css" ignore missing %}
-        {% include "/css/mobilescreenstyling.css" ignore missing %}
+        {% include "css/styles.css" ignore missing %}
+        {% include "css/mobilescreenstyling.css" ignore missing %}
 
         {% if page.url == "/pages/aboutomegax/" %}
-          {% include "/css/aboutoxpage.css" ignore missing %}
+          {% include "css/aboutoxpage.css" ignore missing %}
         {% elseif page.url ==  "/pages/aboutthisproject/"%}
-          {% include "/css/aboutthispage.css" ignore missing %}
+          {% include "css/aboutthispage.css" ignore missing %}
         {% elseif "/pages/readletters/" in page.url %}
-          {% include "/css/readpage.css" ignore missing %}
+          {% include "css/readpage.css" ignore missing %}
         {% elseif page.url == "/pages/sitemap/" or page.url == "/pages/faq/" %}
-          {% include "/css/sitemapandfaqpages.css" ignore missing %}
+          {% include "css/sitemapandfaqpages.css" ignore missing %}
         {% elseif page.url == "/pages/writeletters/" %}
-          {% include "/css/writepage.css" ignore missing %}
+          {% include "css/writepage.css" ignore missing %}
         {% elseif "/admin/" in page.url %}
-          {% include "/css/approveletterspage.css" ignore missing %}
+          {% include "css/approveletterspage.css" ignore missing %}
         {% endif %}
     </style>
 
