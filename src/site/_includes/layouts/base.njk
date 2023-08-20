@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="oxllstamp.ico"/>
+    <link rel="shortcut icon" href="/oxllstamp.ico"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>{{ title }}</title>
@@ -18,21 +18,21 @@
 {#    <link href="css/mobilescreenstyling.css" rel="stylesheet" />#}
 
     <style>
-        {% include "css/styles.css" ignore missing %}
-        {% include "css/mobilescreenstyling.css" ignore missing %}
+        {% include "/css/styles.css" ignore missing %}
+        {% include "/css/mobilescreenstyling.css" ignore missing %}
 
         {% if page.url == "/pages/aboutomegax/" %}
-          {% include "css/aboutoxpage.css" ignore missing %}
+          {% include "/css/aboutoxpage.css" ignore missing %}
         {% elseif page.url ==  "/pages/aboutthisproject/"%}
-          {% include "css/aboutthispage.css" ignore missing %}
+          {% include "/css/aboutthispage.css" ignore missing %}
         {% elseif "/pages/readletters/" in page.url %}
-          {% include "css/readpage.css" ignore missing %}
+          {% include "/css/readpage.css" ignore missing %}
         {% elseif page.url == "/pages/sitemap/" or page.url == "/pages/faq/" %}
-          {% include "css/sitemapandfaqpages.css" ignore missing %}
+          {% include "/css/sitemapandfaqpages.css" ignore missing %}
         {% elseif page.url == "/pages/writeletters/" %}
-          {% include "css/writepage.css" ignore missing %}
+          {% include "/css/writepage.css" ignore missing %}
         {% elseif "/admin/" in page.url %}
-          {% include "css/approveletterspage.css" ignore missing %}
+          {% include "/css/approveletterspage.css" ignore missing %}
         {% endif %}
     </style>
 
@@ -47,10 +47,18 @@
 <body onload="myLoadFunc()">
 <header>
     <div id="bannerH" onclick="openHome()">
-      <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select1">
+        {% if page.fileSlug = "" %}
+            <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select1">
+        {% else %}
+            <img src="../assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select1">
+        {% endif %}
     </div>
     <div id="bannerA" onclick="openAbout()">
-        <img src="assets/aboutModalIcon.svg" alt="about" id="infoIcon" class="select2">
+        {% if page.fileSlug = "" %}
+            <img src="assets/aboutModalIcon.svg" alt="about" id="infoIcon" class="select2">
+        {% else %}
+            <img src="../assets/aboutModalIcon.svg" alt="about" id="infoIcon" class="select2">
+        {% endif %}
     </div>
     <!-- The Modal -->
     <div id="abModal" class="modalabout hidden">
