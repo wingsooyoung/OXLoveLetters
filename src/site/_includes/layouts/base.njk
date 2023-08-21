@@ -47,18 +47,10 @@
 <body onload="myLoadFunc()">
 <header>
     <div id="bannerH" onclick="openHome()">
-        {% if page.url == "/" or page.url == "/404" or page.url == "/success" %}
-            <img src="assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select1">
-        {% else %}
-            <img src="./assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select1">
-        {% endif %}
+        <img src="https://forxloveletters.com/assets/oxllstamp.svg" alt="OXLL logo" id="logo" class="select1">
     </div>
     <div id="bannerA" onclick="openAbout()">
-        {% if page.url == "/" or page.url == "/404" or page.url == "/success" %}
-            <img src="assets/aboutModalIcon.svg" alt="about" id="infoIcon" class="select2">
-        {% else %}
-            <img src="./assets/aboutModalIcon.svg" alt="about" id="infoIcon" class="select2">
-        {% endif %}
+        <img src="https://forxloveletters.com/assets/aboutModalIcon.svg" alt="about" id="infoIcon" class="select2">
     </div>
     <!-- The Modal -->
     <div id="abModal" class="modalabout hidden">
