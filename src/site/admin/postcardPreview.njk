@@ -81,6 +81,9 @@ permalink: "admin/page-{{ pagination.pageNumber + 1 }}/"
             <button class="{{ loop.revindex }}" id="undoer" onclick="undoerFunc({{ loop.revindex }})">Undo</button>
             <br><br>
         </div>
+    {% if loop.last %}
+
+    {% endif %}
 {% else %}
     <li>No new letter submissions.</li>
     <li>AS OF: {{ page.date.toLocaleString() }}</li>
@@ -102,6 +105,16 @@ permalink: "admin/page-{{ pagination.pageNumber + 1 }}/"
 </form>
 
 <script>
+    function loadAdoption() {
+        let theGriddy = document.getElementById("griddy");
+        let theWaitingNode = theGriddy.childNodes[2];
+        let theWaiting = document.adoptNode(theWaitingNode);
+        let attachHere = document.getElementsByTagName("p")[5];
+        attachHere.appendChild(theWaiting);
+    }
+
+
+
     function duperaser() {
 
 

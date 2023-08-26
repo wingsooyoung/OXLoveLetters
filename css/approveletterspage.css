@@ -7,7 +7,7 @@
 }
 
 .griddywrap {
-    margin: 4px auto;
+    /*margin: 4px auto;*/
 }
 
 /*POSTCARD TEMPLATE*/
@@ -68,6 +68,26 @@
 }
 #memberbox {
     display: none;
+}
+#namebox {
+    bottom: 15%;
+    right: 11%;
+    width: 27%;
+    height: 8%;
+    overflow: clip;
+    line-height: 15px;
+    font-size: x-small;
+    text-align: center;
+}
+#nameboxM {
+    bottom: 14%;
+    right: 14%;
+    width: 27%;
+    height: 8%;
+    overflow: clip;
+    /*line-height: 15px;*/
+    font-size: large;
+    text-align: center;
 }
 #contentbox {
     top: 44%;
