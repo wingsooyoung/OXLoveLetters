@@ -23,19 +23,19 @@ package = "netlify-plugin-cache"
     [plugins.inputs]
     paths = [ ".cache" ]
 
-#[[redirects]]
-#from = "/admin/*"
-#to = "/admin/:splat"
-#force = true
-#status = 200
-#  [redirects.conditions]
-#  Role = [ "admin" ]
-#
-#[[redirects]]
-#from = "/admin/*"
-#to = "/pages/notallowed"
-#force = true
-#status = 401
+[[redirects]]
+from = "/admin/*"
+to = "/admin/:splat"
+force = true
+status = 200
+  [redirects.conditions]
+  Role = [ "admin" ]
+
+[[redirects]]
+from = "/admin/*"
+to = "/pages/notallowed"
+force = true
+status = 401
 
 # Error Page Redirects
 [[redirects]]
@@ -43,9 +43,5 @@ from = "/*"
 to = "/404"
 status = 404
 
-# ------------------------------------------------------------------------------------- #
-[[headers]]
-for = "/admin/*"
-[headers.values]
-    Basic-Auth = "someuser:somepassword anotheruser:anotherpassword"
+
 
