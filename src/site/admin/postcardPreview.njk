@@ -8,9 +8,9 @@ permalink: "admin/page-{{ pagination.pageNumber + 1 }}/"
 ---
 
 {%- for item in pagination.items -%}
-    {% if loop.first %}
-        <div class="waiting">LETTERS WAITING FOR APPROVAL: {{ loop.length }}</div>
-    {% endif %}
+{#    {% if loop.first %}#}
+{#        <div class="waiting">LETTERS WAITING FOR APPROVAL: {{ loop.length }}</div>#}
+{#    {% endif %}#}
         <div class="griddywrap {{ loop.revindex }}">
             <div class="containerbox grid-item {{ loop.revindex }}" onclick="modalZoom(this)">
                 {% if item.data.members === ("Jaehan" or "在汉") %}
@@ -81,9 +81,9 @@ permalink: "admin/page-{{ pagination.pageNumber + 1 }}/"
             <button class="{{ loop.revindex }}" id="undoer" onclick="undoerFunc({{ loop.revindex }})">Undo</button>
             <br><br>
         </div>
-    {% if loop.last %}
+{#    {% if loop.last %}#}
 
-    {% endif %}
+{#    {% endif %}#}
 {% else %}
     <li>No new letter submissions.</li>
     <li>AS OF: {{ page.date.toLocaleString() }}</li>
@@ -105,16 +105,6 @@ permalink: "admin/page-{{ pagination.pageNumber + 1 }}/"
 </form>
 
 <script>
-    function loadAdoption() {
-        let theGriddy = document.getElementById("griddy");
-        let theWaitingNode = theGriddy.childNodes[2];
-        let theWaiting = document.adoptNode(theWaitingNode);
-        let attachHere = document.getElementsByTagName("p")[5];
-        attachHere.appendChild(theWaiting);
-    }
-
-
-
     function duperaser() {
 
 
@@ -140,7 +130,7 @@ permalink: "admin/page-{{ pagination.pageNumber + 1 }}/"
             .then(finalData => {
                 console.log("postData to submission-created endpoint was a SUCCESS: " + JSON.stringify(finalData))
             })
-            .then((res) => alert(res.body))
+            .then((res) => alert(res)) //res.body changed to res
             .catch(error => {
                 console.log(error)
                 window.alert("postData to submission-created endpoint was a FAILURE")
@@ -178,6 +168,7 @@ permalink: "admin/page-{{ pagination.pageNumber + 1 }}/"
         document.getElementById("innerDeletionGriddy").removeChild(ch);
     }
 
+    // create a pre-approver and adjust handleSubmit so it automatically sends, waits for response, and retries all on its own!
 
     const handleSubmit = (event) => {
         event.preventDefault();

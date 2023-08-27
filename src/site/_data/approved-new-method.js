@@ -77,10 +77,12 @@ async function getAllPosts() {
     const cachedItems = cache.getKey(CACHE_KEY);
 
     // if we have a cache, return cached data
-    if (cachedItems) {
-        console.log("Blogposts from approved cache");
-        return cachedItems;
-    }
+    // UNCOMMENT LINES BELOW WHEN YOU ARE NOT APPROVING NEW LETTERS!!!!! / or delete lines completely? idk
+    // reason: when rebuilding site after mass deleter, it will pull cached letters and return submissions that have already been deleted
+        // if (cachedItems) {
+        //     console.log("Blogposts from approved cache");
+        //     return cachedItems;
+        // }
 
     // if we do not, make queries
     console.log("Blogposts from approved API");
