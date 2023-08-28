@@ -200,6 +200,7 @@ div#griddy {
     border-radius: 1rem;
     outline-offset: 7px;
     padding: 0 9px 9px;
+    width: 100%;
 }
 
 .deletiongriddywrap {
