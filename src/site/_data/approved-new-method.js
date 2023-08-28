@@ -52,8 +52,8 @@ async function requestSubmissions(urlParams) {
             method: "get",
             headers: { "Accept-Encoding": "gzip,deflate,compress" },
         })
-        console.log("site api call result type: "+typeof siteRes.data)
-        console.log("site api call result body: "+ siteRes.data)
+        // console.log("site api call result type: "+typeof siteRes.data)
+        // console.log("site api call result body: "+ siteRes.data)
 
         // return the total number of items to fetch and the data
         return {

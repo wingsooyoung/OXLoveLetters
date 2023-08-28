@@ -74,10 +74,11 @@ async function getAllPosts() {
     const cachedItems = cache.getKey(CACHE_KEY);
 
     // if we have a cache, return cached data
-    if (cachedItems) {
-        console.log("Blogposts from letter cache");
-        return cachedItems;
-    }
+    // ----------------------- UNCOMMENT LATER MAYBE?? -----------------------------
+    //     if (cachedItems) {
+    //         console.log("Blogposts from letter cache");
+    //         return cachedItems;
+    //     }
 
     // if we do not, make queries
     console.log("Blogposts from letter API");
