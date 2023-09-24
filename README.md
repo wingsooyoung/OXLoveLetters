@@ -1,9 +1,17 @@
-# OXLoveLetters (aka FORXLoveLetters)
+# OXLoveLetters (aka FORXLoveLetters.com)
 
 All the code for my newest "silly little project"! 
 (Hosted on Netlify)
 
-## ***APRIL _ th MEMBERS UPDATE (FOR X LOVE LETTERS VERSION 2.O) NOTICE:***
+## _IN PROGRESS... (FXLL VERSION 3.0):_
+
+If I have realized anything over these past several months, it is that my site was NOT designed to handle the number of submissions it has received. I have been brainstorming nonstop about new and better ways to manage all the letters. Who would have though that vanilla HTML and JavaScript could only get me so far? (/j) 
+
+Right now, my goal is to slowly start converting pieces of this site into React because I believe that is the framework that can help me the most moving forward. I don't know a damn thing about React though, so this will take me some time to work on, but I will keep working until I have a new and very improved version of FOR X Love Letters for everyone! 
+
+Thank you for your patience! ♥ 
+
+## ***APRIL MEMBERS UPDATE (FOR X LOVE LETTERS VERSION 2.0) NOTICE:***
 
 IT'S FINALLY HERE!!! I've worked almost nonstop for these past couple months, trying to get this update out. I know the site is probably still lacking in some areas, but GOD DAMN I am so proud of this update! Functionally, I realize all it looks like is a new dropdown list on the form to write letters, and some new postcard designs, but behind the scenes I have been making so many changes to help the site run more efficiently. I completely changed the entire submit process (goodbye Google Sheets!) which definitely took up most of my time. And when I wasn't working on that, I was fighting with my inner artist to design eleven (11!!!!) brand new postcards... And considering the "handmade" theme of the website, I think I'm pretty proud of my final creations. However, please anticipate version 2.5 where I add some more doodles to a few of the cards, which is to be released after my inspiration grows back ❤
 
