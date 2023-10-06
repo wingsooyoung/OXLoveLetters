@@ -2,7 +2,7 @@
 // import {createClient} from 'https://esm.sh/@sanity/client'
 // const {createClient} = require('@sanity/client')
 const {createClient} = await import('https://esm.sh/@sanity/client')
-const {imageUrlBuilder} = await import('https://esm.sh/@sanity/image-url')
+// const {imageUrlBuilder} = await import('https://esm.sh/@sanity/image-url')
 // import imageUrlBuilder from '@sanity/image-url'
 // const {imageUrlBuilder} = require('@sanity/image-url')
 
@@ -12,7 +12,7 @@ const client = createClient({
     useCdn: true, // set to `false` to bypass the edge cache
     apiVersion: '2023-10-02', // use current date (YYYY-MM-DD) to target the latest API version
 })
-const builder = imageUrlBuilder(client)
+// const builder = imageUrlBuilder(client)
 
 const data = await client.fetch(`count(*)`)
 
@@ -30,10 +30,10 @@ document.getElementById('results').innerText = `Number of documents: ${data}`
 
 
 export async function getPosts() {
-    function urlFor(source) {
-        return builder.image(source)
-    }
-    const query = '*[_type == "postcard-1"] {postcardDesign->{postcardBase{caption, "image": asset->url}}, letterTo, letterSigned, letterFrom, letterMessage, _id}'
+    // function urlFor(source) {
+    //     return builder.image(source)
+    // }
+    const query = '*[_type == "postcard-1"] {"": postcardDesign->{"":postcardBase{"design": asset->url}}, letterTo, letterSigned, letterFrom, letterMessage, _id}'
 
     const posts = await client.fetch(query)
         // .then((res) => console.log(res.json()))
@@ -51,12 +51,12 @@ export async function getPosts() {
                 res.forEach((postcard) => {
                     // add the pet name as the text content
                     // document.getElementById('l1').innerText  = postcard?.postcardDesign;
-                    console.log(postcard.postcardDesign.postcardBase)
-                    let x = urlFor(postcard.postcardDesign.postcardBase).width(200).url();
-                    console.log(x)
-                    document.getElementById("l1img").src = x;
+                    // console.log(postcard.postcardDesign.postcardBase)
+                    // let x = urlFor(postcard.postcardDesign.postcardBase).width(200).url();
+                    // console.log(x)
+                    // document.getElementById("l1img").src = x;
 
-                    // document.getElementById("l1Img").src = postcard?.postcardDesign.postcardBase.image;
+                    document.getElementById("l1Img").src = postcard?.design;
 
                     document.getElementById('l2').innerText  = postcard?.letterTo;
                     document.getElementById('l3').innerText  = postcard?.letterSigned;
