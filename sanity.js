@@ -1,11 +1,9 @@
 
 // import {createClient} from 'https://esm.sh/@sanity/client'
-const {createClient} = require('@sanity/client')
-// const {createClient} = await import('https://esm.sh/@sanity/client')
-
-
-// import imageUrlBuilder from '@sanity/image-url'
-const {imageUrlBuilder} = require('@sanity/image-url')
+// const {createClient} = require('@sanity/client')
+const {createClient} = await import('https://esm.sh/@sanity/client')
+import imageUrlBuilder from '@sanity/image-url'
+// const {imageUrlBuilder} = require('@sanity/image-url')
 
 const client = createClient({
     projectId: 'o9bzeud3',
