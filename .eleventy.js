@@ -8,6 +8,8 @@ module.exports = function(config) {
     config.addPassthroughCopy("oxllstamp.ico");
     config.addPassthroughCopy("favicon-16x16.png");
     config.addPassthroughCopy("favicon-32x32.png");
+    config.addPassthroughCopy("sanity.js");
+
 
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
     config.addShortcode("footer", function() {
