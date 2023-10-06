@@ -33,6 +33,8 @@
           {% include "css/writepage.css" ignore missing %}
         {% elseif "/admin/" in page.url %}
           {% include "css/approveletterspage.css" ignore missing %}
+        {% elseif page.url == "/pages/sanitytestpage" %}
+          {% include "css/sanitystyles.css" ignore missing %}
         {% endif %}
     </style>
 
