@@ -56,7 +56,7 @@ export async function getPosts() {
                     // console.log(x)
                     // document.getElementById("l1img").src = x;
 
-                    document.getElementById("l1Img").src = postcard?.design;
+                    document.getElementById("l1img").src = postcard?.design;
 
                     document.getElementById('l2').innerText  = postcard?.letterTo;
                     document.getElementById('l3').innerText  = postcard?.letterSigned;
