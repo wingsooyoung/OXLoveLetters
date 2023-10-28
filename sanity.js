@@ -33,7 +33,7 @@ export async function getPosts() {
     // function urlFor(source) {
     //     return builder.image(source)
     // }
-    const query = '*[_type == "postcard-1"] {"": postcardDesign->{"":postcardBase{"design": asset->url}}, letterTo, letterSigned, letterFrom, letterMessage, _id}'
+    const query = '*[_type == "postcard-1"] {"": postcardDesign->{"":postcardBase{"design": asset->url}}, letterTo[0], letterSigned, letterFrom, letterMessage, _id}'
 
     const posts = await client.fetch(query)
         // .then((res) => console.log(res.json()))
