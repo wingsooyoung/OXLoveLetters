@@ -1,4 +1,4 @@
-import { HTMLPage } from 'src/site/_includes/components/html-page';
+import { HTMLPage } from 'src/site/_includes/components/html-page.jsx';
 
 function MyPage() {
     return (
