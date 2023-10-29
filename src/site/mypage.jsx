@@ -9,7 +9,7 @@ function MyPage() {
     return (
         <>
             <h1 className={customData.foo}>{title}</h1>
-            <p>URL: {page.ur}</p>
+            <p>URL: {page.url}</p>
         </>
     );
 }
