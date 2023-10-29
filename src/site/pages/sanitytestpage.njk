@@ -1,5 +1,4 @@
 ---
-templateEngineOverride: hbs
 title: Sanity Test Page
 ---
 
@@ -26,15 +25,15 @@ Your data will show up here when you've configured everything correctly
 <div class="grid-container">
     <div class="containerbox grid-item" onclick="modalZoom(this)">
             
-        <img src="{{src}}" alt="" id="postcard">
+        <img src="{{ src }}" alt="" id="postcard">
             
-        <div id="contentbox" class="template"> {{content}} </div>
+        <div id="contentbox" class="template"> {{ content }} </div>
 
-        <div id="namebox" class="template"> {{content}} </div>
+        <div id="namebox" class="template"> {{ content }} </div>
             
-        <div id="lettercount" class="template"> {{content}} </div>
+        <div id="lettercount" class="template"> {{ content }} </div>
 
-        <div id="membersbox" class="template" style="display: none"> {{content}} </div>
+        <div id="membersbox" class="template" style="display: none"> {{ content }} </div>
 
     </div>
 </div>
@@ -66,33 +65,33 @@ function ContainerBox() {
             onClick="modalZoom(this)">
 
             <img
-                src="{{placeholder.com}}"
-                alt="{{placeholder postcard image}}"
+                src="{{ placeholderDotCom }}"
+                alt="{{ placeholderPostcardImage }}"
             />
                     
             <div 
                 id="contentbox" 
                 className="template"> 
-                {{content}}
+                {{ content }}
             </div>
 
             <div 
                 id="namebox" 
                 className="template"> 
-                {{content}} 
+                {{ content }} 
             </div>
                 
             <div 
                 id="lettercount" 
                 className="template"> 
-                {{content}} 
+                {{ content }} 
             </div>
 
             <div 
                 id="membersbox" 
                 className="template" 
                 style="display: none"> 
-                {{content}} 
+                {{ content }} 
             </div>
     )
 }
