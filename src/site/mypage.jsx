@@ -15,6 +15,7 @@ function MyPage() {
 }
 
 MyPage.data = {
+    layout: 'layouts/base.njk',
     title: 'Hello world',
     customData: {
         foo: 'bar',
