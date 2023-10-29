@@ -1,7 +1,7 @@
 export function HTMLPage({ lang, children }) {
     return (
         <html lang={lang}>
-            <head>{/* Link to styles, scripts, etc. */}</head>
+            <head>/*this is the head area*/</head>
             <body>{children}</body>
         </html>
     );
