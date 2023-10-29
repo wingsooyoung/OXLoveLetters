@@ -1,4 +1,6 @@
 const { EleventyServerlessBundlerPlugin } = require("@11ty/eleventy");
+const eleventyReactSSRPlugin = require('eleventy-plugin-react-ssr');
+
 
 module.exports = function(config) {
     // eleventy config settings
@@ -9,6 +11,13 @@ module.exports = function(config) {
     config.addPassthroughCopy("favicon-16x16.png");
     config.addPassthroughCopy("favicon-32x32.png");
     config.addPassthroughCopy("sanity.js");
+
+
+    config.addPlugin(eleventyReactSSRPlugin, {
+        babelConfig: {
+            // plugins: [['inline-react-svg', { svgo: false }]],
+        },
+    });
 
 
     // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
