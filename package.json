@@ -9,20 +9,23 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^3.0.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.15",
     "@netlify/functions": "^0.7.2",
+    "@sanity/client": "^6.4.12",
+    "@sanity/image-url": "^1.0.2",
     "axios": "1.2.1",
     "dotenv": "^16.0.3",
+    "eleventy-plugin-react-ssr": "^1.0.3",
     "express": "^4.18.2",
     "flat-cache": "^3.0.4",
     "googleapis": "^110.0.0",
     "netlify": "^13.1.2",
     "netlify-plugin-cache": "^1.0.3",
     "netlify-plugin-form-submissions-twos": "^1.1.1",
-    "@sanity/image-url": "^1.0.2",
-    "@sanity/client": "^6.4.12",
     "react": "^18.2.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.0",
-    "eleventy-plugin-react-ssr": "^1.0.3"
+    "react-scripts": "^5.0.0"
   }
 }

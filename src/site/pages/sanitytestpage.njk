@@ -55,6 +55,9 @@ return (
   <li className="item">
     {isPacked ? name + ' ✔' : name}
     {# if isPacked is true, then (?) render name + ' ✔', otherwise (:) render name #}
+    {#         {show ? 'Remove' : 'Show'} #}
+    {#         if show is true, then render Remove otherwise Show #}
+
   </li>
 );
 
