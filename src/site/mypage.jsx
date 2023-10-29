@@ -34,8 +34,7 @@ function ContainerBox() {
 
             <div 
                 id="membersbox" 
-                className="template" 
-                style="display: none"> 
+                className="template">
                 {customData.content}
             </div>
         </div>
