@@ -10,7 +10,7 @@ function ContainerBox() {
             onClick="modalZoom(this)">
 
             <img
-                src={customData.src}
+                src={customData.source}
                 alt={customData.altText}
             />
                     
