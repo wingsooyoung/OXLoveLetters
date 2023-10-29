@@ -39,7 +39,7 @@ module.exports = function(config) {
             includes: "_includes",
             data: "_data"
         },
-        templateFormats : ["hbs", "md", "html", "css", "js", "njk"],
+        templateFormats : ["hbs", "md", "html", "css", "js", "njk", "jsx"],
         htmlTemplateEngine : "html"
     };
 };
