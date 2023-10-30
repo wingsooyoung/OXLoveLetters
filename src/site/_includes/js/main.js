@@ -122,6 +122,12 @@ function modalZoom(x) {
     m["nameboxM"].textContent = y[2].innerHTML;
     m["lettercountM"].textContent = y[3].innerHTML;
 }
+//NEWLY ADDED BELOW (for testing on MyPage): attaching the modalZoom function to each containerbox element!
+var boxes = document.getElementsByClassName("containerbox grid-item");
+for (let i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener("click", modalZoom(this));
+}
+
 var span = document.getElementsByClassName("close")[0];
 try {
     span.onclick = function() {
