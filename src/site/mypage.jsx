@@ -1,59 +1,83 @@
 import EleventyContext from 'eleventy-plugin-react-ssr/context';
 import { useContext } from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-  };
+function MyInput() {
+  const [text, setText] = useState('hello');
 
-function BasicModal() {
-    const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  function handleChange(e) {
+    setText(e.target.value);
+  }
 
   return (
-    <div>
-      <Button onClick={handleOpen}>Open modal</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
-        </Box>
-      </Modal>
+    <>
+      <input value={text} onChange={handleChange} />
+      <p>You typed: {text}</p>
+      <button onClick={() => setText('hello')}>
+        Reset
+      </button>
+    </>
+  );
+}
+
+function ModalContent({ onClose,  }) {
+  const [image, setImage] = useState('url.com');
+  const [altText, setAltText] = useState('alt placeholder');
+  const [content, setContent] = useState('content placeholder');
+  const [nickname, setNickname] = useState('nickname placeholder');
+  const [counter, setCounter] = useState('counter placeholder');
+
+
+  function handleChange(e) {
+    setImage(e.target.children[0].attributes[0].value)
+    setAltText(e.target.children[0].attributes[1].value)
+    setContent(e.target.children[1].textContent)
+    setNickname(e.target.children[2].textContent)
+    setCounter(e.target.children[3].textContent)
+
+  }
+
+    return (
+    <div class="containerboxM grid-item modal-content" id="modal1" onClick={onClose}>
+      <img src={image} alt={altText} id="postcardM" />
+      <div id="contentboxM" class="template">{content}</div>
+      <div id="nameboxM" class="template">{nickname}</div>
+      <div id="lettercountM" class="template">{counter}</div>
     </div>
+    )
+  
+
+
+}
+// -------------------------- my modal --------------------------------
+
+//----------------------------------------------------------------------
+
+function PortalExample() {
+  const [showModal, setShowModal] = useState(false);
+  return (
+    <>
+      <button onClick={() => setShowModal(true)}>
+        Show modal using a portal
+      </button>
+      {showModal && createPortal(
+        <ModalContent onClose={() => setShowModal(false)} />,
+        document.body
+      )}
+    </>
   );
 }
 
 function ContainerBox() {
     const { customData } = useContext(EleventyContext);
 
-    
-
     return (
         <div
             className="containerbox grid-item"
-            // onClick="modalZoom(this)"
-            onClick={handleOpen}
+            // onClick="modalZoom(this)" INCORRECT!
+            // onClick={x}
+            onClick={handleChange}
             >
 
             <img
@@ -93,9 +117,10 @@ function GridContainer() {
     return (
         <div 
             className="grid-container">
-            <ContainerBox />
-            <ContainerBox />
-            <ContainerBox />
+            <ContainerBox onClick={handleChange}/>
+            <ContainerBox onClick={handleChange}/>
+            <ContainerBox onClick={handleChange}/>
+            <ModalContent />
         </div>
     )
 }
@@ -110,7 +135,9 @@ function MyPage() {
             <h1 className={customData.foo}>{title}</h1>
             <p>URL: {page.url}</p>
             <GridContainer />
-            <BasicModal />
+            <div className="clipping-container">
+              <PortalExample />
+            </div>
         </>
     );
 }
