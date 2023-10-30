@@ -112,9 +112,6 @@ function MyPage() {
             <h1 className={customData.foo}>{title}</h1>
             <p>URL: {page.url}</p>
             <GridContainer />
-            <div className="clipping-container">
-              <PortalExample />
-            </div>
         </>
     );
 }
