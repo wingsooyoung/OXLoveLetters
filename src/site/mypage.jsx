@@ -58,28 +58,23 @@ function ContainerBox() {
             onClick={handleChange}
             >
             <img
-                src={customData.source}
-                alt={customData.altText}
+                src={customData.ph0}
+                alt={customData.ph1}
             />
             <div 
                 id="contentbox" 
                 className="template"> 
-                {customData.content}
+                {customData.ph2}
             </div>
             <div 
                 id="namebox" 
                 className="template"> 
-                {customData.content}
+                {customData.ph3}
             </div>
             <div 
                 id="lettercount" 
                 className="template"> 
-                {customData.content}
-            </div>
-            <div 
-                id="membersbox" 
-                className="template">
-                {customData.content}
+                {customData.ph3}
             </div>
         </div>
         {showModal && (
@@ -122,9 +117,11 @@ MyPage.data = {
     title: 'Hello world',
     customData: {
         foo: 'bar',
-        source: '/assets/small borders postcard.svg',
-        altText: 'this is the image desc',
-        content: 'this is the placeholder text'
+        ph0: '/assets/small borders postcard.svg',
+        ph1: 'this is the image desc',
+        ph2: 'this is the placeholder text',
+        ph3: 'placeholder nickname',
+        ph4: '001-ph'
     },
 };
 
