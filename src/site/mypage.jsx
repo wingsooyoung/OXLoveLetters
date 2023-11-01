@@ -31,15 +31,14 @@ import { useState } from 'react';
 function ModalContent({ image, altText, content, nickname, counter }) {
 
     return (
-        <div id="myModal" className="modal">
-            <span className="close">×</span>
-            <div className="containerboxM grid-item modal-content" id="modal1">
-                <img src={image} alt={altText} id="postcardM" />
-                <div id="contentboxM" className="template">{content}</div>
-                <div id="nameboxM" className="template">{nickname}</div>
-                <div id="lettercountM" className="template">{counter}</div>
+        <div id="myModalReact" className="modalReact">
+            <span className="closeR">×</span>
+            <div className="containerboxMR grid-item modal-content" id="modal1R">
+                <img src={image} alt={altText} id="postcardMR" />
+                <div id="contentboxMR" className="templateR">{content}</div>
+                <div id="nameboxMR" className="templateR">{nickname}</div>
+                <div id="lettercountMR" className="templateR">{counter}</div>
             </div>
-
         </div>
 
     )
@@ -49,7 +48,6 @@ function ContainerBox({ image = "/assets/small borders postcard.svg", altText = 
     // const ref = useRef(null);
 
     const [hide, setHide] = useState(true);
-
 
     // const { customData } = useContext(EleventyContext);
     // const [showModal, setShowModal] = useState(false);
@@ -87,9 +85,9 @@ function ContainerBox({ image = "/assets/small borders postcard.svg", altText = 
         <div
             className="containerbox grid-item"
             // ref={ref}
-            onClick={() => {
-                setHide(!hide);
-            }}
+            // onClick={() => {
+            //     setHide(!hide);
+            // }}
             >
             <img
                 src={image}
