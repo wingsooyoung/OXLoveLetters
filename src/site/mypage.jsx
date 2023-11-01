@@ -107,7 +107,7 @@ function MyPage() {
             <h1 className={customData.foo}>{title}</h1>
             <p>URL: {page.url}</p>
             <GridContainer />
-            <div id="myModal" className="modal" style={{display:none}}>
+            <div id="myModal" className="modal" style={{display:"none"}}>
                 <span className="close">×</span>
                 <div className="containerboxM grid-item modal-content" id="modal1">
                     <img src="/assets/small borders postcard.svg" alt=""
