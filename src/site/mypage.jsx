@@ -1,5 +1,5 @@
 import EleventyContext from 'eleventy-plugin-react-ssr/context';
-import { useContext } from 'react';
+import {useContext, useEffect, useRef} from 'react';
 import { useState } from 'react';
 
 // function MyInput() {
@@ -28,10 +28,10 @@ import { useState } from 'react';
 //       <button onClick={onClose}>Close</button>
 //  </div>
 
-function ModalContent({ onClose, image, altText, content, nickname, counter }) {
+function ModalContent({ image, altText, content, nickname, counter }) {
 
     return (
-        <div id="myModal" className="modal" style={{display:"none"}}>
+        <div id="myModal" className="modal">
             <span className="close">×</span>
             <div className="containerboxM grid-item modal-content" id="modal1">
                 <img src={image} alt={altText} id="postcardM" />
@@ -45,51 +45,74 @@ function ModalContent({ onClose, image, altText, content, nickname, counter }) {
     )
 }
 
-function ContainerBox() {
-    const { customData } = useContext(EleventyContext);
-    const [showModal, setShowModal] = useState(false);
-    const [image, setImage] = useState('placeholder.com');
-    const [altText, setAltText] = useState('alt placeholder');
-    const [content, setContent] = useState('content placeholder');
-    const [nickname, setNickname] = useState('nickname placeholder');
-    const [counter, setCounter] = useState('counter placeholder');
-  
-    function handleChange(e) {
-      setImage(e.target.children[0].attributes[0].value)
-      setAltText(e.target.children[0].attributes[1].value)
-      setContent(e.target.children[1].textContent)
-      setNickname(e.target.children[2].textContent)
-      setCounter(e.target.children[3].textContent)
+function ContainerBox({ image = "placeholder.com", altText = "placeholder alt", content = "placeholder content", nickname = "ph n.n.", counter = "0" }) {
+    // const ref = useRef(null);
 
-      (() => setShowModal(true))
-    }
+    const [hide, setHide] = useState(true);
+
+
+    // const { customData } = useContext(EleventyContext);
+    // const [showModal, setShowModal] = useState(false);
+    // const [image, setImage] = useState('placeholder.com');
+    // const [altText, setAltText] = useState('alt placeholder');
+    // const [content, setContent] = useState('content placeholder');
+    // const [nickname, setNickname] = useState('nickname placeholder');
+    // const [counter, setCounter] = useState('counter placeholder');
+  
+    // function handleChange(e) {
+    //   setImage(e.target.children[0].attributes[0].value)
+    //   setAltText(e.target.children[0].attributes[1].value)
+    //   setContent(e.target.children[1].textContent)
+    //   setNickname(e.target.children[2].textContent)
+    //   setCounter(e.target.children[3].textContent)
+    //
+    //   (() => setShowModal(true))
+    // }
+
+    {/*useEffect(() => {*/}
+    //     if (showModal) {
+    //         ref.current.modalZoom(this);
+    //     } else {
+    //         ref.current.modalZoom(this);
+    //         //var span = document.getElementsByClassName("close")[0];
+    //         // try {
+    //         //     span.onclick = function() {
+    //         //         modal.style.display = "none";
+    //         //     }}
+    //     }
+    // });
+
     return (
       <>
         <div
             className="containerbox grid-item"
-            onClick={handleChange}
+            // ref={ref}
+            onClick={() => {
+                setHide(!hide);
+            }}
             >
             <img
-                src={customData.ph0}
-                alt={customData.ph1}
+                src={image}
+                alt={altText}
             />
             <div 
                 id="contentbox" 
                 className="template"> 
-                {customData.ph2}
+                {content}
             </div>
             <div 
                 id="namebox" 
                 className="template"> 
-                {customData.ph3}
+                {nickname}
             </div>
             <div 
                 id="lettercount" 
                 className="template"> 
-                {customData.ph3}
+                {counter}
             </div>
         </div>
-        {showModal && (
+          {/*{!hide && <p>Hello world</p>}*/}
+        {!hide && (
           <ModalContent
               image={image}
               altText={altText}
