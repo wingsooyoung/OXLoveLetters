@@ -20,16 +20,28 @@ import { useState } from 'react';
 //   );
 // }
 
+//  <div className="containerboxM grid-item modal-content" id="modal1" style={{visibility: "hidden"}}>
+//       <img src={image} alt={altText} id="postcardM" />
+//       <div id="contentboxM" class="template">{content}</div>
+//       <div id="nameboxM" class="template">{nickname}</div>
+//       <div id="lettercountM" class="template">{counter}</div>
+//       <button onClick={onClose}>Close</button>
+//  </div>
+
 function ModalContent({ onClose, image, altText, content, nickname, counter }) {
 
     return (
-    <div class="containerboxM grid-item modal-content" id="modal1" style={{visibility: {hidden}}}>
-      <img src={image} alt={altText} id="postcardM" />
-      <div id="contentboxM" class="template">{content}</div>
-      <div id="nameboxM" class="template">{nickname}</div>
-      <div id="lettercountM" class="template">{counter}</div>
-      <button onClick={onClose}>Close</button>
-    </div>
+        <div id="myModal" className="modal" style={{display:"none"}}>
+            <span className="close">×</span>
+            <div className="containerboxM grid-item modal-content" id="modal1">
+                <img src={image} alt={altText} id="postcardM" />
+                <div id="contentboxM" className="template">{content}</div>
+                <div id="nameboxM" className="template">{nickname}</div>
+                <div id="lettercountM" className="template">{counter}</div>
+            </div>
+
+        </div>
+
     )
 }
 
@@ -78,7 +90,12 @@ function ContainerBox() {
             </div>
         </div>
         {showModal && (
-          <ModalContent onClose={() => setShowModal(false)} image={image} altText={altText} content={content} nickname={nickname} counter={counter}/>
+          <ModalContent
+              image={image}
+              altText={altText}
+              content={content}
+              nickname={nickname}
+              counter={counter}/>
         )}
         
       </>
@@ -107,17 +124,6 @@ function MyPage() {
             <h1 className={customData.foo}>{title}</h1>
             <p>URL: {page.url}</p>
             <GridContainer />
-            <div id="myModal" className="modal" style={{display:"none"}}>
-                <span className="close">×</span>
-                <div className="containerboxM grid-item modal-content" id="modal1">
-                    <img src="/assets/small borders postcard.svg" alt=""
-                         id="postcardM" />
-                        <div id="contentboxM" className="template"></div>
-                        <div id="nameboxM" className="template"></div>
-                        <div id="lettercountM" className="template"></div>
-                </div>
-
-            </div>
         </>
     );
 }
