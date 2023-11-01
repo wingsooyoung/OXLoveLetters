@@ -108,9 +108,7 @@ function MyPage() {
             <p>URL: {page.url}</p>
             <GridContainer />
             <div id="myModal" className="modal" style="display: none;">
-                <!-- The Close Button -->
                 <span className="close">×</span>
-                <!-- Modal Content (The Image) -->
                 <div className="containerboxM grid-item modal-content" id="modal1">
                     <img src="/assets/small borders postcard.svg" alt=""
                          id="postcardM" />
