@@ -45,7 +45,7 @@ function ModalContent({ image, altText, content, nickname, counter }) {
     )
 }
 
-function ContainerBox({ image = "placeholder.com", altText = "placeholder alt", content = "placeholder content", nickname = "ph n.n.", counter = "0" }) {
+function ContainerBox({ image = "/assets/small borders postcard.svg", altText = "placeholder alt", content = "placeholder content", nickname = "ph n.n.", counter = "0" }) {
     // const ref = useRef(null);
 
     const [hide, setHide] = useState(true);
@@ -94,6 +94,9 @@ function ContainerBox({ image = "placeholder.com", altText = "placeholder alt", 
             <img
                 src={image}
                 alt={altText}
+                onClick={() => {
+                    setHide(!hide);
+                }}
             />
             <div 
                 id="contentbox" 
