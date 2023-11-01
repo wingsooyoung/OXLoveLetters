@@ -124,8 +124,9 @@ function modalZoom(x) {
 }
 //NEWLY ADDED BELOW (for testing on MyPage): attaching the modalZoom function to each containerbox element!
 var boxes = document.getElementsByClassName("containerbox grid-item");
+
 for (let i = 0; i < boxes.length; i++) {
-    boxes[i].addEventListener("click", modalZoom(this));
+    boxes[i].addEventListener("click", modalZoom(boxes[i]));
 }
 
 var span = document.getElementsByClassName("close")[0];
