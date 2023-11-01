@@ -107,6 +107,19 @@ function MyPage() {
             <h1 className={customData.foo}>{title}</h1>
             <p>URL: {page.url}</p>
             <GridContainer />
+            <div id="myModal" className="modal" style="display: none;">
+                <!-- The Close Button -->
+                <span className="close">×</span>
+                <!-- Modal Content (The Image) -->
+                <div className="containerboxM grid-item modal-content" id="modal1">
+                    <img src="/assets/small borders postcard.svg" alt=""
+                         id="postcardM" />
+                        <div id="contentboxM" className="template"></div>
+                        <div id="nameboxM" className="template"></div>
+                        <div id="lettercountM" className="template"></div>
+                </div>
+
+            </div>
         </>
     );
 }
