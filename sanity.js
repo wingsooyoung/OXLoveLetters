@@ -49,9 +49,12 @@ export async function getPosts() {
     // letterMessage ,
     // _id
 
+    console.log(query)
+
     const posts = await client.fetch(query)
         // .then((res) => console.log(res.json()))
         .then((res) => {
+            console.log(res.json())
             // get the list element, and the first item
             // let list = document.querySelector("ul");
             // let firstListItem = document.querySelector("ul li");
@@ -61,8 +64,10 @@ export async function getPosts() {
             if (res.length > 0) {
                 // remove the placeholder content
                 // list.removeChild(firstListItem);
+                console.log("res.length: "+res.length)
 
                 res.forEach((postcard) => {
+                    console.log("postcard: "+postcard)
                     // add the pet name as the text content
                     // document.getElementById('l1').innerText  = postcard?.postcardDesign;
                     // console.log(postcard.postcardDesign.postcardBase)
@@ -73,10 +78,10 @@ export async function getPosts() {
                     document.getElementById("postcard").src = postcard?.design.url;
                     document.getElementById("postcard").alt = postcard?.altText;
 
-                    document.getElementById('membersbox').innerText  = postcard?.letterTo;
-                    document.getElementById('lettersigned').innerText  = postcard?.letterSigned;
-                    document.getElementById('namebox').innerText  = postcard?.letterFrom;
-                    document.getElementById('lettercontent').innerText  = postcard?.letterMessage;
+                    document.getElementById('membersbox').textContent  = postcard?.letterTo;
+                    document.getElementById('lettersigned').textContent  = postcard?.letterSigned;
+                    document.getElementById('namebox').textContent  = postcard?.letterFrom;
+                    document.getElementById('lettercontent').textContent  = postcard?.letterMessage;
 
 
                 });
