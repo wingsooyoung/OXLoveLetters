@@ -54,7 +54,7 @@ export async function getPosts() {
     const posts = await client.fetch(query)
         // .then((res) => console.log(res.json()))
         .then((res) => {
-            console.log(res.json())
+            console.log(res.json)
             // get the list element, and the first item
             // let list = document.querySelector("ul");
             // let firstListItem = document.querySelector("ul li");
