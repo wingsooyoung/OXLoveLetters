@@ -25,98 +25,20 @@ Your data will show up here when you've configured everything correctly
 <div class="grid-container">
     <div class="containerbox grid-item" onclick="modalZoom(this)">
             
-        <img src="{{ src }}" alt="" id="postcard">
+        <img src="{{ src }}" alt="{{ alt }}" id="postcard">
             
         <div id="contentbox" class="template"> {{ content }} </div>
 
-        <div id="namebox" class="template"> {{ content }} </div>
+        <div id="namebox" class="template"> {{ name }} <p id="lettersigned">{{ signed }}</p></div>
             
-        <div id="lettercount" class="template"> {{ content }} </div>
+        <div id="lettercount" class="template"> {{ count }} </div>
 
-        <div id="membersbox" class="template" style="display: none"> {{ content }} </div>
+        <div id="membersbox" class="template" style="display: none"> {{ member }} </div>
 
     </div>
 </div>
 
-function Item({ name, isPacked }) {
-  if (isPacked) {
-    return <li className="item">{name} ✔</li>;
-  }
-  return <li className="item">{name}</li>;
-}
-function Item2({ name, isPacked }) {
-  if (isPacked) {
-    return null;
-  }
-  return <li className="item">{name}</li>;
-}
 
-return (
-  <li className="item">
-    {isPacked ? name + ' ✔' : name}
-    {# if isPacked is true, then (?) render name + ' ✔', otherwise (:) render name #}
-    {#         {show ? 'Remove' : 'Show'} #}
-    {#         if show is true, then render Remove otherwise Show #}
-
-  </li>
-);
-
-function ContainerBox() {
-    return (
-        <div
-            className="containerbox grid-item"
-            onClick="modalZoom(this)">
-
-            <img
-                src="{{ placeholderDotCom }}"
-                alt="{{ placeholderPostcardImage }}"
-            />
-                    
-            <div 
-                id="contentbox" 
-                className="template"> 
-                {{ content }}
-            </div>
-
-            <div 
-                id="namebox" 
-                className="template"> 
-                {{ content }} 
-            </div>
-                
-            <div 
-                id="lettercount" 
-                className="template"> 
-                {{ content }} 
-            </div>
-
-            <div 
-                id="membersbox" 
-                className="template" 
-                style="display: none"> 
-                {{ content }} 
-            </div>
-    )
-}
-
-{# below ----------------------------------- #}
-function Container({ children }) {
-  return (
-    <div className="container">
-      {children}
-    </div>
-  );
-}
-
-export default function GridContainer({ inside }) {
-    return (
-        <div 
-            className="grid-container">
-            <ContainerBox />
-        </div>
-    )
-}
-{# above ----------------------------------- #}
 
 <script type="module" src="/sanity.js"></script>
 

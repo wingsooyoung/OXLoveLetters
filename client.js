@@ -6,7 +6,7 @@ const client = createClient({
     projectId: 'o9bzeud3',
     dataset: 'production',
     useCdn: true, // set to `false` to bypass the edge cache
-    apiVersion: '2023-10-02', // use current date (YYYY-MM-DD) to target the latest API version
+    apiVersion: '2023-11-05', // use current date (YYYY-MM-DD) to target the latest API version
 })
 
 export default client

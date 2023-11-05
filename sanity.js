@@ -15,7 +15,30 @@ export async function getPosts() {
     // function urlFor(source) {
     //     return builder.image(source)
     // }
-    const query = '*[_type == "postcard-1"] {"": postcardDesign->{"":postcardBase{"design": asset->url}}, letterTo[0], letterSigned, letterFrom, letterMessage, _id}'
+    const query = `*[_type == "postcard-1"]{
+                    "": postcardDesign->{
+                        "altText":postcardAlt,
+                        "":postcardBase{
+                          "design":asset->{
+                            _id,
+                            url
+                          }
+                        }
+                    }, 
+                    letterTo[0], 
+                    letterSigned, 
+                    letterFrom, 
+                    letterMessage, 
+                    _id
+                }`
+    // altText ,
+    // design._id ,
+    // design.url ,
+    // letterTo ,
+    // letterSigned ,
+    // letterFrom ,
+    // letterMessage ,
+    // _id
 
     const posts = await client.fetch(query)
         // .then((res) => console.log(res.json()))
@@ -38,12 +61,13 @@ export async function getPosts() {
                     // console.log(x)
                     // document.getElementById("l1img").src = x;
 
-                    document.getElementById("l1img").src = postcard?.design;
+                    document.getElementById("postcard").src = postcard?.design.url;
+                    document.getElementById("postcard").alt = postcard?.altText;
 
-                    document.getElementById('l2').innerText  = postcard?.letterTo;
-                    document.getElementById('l3').innerText  = postcard?.letterSigned;
-                    document.getElementById('l4').innerText  = postcard?.letterFrom;
-                    document.getElementById('l5').innerText  = postcard?.letterMessage;
+                    document.getElementById('membersbox').innerText  = postcard?.letterTo;
+                    document.getElementById('lettersigned').innerText  = postcard?.letterSigned;
+                    document.getElementById('namebox').innerText  = postcard?.letterFrom;
+                    document.getElementById('lettercontent').innerText  = postcard?.letterMessage;
 
 
                 });
