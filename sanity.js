@@ -66,9 +66,9 @@ export async function getPosts() {
                 let pcbox = document.getElementById("postcard");
 
                 let mbox = document.getElementById('membersbox');
-                let sbox = document.getElementById('lettersigned');
+                let sbox = document.getElementById('lettercount');
                 let nbox = document.getElementById('namebox');
-                let cbox = document.getElementById('lettercontent');
+                let cbox = document.getElementById('contentbox');
                 res.forEach((postcard) => {
                     console.log("postcard: "+postcard)
                     // add the pet name as the text content
