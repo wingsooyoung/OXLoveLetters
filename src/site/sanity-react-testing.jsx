@@ -67,7 +67,7 @@ const Letters = () => {
                     All Letters🥗
                 </h3>
                 <div className="level0">
-                    {letters &&
+                    {(letters &&
                         letters.map((letter) => (
                             <div
                                 className="level1"
@@ -89,7 +89,7 @@ const Letters = () => {
                                 </div>
                                 <p className="level6">{letter.letterMessage}</p>
                             </div>
-                        ))}
+                        ))) ?? 'Loading...'}
                 </div>
             </div>
         </section>
