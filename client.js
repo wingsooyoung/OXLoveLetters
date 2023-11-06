@@ -9,4 +9,9 @@ const client = createClient({
     apiVersion: '2023-11-05', // use current date (YYYY-MM-DD) to target the latest API version
 })
 
+client
+    .fetch(`count(*)`)
+    .then((data) => console.log(`Number of documents: ${data}`))
+    .catch(console.error)
+
 export default client

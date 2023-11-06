@@ -1,6 +1,7 @@
 
-const {createClient} = await import('https://esm.sh/@sanity/client')
+// const {createClient} = await import('https://esm.sh/@sanity/client')
 // const {createClient} = require('@sanity/client')
+import {createClient} from 'https://esm.sh/@sanity/client'
 
 const client = createClient({
     projectId: 'o9bzeud3',
@@ -9,17 +10,14 @@ const client = createClient({
     apiVersion: '2023-11-05', // use current date (YYYY-MM-DD) to target the latest API version
 })
 
-
+const data = await client.fetch(`count(*)`)
+document.getElementById('results').innerText = `Number of documents: ${data}`
 
 // Get a pre-configured url-builder from your sanity client
 
 // Then we like to make a simple function like this that gives the
 // builder an image and returns the builder for you to specify additional
 // parameters:
-
-
-
-
 export async function getPosts() {
     // function urlFor(source) {
     //     return builder.image(source)
