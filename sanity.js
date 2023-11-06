@@ -63,7 +63,12 @@ export async function getPosts() {
                 // remove the placeholder content
                 // list.removeChild(firstListItem);
                 console.log("res.length: "+res.length)
+                let pcbox = document.getElementById("postcard");
 
+                let mbox = document.getElementById('membersbox');
+                let sbox = document.getElementById('lettersigned');
+                let nbox = document.getElementById('namebox');
+                let cbox = document.getElementById('lettercontent');
                 res.forEach((postcard) => {
                     console.log("postcard: "+postcard)
                     // add the pet name as the text content
@@ -73,13 +78,19 @@ export async function getPosts() {
                     // console.log(x)
                     // document.getElementById("l1img").src = x;
 
-                    document.getElementById("postcard").src = postcard?.design.url;
-                    document.getElementById("postcard").alt = postcard?.altText;
+                    pcbox.src = postcard?.design.url;
+                    pcbox.alt = postcard?.altText;
 
-                    document.getElementById('membersbox').textContent  = postcard?.letterTo;
-                    document.getElementById('lettersigned').textContent  = postcard?.letterSigned;
-                    document.getElementById('namebox').textContent  = postcard?.letterFrom;
-                    document.getElementById('lettercontent').textContent  = postcard?.letterMessage;
+                    try {
+                        mbox.innerText = postcard?.letterTo;
+                        sbox.innerText = postcard?.letterSigned;
+                        nbox.innerText = postcard?.letterFrom;
+                        cbox.innerText= postcard?.letterMessage;
+                    } catch (e) {
+                        console.log("error message: "+e)
+                    }
+
+
 
 
                 });
