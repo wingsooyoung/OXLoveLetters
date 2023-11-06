@@ -1,8 +1,31 @@
 ---
 title: Sanity Test Page
 ---
+{#// altText ,#}
+{#// design._id ,#}
+{#// design.url ,#}
+{#// letterTo ,#}
+{#// letterSigned ,#}
+{#// letterFrom ,#}
+{#// letterMessage ,#}
+{#// _id#}
+{#<script type="module" src="/sanity.js"></script>#}
 
-<script type="module" src="/sanity.js"></script>
+{% if sanityData.length > 0 %}
+    {%- for data in sanityData -%}
+        <div class="containerbox grid-item" onclick="modalZoom(this)">
+            <img src="{{ data.design.url }}" alt="{{ data.altText }}" id="postcard">
+            <div id="contentbox" class="template"> {{ data.letterMessage }} </div>
+            <div id="namebox" class="template"> {{ data.letterFrom }} <p id="lettersigned">{{ data.letterSigned }}</p></div>
+            <div id="lettercount" class="template"> {{ data._id }} </div>
+            <div id="membersbox" class="template" style="display: none"> {{ data.letterTo }} </div>
+        </div>
+    {%- endfor -%}
+{% else %}
+    <div id="loading">The EleventyFetch method didn't work properly...</div>
+{% endif %}
+
+
 
 <div id="results"></div>
 
@@ -24,21 +47,21 @@ Your data will show up here when you've configured everything correctly
     </div>
 </main>
 
-<div class="grid-container">
-    <div class="containerbox grid-item" onclick="modalZoom(this)">
-            
-        <img src="{{ src }}" alt="{{ alt }}" id="postcard">
-            
-        <div id="contentbox" class="template"> {{ content }} </div>
+{#<div class="grid-container">#}
+{#    <div class="containerbox grid-item" onclick="modalZoom(this)">#}
+{#            #}
+{#        <img src="{{ src }}" alt="{{ alt }}" id="postcard">#}
+{#            #}
+{#        <div id="contentbox" class="template"> {{ content }} </div>#}
 
-        <div id="namebox" class="template"> {{ name }} <p id="lettersigned">{{ signed }}</p></div>
-            
-        <div id="lettercount" class="template"> {{ count }} </div>
+{#        <div id="namebox" class="template"> {{ name }} <p id="lettersigned">{{ signed }}</p></div>#}
+{#            #}
+{#        <div id="lettercount" class="template"> {{ count }} </div>#}
 
-        <div id="membersbox" class="template" style="display: none"> {{ member }} </div>
+{#        <div id="membersbox" class="template" style="display: none"> {{ member }} </div>#}
 
-    </div>
-</div>
+{#    </div>#}
+{#</div>#}
 
 
 
